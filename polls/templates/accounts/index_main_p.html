@@ -1,0 +1,399 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>SoocialFly</title>
+		
+		<meta name="keywords" content="on scroll, effect, slide in, layout, template, transition, javascript" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="{% static 'css_main/demo.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css_main/component.css' %}" />
+		<style type="text/css">
+			:root {
+    --color-header-input-placeholder: #8b88ff;
+    --color-header-logo-background: rgb(35 35 35 / 90%);
+    --color-wplogin-body: #3e3f5e;
+    --color-wplogin-header-text: rgb(35 35 35 / 90%);
+    --color-header-background: #080808;
+    --color-header-text: #fff;
+    --color-header-icon: rgb(35 35 35 / 90%);
+    --color-header-icon-hover: #fff;
+    --color-header-profile-settings-icon: #fff;
+    --color-header-mobilemenu-trigger-icon: #fff;
+    --color-header-divider: rgb(35 35 35 / 90%);
+    --color-header-input-background: rgb(0 0 0 / 100%);
+    --color-header-progressbar-line-gradient-start: #41efff;
+    --color-header-progressbar-line-gradient-end: #41efff;
+    --color-header-progressbar-underline: rgb(35 35 35 / 90%);
+    --color-body: rgb(2 2 2 / 94%);
+    --color-box-background: rgb(12 12 12 / 80%);
+    --color-box-background-alt: rgb(35 35 35 / 90%);
+    --color-box-over-box-background: #fff;
+    --color-box-over-box-light-background: #fff;
+    --color-box-highlight-background: #f7f7fb;
+    --color-box-hover-background: #f2f2f9;
+    --color-box-shadow: 0 0 40px 0 rgba(94, 92, 154, .06);
+    --color-overbox-shadow: 3px 5px 20px 0 rgba(94, 92, 154, .12);
+    --color-overbox-dark-shadow: 0 0 40px 0 rgba(94, 92, 154, .12);
+    --color-overbox-big-shadow: 3px 5px 40px 0 rgba(94, 92, 154, .1);
+    --color-text: #ffffff;
+    --color-text-alt: #8f91ac;
+    --color-text-alt-2: #adafca;
+    --color-icon: #adafca;
+    --color-icon-highlighted: #3e3f5e;
+    --color-border: #dedeea;
+    --color-divider: #eaeaf5;
+    --color-progressbar-line-gradient-start: #615dfa;
+    --color-progressbar-line-gradient-end: #41efff;
+    --color-progressbar-underline: #e7e8ee;
+    --color-avatar-rank-hexagon: #45437f;
+    --color-primary: #23d2e2;
+    --color-primary-hover: #1bc5d4;
+    --color-primary-light: #41efff;
+    --color-primary-dark: #00c7d9;
+    --color-primary-shadow: 4px 7px 12px 0 rgba(35, 210, 226, .2);
+    --color-secondary: #615dfa;
+    --color-secondary-hover: #5753e4;
+    --color-secondary-dark: #45437f;
+    --color-secondary-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+    --color-tertiary: #fd4350;
+    --color-tertiary-hover: #dd343f;
+    --color-tertiary-shadow: 4px 7px 12px 0 rgba(253, 67, 80, .2);
+    --color-loading-screen-background: #3e3f5e;
+
+}
+.clkyu{
+	position: absolute;margin-left: calc(50% - 50px);
+	height: 400px;
+    width: 1px;
+}
+.image_pk{
+	width: 150px;height: 150px;position: absolute;
+    margin-left: -150px;
+}.image_pk img{
+	width: 150px;height: 150px;
+}
+.image_pk h2{
+	    font-size: 50px;
+    /* width: auto; */
+    /* position: relative; */
+    /* float: left; */
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -110px;
+}
+ .loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999999999;
+}
+.ssdty{
+	padding-bottom: 100px; */
+    position: absolute;
+    /* padding-top: 150px; */
+    padding-bottom: 100px;
+    /* height: 183px; */
+    width: 100px;
+    margin-top: 150px;
+}
+
+			.sign_in_mk.primary {
+    background-color: #23d2e2;
+    box-shadow: var(--color-primary-shadow);
+}
+.shd{
+	padding-left: 100px;
+    padding-bottom: 200px;
+    position: absolute;
+    margin-left: 250px;
+}
+}
+.shd h2{
+	position: absolute;
+}
+.sign_in_mk {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #3e3f5e;
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    box-shadow: 3px 5px 10px 0 rgb(62 63 94 / 20%);
+    margin-top: 50px;
+   
+    margin-left: -100px;
+    position: absolute;
+    width: 300px;
+}
+			
+			@media(max-width: 1400px){
+				.shd{
+
+				}
+				.shd1{
+					margin-left: -90px;
+					
+				}
+				.shd2{
+					margin-top: 60px
+					
+				}
+
+			}
+
+
+			@media screen and (max-width: 73.5em){
+.shd1{
+					margin-left: -90px;
+					
+				}
+				.shd2{
+					margin-top: -20px
+					
+				}}
+
+				@media screen and (max-width: 41.125em){
+.shd1{
+					margin-left: 0;
+					
+				}
+				.shd2 {
+				    margin-left: calc(-50% - 20px);
+    position: absolute;
+    max-width: 80px;max-width: 80px !important;
+					
+				}
+				.shd{
+					text-align: center;
+				}
+				.sign_in_mk{
+					margin-left: calc(50% - 75px);
+				}
+
+				.clkyu {
+    position: absolute;
+    margin-left: calc(50% - 70px);
+    height: 400px;
+    width: 1px;
+}
+			}
+
+
+			@media screen and (max-width: 470px){
+
+				.image_pk img {
+    width: 100px;
+    height: 100px;
+}
+.image_pk h2 {
+    font-size: 40px;
+    /* width: auto; */
+    /* position: relative; */
+    /* float: left; */
+    
+    margin-left: 150px;
+    margin-top: -75px;
+}
+.clkyu {
+   
+    margin-left: calc(50% - 20px);
+    
+}
+.sign_in_mk {
+    margin-left: calc(50% - 133px);
+}
+.ssdty {
+   
+    margin-top: 120px;
+}
+			}
+
+
+			@media screen and (max-width: 361px){
+
+				.sign_in_mk{
+					margin-left: calc(50% - 90px);
+					width: 230px
+				}
+				.image_pk img {
+    width: 80px;
+    height: 80px;
+}
+.image_pk {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin-left: -100px;
+}
+.image_pk h2 {
+    font-size: 30px;
+    /* width: auto; */
+    /* position: relative; */
+    /* float: left; */
+    margin-left: 105px;
+    margin-top: -65px;
+}
+.clkyu {
+   
+    margin-left: calc(50% - 20px);
+    
+}
+
+.ssdty {
+   
+    margin-top: 100px;
+}
+
+			}
+			@media(max-width: 310px){
+				h2.iclu{
+					font-size: 3.7em;
+				}
+
+			}
+			@media screen and (max-width: 280px){
+
+				.sign_in_mk{
+					margin-left: calc(50% - 80px);
+					width: 200px
+				}
+			}
+		</style>
+		<script src="{% static 'js_main/modernizr.custom.js' %}"></script>
+	</head>
+	<body>
+		<div class="loader-wrapper" id="llo" style="position: fixed;display: block;">
+    <img src="{% static 'images/bab.png' %}" style="left: calc(50% - 48px);top: calc(50% - 48px);position: absolute;">
+</div>
+		<div class="container">
+			<div id="cbp-so-scroller" class="cbp-so-scroller">
+				<section class="cbp-so-section">
+					<article class="cbp-so-side cbp-so-side-left">
+						<h2 class="iclu">Перспективность</h2>
+						<p>Платформа для обмена видео, фото, музыки и книг<br>Монетизируй свои видео<br>
+Получай бонусы за просмотры видео<br>бонусы можно перевести в деньги или купить товар в магазине за те же бонусы
+</p>
+					</article>
+					<figure class="cbp-so-side cbp-so-side-right">
+						<img src="{% static 'images_main/1j (2).png' %}" alt="img01" style="border-radius: 20px">
+					</figure>
+				</section>
+				<section class="cbp-so-section">
+					<figure class="cbp-so-side cbp-so-side-left">
+						<img src="{% static 'images_main/2.png' %}" alt="img01">
+					</figure>
+					<article class="cbp-so-side cbp-so-side-right">
+						<h2 class="iclu">Музыка</h2>
+						<p>Слушай бесплатную музыку <br>
+							Создай плейлисты и поделись с друзями
+						</p>
+					</article>
+				</section>
+				<section class="cbp-so-section">
+					<article class="cbp-so-side cbp-so-side-left">
+						<h2 class="iclu">Шоппинг</h2>
+						<p>Купи/продай что хочешь за низкие цены
+
+						 </p>
+					</article>
+					<figure class="cbp-so-side cbp-so-side-right">
+						<img src="{% static 'images_main/3g.png' %}" alt="img01">
+					</figure>
+				</section>
+				<section class="cbp-so-section">
+					<figure class="cbp-so-side cbp-so-side-left">
+						<img src="{% static 'images_main/1 (1).png' %}" alt="img01">
+					</figure>
+					<article class="cbp-so-side cbp-so-side-right">
+						<h2 class="iclu">Облако</h2>
+						<p>Облоко поможет вам сохронать место на телефоне<br> 
+							1 Gb бесплатного место на облаке , затем можете добавить за очень низкие цены 
+						</p>
+					</article>
+				</section>
+				<section class="cbp-so-section">
+					<figure class="cbp-so-side cbp-so-side-left">
+						<img src="{% static 'images_main/1.png' %}" alt="img01">
+					</figure>
+					<article class="cbp-so-side cbp-so-side-right">
+						<h2 class="iclu">Книги</h2>
+						<p>Скачай любую книгу бесплатно<br> 
+							добавь книги  сколько угодно
+						</p>
+					</article>
+				</section>
+				<!--<section class="cbp-so-section">
+					<article class="cbp-so-side cbp-so-side-left">
+						<h2>Pudding lollipop</h2>
+						<p>Chupa chups pudding lollipop gummi bears gummies cupcake pie. Cookie cotton candy caramels. Oat cake dessert applicake. Sweet roll tiramisu sweet roll sweet roll.</p>
+					</article>
+					<figure class="cbp-so-side cbp-so-side-right">
+						<img src="images/5.png" alt="img01">
+					</figure>
+				</section>
+				<section class="cbp-so-section">
+					<figure class="cbp-so-side cbp-so-side-left shd1" >
+						<img src="images/bab (1).png" alt="img01 "  class="shd2">
+					</figure>
+					<article class="cbp-so-side cbp-so-side-right shd">
+						<h2>SoocialFly
+							
+
+						</h2>
+						<div class="sign_in_mk primary">Sign_in</div>
+
+						
+					</article>
+				</section>-->
+
+				<div class="clkyu">
+					<div class="image_pk">
+						<img src="{% static 'images_main/bab (1).png' %}" alt="img01 "  >
+												<h2>SoocialFly
+							
+
+						</h2>
+					</div>
+					<div class="ssdty">
+
+						<a href="{% url 'accounts:sign_up' %}"><div class="sign_in_mk primary">Sign_up</div></a>
+					</div>
+					
+
+				</div>
+			</div>
+		</div>
+		 <script src='{% static "css/jquery.min.js" %}'></script>
+		<script src="{% static 'js_main/classie.js' %}"></script>
+		<script src="{% static 'js_main/cbpScroller.js' %}"></script>
+		<script>
+			new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+			 $(window).on("load",function(){
+    document.getElementById("llo").style.display="none";
+
+});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% for list in st_list %}
+	<p>{{ list.users.count }}</p>
+	<img src="{{ list.avatar_a.url }}" style="width: 100px;
+	height: 100px;">
+
+
+
+
+	{% endfor %}
+
+</body>
+</html>

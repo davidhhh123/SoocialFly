@@ -1,0 +1,1181 @@
+{% extends "indexchat.html" %}
+{% load  static %}
+
+
+<head>
+{% block style %}
+
+<style>
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+.actor{
+  position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+}
+.rewuve{
+   position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+
+}
+.sqdOP{
+    font-size: 15px;
+}
+.name{
+  position: absolute;
+  color: white;
+  padding-top: 110px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  
+    word-wrap: break-word;
+
+}
+.prof{
+  position: absolute;
+  color: #D22A2A;
+  padding-top: 160px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  
+  font-size: 13px;
+  
+    word-wrap: break-word;
+
+
+}
+.carousel {
+  width: 93%;
+  left: 3%;
+
+
+}
+
+.carousel-cell {
+  width: 100px;
+  height: 250px;
+  margin-right: 30px;
+  background: transparent;
+  border-radius: 180px;
+  
+}
+
+
+.carousel-cell.is-selected {
+  background: transparent;
+}
+
+/* cell number */
+
+</style>
+  <style type="text/css">
+    body{
+      background: #FAFAFA;
+    }
+    .footer{
+      background: #0E0E0E;
+      border-top: 1px solid rgba(87, 83, 103, 0.1);
+
+
+    }
+    .home{
+      height: 300%;
+      width: 75%;
+      left: 12.5%;
+      top: 5%;
+      background: #0E0E0E;
+      box-shadow: 0 3px 1px 0 rgba(0,0,0,0.14),0 0px 3px -2px rgba(0,0,0,0.12),0 -1px 5px 0 rgba(0,0,0,0.2);
+
+
+
+
+
+    }
+    .header{
+      background: #F9F9F9;
+    }
+    .img{
+      position: absolute;
+      width: 200px;
+      height: 288px;
+      left: 0%;
+      top: 0%;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+          box-sizing: inherit;
+
+
+
+
+
+
+
+    }
+    .span{
+      
+      width: 100%;
+      height: 50px;
+      margin-left: 28%;
+      padding-top: -50px;
+
+      
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+      z-index: 1;
+      float: left;
+
+    }
+    .span1{
+      width: 100%;
+      
+      margin-left: 29%;
+      
+      left: 213px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    .span2{
+      width: 100%;
+      
+      margin-left: 35%;
+      margin-top: -24px;
+      left: 270px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    @media (max-width: 969px){
+      .span2{
+
+      margin-left: 37%;
+      
+    }
+    .span{
+      margin-top: -5px;
+    }
+
+    
+
+  }
+    @media (max-width: 709px){
+      .span2{
+
+      margin-left: 39%;
+      }
+      .span{
+      margin-top: -10px;
+      font-size: 28px;
+      height: 43px;
+    }
+
+
+  }
+    @media (max-width: 595px){
+      .span2{
+
+      margin-left: 41%;
+    }
+    .span{
+      margin-top: -15px;
+      font-size: 25px;
+      height: 38px;
+    }
+  }
+    @media (max-width: 500px){
+      .span2{
+
+      margin-left: 44%;
+    }
+    .span{
+      margin-top: -20px;
+    }
+
+  }
+    @media (max-width: 400px){
+      .span2{
+
+      margin-left: 48%;
+    }}
+    @media (max-width: 290px){
+      .span2{
+
+      margin-left: 51%;
+    }}
+
+
+
+
+    }
+    .images{
+      position: absolute;
+      
+      width: 100%;
+      
+      top: 450px;
+    }
+    .images img{
+      width: 100%;
+    }
+    .b22{
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      left: 500px;
+      top: 200px;
+      
+    }
+    .header__dow{
+      
+      
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow1{
+      
+      margin-left: 25px;
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow2{
+      margin-left: 25px; 
+      
+      
+
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .hidden{
+      margin-top: 12px;
+      margin-left: 13px;
+      color: #fd6060;
+
+      
+      
+      
+
+    }
+     .f46{
+   
+    display: none;
+  }
+
+
+    .hidden .fa{
+      font-size: 25px;
+    }
+    
+    #fa{
+      margin-left: 5px;
+
+    }
+    .bl{
+      position: relative;
+      margin-top: -8%;
+      
+      background: #212121;
+      width: 94%;
+      left: 3%;
+
+      height: 1.5px;
+
+    }
+    .bl1{
+      position: relative;
+      margin-top: 5%;
+      
+      background: #212121;
+      width: 99%;
+      left: 0%;
+
+      height: 1.5px;
+
+    }
+    #bl1{
+      width: 236%;
+      height: 1px;
+
+    }
+
+@media (max-width: 961px){
+  .article{
+    right: 8%;
+  }
+  .f45{
+    width: 21%;
+  }
+}
+.addcomff{
+  position: absolute;
+  width: 100%;
+  margin-top: 810px;
+  overflow: hidden;
+}
+.Ypffh {
+    
+    border: 0;
+    color: #262626;
+    color: black;
+    position: relative;
+   
+    font-size: inherit;
+    height: 38px;
+    width: 77%;
+    background: transparent;
+    max-height: 50px;
+    outline: 0;
+    padding: 0;
+    resize: none;
+    margin-left: 5px;
+    line-height: 1.35em;
+    
+    overflow: auto; /* или auto */
+
+}
+
+
+
+@media (max-width: 900px){
+  .article{
+   
+    width: 590px;
+  }
+  
+  .sqdOP{
+    margin-left: 461px
+
+  }
+  .w1{
+    width: 100%;
+
+  }
+}
+@media (max-width: 865px){
+  .article{
+    right: 4%;
+    width: 590px;
+  }
+  .f45{
+    width: 22%;
+  }
+  
+}
+@media (max-width: 820px){
+  .article{
+    right: 4%;
+    width: 560px;
+  }
+  .f45{
+    width: 22%;
+  }
+  .sqdOP{
+    margin-left: 431px
+
+  }
+  .w1{
+    width: 100%;
+    height: 520px
+
+  }
+  .Ypffh{
+    width: 75%;
+  }
+}
+@media (max-width: 785px){
+  .article{
+    right: 4%;
+    width: 540px;
+  }
+  .f45{
+    width: 22%;
+  }
+  .sqdOP{
+    margin-left: 411px
+
+  }
+  .w1{
+    width: 100%;
+    height: 500px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -25px; 
+  }
+  .Ypffh{
+    width: 74%;
+  }
+  .spoiler_links{
+    margin-top: 632px;
+  }
+}
+@media (max-width: 760px){
+  .article{
+    right: 4%;
+    width: 510px;
+  }
+  .f45{
+    width: 22%;
+  }
+  .sqdOP{
+    margin-left: 381px
+
+  }
+  .w1{
+    width: 100%;
+    height: 470px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -55px; 
+  }
+  .Ypffh{
+    width: 73%;
+  }
+  .spoiler_links{
+    margin-top: 601px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 713px){
+  .article{
+    right: 10%;
+    width: 550px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+   .f46{
+   
+    display: block;
+  }
+  .sqdOP{
+    margin-left: 421px
+
+  }
+  .w1{
+    width: 100%;
+    height: 510px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -15px; 
+  }
+   .Ypffh{
+    width: 73%;
+  }
+  .spoiler_links{
+    margin-top: 642px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 9%;
+    width: 550px;
+  }}
+
+
+@media (max-width: 658px){
+ .article{
+    right: 9%;
+    width: 520px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+ 
+  .sqdOP{
+    margin-left: 391px
+
+  }
+  .w1{
+    width: 100%;
+    height: 480px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -45px; 
+  }
+  .Ypffh{
+    width: 72%;
+  }
+  .spoiler_links{
+    margin-top: 612px;
+     margin-left: 255px;
+  }
+  .f4h5aa{
+      height: 810px;
+  }
+}
+@media (max-width: 628px){
+ .article{
+    right: 8%;
+    width: 490px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 361px
+
+  }
+  .w1{
+    width: 100%;
+    height: 450px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -75px; 
+  }
+  .Ypffh{
+    width: 70%;
+  }
+  .spoiler_links{
+    margin-top: 584px;
+     margin-left: 255px;
+  }
+   .f4h5aa{
+      height: 790px;
+  }
+}
+
+@media (max-width: 588px){
+ .article{
+    right: 9%;
+    width: 460px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 331px
+
+  }
+  .w1{
+    width: 100%;
+    height: 420px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -105px; 
+  }
+  .Ypffh{
+    width: 69%;
+  }
+   .spoiler_links{
+    margin-top: 554px;
+     margin-left: 243px;
+  }
+   .f4h5aa{
+      height: 750px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 8%;
+    
+  }}
+
+@media (max-width: 544px){
+ .article{
+    right: 8%;
+    width: 440px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 311px
+
+  }
+  .w1{
+    width: 100%;
+    height: 400px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -125px; 
+  }
+  .Ypffh{
+    width: 68%;
+  }
+  .spoiler_links{
+    margin-top: 538px;
+     margin-left: 243px;
+  }
+  .f4h5aa{
+      height: 725px;
+  }
+}
+@media (max-width: 524px){
+ .article{
+    right: 8%;
+    width: 420px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 291px
+
+  }
+  .w1{
+    width: 100%;
+    height: 380px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -145px; 
+  }
+  .Ypffh{
+    width: 67%;
+  }
+  .spoiler_links{
+    margin-top: 538px;
+     margin-left: 260px;
+  }
+  .f4h5aa{
+      height: 710px;
+  }
+  .da4{
+      margin-top: 5px;
+      margin-left: 0px;
+      width: 60%;
+  }
+  .commments {
+    
+    margin-top: 710px;
+   
+}
+
+}
+@media (max-width: 500px){
+ .article{
+    right: 43px;
+    width: 400px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 271px
+
+  }
+  .w1{
+    width: 100%;
+    height: 360px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -165px; 
+  }
+   .Ypffh{
+    width: 65%;
+  }
+  .spoiler_links{
+   margin-top: 520px;
+     margin-left: 260px;
+  }
+   .f4h5aa{
+      height: 690px;
+  }
+}
+@media (max-width: 484px){
+ .article{
+    right: 45px;
+    width: 380px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 251px
+
+  }
+  .w1{
+    width: 100%;
+    height: 340px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -185px; 
+  }
+  .Ypffh{
+    width: 61%;
+  }
+  .spoiler_links{
+    margin-top: 500px;
+     margin-left: 263px;
+  }
+   .f4h5aa{
+      height: 660px;
+  }
+}
+@media (max-width: 464px){
+ .article{
+    right: 45px;
+    width: 360px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 320px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -205px; 
+  }
+  .Ypffh{
+    width: 61%;
+  }
+  .spoiler_links{
+    margin-top: 480px;
+     margin-left: 225px;
+  }
+   .f4h5aa{
+      height: 640px;
+  }
+  
+
+}
+@media (max-width: 452px){
+ .article{
+    right: 50px;
+    width: 330px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 290px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -235px; 
+  }
+  .spojhg{
+    width: 200px;
+  }
+  .Ypffh{
+    width: 61.5%;
+  }
+  .spoiler_links{
+    margin-top: 480px;
+     margin-left: 223px;
+  }
+    .f4h5aa{
+      height: 620px;
+  }
+}
+@media (max-width: 452px){
+ .article{
+    right: 50px;
+    width: 330px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 290px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -235px; 
+  }
+  .spojhg{
+    width: 200px;
+  }
+  .Ypffh{
+    width: 59%;
+  }
+  .spoiler_links{
+    margin-top: 450px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 422px){
+ .article{
+    right: 40px;
+   
+  }}
+@media (max-width: 408px){
+ .article{
+    right: 35px;
+   
+  }}
+@media (max-width: 395px){
+ .article{
+    right: 35px;
+    width: 300px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 260px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -265px; 
+  }
+
+}
+@media (max-width: 395px){
+ .article{
+    right: 45px;
+    width: 270px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 230px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -295px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 98%;
+    height: 30px;
+  }
+  .spoiler_links{
+    margin-top: 390px;
+     margin-left: 182px;
+  }
+   .f4h5aa{
+      height: 590px;
+  }
+}
+@media (max-width: 355px){
+ .article{
+    right: 35px;
+   
+  }}
+
+@media (max-width: 336px){
+ .article{
+    right: 30px;
+   
+  }}
+
+@media (max-width: 328px){
+ .article{
+    right: 35px;
+    width: 250px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 181px
+
+  }
+  .w1{
+    width: 100%;
+    height: 220px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -315px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 98%;
+  }
+  .spoiler_links{
+    margin-top: 370px;
+     margin-left: 180px;
+  }
+}
+@media (max-width: 315px){
+ .article{
+    right: 30px;
+   
+  }}
+
+
+@media (max-width: 305px){
+ .article{
+    right: 25px;
+   
+  }}
+@media (max-width: 300px){
+ .article{
+    right: 22px;
+   
+  }}
+@media (max-width: 294px){
+ .article{
+    right: 20px;
+   
+  }
+  .hfghtre4i{
+    font-size: 30px;
+  }
+  .hfghtre4i1 img{
+    width: 30px;
+    height: 30px;
+  }
+  .s26d9sf54{
+    margin-top: -16px;
+  }
+  .s26d9sf54 i{
+    font-size: 34px;
+  }
+  .s26d9sf544{
+    font-size: 30px;
+  }
+ 
+}
+@media (max-width: 288px){
+ .article{
+    right: 17px;
+   
+  }}
+@media (max-width: 282px){
+ .article{
+    right: 15px;
+   
+  }}
+@media (max-width: 276px){
+ .article{
+    right: 13px;
+   
+  }}
+#dropdownMenuCatalog{
+  color: #F94133;
+
+  
+}
+#dropdownMenuHome{
+  color: #F94133;
+
+}
+@media (min-width: 1200px){
+.header__sign-in span{
+  color: black;
+}
+.header__nav-link{
+  line-height: 20px;
+}
+
+}
+.spoiler_links{
+   background: transparent;
+}
+
+
+</style>
+<link rel="stylesheet" type="text/css" href="style15.css">
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+ 
+
+</head>
+<body>
+	{% block body %}
+
+	<div class="f45">
+  <div class="title">News<span class="s26d9sf"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span></div>
+  <div class="title">Market<span class="s26d9sf"><img src="shopping-bag.png"></span></div>
+  <div class="title">Posts<span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-infinite"></i></span></div>
+  <div class="title">Profile<span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-contact"></i></span></div>
+  <div class="s50fgh"><span class="s26d9sf4"><i class="icon ion-ios-add-circle-outline"></i></span></div>
+  
+</div>
+<div class="f46">
+  <span class="hfghtre4i"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+   <span class="hfghtre4i1"><img src="shopping-bag.png"></span>
+   <span class="s26d9sf54" ><i class="icon ion-ios-infinite"></i></span>
+   <span class="s26d9sf544"><i class="icon ion-ios-contact"></i></span>
+   <span class="s26d9sf544f"><i class="icon ion-ios-add-circle-outline"></i></span>
+
+  
+</div>
+
+
+<div class="article">
+  <div class="d4558">
+     <a  class="spoiler_links" id="dd">ещё</a>
+  <div class="f4h5aa" id="ffff44">
+    <header class="h458aad">
+      <div class="dgghh54"></div>
+      <div class="f44456s"><a href="{% url 'accounts:profile_s' profile.pk %}">{{ album.first_name }}</a></div>
+    </header>
+    <img src="{{ album.avatar_p.url }}" class="w1">
+    <div class="fjgiiir">
+    <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+    <div class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i></div>
+     <div class="shere"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></div>
+      <div class="money"><i class="fa fa-usd" aria-hidden="true"></i></div>
+
+      <div class="bfgg55"><span>Lovid:</span><a href="#">{{ album.likes.count }}</a><span class="f456">и другим</span></div>
+       <div class="skkgfh"><div class="gf">Namedgdfghfh:</div><div class="da4" tabindex="0" id="da5"> gfdokhgpokjgpohfgjgfdghgfhjghjkhk561651562015616501652001651968549415641564154564413151566546846465165fddgfgfdhЯ люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!Я люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!</div></div>
+       <div class="commments">
+        <a href="#" class="crs778sj">all comments</a>
+
+
+        <div class="commeftht">
+        	{% for song in comments %}
+
+
+         	 <div class="sdfgth"><a href="#">{{ song.profile }}</a>&nbsp;<span class="spojhg">{{ song.comment_title }}</span></div>
+
+         	{% endfor %} 
+          
+
+          
+        </div>
+
+       </div>
+       <div class="line"></div>
+       <form method="POST">
+        <div class="addcomff"><textarea aria-label="Добавьте комментарий..." placeholder=" Добавьте комментарий..." class="Ypffh"  autocorrect="off"></textarea><button class="sqdOP yWX7d    y3zKF     " disabled="" type="submit">Опубликовать</button></div></form></div>
+     
+    
+
+  </div>
+  </div>
+
+
+  </div>
+  {% endblock %}
+	
+
+
+
+</body>

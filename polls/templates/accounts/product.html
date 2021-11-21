@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% for po in post %}
+	<p>{{ po.name_pr }}</p>
+<img src="{{ po.logo_pr.url }}" style="width: 100px;height: 100px;">
+<div class="prise">prise<span>{{ po.prise }}$</span></div>
+
+
+	{% endfor %}
+
+</body>
+</html>

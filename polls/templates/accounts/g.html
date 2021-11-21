@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% load  static %}
+
+{% block title %}Profile | {{ user }} {{ super }}{% endblock %}
+
+{% block body %}
+<div>dddd</div>
+
+{% for f in view %}
+    <div>{{ f }}</div>
+
+
+
+{% endfor %}
+
+{% endblock %}
+ 
+

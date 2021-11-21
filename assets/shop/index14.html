@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script type="text/javascript">
+		$(window).resize(function(){
+			alert('dsafd');
+		});
+		function isPrime(element, index, array) {
+  var start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+    }
+  }
+  return element > 1;
+}
+
+ // undefined, не найдено
+console.log([4, 5, 8, 12].find(isPrime)); 
+		
+	</script>
+
+</body>
+</html>

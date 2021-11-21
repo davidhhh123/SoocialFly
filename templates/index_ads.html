@@ -1,0 +1,1855 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/bab (1).ico' %}" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>NetLife</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style166.css' %}">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  
+
+  
+
+  <link rel="stylesheet" href="{% static 'css/default-skin.css' %}">
+  <style type="text/css">
+
+  </style>
+  <link rel="stylesheet" href="{% static 'css/main6.css' %}">
+<link rel='stylesheet' href="{% static 'css/flickity13.css' %}">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="{% static 'css/swiper-bundle.min_c.css' %}">
+
+
+
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+<style type="text/css">
+  @media (min-width: 1200px){
+.header__nav-link {
+    line-height: 20px;font-weight: 700;
+    font-size: 14px;
+}}
+@media(min-width: 1199px){
+  .nav_o:nth-child(1){
+    display: none;
+  }
+}
+.nav_p {
+    display: none;
+}
+   .loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999999999;
+}
+.loader22 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+                         /******** <- Remove this line *********/
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+
+  </style>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style166.css' %}">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap1-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plyr.css' %}">
+  <link rel="stylesheet" href="{% static 'css/photoswipe.css' %}">
+  <link rel="stylesheet" href="{% static 'css/default-skin.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main8.css' %}">
+  <link rel="stylesheet" href="{% static 'css/flickity.css' %}">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/flickity1.css' %}">
+  <style type="text/css">
+  @media (min-width: 1200px){
+.header__nav-link {
+    line-height: 20px;
+}}
+
+.nav_p {
+    display: none;
+}
+   :root {
+  --custom-width: {{ profile.lavel_dr_s  }}%;
+}
+.nav_p{
+  display: none;
+}
+.iconnn{
+  margin-left: -90px;
+  margin-top: 20px;
+  font-size: 14px;
+  
+
+}
+.iconnn1{
+  margin-left: -90px;
+  margin-top: 7px;
+  font-size: 14px;
+  
+
+
+}
+#Capa_1ewtt {
+    width: 15px;
+    height: 15px;
+    fill: #e64033;
+    margin-left: 5px;
+    margin-top: 1px;
+    position: absolute;
+    display: inline-block;
+}
+.f22gt4 {
+    display: none;
+}
+
+@media (max-width: 400px){
+.f22gt4, .f22gt4 span {
+    display: block;
+}}
+
+.fty{
+  color: #F44336;
+  font-size: 24px;
+  position: absolute;
+   margin-top: -20px;
+  margin-left: 75px;
+}
+.fly1{
+  color: #F44336;
+  font-size: 24px;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 75px;
+}
+#loia {
+    width: 70px;
+    height: 70px;
+}.header__logo img.a26 {
+    display: none;
+}
+.iconnn span{
+
+}
+#money_app0{
+  font-size: 16px;
+  color: #40a28c;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      line-height: 40px;
+
+  margin-top: 30px;
+  margin-left: -90px;
+}
+#lavel{
+  
+  
+  margin-top: 20px;
+  font-size: 14px;
+  
+
+
+  
+}
+.lavel{
+  
+  
+  background: #f44336;
+  padding-top: 15px;
+}
+
+
+  .lavel{
+  width: calc(var(--custom-width) / {{ profile.total_lavel_b  }}); 
+}
+.haraai93{
+  
+  width: 120px;
+  height: 114px;
+  background: #0a0a0a;
+  position: fixed;
+  top: 70px;
+  padding-left: 100px;
+  z-index: 10000;
+  margin-left: -100px;
+  display: none;
+
+   
+
+}
+ @media(min-width: 1400px){
+      .header__logo img {
+    width: 100%;
+    max-width: 125px;
+    height: 70px;
+    display: block;
+    margin-left: -150px;
+    position: absolute;
+}
+    }
+     @media(max-width: 1400px){
+      .header__logo img {
+    width: 100%;
+    max-width: 125px;
+    height: 70px;
+    display: block;
+    margin-left: 0px;
+    position: absolute;
+}
+    }
+
+    @media(max-width: 1300px){
+   .header__logo img.a25{
+
+
+    margin-left: -100px;
+  }
+}
+@media(max-width: 1225px){
+   .header__logo img.a25{
+
+    margin-left: -100px;
+  }
+}
+@media(max-width: 1135px){
+   .header__logo img.a25{
+
+
+    margin-left: -150px;
+  }
+}
+@media(max-width: 1050px){
+   .header__logo img.a25{
+
+
+    margin-left: -30px;
+  }
+}
+@media(max-width: 950px){
+   .header__logo img.a25{
+
+
+    margin-left: -30px;
+  }
+}
+@media(max-width: 806px){
+   .header__logo img.a25{
+
+    margin-left: -30px;
+  }
+}
+@media(max-width: 700px){
+   .header__logo img.a25{
+
+
+    margin-left: -30px;
+  }
+}
+@media(max-width: 657px){
+   .header__logo img.a25{
+
+
+   margin-left: -30px;
+  }
+}
+
+@media(max-width: 575px){
+   .header__logo img.a25{
+
+
+    margin-left: -30px;
+  }
+}
+
+@media(max-width: 550px){
+   .header__logo img.a25{
+
+
+    margin-left: -30px;
+  }
+}
+@media(max-width: 491px){
+   .header__logo img.a25{
+
+
+    margin-left: -30px;
+  }
+}
+@media(max-width: 457px){
+   .header__logo img.a25{
+
+
+    margin-left: -30px;
+  }
+}
+
+@media(max-width: 410px){
+   .header__logo img.a25{
+
+
+    margin-left: -30px;
+  }
+}
+@media(max-width: 400px){
+  .header__btn{
+    display: none;
+  }
+
+  .header__lang{
+    left: 80px;
+  }
+  .header__search-btn{
+    position: relative;
+    left: 80px;
+  }
+  .header__sign-in{
+    position: absolute;
+    left: -20px;
+
+  }
+   .header__logo img.a25{
+    display: block;
+
+    margin-left: calc(50%  + 48px)
+  }
+  .haraai93{
+    left: 0px;
+    height: calc(100vh - 80px);
+    margin-left: 0;
+    width: 100%;
+
+  }
+}
+@media(max-width: 375px){
+  .header__auth{
+    margin-right: 70px;
+  }
+}
+@media(max-width: 362px){
+  .header__logo img.a25{
+    display: none;
+
+  }
+  .header__logo img.a26{
+    display: block;
+    max-width: 65px;height: 65px;
+    margin-left: calc(100% - 100px);
+  }
+}
+@media(max-width: 353px){
+  .container1{
+    width: 100%;
+
+  }
+
+.story_view_ex{
+  width: 100%;
+}
+
+#loia{
+  width: 60px;
+  height: 60px;
+}
+}
+
+
+  </style>
+
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+  <title>HotFlix – Online Movies, TV Shows & Cinema HTML Template</title>
+  {% block style %}
+  {% endblock %}
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  window.console = window.console || {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+
+<div class="loader-wrapper" id="llo" style="position: fixed;display: block;">
+    <img src="{% static 'images/bab.png' %}" style="left: calc(50% - 48px);top: calc(50% - 48px);position: absolute;">
+</div>
+
+
+
+<header class="header" id="btn-id">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__content">
+            <!-- header logo -->
+            <a href="" class="header__logo">
+              <img src="{% static 'images/bab.png' %}" alt="" class="a25" id="loia" >
+              <img src="{% static 'images/bab.png' %}" alt="" class="a26" id="loia" >
+
+            </a>
+            <!-- end header logo -->
+
+            <!-- header nav -->
+            <ul class="header__nav">
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+                  <li><a href="index.html">Home slideshow bg</a></li>
+                  <li><a href="index2.html">Home static bg</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link nav_o" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Music</a>
+                <a class=" header__nav-link nav_p" href="{% url 'accounts:tasks' %}" id="" ><i class="fa fa-star" aria-hidden="true"></i><span style="margin-left: 10px;">{{ profile.lavel }}</span>
+                 
+
+
+                </a>
+                <a class="dropdown-toggle header__nav-link nav_o" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Music <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1ewtt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+   viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M472.184,4.347c-3.631-3.209-8.441-4.75-13.261-4.25l-307.2,34.133c-8.647,0.957-15.19,8.265-15.189,16.964V355.34
+      c-15.468-9.256-33.174-14.102-51.2-14.012C38.281,341.329,0,371.946,0,409.595s38.281,68.267,85.333,68.267
+      s85.333-30.601,85.333-68.267V151.889l273.067-30.413v199.68c-15.473-9.238-33.179-14.066-51.2-13.961
+      c-47.053,0-85.333,30.618-85.333,68.267c0,37.649,38.281,68.267,85.333,68.267s85.333-30.601,85.333-68.267v-358.4
+      C477.866,12.208,475.8,7.584,472.184,4.347z"/>
+  </g>
+</g>
+
+</svg>
+</a>
+                <a class=" header__nav-link nav_p" href="#" id="" style="border: 1px solid #f44336;margin-top: 10px;border-radius: 5px;height: 17px;">
+                  
+                  <div class="lavel"></div>
+
+
+                </a>
+
+
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                  <li><a href="catalog.html">Catalog</a></li>
+                  <li><a href="details.html">Movie Detail</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Movies <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1ewtt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M28.457,0v512h455.087V0H28.457z M91.333,482H58.457v-31.936h32.877V482z M91.333,420.064H58.457v-30.003h32.877V420.064z
+       M91.333,360.061H58.457v-30.004h32.877V360.061z M91.333,300.057H58.457v-30.004h32.877V300.057z M91.333,240.053H58.457v-30.004
+      h32.877V240.053z M91.333,180.048H58.457v-30.003h32.877V180.048z M91.333,120.045H58.457V90.042h32.877V120.045z M91.333,60.042
+      H58.457V30h32.877V60.042z M390.666,482H121.333V270.053h269.332V482z M390.666,240.053H121.333V30h269.332V240.053z M453.542,482
+      h-32.877v-31.936h32.877V482z M453.542,420.064h-32.877v-30.003h0h32.877V420.064z M453.542,360.061h-32.877v-30.004h32.877
+      V360.061z M453.542,300.057h-32.877v-30.004h32.877V300.057z M453.542,240.053h-32.877v-30.004h32.877V240.053z M453.542,180.049
+      h-32.877v-30.003h32.877V180.049z M453.542,120.046h-32.877v-0.001V90.042h32.877V120.046z M453.543,60.042h-32.877V30h32.877
+      V60.042z"/>
+  </g>
+</g>
+
+</svg>
+</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="faq.html" class="header__nav-link">Help</a>
+              </li>
+
+              <!-- dropdown -->
+              <li class="dropdown header__nav-item">
+                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                  <li><a href="about.html" id="money_appp">{{  profile.mymoney|stringformat:".2f" }} $</a></li>
+
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="{% url 'accounts:tasks' %}" ><i class="fa fa-star" aria-hidden="true"></i><span style="margin-left: 10px;">{{ profile.lavel }}</span></a></li>
+                  <li><a href="#" style="border: 1px solid #f44336;border-radius: 5px;"><div class="lavel" style="border-radius: 5px;"></div></a></li>
+                  <li><a href="#">Forgot password</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Contacts</a></li>
+                  <li><a href="#">404 Page</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+            </ul>
+            <!-- end header nav -->
+
+            <!-- header auth -->
+            <div class="header__auth">
+              <div action="#" class="header__search">
+                 <div id="myUL">
+
+
+</div>
+
+                <input class="header__search-input" type="text" placeholder="Search..."    id="search" autocomplete="off">
+
+
+
+
+
+
+                 <button class="header__search-button" type="button" id="oklisearch">
+                  <i class="icon ion-ios-search"></i>
+                </button>
+                <div class="lds-ring header__search-button" id="loader_ppojhd"><div></div><div></div><div></div><div></div></div>
+                <button class="header__search-close" type="button">
+                  <i class="icon ion-md-close"></i>
+                </button>
+
+
+
+              </div>
+
+              <button class="header__search-btn" type="button">
+                <i class="icon ion-ios-search"></i>
+              </button>
+
+
+
+
+              <!-- dropdown -->
+              <div class="dropdown header__lang">
+                 <a class="dropdown-toggle header__nav-link" href="/messager/" role="button" id="dropdownMenuLang" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#32b0ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#32b0ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                  {% if  mes_len != 0 %}
+                  <div class="num_mess" style="width: 15px;height: 15px;
+                  background: red; position: absolute;margin-top: -33px;margin-left: 25px;border-radius: 180px;"><p style="text-align: center;line-height: 13px;" id="i9ouyyt">{{ mes_len }}</p></div>
+
+                  {% else %}
+                  <div class="num_mess" id="er0okj" style="width: 15px;height: 15px;
+                  background: red; position: absolute;margin-top: -33px;margin-left: 25px;border-radius: 180px;display: none;"><p style="text-align: center;line-height: 13px; " id="i9ouyyt">1</p></div>
+                  {% endif %}
+
+                 </a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
+                </ul>
+              </div>
+              <!-- end dropdown -->
+              {% if l.is_authenticated %}
+              <div  class="header__sign-in" style="height: 40px;width: 40px;">
+                {% if  l.profile.avatar.url != None %}
+                <img src="{{ l.profile.avatar.url }}" style="width: 100%;height: 100%;border-radius: 180px;">
+                {% else %}
+                <img src="{% static 'images/user_no_photo_300x300.png' %}" style="width: 100%;height: 100%;border-radius: 180px;">
+
+                {% endif %}
+
+               <div class="haraai93" >
+                <a href="about.html" id="money_app0">
+
+
+
+                {{  profile.mymoney|stringformat:".2f" }} $</a>
+
+                
+                  <a href="{% url 'accounts:tasks' %}" class="f22gt4">
+                    <div class="iconnn1" style="padding-bottom: 10px;margin-top: -3px;">
+                  <i class="fa fa-star" aria-hidden="true" style="display: block;"></i><span style="margin-left: 40px;margin-top: -18px;
+    ">{{ profile.lavel }}</span>
+
+                </div></a>
+
+
+                    <div class="iconnn1 f22gt4" style="padding-bottom: 10px;margin-top: 5px;">
+                  <a href="#" style="border: 1px solid #f44336;border-radius: 5px;display: block;"><div class="lavel" style="border-radius: 5px;"></div></a>
+
+                </div>
+
+
+
+                 <a href="{% url 'accounts:edit_profile' %}"><div class="iconnn1" >
+                  <span style="display: block;">Settings<span style="display: block;">
+                  <i class="fa fa-cog fly1" aria-hidden="true" style="display: block;"></i>
+
+                </div></a>
+                <a href="{% url 'accounts:sign_out' %}"><div class="iconnn">
+                  <span style="display: block;">Sign_out<span style="display: block;">
+                  <i class="fa fa-sign-out fty" aria-hidden="true" style="display: block;"></i>
+
+                </div></a>
+
+
+
+              </div>
+
+
+              </div>
+
+              {% else %}
+
+
+              <a href="signin.html" class="header__sign-in">
+                <i class="icon ion-ios-log-in"></i>
+                <span>sign in</span>
+              </a>
+              {% endif %}
+
+            </div>
+            <!-- end header auth -->
+
+            <!-- header menu btn -->
+            <button class="header__btn" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- end header menu btn -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+   <div class="f45">
+  <a href="{% url 'accounts:post_home' %}"><div class="title"><span class="s26d9sf" ><i aria-hidden="true"><svg id="Layer_1" style="fill: #F44336" enable-background="new 0 0 512 512" height="26px" viewBox="0 0 512 512" width="26px" xmlns="http://www.w3.org/2000/svg"><g><path d="m426 495.983h-340c-25.364 0-46-20.635-46-46v-242.02c0-8.836 7.163-16 16-16s16 7.164 16 16v242.02c0 7.72 6.28 14 14 14h340c7.72 0 14-6.28 14-14v-242.02c0-8.836 7.163-16 16-16s16 7.164 16 16v242.02c0 25.364-20.635 46-46 46z"/><path d="m496 263.958c-4.095 0-8.189-1.562-11.313-4.687l-198.989-198.987c-16.375-16.376-43.02-16.376-59.396 0l-198.988 198.988c-6.248 6.249-16.379 6.249-22.627 0-6.249-6.248-6.249-16.379 0-22.627l198.988-198.989c28.852-28.852 75.799-28.852 104.65 0l198.988 198.988c6.249 6.249 6.249 16.379 0 22.627-3.123 3.125-7.218 4.687-11.313 4.687z"/><path d="m320 495.983h-128c-8.837 0-16-7.164-16-16v-142c0-27.57 22.43-50 50-50h60c27.57 0 50 22.43 50 50v142c0 8.836-7.163 16-16 16zm-112-32h96v-126c0-9.925-8.075-18-18-18h-60c-9.925 0-18 8.075-18 18z"/></g></svg></i></span></div></a>
+  <a href="{% url 'accounts:shop_p' %}"> <div class="title"><span class="s26d9sf"><img src="{% static 'css/shopping-bag.png' %}"></span></div></a>
+  <a href="{% url 'accounts:post_home_all' %}"><div class="title"><span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-infinite"></i></span></div></a>
+   <a href="{% url 'accounts:my_profile' %}"><div class="title"><span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-contact"></i></span></div></a>
+
+
+  <a href="{% url 'accounts:create_song2' profile.pk %}"><div class="s50fgh"><span class="s26d9sf4"><i class="icon ion-ios-add-circle-outline"></i></span></div></a>
+  
+</div>
+
+<div class="f46">
+  <a href="{% url 'accounts:post_home' %}"> <span class="hfghtre4i"><i aria-hidden="true"><svg id="Layer_1" style="fill: #F44336" enable-background="new 0 0 512 512" height="26px" viewBox="0 0 512 512" width="26px" xmlns="http://www.w3.org/2000/svg"><g><path d="m426 495.983h-340c-25.364 0-46-20.635-46-46v-242.02c0-8.836 7.163-16 16-16s16 7.164 16 16v242.02c0 7.72 6.28 14 14 14h340c7.72 0 14-6.28 14-14v-242.02c0-8.836 7.163-16 16-16s16 7.164 16 16v242.02c0 25.364-20.635 46-46 46z"/><path d="m496 263.958c-4.095 0-8.189-1.562-11.313-4.687l-198.989-198.987c-16.375-16.376-43.02-16.376-59.396 0l-198.988 198.988c-6.248 6.249-16.379 6.249-22.627 0-6.249-6.248-6.249-16.379 0-22.627l198.988-198.989c28.852-28.852 75.799-28.852 104.65 0l198.988 198.988c6.249 6.249 6.249 16.379 0 22.627-3.123 3.125-7.218 4.687-11.313 4.687z"/><path d="m320 495.983h-128c-8.837 0-16-7.164-16-16v-142c0-27.57 22.43-50 50-50h60c27.57 0 50 22.43 50 50v142c0 8.836-7.163 16-16 16zm-112-32h96v-126c0-9.925-8.075-18-18-18h-60c-9.925 0-18 8.075-18 18z"/></g></svg></i></span></a>
+   <a href="{% url 'accounts:shop_p' %}">  <span class="hfghtre4i1"><img src="{% static 'css/shopping-bag.png' %}"></span></a>
+   <a href="{% url 'accounts:post_home_all' %}"><span class="s26d9sf54" ><i class="icon ion-ios-infinite"></i></span></a>
+   <a href="{% url 'accounts:my_profile' %}"> <span class="s26d9sf544"><i class="icon ion-ios-contact"></i></span></a>
+    <a href="{% url 'accounts:create_song2' profile.pk %}"><span class="s26d9sf544f"><i class="icon ion-ios-add-circle-outline"></i></span></a></div>
+
+
+</div>
+
+
+
+
+
+{% block body %}
+
+
+
+{% endblock %}
+
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+ <script src="{% static 'js/KrYJow.js' %}"></script>
+ 
+  <script src="{% static 'js/flickity1.pkgd.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.mCustomScrollbar.min.js' %}"></script>
+  <script src="{% static 'js/wNumb.js' %}"></script>
+  <script src="{% static 'js/nouislider.min.js' %}"></script>
+  <script src="{% static 'js/jquery.morelines.min.js' %}"></script>
+  <script src="{% static 'js/plyr.min.js' %}"></script>
+  <script src="{% static 'js/photoswipe.min.js' %}"></script>
+  <script src="{% static 'js/photoswipe-ui-default.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<script>
+
+
+   $(window).on("load",function(){
+    document.getElementById("llo").style.display="none";
+     
+});
+
+   $(".modal").each( function(){
+  $(this).wrap('<div class="overlay"></div>')
+});
+
+$(".open-modal").on('click', function(e){
+    e.preventDefault();
+  e.stopImmediatePropagation;
+
+  
+  var $this = $(this),
+      modal = $($this).data("modal");
+
+  
+  $(modal).parents(".overlay").addClass("open");
+  console.log($this)
+
+  setTimeout( function(){
+    $(modal).addClass("open");
+  }, 350);
+
+  
+  $(document).on('click', function(e){
+    var target = $(e.target);
+    
+    if ($(target).hasClass("overlay")){
+      $(target).find(".modal").each( function(){
+        $(this).removeClass("open");
+      });
+      setTimeout( function(){
+        $(target).removeClass("open");
+      }, 350);
+    }
+    
+  });
+  
+});
+
+$(".close-modal").on('click', function(e){
+  e.preventDefault();
+  e.stopImmediatePropagation;
+  document.getElementById("avatar_a_pa").value = "";
+  document.getElementById("nbyuo00").innerHTML = ""
+  document.getElementById("swiper-container34").style.display="none"
+  document.getElementById("s30a").style.display="block";
+  
+  var $this = $(this),
+      modal = $($this).data("modal");
+  
+  $(modal).removeClass("open");
+  setTimeout( function(){ 
+    $(modal).parents(".overlay").removeClass("open");
+  }, 350);
+  
+});
+
+
+var swiper34 = new Swiper('.swiper-container34', {
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        hide: true,
+      },
+
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+       observer: true, 
+        observeParents: true,
+        observeSlideChildren: true,
+        rebuildOnUpdate: true
+
+
+    
+    });
+
+     var files_m = []
+        var i23 = -1;
+        box_video = `  <div class="swiper-slide"><img src="jpg" class="f22poj"></div>`
+
+        
+
+        
+          $('#avatar_a_pa').on('change',function(){
+            console.log("a")
+            document.getElementById("s30a").style.display="none";
+            $(".swiper-container34").css("display","block")
+            
+            
+
+            
+            
+           
+            if (this.files.length > 1){
+
+                for (var i1 = 0; i1 < this.files.length; i1++) {
+                files_m.push(this.files[i1])
+
+                
+            } 
+            
+            }
+            else{
+                if (this.files.length == 0){
+
+
+                }else{
+
+                
+                files_m.push(this.files[0])
+                 
+                 
+            }}
+
+                if (this.files.length > 1){
+
+                    for (var i1 = 0; i1 < this.files.length; i1++) {
+                        i23++
+                 box=`<div class="a22_filename">` + this.files[i1]["name"] +`</div>`
+                   let render = new FileReader();
+        render.addEventListener("load", function(){
+            console.log(this)
+           
+
+                         var box_video1 = box_video.replace('jpg',  this.result);
+                
+
+                 swiper34.appendSlide(box_video1);
+                 $(".swiper-pagination").css("display", "block")
+                 swiper34.update();
+            
+
+        })
+        
+
+        render.readAsDataURL(this.files[i1])
+          
+    
+
+
+
+
+
+
+
+                 console.log( this.files[i1])
+
+
+
+
+
+            
+               
+            } 
+                   
+
+                }
+                else{
+                i23++
+
+
+                box=`<div class="a22_filename" id="` + i23 +`">` + this.files[0]["name"] +`</div>`
+                  let render = new FileReader();
+        render.addEventListener("load", function(){
+            console.log(this)
+           
+
+                         var box_video1 = box_video.replace('jpg',  this.result);
+                
+
+                 swiper34.appendSlide(box_video1);
+                 $(".swiper-pagination").css("display", "none")
+
+                 swiper34.update();
+            
+
+        })
+        
+
+        render.readAsDataURL(this.files[0])
+
+
+
+
+
+
+               
+                
+            }
+        
+
+
+            });
+
+          $(".niu899").on("click", function(){
+  if (files_m.length >= 1){
+    $("#ss22_file").css("display", "none")
+    $(".kukulala").css("display", "block")
+    $(".niu8991").css("display", "block")
+    $(".niu899").css("display", "none")
+    
+
+    
+
+
+
+
+  }
+
+
+
+
+})
+          $(".heshtegs_add").on("click", function(){
+            document.getElementById("heshteg_form").innerHTML=`{{ form1.as_p }}`
+            $(this).css("display", "none")
+
+
+          })
+
+
+
+
+
+
+   time_line_unread_messages = 30000;
+function fname(){
+
+
+ $.ajax({
+
+           url: "{% url 'accounts:unread_messages' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: { 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            console.log(data.len)
+            if (data.len !=0){
+
+              document.getElementById("i9ouyyt").innerHTML=String(data.len)
+              document.getElementById("er0okj").style.display= "block";
+              time_line_unread_messages = 5000;
+             
+            }
+            else{
+               document.getElementById("er0okj").style.display= "none";
+               if (time_line_unread_messages <30000){
+                time_line_unread_messages += 5000;
+
+               }
+               else{
+                
+               }
+               
+
+            }
+
+
+
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+
+
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+}
+
+
+ var refreshIntervalId = setInterval(fname, time_line_unread_messages);
+
+$(".header__sign-in").click(function(){
+  $(".haraai93").toggle(400);
+});  
+
+$(function() {
+
+    $('#search').keyup(function() {
+        document.getElementById("myUL").innerHTML = "";
+        document.getElementById("myUL").style.display = "block";
+
+
+
+        if ($('#search').val().length !=0){
+
+            $.ajax({
+                type: "Post",
+                url: "{% url 'accounts:search_status' %}",
+                dataType: 'json',
+                data: {
+                    'search_text' : $('#search').val(),
+                    'csrfmiddlewaretoken': '{{csrf_token}}'
+                },
+                success: searchSuccess,
+                
+            });
+        }
+        else{
+          document.getElementById("myUL").style.display = "none";
+
+
+        }
+
+        });
+
+});
+
+function searchSuccess(statuss, textStatus, jqXHR)
+
+{
+    const text_box = '<li><a href="#"><div class="pr_info"><div class="imge25"><img src="/media/4k" class="e25"></div><div class="title_pr"><p>Adele</p></div></div></a></li>'
+    const text_box1 = '<li сlass = "li_no_res" style = "font-size: 35px;margin-top: 50%;margin-left:30%;color:#C3C3C3;">No Resoult</li>'
+        
+
+
+
+      
+
+
+
+    l = JSON.parse(statuss)
+    console.log(l)
+
+if(l != ''){
+  for (var i = 0, len = l.length; i < len; ++i) {
+
+        var result = l[i];
+        console.log(result['fields']['first_name'])
+        var box = text_box.replace('Adele', result['fields']['first_name']);
+        e = result['pk']
+        box = box.replace('#', "/profile/" + e + "/");
+        if (result['fields']['avatar'] == ''){
+          box = box.replace('/media/4k', '/assets/images/no-img.jpg');
+          
+
+        }
+        else{
+          box = box.replace('4k', result['fields']['avatar']);
+
+
+
+        }
+
+
+       
+        
+        $('#myUL').append(box);
+        //$('#search-results').append(result['fields']['first_name']);
+        
+        
+    }
+   
+
+
+
+}
+else{
+
+  $('#myUL').append(text_box1);
+
+
+
+}
+
+
+
+    
+    
+}
+
+
+
+
+function searchResult(data) {
+    $( "#txtSearch" ).autocomplete ({
+        source: data
+    });
+}
+
+
+$('.fl_20').click(function(event){
+  var  pk = $(this).attr('name');
+  var ek =  "testfollow" + String(pk) 
+  $.ajax({
+           
+           url: "{% url 'accounts:subscribe' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+            document.getElementById(String(ek)).innerHTML = data.j;
+            
+            
+            
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+
+
+
+
+</script>
+
+
+
+
+
+<!--<div class="article">
+<div>
+ Спойлер №1 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+
+ <div class="spoiler_body">
+  Текст в первом спойлере
+  Текст в первом спойлере
+ </div>
+</div>
+</div>
+
+<div>
+ Спойлер №2 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+ <div class="spoiler_body">
+  Текст во втором спойлере
+  Текст во втором спойлере
+ </div>
+</div>
+
+</div>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<!--<script id="rendered-js">
+ 
+
+  function s20(){
+     var v = document.getElementById("da5").offsetHeight;
+     var s = document.getElementById("ffff44").offsetHeight;
+     console.log(s,v)
+   
+    document.getElementById("ffff44").style.height = s + (v-50) + "px";
+    document.getElementById("dd").style.opacity = "0";
+    
+    
+
+
+
+
+  }
+  $( "#dd" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
+
+</script>-->
+<!--<script type="text/javascript">
+  
+  $( ".f22" ).click(function(event) {
+
+        $('.f4h5aa .da4').css({
+  'height': 'auto',
+  
+});
+  var p=$("#da5");
+  var k=$("#ffff44");
+
+
+  var s=p.outerHeight();
+  var e=k.outerHeight();
+
+  $('#ffff44').css({
+  'height': e+s-50,
+  
+});
+  $('#dd').css({
+  
+  
+});
+  
+
+  console.log(s);
+});
+  
+</script>-->
+
+  
+
+  <script>
+
+$(".Layer_1").on("click", function(event){
+   var id = $(this).attr('name');
+   var name = $(this).attr('name1');
+   var element = $(this)
+   
+   
+
+      $.ajax({
+          url: '{% url "accounts:add_money_tasks" %}',
+          type: 'POST',
+          dataType: 'json',
+          data: { 
+                      'name': name,
+                      'id': id,  
+                      'csrfmiddlewaretoken': '{{csrf_token}}'
+                  },  // This is the default though, you don't actually need to always mention it
+          success: function(data) {
+            document.getElementById("money_appp").innerHTML = String(data.my_money) + ' $' ;
+
+            element.remove();
+           
+
+            
+           
+
+          },
+          failure: function() { 
+              alert('Got an error dude');
+          }
+      }); 
+
+
+})    
+
+$('.gallery-item').on('click', function() {
+  const text_box = '<div class="sdfgj4" id="gg11">'+
+        '<span  class="spo" id="dd">ещё</span>'+
+        
+        '<div class="jghyfg">'+
+        '<div class="imagefgh"><img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" class="img144dfs"></div>' + 
+        '<div class="wrap">' + 
+        '<div class="cont" tabindex="0">ffff</div></div><span class="likes"><i class="fa fa-heart-o" aria-hidden="true"></i></span></div>'
+        + 
+        '</div>'+
+        
+
+
+
+      '</div>'
+      
+
+    var name = $(this).attr('data_id');
+    var id = $(this).attr('data_post_id');
+    alert(id);
+      $.ajax({
+          url: '{% url "accounts:comments_url" %}',
+          type: 'POST',
+          dataType: 'json',
+          data: { 
+                      'name': name,
+                      'id': id,  
+                      'csrfmiddlewaretoken': '{{csrf_token}}'
+                  },  // This is the default though, you don't actually need to always mention it
+          success: function(data, fields) {
+            l = JSON.parse(data)
+            console.log(data)
+            console.log(l)
+
+            for (var i = 0, len = l.length; i < len; ++i) {
+            // Setup the result...
+                        
+            var result = l[i];
+            var box = text_box.replace('ffff', result['fields']['comment_title']);
+
+            $('.hpljfjs').append(box);
+
+            // Name
+            
+            console.log(result['fields']['comment_title'])
+
+
+            
+        }
+              
+
+              
+              
+
+             
+
+              
+
+
+          },
+          failure: function() { 
+              alert('Got an error dude');
+          }
+      }); 
+
+
+
+
+
+     var src = $(this).attr('data-full');
+      
+        // Change src attribute of image
+        $("#imghhh").attr("src", src);
+        $(".s258").css("display", "block");
+        $(".spo").css({
+  'position': 'relative',
+   'top': '100px',
+   'left': '85%',
+   'display': 'block'
+
+  
+  
+});
+  });
+
+
+
+$('.s55hf').on('click', function() {
+      
+          $('.cont').removeClass('full');
+          $(this).parent().find('.jghyfg').css({
+              'height': 50,
+  
+  
+          });
+          var parent = document.getElementById("das");
+          //document.getElementById("gg11").outerHTML='';
+      //var child = document.getElementById("gg11");
+      //parent.removeChild(child);
+      var myNode = document.getElementById("das");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+    }
+          
+  });
+
+
+
+
+
+
+$('.btn').click(function(event){
+  var pk = $(this).attr('name');
+  $.ajax({
+           
+           url: "{% url 'accounts:subscribe' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+                {% if my_profile %}
+                  
+                  document.getElementById('test').innerHTML = data.f;
+                  document.getElementById('subscribe').innerHTML = data.j;
+                  
+                {% else %}
+                  document.getElementById('test').innerHTML = data.f;
+                  document.getElementById('subscribe').innerHTML = data.j;
+
+                {% endif %}
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+</script> 
+  <script type="text/javascript">
+  
+  
+  var i = [];
+  var are = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+  var arrr = [];
+  var n = $("div.gallery-item").length;
+    var A = $('div.gallery-item'), max = 0, elem;
+
+   
+    
+    
+    for (i.length; i.length < n;  i.push(A[i.length])) {
+      arrr.push(A[i.length].offsetWidth);
+
+      
+
+
+    }
+  
+        
+    if (arrr.length > 2){
+    delete arrr[0];
+    delete arrr[1];
+    var gh  = arrr[2];
+    var f = arrr.length;
+    var aree = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+    
+    
+    var judoIndex = are.lastIndexOf(i.length);
+    var judoIndexg = are.lastIndexOf(i.length - 1);
+
+   
+    
+    
+    if (judoIndex > -1 ){
+         $('.gallery-item:nth-child(' + f + ')').css({
+        'max-width': gh,
+        'height': gh,
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    if (judoIndexg > -1){
+       
+      $('.gallery-item:nth-child(' + f + ')').css({
+        'max-width': gh ,
+        'height': gh,
+  
+  
+
+
+  
+  
+  });
+    var gb = f - 1;
+
+
+  $('.gallery-item:nth-child(' + gb + ')').css({
+      'max-width': gh,
+      'height': gh,
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    
+   
+   
+    
+    
+      
+
+    }
+    else{
+
+
+  var serv = window.innerWidth;
+  console.log(arrr.length);
+  if( arrr.length == 1){
+    
+    $(".gallery-item:nth-child(1)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+
+  }
+  if(arrr.length == 2) {
+    $(".gallery-item:nth-child(2)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+    $(".gallery-item:nth-child(1)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+
+  }
+
+
+
+
+
+
+}
+   
+        
+  $(window).resize(function(){
+    var i = [];
+  var are = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+  var arrr = [];
+  var n = $("div.gallery-item").length;
+    var A = $('div.gallery-item'), max = 0, elem;
+
+   
+    
+    
+    for (i.length; i.length < n;  i.push(A[i.length])) {
+      arrr.push(A[i.length].offsetWidth);
+
+      
+
+
+    }
+    if (arrr.length > 2){
+    delete arrr[0];
+    delete arrr[1];
+    var gh  = arrr[2];
+    var f = arrr.length;
+    var aree = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+    
+    
+    var judoIndex = are.lastIndexOf(i.length);
+    var judoIndexg = are.lastIndexOf(i.length - 1);
+    
+    
+    if (judoIndex > -1 ){
+         $('.gallery-item:nth-child(' + f + ')').css({
+        'max-width': gh,
+        'height': gh,
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    if (judoIndexg > -1 ){
+        
+      $('.gallery-item:nth-child(' + f + ')').css({
+        'max-width': gh ,
+        'height': gh,
+  
+  
+
+
+  
+  
+  });
+    var gb = f - 1;
+
+
+  $('.gallery-item:nth-child(' + gb + ')').css({
+      'max-width': gh,
+      'height': gh,
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    
+   
+   
+    
+    
+      
+
+    }
+        else{
+
+
+  var serv = window.innerWidth;
+  
+  if( arrr.length == 1){
+    console.log(serv);
+    $(".gallery-item:nth-child(1)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+  }
+  if(arrr.length == 2) {
+    $(".gallery-item:nth-child(2)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+    $(".gallery-item:nth-child(1)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+
+  }
+
+
+
+
+
+
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    });
+    
+    
+    
+  </script>
+  <script type="text/javascript">
+    let arr = [];
+
+    $(document).ready(function(){
+
+        if($('.cont').height() > 75){
+        $('.cont').height(75);
+        $('.open').addClass('visible');
+    }
+  
+    $('.spo').click(function () {
+        
+       
+        $(this).parent().find('.cont').addClass('full');
+        var p=$(this).parent().find('.cont');
+         var s=p.outerHeight();
+         var k=$(this).parent().find('.spo');
+         
+         arr.splice(1, 0, s);
+          $(this).parent().find('.jghyfg').css({
+  'height': s+5,
+  
+  
+});
+          $(this).parent().find('.spo').css({
+  'display': 'none',
+
+  
+  
+});
+$(this).parent().find('.likes').css({
+  
+  
+
+
+  
+  
+});
+
+        $('.open').removeClass('visible');
+        $('.close').removeClass('hide');
+       
+        
+        
+        console.log(arr);
+
+    });
+  $('.close').click(function () {
+        $('.cont').removeClass('full');
+        $('.open').addClass('visible');
+        $('.close').addClass('hide');
+    });
+
+  
+
+
+
+});
+     $(document).ready(function(){
+
+            $('#form').on('submit', function(e){
+              var pk = $(this).attr('name1')
+
+
+
+
+            
+            e.preventDefault();
+            var data = new FormData($('form').get(0));
+             for (var i = 0; i < files_m.length; i++) {
+                data.append('images' + i, files_m[i])
+            }
+            data.append('length', files_m.length)
+            data.append('pk', pk)
+            console.log(data)
+            $.ajax({
+
+            xhr : function() {
+                var xhr = new window.XMLHttpRequest();
+
+                xhr.upload.addEventListener('progress', function(e) {
+
+                    if (e.lengthComputable) {
+
+                        console.log('Bytes Loaded: ' + e.loaded);
+                        console.log('Total Size: ' + e.total);
+                        console.log('Percentage Uploaded: ' + (e.loaded / e.total))
+
+                        var percent = Math.round((e.loaded / e.total) * 100);
+
+                        $('#progressBar').attr('aria-valuenow', percent).css('width', percent + '%').text(percent + '%');
+
+                    }
+
+                });
+
+                return xhr;
+            },    
+            url: '{% url "accounts:create_history" %}',
+            method: "POST",
+            data: data,
+            success: function(data){ 
+             var line= "/stories_view/" + String(pk)
+            location.replace(line)},
+            error: function(data){},
+            processData: false,
+            contentType: false,
+        });
+    });
+                });
+
+
+
+
+
+  
+
+        //For sending
+        
+            
+            
+            
+          
+</script>
+
+
+
+
+
+</body>
+</html>

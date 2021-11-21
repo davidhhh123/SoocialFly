@@ -1,0 +1,595 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html  >
+<head>
+ 
+  <title>SoocialFlya</title>
+   <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/bab (1).ico' %}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'css/login/style.css' %}">
+
+
+
+<style type="text/css">
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+ .checkbox_pr {
+    position: relative;
+    width: 125px;
+    margin-top: 10px;
+    left: 10px;
+    white-space: nowrap;
+
+
+    float: left;
+}
+.Current_password_or_login{
+  display: none;
+}
+    .loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999999999;
+}
+body {
+    line-height: 1.6;
+    font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+    
+    background: #020202f0;
+}
+.form__input {
+   
+    border: 1px solid #e1e9f0;
+    border-radius: 3px;
+   
+}
+.bnt{
+  background-color: rgba(12, 12, 12, 0.8);
+  border-color: #6a6c6d;
+}
+
+
+
+.kjh{
+  position: absolute;
+    right: 0;
+    margin-top: -40px;
+}
+@media(max-width: 410px){
+
+.checkbox_pr{
+  width: 118px;
+}
+.kjh{
+  position: absolute;
+    left: 0;
+    margin-top: 20px;
+}
+
+}
+@media(max-width: 395px){
+
+
+
+}
+@media(max-width: 267px){
+  .form_reg{
+    left: -15px;
+    position: absolute;
+  }
+
+.ikd {
+    margin-top: 290px;
+    margin-left: -14px;
+}
+
+}
+
+</style>
+
+</head>
+<body style="background: rgba(2, 2, 2, 0.94);">
+<!-- partial:index.partial.html
+ <div class="loader-wrapper" id="llo" style="position: fixed;display: none;">
+    <img src="{% static 'images/bab.png' %}" style="left: calc(50% - 48px);top: calc(50% - 48px);position: absolute;">
+</div> -->
+<div class="outer">
+  <div class="container">
+    <div class="steps-wrapper">
+      <div class="steps">
+        <div class="steps__step step-1 step--active" data-target="steps-content__step-1"><span class="step-label">Register</span></div>
+        <div class="steps__step step-2" data-target="steps-content__step-2"><span class="step-label">Profile</span></div>
+
+        <div class="steps__step step-4" data-target="steps-content__step-4"><span class="step-label">Finish</span></div>
+      </div>
+      <div class="steps-content">
+        <div class="step-content steps-content__step-1" id="steps-content__step-1" step="1">
+          <h3 class="headline">Create an account</h3>
+          <p class="sub-headline">Write your username and password</p>
+          <div class="form">
+            <form method="get" id="form">
+              <div class="form__control">
+                <label class="label form__label" for="first-name">Login</label>
+                <input class="form__input bnt" type="text" id="first-name" placeholder="John"/>
+              </div>
+              <div class="form__control">
+                <label class="label form__label" for="last-name">Password</label>
+                <input class="form__input bnt" type="Password" id="last-name" placeholder=""/>
+              </div>
+              <div class="form__control">
+                <label class="label form__label" for="email">Confirm Password</label>
+                <input class="form__input bnt" type="Password" id="email" placeholder=""/>
+              </div>
+
+            </form>
+          </div>
+            <div style="position: absolute;margin-top: 10px;" class="Current_password_or_login">Current Password</div>
+          <div class="form__control">
+            <button class="next btn btn--primary submit__btn k2224j" type="submit" style="">Sign up </button>
+          </div>
+
+
+          <div class="kjh" style="padding-bottom: 100px;">
+           have you an account? <a href="{% url 'accounts:sign_in' %}" style="color: #20d481;">Sign in</a>
+          </div>
+        </div>
+        <div class="step-content steps-content__step-1" id="steps-content__step-2" step="2">
+          <h3 class="headline">Setting up your profile</h3>
+          <p class="sub-headline">Fill in your profile</p>
+          <div class="form">
+            <form method="get">
+              <div class="form__control">
+                <label class="label form__label" for="first-name">First name</label>
+                <input class="form__input  bnt" type="text" id="first-name_ps" placeholder="John"/>
+              </div>
+
+
+              <div class="form__control">
+                <label class="label form__label" for="email">Email</label>
+                <input class="form__input bnt" type="email" id="email_ps" placeholder="example@example.com"/>
+              </div>
+              <div class="form__control">
+                <label class="label form__label" for="about">Description</label>
+                <textarea class="form__input input--3-quarter bnt" id="description" placeholder="short description about youself" rows="4"></textarea>
+              </div>
+              
+                <div class="form__control">
+                <label class="label form__label" for="file1">Profile Image</label>
+               <input name="myFile" type="file" id="file1">
+              </div>
+            </form>
+          </div>
+          <div class="form__control">
+            <button class="next btn btn--primary submit__btn" type="submit">Next</button>
+          </div>
+        </div>
+
+        <div class="step-content steps-content__step-1" id="steps-content__step-4" step="3">
+          <h3 class="headline">Finish</h3>
+          <p class="sub-headline">
+Сhoose your entertainment</p>
+          <div class="form form_reg" >
+            <form method="get">
+              <div class="checkbox_pr">
+               <input type="checkbox" id="scales" name="Games" class="false"
+         ><label for="scales">Games</label></div>
+  <div class="checkbox_pr"> <input type="checkbox" id="scales1" name="Movies"
+          class="false">
+  <label for="scales1">Movies</label></div>
+  <div class="checkbox_pr"> <input type="checkbox" id="scales2" name="Sport"
+           class="false">
+  <label for="scales2">Sport</label></div>
+  <div class="checkbox_pr"> <input type="checkbox" id="scales3" name="Travel"
+           class="false">
+  <label for="scales3">Travel</label></div>
+  <div class="checkbox_pr"> <input type="checkbox" id="scales4" name="Books"
+           class="false">
+  <label for="scales4">Books</label></div>
+  <div class="checkbox_pr"> <input type="checkbox" id="scales5" name="Tv"
+           class="false">
+  <label for="scales5">Tv</label></div>
+   <div class="checkbox_pr"> <input type="checkbox" id="scales6" name="Animals"
+           class="false">
+  <label for="scales6">Animals</label></div>
+  <div class="checkbox_pr"> <input type="checkbox" id="scales7" name="Shopping"
+           class="false">
+  <label for="scales7">Shopping</label></div>
+  <div class="checkbox_pr"> <input type="checkbox" id="scales8" name="Paint"
+           class="false">
+  <label for="scales8">Paint</label></div>
+
+
+     <div class="checkbox_pr"> <input type="checkbox" id="scales9" name="Art"
+           class="false">
+  <label for="scales9">Art</label></div>
+
+    <div class="checkbox_pr"> <input type="checkbox" id="scales10" name="Programming"
+           class="false">
+  <label for="scales10">Programming</label></div>
+
+  <div class="checkbox_pr"> <input type="checkbox" id="scales11" name="Fashion"
+           class="false">
+  <label for="scale11s">Fashion</label></div>
+  <div class="checkbox_pr"> <input type="checkbox" id="scales12" name="Dance"
+           class="false">
+  <label for="scales12">Dance</label></div>
+   <div class="checkbox_pr"> <input type="checkbox" id="scales13" name="Astronomy"
+           class="false">
+  <label for="scales13">Astronomy</label></div>
+
+  <div class="checkbox_pr"> <input type="checkbox" id="scales14" name="History"
+           class="false">
+  <label for="scales14">History</label></div>
+   <div class="checkbox_pr"> <input type="checkbox" id="scales15" name="Web design"
+           class="false">
+  <label for="scales15">Web design</label></div>
+   <div class="checkbox_pr"> <input type="checkbox" id="scales16" name="Education"
+           class="false">
+  <label for="scales16">Education</label></div>
+
+
+
+
+
+
+            </form>
+          </div>
+          <div class="ikd"><button class="next btn btn--primary submit__btn" type="submit" style="position: relative;
+    margin-top: 70px;">Finish    </button></div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+  <script src='{% static "css/jquery.min.js" %}'></script>
+
+
+  
+<script type="text/javascript">
+
+ 
+   var p = "{{ invite_code }}" 
+   var m = "{{ username_u }}"
+  var steps = $(".step-content")
+  var step_active = $(".steps__step")
+  
+
+  steps.eq(0).css("display", "block")
+  step_active.eq(0).addClass("step--active")
+  var r = -1;
+  var formData = new FormData()
+  var profile = {
+    "password": null,
+    "username": null,
+    "email": null,
+    "first_name": null,
+    "photo": null,
+    "description":null,
+    "sponsor":null, 
+    "pre":[]
+  };
+   $('#file1').on('change',function(){
+     for (var i = 0; i < this.files.length; i++) {
+                formData.append('images' + i, this.files[i])
+      }
+
+
+    
+          
+          profile.photo = this.files[0]
+
+        })
+
+   $(document).on("change", "#checkbox", function(){
+  var $input = $( this );
+  if ($input.prop( "checked" )==true){
+    $input.attr("name", 1)
+
+  }
+  else{
+     $input.attr("name", 0)
+
+  }
+
+})
+$(".false").on("click", function(){
+  if (this.checked) {
+    $(this).attr('class', 'true');
+  } else {
+    $(this).attr('class', 'false');
+  }
+
+})
+  function rchange(r_c){
+    r = r_c
+  }
+  
+
+
+  $(".next").on("click", function(){
+
+    r++
+    
+    if (r>2){
+
+    }
+    else{
+      if (r==0){
+        console.log(document.getElementById("first-name"))
+
+        var username = $("#first-name").val()
+
+        var password = $("#last-name").val()
+        var password_confirm = $("#email").val()
+        
+       
+        if(username.length > 0  &&  password.length > 0  &&  password_confirm.length > 0){
+          if (String(password) ==  String(password_confirm)){
+            if (password.length<7){
+              rchange(-1)
+            $("#first-name").css("background-color", "red")
+            $(".Current_password_or_login").text("min password length 7")
+           
+            $(".Current_password_or_login").css("display", "block")
+             $(".k2224j").css("margin-top", "20px")
+
+
+
+            }
+            else{
+            
+             
+
+
+
+             $.ajax({
+            
+
+           url: "/api/registration_user_exists",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'username': username, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(message) {
+           
+           if (message==0){
+           
+            rchange(-1)
+           
+             
+            $(".Current_password_or_login").text("login already exists")
+           
+            $(".Current_password_or_login").css("display", "block")
+             $(".k2224j").css("margin-top", "20px")
+
+          }
+            
+
+           
+           else if(message==1){
+            console.log(password.match(/\d/g))
+
+             if (/[a-zа]/i.test(password) && password.match(/\d/g)!=null){
+
+                  console.log("yes")
+             
+
+           profile.password = password
+           profile.username = username
+
+            
+            
+           
+           
+            console.log(username, password, password_confirm)
+    steps.eq(r).css("display", "none")
+    steps.eq(r+1).css("display", "block")
+    step_active.eq(r).removeClass("step--active")
+    step_active.eq(r+1).addClass("step--active")
+
+           
+
+
+                //alert(data.a);Math.round(1.7777777 * 100)/100
+                //alert($("#" + data.a).val());
+
+
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+ } else if(password.match(/\d/g)==null) {console.log("aaaa");
+  rchange(-1)
+
+   $(".Current_password_or_login").text("password must contain numbers")
+             $(".Current_password_or_login").css("display", "block")
+             $(".k2224j").css("margin-top", "20px")
+                 
+              }
+              else { rchange(-1)
+
+   $(".Current_password_or_login").text("The password must contain latin letters")
+             $(".Current_password_or_login").css("display", "block")
+             $(".k2224j").css("margin-top", "20px")
+                 
+              }
+            }
+
+            },
+           error: function(message) {
+                  alert('Something went wrong.');
+           }
+      });
+          }
+
+
+          }
+          else{
+            rchange(-1)
+            
+             $(".Current_password_or_login").text("Password mismatch")
+             $(".Current_password_or_login").css("display", "block")
+             $(".k2224j").css("margin-top", "20px")
+             
+             
+
+            
+
+          }
+
+         
+        }
+        else{
+          rchange(-1)
+          $(".Current_password_or_login").text("One of the fields was not filled")
+             $(".Current_password_or_login").css("display", "block")
+             $(".k2224j").css("margin-top", "20px")
+        }
+
+
+      }
+      else if (r==1){
+        console.log(r)
+        var first_name = $("#first-name_ps").val()
+        var email = $("#email_ps").val()
+        var description = $("#description").val()
+       
+       
+
+        profile.first_name = first_name
+        profile.description = description
+        profile.email = email
+         steps.eq(r).css("display", "none")
+    steps.eq(r+1).css("display", "block")
+    step_active.eq(r).removeClass("step--active")
+    step_active.eq(r+1).addClass("step--active")
+          console.log(description,email, first_name )
+         
+
+
+      }
+
+      else if (r==2){
+        console.log(r)
+        var dataf = new FormData();
+        dataf.append('username', $("#first-name").val())
+         for (var i = 0; i < $(".true").length; i++) {
+      
+      profile.pre.push($(".true").eq(i).attr("name"))
+
+  }
+  var sponsor = $('#checkbox').attr("name")
+  formData.append("username",profile.username)
+  formData.append("sponsor",sponsor)
+
+  formData.append("password",profile.password)
+  formData.append("first_name",profile.first_name)
+  formData.append("email",profile.email)
+  formData.append("description",profile.description)
+  formData.append("pre",profile.pre)
+  formData.append("length",profile.pre.length)
+  formData.append("invite_code",p)
+  formData.append("user_name",m)
+
+  formData.append("csrfmiddlewaretoken","{{ csrf_token }}")
+  for (var i = 0; i < profile.pre.length; i++) {
+      
+      formData.append('Category' + i, profile.pre[i])
+
+  }
+ 
+
+  console.log(profile.pre, p, m)
+        //e.target.classList.add('disabled');
+        //e.target.disabled = true;
+         $.ajax({
+
+           url: "/api/registration/",
+           type: 'POST',
+        
+           data: formData,
+
+           success: function(data) {
+            if(data=="data"){
+              location.replace("/profile/")
+
+            }
+           
+          
+
+
+                //alert(data.a);Math.round(1.7777777 * 100)/100
+                //alert($("#" + data.a).val());
+
+
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           },
+            processData: false,
+            contentType: false,
+      });
+         
+
+
+      }
+        
+
+      
+   
+     
+
+    }
+    
+
+
+  })
+
+
+
+
+
+  console.log()
+
+
+
+
+</script>
+  
+
+
+
+
+
+</body>
+</html>

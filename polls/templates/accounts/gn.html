@@ -1,0 +1,5263 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static 'shop/style.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/bab (1).ico' %}" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>NetLife</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style110.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'shop/styleshop.css' %}">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+<link rel="stylesheet" href="{% static 'shop/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/bootstrap1-grid.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'shop/jquery.mCustomScrollbar.min.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/nouislider.min.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/plyr.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/photoswipe.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/default-skin.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/mainshop.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style_new.css' %}">
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style3_shop.css' %}">
+   <style type="text/css">
+   	  #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+.title {
+    
+    color: #F44336;
+    }
+   
+
+.btn {
+    z-index: 10002;
+}
+.btn {
+    display: inline-block;
+    font: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+.btn {
+    color: white;
+}
+.tooll{position: absolute;margin-top: -30px;width: 50px;height: 50px;float: left;}
+
+
+.k1{
+    margin-left: 0px;
+
+}
+.k2{
+  margin-left: 21%;
+}
+
+.k3{
+ margin-left: 45%;
+}
+.k4{
+     margin-left: 67%;
+    
+}
+.k5{
+     margin-left:90%;
+    
+}
+.top_nav{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 22px;
+   opacity: 1;
+   background: #0f0f0f;
+    color: #fff;
+    width: 100%;
+    z-index: 100;
+    
+    
+
+
+}
+
+
+@media (max-width: 980px){
+.k1{
+    margin-left: 0px;
+
+}
+.k2{
+  margin-left: 20%;
+}
+
+.k3{
+ margin-left: 44%;
+}
+.k4{
+     margin-left: 67%;
+    
+}
+.k5{
+     margin-left:88%;
+    
+}
+
+}
+@media(max-width: 960px){
+ 
+.sch_b{
+  margin-left: -100px;
+
+  
+}
+.sch_b1{
+  display: block;
+ margin-right: -100px;
+    margin-left: -100px;
+
+  
+}
+
+
+}
+
+@media (max-width: 770px){
+.k1{
+    margin-left: -20px;
+
+}
+.k2{
+  margin-left: 18%;
+}
+
+.k3{
+ margin-left: 41%;
+}
+.k4{
+     margin-left: 64%;
+    
+}
+.k5{
+     margin-left:86%;
+    
+}
+
+}
+@media (max-width: 670px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: calc(18% - 13px);
+}
+
+.k3{
+ margin-left: 40%;
+}
+.k4{
+     margin-left: 64%;
+    
+}
+.k5{
+     margin-left:84%;
+    
+}
+
+}
+
+@media (max-width: 580px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 15%;
+}
+
+.k3{
+ margin-left: 38%;
+}
+.k4{
+     margin-left: 61%;
+    
+}
+.k5{
+     margin-left:83%;
+    
+}
+
+}
+
+@media (max-width: 500px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 13%;
+}
+
+.k3{
+ margin-left: 36%;
+}
+.k4{
+     margin-left: 58%;
+    
+}
+.k5{
+     margin-left:78%;
+    
+}
+
+}
+
+@media (max-width: 390px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 12%;
+}
+
+.k3{
+ margin-left: 34%;
+}
+.k4{
+     margin-left: 56%;
+    
+}
+.k5{
+     margin-left: 76%;
+    
+    
+}
+
+}
+@media (max-width: 350px){
+ .k1{
+    margin-left: -28px;
+
+}
+.k2{
+  margin-left: 10%;
+}
+
+.k3{
+ margin-left: 32%;
+}
+.k4{
+     margin-left: 54%;
+    
+}
+.k5{
+     margin-left: 74%;
+    
+    
+}
+
+}
+@media (max-width: 300px){
+ .k1{
+    margin-left: -34px;
+
+}
+.k2{
+  margin-left: 8%;
+}
+
+.k3{
+ margin-left: 30%;
+}
+.k4{
+     margin-left: 52%;
+    
+}
+.k5{
+     margin-left: 72%;
+    
+    
+}
+
+}
+
+@media (max-width: 290px){
+  .quick-filters .quick-filters-tabs .quick-filters-tab{
+    font-size: 0.705rem;
+    margin-right: 18px;
+  }
+
+}
+@media (max-width: 270px){
+ .k1{
+    margin-left: -38px;
+
+}
+.k2{
+  margin-left: 6%;
+}
+
+.k3{
+ margin-left: 27%;
+}
+.k4{
+     margin-left: 49%;
+    
+}
+.k5{
+     margin-left: 68%;
+    
+    
+}
+
+}
+#left0p{
+  margin-left: 0;
+}
+.btn-sm, .btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+.btn-dark {
+    color: #fff;
+    background-color: #151515;
+    border-color: #343a40;
+}
+ .btn-sm, .btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.img-preview {
+    -webkit-box-flex: 1;
+    flex: 1;
+    background: #f6f8fc;
+}
+.video-box-wrapper{
+  display: -webkit-box;
+}
+.img-preview img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.hfghtre4i{
+    
+    color: #F44336;
+  }
+  .hfghtre4i1 img{
+    
+    color: #F44336;
+  }
+  .s26d9sf54{
+    
+    color: #F44336;
+  }
+  .s26d9sf54 i{
+    
+    color: #F44336;
+
+  }
+  .s26d9sf544{
+    
+    color: #F44336;
+  }
+  .s26d9sf544f{
+    color: #F44336;
+
+  }
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  width: 395px;
+  height: 525px;
+  background: #f6f6f6;
+
+  position: absolute;
+
+  right: 27.2%;
+  margin-top: 60px;
+  display: none;
+}
+#myUL li  {
+  position: relative;
+   /* Add a border to all links */
+  margin-top: 8px; /* Prevent double borders */
+   /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a {
+  border: 1px solid transparent; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  height: 52px; /* Add some padding */
+  text-decoration: none;
+  font-family: inherit; /* Remove default text underline */
+  font-size: 16px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+.pr_info{
+  width: 100%;
+  height: 52px;
+  
+
+
+}
+.imge25{
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 180px;
+  margin-top: 8px;
+  margin-left: 5px;
+
+}
+.e25{
+  width: 100%;
+  height: 100%;
+  border-radius: 180px;
+}
+.title_pr{
+  
+  width: calc(100% - 40px);
+  margin-left: 50px;
+  margin-top: -27px;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+@media (max-width: 991px){
+  #myUL{
+    right: 30.8%;
+    width: 395px;
+  }
+
+
+
+}
+@media (max-width: 900px){
+  #myUL{
+    right: 34%;
+    width: 345px;
+  }
+
+
+
+}
+@media (max-width: 830px){
+  #myUL{
+    right: 34%;
+    width: 295px;
+  }
+
+
+
+}
+@media (max-width: 815px){
+  #myUL{
+    right: 36.5%;
+    
+  }
+
+
+
+}
+@media (max-width: 767px){
+  #myUL{
+    right: 26.1%;
+    margin-top: 56px;
+    
+  }
+
+
+
+
+}
+@media (max-width: 765px){
+  #myUL{
+    right: 26.3%;
+    width: 293px
+
+    
+  }
+
+
+
+
+}
+@media (max-width: 758px){
+  #myUL{
+    right: 26.9%;
+    width: 290px
+
+    
+  }
+
+
+
+
+}
+@media (max-width: 750px){
+  #myUL{
+    right: 27.2%;
+    width: 291px
+
+  }
+
+}
+@media (max-width: 734px){
+  #myUL{
+    right: 27.5%;
+    
+
+  }
+
+}
+@media (max-width: 727px){
+  #myUL{
+    right: 27.8%;
+    width: 292px
+    
+
+  }
+
+}
+@media (max-width: 718px){
+  #myUL{
+    right: 28.2%;
+    
+    
+
+  }
+
+}
+@media (max-width: 710px){
+  #myUL{
+    right: 28.5%;
+    
+    
+
+  }
+
+}
+@media (max-width: 703px){
+  #myUL{
+    right: 28.8%;
+    
+    
+
+  }
+
+}
+@media (max-width: 690px){
+  #myUL{
+    right: 29.3%;
+    
+    
+
+  }
+
+}
+@media (max-width: 687px){
+  #myUL{
+    right: 29.7%;
+    width: 291px;
+    
+    
+
+  }
+
+}
+@media (max-width: 677px){
+  #myUL{
+    right: 30.2%;
+    width: 291px;
+    
+    
+
+  }
+
+}
+@media (max-width: 665px){
+  #myUL{
+    right: 30.6%;
+    width: 291px;
+    
+    
+
+  }
+
+}
+@media (max-width: 660px){
+  #myUL{
+    right: 30.7%;
+    width: 247px;
+    
+    
+
+  }
+
+}
+@media (max-width: 646px){
+  #myUL{
+    right: 31%;
+    width: 247px;
+    
+    
+
+  }
+
+}
+@media (max-width: 640px){
+  #myUL{
+    right: 31.5%;
+    width: 246px;
+    
+    
+
+  }
+
+}
+@media (max-width: 630px){
+  #myUL{
+    right: 32%;
+    width: 246px;
+    
+    
+
+  }
+
+}
+@media (max-width: 620px){
+  #myUL{
+    right: 32.5%;
+    width: 246px;
+    
+    
+
+  }
+
+}
+@media (max-width: 614px){
+  #myUL{
+    right: 33%;
+    width: 245px;
+    
+    
+
+  }
+
+}
+@media (max-width: 604px){
+  #myUL{
+    right: 33.5%;
+    width: 244px;
+    
+    
+
+  }
+
+}
+@media (max-width: 594px){
+  #myUL{
+    right: 34.2%;
+    width: 243px;
+    
+    
+
+  }
+
+}
+@media (max-width: 584px){
+  #myUL{
+    right: 35%;
+    width: 243px;
+    
+    
+
+  }
+
+}
+@media (max-width: 575px){
+  #myUL{
+    right: 0;
+    margin-top: 71px;
+    width: 100%;
+    
+    
+
+  }
+
+}
+
+
+
+
+
+
+
+    @media screen and  (min-width: 1700px){
+    .gallery-item {
+    
+    flex: 1 0 29rem;
+    margin: 1rem;
+   
+}
+    
+}
+  @media screen and  (min-width: 1900px){
+    .gallery-item {
+    
+    flex: 1 0 29rem;
+    margin: 1.1rem;
+   
+}
+    
+}
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif;
+	width: 100%;
+    height: 100%;
+    background-color: #0E0E0E;
+    
+
+
+ }
+.actor{
+  position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+  background: #0E0E0E;
+}
+.rewuve{
+   position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+
+}
+.name{
+  position: absolute;
+  color: white;
+  padding-top: 110px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  
+    word-wrap: break-word;
+
+}
+.prof{
+  position: absolute;
+  color: #D22A2A;
+  padding-top: 160px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  
+  font-size: 13px;
+  
+    word-wrap: break-word;
+
+
+}
+.carousel {
+  width: 93%;
+  left: 3%;
+
+
+}
+
+.carousel-cell {
+  width: 100px;
+  height: 250px;
+  margin-right: 30px;
+  background: transparent;
+  border-radius: 180px;
+  
+}
+.right-area-upper {
+    position: fixed;
+    z-index: 999999999;
+    margin-top: -130px;
+}
+
+.content-line-hero {
+    margin-top: 130px;
+}
+
+
+.carousel-cell.is-selected {
+  background: transparent;
+}
+
+/* cell number */
+
+</style>
+  <style type="text/css">
+    body{
+      background: #0E0E0E;
+    }
+    .footer{
+      background: #0E0E0E;
+      border-top: 1px solid rgba(87, 83, 103, 0.1);
+
+
+    }
+    h1{
+      color: white;
+    }
+    .btn{
+      color: white;
+    }
+    li{
+      color: white;
+    }
+    .profile-stat-count{
+      color: white;
+    }
+    p{
+      color: white;
+    }
+{
+      color: #F44336;
+    }
+    .s26d9sf4 i{
+      color: #F44336
+    }
+    .s258{
+      display: none;
+    }
+    .home{
+      height: 300%;
+      width: 75%;
+      left: 12.5%;
+      top: 5%;
+      background: #0E0E0E;
+      box-shadow: 0 3px 1px 0 rgba(0,0,0,0.14),0 0px 3px -2px rgba(0,0,0,0.12),0 -1px 5px 0 rgba(0,0,0,0.2);
+
+
+
+
+
+    }
+
+    
+    .header{
+      background: #101010;
+    }
+    .img{
+      position: absolute;
+      width: 200px;
+      height: 288px;
+      left: 0%;
+      top: 0%;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+          box-sizing: inherit;
+
+
+
+
+
+
+
+    }
+    .span{
+      
+      width: 100%;
+      height: 50px;
+      margin-left: 28%;
+      padding-top: -50px;
+
+      
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+      z-index: 1;
+      float: left;
+
+    }
+    .span1{
+      width: 100%;
+      
+      margin-left: 29%;
+      
+      left: 213px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    .span2{
+      width: 100%;
+      
+      margin-left: 35%;
+      margin-top: -24px;
+      left: 270px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    @media (max-width: 969px){
+      .span2{
+
+      margin-left: 37%;
+      
+    }
+    .span{
+      margin-top: -5px;
+    }
+
+    
+
+  }
+    @media (max-width: 709px){
+      .span2{
+
+      margin-left: 39%;
+      }
+      .span{
+      margin-top: -10px;
+      font-size: 28px;
+      height: 43px;
+    }
+
+
+  }
+    @media (max-width: 595px){
+      .span2{
+
+      margin-left: 41%;
+    }
+    .span{
+      margin-top: -15px;
+      font-size: 25px;
+      height: 38px;
+    }
+  }
+    @media (max-width: 500px){
+      .span2{
+
+      margin-left: 44%;
+    }
+    .span{
+      margin-top: -20px;
+    }
+
+  }
+    @media (max-width: 400px){
+      .span2{
+
+      margin-left: 48%;
+    }}
+    @media (max-width: 290px){
+      .span2{
+
+      margin-left: 51%;
+    }}
+
+
+
+
+    }
+    .images{
+      position: absolute;
+      
+      width: 100%;
+      
+      top: 450px;
+    }
+    .images img{
+      width: 100%;
+    }
+
+    .b22{
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      left: 500px;
+      top: 200px;
+      
+    }
+    .header__dow{
+      
+      
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow1{
+      
+      margin-left: 25px;
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow2{
+      margin-left: 25px; 
+      
+      
+
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .hidden{
+      margin-top: 12px;
+      margin-left: 13px;
+      color: #fd6060;
+
+      
+      
+      
+
+    }
+     .f46{
+   
+    display: none;
+    background: #0A0A0A;
+
+    color: #F44336;
+
+  }
+
+
+
+    .hidden .fa{
+      font-size: 25px;
+    }
+    
+    #fa{
+      margin-left: 5px;
+
+    }
+    .bl{
+      position: relative;
+      margin-top: -8%;
+      
+      background: #212121;
+      width: 94%;
+      left: 3%;
+
+      height: 1.5px;
+
+    }
+    .bl1{
+      position: relative;
+      margin-top: 5%;
+      
+      background: #212121;
+      width: 99%;
+      left: 0%;
+
+      height: 1.5px;
+
+    }
+    #bl1{
+      width: 236%;
+      height: 1px;
+
+    }
+     .f45{
+  
+  position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+     /* Поля вокруг текста */
+    background: #0A0A0A; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 86.66px; /* Ширина слоя */
+    z-index: 100;
+    top: 55px;
+      
+}
+
+.s50fgh{
+  margin-left: 20px;
+}
+
+@media (max-width: 961px){
+  .article{
+    right: 8%;
+  }
+  .f45{
+    width: 10%;
+  }
+}
+.ffff{
+  width: 100%;
+  height: 500px;
+  background: white;
+}
+.Ypffh {
+    
+    border: 0;
+    color: #262626;
+    color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: inherit;
+    height: 38px;
+    width: 79%;
+    background: black;
+    max-height: 80px;
+    outline: 0;
+    padding: 0;
+    resize: none;
+    margin-left: 5px;
+    
+    overflow: hidden; /* или auto */
+
+}
+
+@media (max-width: 900px){
+  .article{
+   
+    width: 590px;
+  }
+  
+  .sqdOP{
+    margin-left: 461px
+
+  }
+  .w1{
+    width: 100%;
+
+  }
+}
+@media (max-width: 865px){
+  .article{
+    right: 4%;
+    width: 590px;
+  }
+  .f45{
+    width: 11%;
+  }
+  
+}
+@media (max-width: 820px){
+  .article{
+    right: 4%;
+    width: 560px;
+  }
+  .f45{
+    width: 11%;
+  }
+  .sqdOP{
+    margin-left: 431px
+
+  }
+  .w1{
+    width: 100%;
+    height: 520px
+
+  }
+  .Ypffh{
+    width: 77.5%;
+  }
+}
+@media (max-width: 785px){
+  .article{
+    right: 4%;
+    width: 540px;
+  }
+  .f45{
+    width: 12%;
+  }
+  .sqdOP{
+    margin-left: 411px
+
+  }
+  .w1{
+    width: 100%;
+    height: 500px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -25px; 
+  }
+  .Ypffh{
+    width: 76.5%;
+  }
+  .spoiler_links{
+    margin-top: 632px;
+  }
+}
+@media (max-width: 760px){
+  .article{
+    right: 4%;
+    width: 510px;
+  }
+  .f45{
+    width: 12%;
+  }
+  .sqdOP{
+    margin-left: 381px
+
+  }
+  .w1{
+    width: 100%;
+    height: 470px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -55px; 
+  }
+  .Ypffh{
+    width: 75%;
+  }
+  .spoiler_links{
+    margin-top: 601px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 1365px){
+  .article{
+    right: 10%;
+    width: 550px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+   .f46{
+   
+    display: block;
+  }
+  .sqdOP{
+    margin-left: 421px
+
+  }
+  .w1{
+    width: 100%;
+    height: 510px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -15px; 
+  }
+   .Ypffh{
+    width: 77%;
+  }
+  .spoiler_links{
+    margin-top: 642px;
+     margin-left: 265px;
+  }
+  .owl-carousel {
+    
+    width: 100%;
+    
+    margin-left: 0px;
+}
+.d2 {
+    width: 100%;
+    
+    margin-left: 0px;
+   
+}
+.d3 {
+    width: 100%;
+    
+    margin-left: 0px;
+   
+}
+.d4 {
+    width: 100%;
+    
+    margin-left: 0px;
+   
+}
+.d5 {
+    width: 100%;
+    
+    margin-left: 0px;
+   
+}
+.d6 {
+    width: 100%;
+    
+    margin-left: 0px;
+   
+}
+.content-line .header-text {
+    
+    margin-left: 0px;
+}
+
+
+}
+@media (max-width: 693px){
+  .article{
+    right: 9%;
+    width: 550px;
+  }}
+
+
+@media (max-width: 658px){
+ .article{
+    right: 9%;
+    width: 520px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+ 
+  .sqdOP{
+    margin-left: 391px
+
+  }
+  .w1{
+    width: 100%;
+    height: 480px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -45px; 
+  }
+  .Ypffh{
+    width: 76%;
+  }
+  .spoiler_links{
+    margin-top: 612px;
+     margin-left: 255px;
+  }
+}
+@media (max-width: 628px){
+ .article{
+    right: 8%;
+    width: 490px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 361px
+
+  }
+  .w1{
+    width: 100%;
+    height: 450px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -75px; 
+  }
+  .Ypffh{
+    width: 74%;
+  }
+  .spoiler_links{
+    margin-top: 584px;
+     margin-left: 255px;
+  }
+}
+
+@media (max-width: 588px){
+ .article{
+    right: 9%;
+    width: 460px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 331px
+
+  }
+  .w1{
+    width: 100%;
+    height: 420px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -105px; 
+  }
+  .Ypffh{
+    width: 72.5%;
+  }
+   .spoiler_links{
+    margin-top: 554px;
+     margin-left: 243px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 8%;
+    
+  }}
+
+@media (max-width: 544px){
+ .article{
+    right: 8%;
+    width: 440px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 311px
+
+  }
+  .w1{
+    width: 100%;
+    height: 400px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -125px; 
+  }
+  .Ypffh{
+    width: 71%;
+  }
+  .spoiler_links{
+    margin-top: 534px;
+     margin-left: 243px;
+  }
+}
+@media (max-width: 524px){
+ .article{
+    right: 8%;
+    width: 420px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 291px
+
+  }
+  .w1{
+    width: 100%;
+    height: 380px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -145px; 
+  }
+  .Ypffh{
+    width: 70%;
+  }
+  .spoiler_links{
+    margin-top: 514px;
+     margin-left: 233px;
+  }
+}
+@media (max-width: 500px){
+ .article{
+    right: 43px;
+    width: 400px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 271px
+
+  }
+  .w1{
+    width: 100%;
+    height: 360px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -165px; 
+  }
+   .Ypffh{
+    width: 68%;
+  }
+  .spoiler_links{
+    margin-top: 494px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 484px){
+ .article{
+    right: 45px;
+    width: 380px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 251px
+
+  }
+  .w1{
+    width: 100%;
+    height: 340px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -185px; 
+  }
+  .Ypffh{
+    width: 67%;
+  }
+  .spoiler_links{
+    margin-top: 474px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 464px){
+ .article{
+    right: 45px;
+    width: 360px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 320px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -205px; 
+  }
+  .Ypffh{
+    width: 65%;
+  }
+  .spoiler_links{
+    margin-top: 454px;
+     margin-left: 213px;
+  }
+  
+
+}
+@media (max-width: 452px){
+ .article{
+    right: 50px;
+    width: 330px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 290px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -235px; 
+  }
+  .spojhg{
+    width: 200px;
+  }
+  .Ypffh{
+    width: 61.5%;
+  }
+  .spoiler_links{
+    margin-top: 424px;
+     margin-left: 213px;
+  }
+}
+@media (max-width: 422px){
+ .article{
+    right: 40px;
+   
+  }}
+  @media (max-width: 408px){
+ .article{
+    right: 35px;
+   
+  }}
+  @media (max-width: 395px){
+ .article{
+    right: 35px;
+    width: 300px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 260px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -265px; 
+  }
+
+}
+  @media (max-width: 395px){
+ .article{
+    right: 45px;
+    width: 270px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 230px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -295px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 170%;
+  }
+  .spoiler_links{
+    margin-top: 360px;
+     margin-left: 190px;
+  }
+  .video-box-wrapper{
+    height: auto;
+  }
+}
+  @media (max-width: 355px){
+ .article{
+    right: 35px;
+   
+  }}
+
+    @media (max-width: 336px){
+ .article{
+    right: 30px;
+   
+  }}
+
+    @media (max-width: 328px){
+ .article{
+    right: 35px;
+    width: 250px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 181px
+
+  }
+  .w1{
+    width: 100%;
+    height: 220px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -315px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 155%;
+  }
+  .spoiler_links{
+    margin-top: 340px;
+     margin-left: 190px;
+  }
+}
+   @media (max-width: 315px){
+ .article{
+    right: 30px;
+   
+  }}
+
+
+  @media (max-width: 305px){
+ .article{
+    right: 25px;
+   
+  }}
+    @media (max-width: 300px){
+ .article{
+    right: 22px;
+   
+  }}
+     @media (max-width: 294px){
+ .article{
+    right: 20px;
+   
+  }
+  .hfghtre4i{
+    font-size: 30px;
+  }
+  .hfghtre4i1 img{
+    width: 30px;
+    height: 30px;
+  }
+  .s26d9sf54{
+    margin-top: -16px;
+  }
+  .s26d9sf54 i{
+    font-size: 34px;
+
+  }
+  .s26d9sf544{
+    font-size: 30px;
+  }
+ 
+}
+       @media (max-width: 288px){
+ .article{
+    right: 17px;
+   
+  }}
+       @media (max-width: 282px){
+ .article{
+    right: 15px;
+   
+  }}
+       @media (max-width: 276px){
+ .article{
+    right: 13px;
+   
+  }}
+#dropdownMenuCatalog{
+  color: #F94133;
+
+  
+}
+#dropdownMenuHome{
+  color: #F94133;
+
+}
+@media (min-width: 1200px){
+.header__sign-in span{
+  color: black;
+}
+.header__nav-link{
+  line-height: 20px;
+}
+
+}
+.article{
+  width: 88%;
+  height: 600px;
+  top: 85px;
+  left: 110px;
+  position: absolute;
+  background: #0E0E0E;
+}
+.gjngujr{
+  width: 100%;
+  height: 200px;
+  
+}
+.image_gh{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 180px;
+  
+
+
+}
+.image{
+  width: 100px;
+  height: 100px;
+  
+  margin-left: 40px;
+  margin-top: 40px;
+
+
+}
+.s20fghja{
+  margin-left: 175px;
+  margin-top: -95px;
+  
+  width: 80%;
+  height: 200px;
+  background:;
+  
+
+}
+.gg13k{
+  
+  font-size: 19px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 150px;
+}
+@media (max-width: 913px){
+  .article{
+    
+    width: 87%;
+  }
+  
+}
+@media (max-width: 843px){
+  .article{
+    left: 108px;
+    
+    width: 86%;
+  }
+  
+}
+@media (max-width: 767px){
+  .article{
+    left: 107px;
+    
+    width: 85%;
+  }
+  
+}
+@media (max-width: 713px){
+  .article{
+    left: 0px;
+    width: 100%;
+  }
+  .profile-image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+}
+.full {
+  height: auto !important;
+}
+a:visited{
+    color: #F9F9F9;
+}
+@media(max-width: 895px){
+  .fghtdjjj{
+    display: none;
+  }
+  .s258{
+    width: 100%;
+  }
+  .imagjd4{
+    width: 70%;
+    height: 488.4px;
+  }
+  .imagjd4{
+    
+    margin-top: 50px;
+    margin-left: 10%;
+   
+
+}
+.panel{
+  display: block;
+}
+@media(max-width: 809px){
+  .fghtdjjj{
+    display: none;
+  }
+  .s258{
+    width: 100%;
+  }
+  .imagjd4{
+    width: 70%;
+    height: 450px;
+  }
+  .imagjd4{
+    
+    margin-top: 50px;
+    margin-left: 10%;
+   
+
+}
+.panel{
+  display: block;
+}
+
+@media (max-width: 770px){
+  .imagjd4{
+    margin-left: 8%;
+  }
+  .imagjd4{
+    width: 69%;
+    height: 430px;
+  }
+  .s55hf{
+    margin-left: 93%;
+  }
+}
+@media (max-width: 722px){
+  .imagjd4{
+    margin-left: 8%;
+  }
+  .imagjd4{
+    width: 75%;
+    height: 430px;
+  }
+  .s55hf{
+    margin-left: 93%;
+  }
+}
+@media (max-width: 680px){
+  .imagjd4{
+    margin-left: 5%;
+
+
+  }
+  .imagjd4{
+    width: 75%;
+    height: 410px;
+  }
+
+}
+@media (max-width: 660px){
+  .imagjd4{
+    margin-left: 6%;
+    width: 77%;
+    height: 410px;
+
+  }
+  
+
+}
+
+@media (max-width: 620px){
+  .imagjd4{
+    margin-left: 6%;
+    width: 75%;
+    height: 390px;
+
+  }
+  .s55hf{
+    margin-left: 91%;
+  }
+  
+
+
+}
+@media (max-width: 605px){
+  .imagjd4{
+    margin-left: 6%;
+    width: 74%;
+    height: 370px;
+
+  }
+  
+
+}
+@media (max-width: 595px){
+  .imagjd4{
+    margin-left: 9%;
+    width: 84%;
+    height: 450px;
+
+  }
+  .panel{
+    display: none;
+  }
+  .panel1{
+    display: block;
+  }
+  .s55hf{
+    margin-left: 91%;
+    margin-top: 5px;
+  }
+  
+
+}
+@media (max-width: 530px){
+  .imagjd4{
+    margin-left: 9%;
+    width: 80%;
+    height: 380px;
+
+  }
+  .panel1{
+    height: 60px;
+  }
+
+  
+
+
+}
+@media (max-width: 470px){
+  .imagjd4{
+    margin-left: 12%;
+    margin-top: 75px;
+    width: 79%;
+    height: 340px;
+
+  }
+  .panel1{
+    height: 60px;
+  }
+  .s55hf{
+    margin-left: 90%;
+    
+  }
+
+  
+
+}
+@media (max-width: 455px){
+  .imagjd4{
+    margin-left: 10%;
+    margin-top: 75px;
+    width: 80%;
+    height: 340px;
+
+  }
+  
+
+  
+
+
+}
+@media (max-width: 430px){
+  .imagjd4{
+    margin-left: 9%;
+    margin-top: 60px;
+    width: 83%;
+    height: 330px;
+
+  }
+  
+
+  
+
+}
+@media (max-width: 410px){
+  .imagjd4{
+    margin-left: 9%;
+    margin-top: 50px;
+    width: 83%;
+    height: 310px;
+
+  }
+  .s55hf{
+    margin-left: 88%;
+    
+  }
+  
+
+  
+
+}
+@media (max-width: 395px){
+  .imagjd4{
+    margin-left: 10%;
+    margin-top: 50px;
+    width: 80%;
+    height: 280px;
+
+  }
+  
+
+  
+
+}
+@media (max-width: 365px){
+  .imagjd4{
+    margin-left: 10%;
+    margin-top: 50px;
+    width: 80%;
+    height: 250px;
+
+  }
+  
+
+  
+
+
+}
+@media (max-width: 350px){
+  .imagjd4{
+    margin-left: 12%;
+    margin-top: 50px;
+    width: 78%;
+    height: 230px;
+
+  }
+  
+
+  
+
+}
+
+@media (max-width: 338px){
+  .imagjd4{
+    margin-left: 12%;
+    margin-top: 70px;
+    width: 78%;
+    height: 230px;
+
+  }
+
+  
+
+  
+
+}
+@media (max-width: 330px){
+  .imagjd4{
+    margin-left: 10%;
+    margin-top: 70px;
+    width: 80%;
+    height: 210px;
+
+  }
+  .s55hf{
+    margin-left: 86%;
+    
+  }
+  
+
+  
+
+}
+@media (max-width: 320px){
+  .imagjd4{
+    margin-left: 12%;
+    margin-top: 60px;
+    width: 80%;
+    height: 210px;
+
+  }
+  
+
+  
+
+}
+@media (max-width: 290px){
+  .imagjd4{
+    margin-left: 9%;
+    margin-top: 60px;
+    width: 83%;
+    height: 210px;
+
+  }
+  .s55hf{
+    margin-left: 84%;
+    
+  }
+  
+
+  
+
+}
+@media (max-width: 280px){
+  .imagjd4{
+    margin-left: 9%;
+    margin-top: 60px;
+    width: 83%;
+    height: 210px;
+
+  }
+  .s55hf{
+    margin-left: 82%;
+    
+  }
+  
+
+  
+
+}
+@media (max-height: 575px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 9%;
+    width: 80%;
+    height: 430px;
+    margin-top: 20px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 524px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 9%;
+    width: 80%;
+    height: 400px;
+    margin-top: 20px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 11%;
+    width: 76%;
+    height: 360px;
+    margin-top: 10px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 72%;
+    height: 320px;
+    margin-top: 20px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 411px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 19%;
+    width: 65%;
+    height: 270px;
+    margin-top: 20px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+@media (max-height: 349px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 21%;
+    width: 55%;
+    height: 240px;
+    margin-top: 10px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+
+
+    /* CSS stuff */
+}
+@media (max-height: 308px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 18%;
+    width: 60%;
+    height: 220px;
+    margin-top: 10px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+@media (max-height: 290px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 23%;
+    width: 50%;
+    height: 200px;
+    margin-top: 10px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+@media (max-height: 263px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 24%;
+    width: 48%;
+    height: 190px;
+    margin-top: 10px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+/* 575/525--------------------------------------------------- */
+@media (max-height: 575px) and (max-width: 540px) {
+  .imagjd4{
+  margin-left: 6%;
+    width: 85%;
+    height: 400px;
+    margin-top: 20px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 540px) {
+  .imagjd4{
+  margin-left: 8%;
+    width: 82%;
+    height: 360px;
+    margin-top: 50px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 450px) {
+  .imagjd4{
+  margin-left: 8%;
+    width: 85%;
+    height: 330px;
+    margin-top: 50px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 387px) {
+  .imagjd4{
+  margin-left: 10%;
+    width: 80%;
+    height: 280px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 355px) {
+  .imagjd4{
+  margin-left: 10%;
+    width: 82%;
+    height: 250px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 309px) {
+  .imagjd4{
+  margin-left: 8%;
+    width: 84%;
+    height: 230px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+/* 575/525--------------------------------------------------- */
+
+
+/* 524/492--------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------////////////// */
+
+
+/* 524/492--------------------------------------------------- */
+
+
+/* 491/450--------------------------------------------------- */
+@media (max-height: 491px) and (max-width: 540px) {
+  .imagjd4{
+  
+    margin-top: 10px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 450px) {
+  .imagjd4{
+  margin-left: 11%;
+    width: 76%;
+    height: 300px;
+    margin-top: 50px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 396px) {
+  .imagjd4{
+  margin-left: 8%;
+    width: 82%;
+    height: 300px;
+    margin-top: 50px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 366px) {
+  .imagjd4{
+  margin-left: 7%;
+    width: 85%;
+    height: 280px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 324px) {
+  .imagjd4{
+  margin-left: 7%;
+    width: 85%;
+    height: 260px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 300px) {
+  .imagjd4{
+  margin-left: 6%;
+    width: 88%;
+    height: 250px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+
+
+
+
+
+
+
+
+
+/* 491/450--------------------------------------------------- */
+
+/* 450/411--------------------------------------------------- */
+
+
+@media (max-height: 450px) and (max-width: 540px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 72%;
+    height: 320px;
+    margin-top: 10px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 440px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 72%;
+    height: 290px;
+    margin-top: 10px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 400px) {
+  .imagjd4{
+  margin-left: 10%;
+    width: 80%;
+    height: 260px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 315px) {
+  .imagjd4{
+  margin-left: 10%;
+    width: 80%;
+    height: 250px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 295px) {
+  .imagjd4{
+  margin-left: 8%;
+    width: 83%;
+    height: 240px;
+    margin-top: 60px;
+
+
+  }
+    /* CSS stuff */
+}
+
+
+
+/* 450/411--------------------------------------------------- */
+
+/* 411/349--------------------------------------------------- */
+
+@media (max-height: 411px) and (max-width: 540px){
+.imagjd4 {
+    margin-left: 19%;
+    width: 65%;
+    height: 270px;
+    margin-top: 20px;
+}
+}
+@media (max-height: 411px) and (max-width: 440px){
+.imagjd4 {
+    margin-left: 13%;
+    width: 75%;
+    height: 270px;
+    margin-top: 20px;
+}}
+@media (max-height: 411px) and (max-width: 380px){
+.imagjd4 {
+    margin-left: 13%;
+    width: 75%;
+    height: 250px;
+    margin-top: 30px;
+}}
+@media (max-height: 411px) and (max-width: 335px){
+.imagjd4 {
+    margin-left: 12%;
+    width: 75%;
+    height: 230px;
+    margin-top: 50px;
+}}
+@media (max-height: 411px) and (max-width: 306px){
+.imagjd4 {
+    margin-left: 10%;
+    width: 80%;
+    height: 220px;
+    margin-top: 60px;
+}}
+
+
+
+
+
+/* 411/349--------------------------------------------------- */
+
+
+/* 308/290--------------------------------------------------- */
+@media (max-height: 308px) and (max-width: 540px) {
+  .imagjd4{
+  margin-left: 18%;
+    width: 65%;
+    height: 220px;
+    margin-top: 10px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+@media (max-height: 308px) and (max-width: 320px) {
+  .imagjd4{
+  margin-left: 16%;
+    width: 70%;
+    height: 210px;
+    margin-top: 10px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+@media (max-height: 308px) and (max-width: 300px) {
+  .imagjd4{
+  margin-left: 14%;
+    width: 70%;
+    height: 200px;
+    margin-top: 20px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+
+
+
+
+
+
+
+
+/* 308/290--------------------------------------------------- */
+/* 290/263--------------------------------------------------- */
+@media (max-height: 290px) and (max-width: 540px) {
+  .imagjd4{
+  margin-left: 20%;
+    width: 60%;
+    height: 200px;
+    margin-top: 10px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+@media (max-height: 290px) and (max-width: 357px) {
+  .imagjd4{
+  margin-left: 22%;
+    width: 55%;
+    height: 180px;
+    margin-top: 10px;
+
+
+  }
+  .panel1{
+    height: 50px;
+  }
+  #fghdj{
+    margin-top: 8px;
+
+
+  }
+
+    /* CSS stuff */
+}
+@media (max-height: 290px) and (max-width: 314px) {
+  .imagjd4{
+  margin-left: 22%;
+    width: 55%;
+    height: 160px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+
+
+
+
+
+
+
+/* 290/263--------------------------------------------------- */
+
+
+@media (max-height: 255px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 22%;
+    width: 55%;
+    height: 170px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 233px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 23%;
+    width: 50%;
+    height: 160px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 223px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 25%;
+    width: 45%;
+    height: 150px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+
+
+
+@media (max-width: 274px){
+  
+  
+
+  
+
+}
+@media (max-width: 272px){
+  
+  
+
+  
+
+}
+@media (max-width: 270px){
+  
+  
+
+  
+
+}
+
+.gallery {
+
+    -webkit-box-align: stretch; */
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    border: 0 solid #000;
+    -webkit-box-sizing: border-box; */
+    box-sizing: border-box; */
+    display: -webkit-box;
+    display: -webkit-flex; */
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical; */
+    -webkit-box-direction: normal; */
+  
+    
+    
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    
+    display: -webkit-flex;
+display: -ms-flexbox;
+    flex-wrap: wrap;
+    margin: -1rem -1rem;
+    padding-bottom: 3rem;
+}
+
+
+.gallery-item {
+    position: relative;
+    flex: 1 0 22rem;
+    margin: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 843px){
+    .gallery-item {
+    
+    flex: 1 0 20rem;
+    margin: 1rem;
+   
+}
+    
+}
+@media (max-width: 779px){
+    .gallery-item {
+    
+    flex: 1 0 18rem;
+    margin: 1rem;
+   
+}
+    
+}
+@media (max-width: 609px){
+    .gallery-item {
+    
+    flex: 1 0 17rem;
+    margin: 0.7rem;
+   
+}
+    
+}
+@media (max-width: 565px){
+    .gallery-item {
+    
+    flex: 1 0 16rem;
+    margin: 1rem;
+   
+}
+    
+}
+@media (max-width: 549px){
+    .gallery-item {
+    
+    flex: 1 0 15rem;
+    margin: 0.6rem;
+   
+}
+    
+}
+@media (max-width: 495px){
+    .gallery-item {
+    
+    flex: 1 0 13rem;
+    margin: 0.6rem;
+   
+}
+    
+}
+@media (max-width: 435px){
+    .gallery-item {
+    
+    flex: 1 0 12rem;
+    margin: 0.5rem;
+   
+}
+    
+}
+@media (max-width: 399px){
+    .gallery-item {
+    
+    flex: 1 0 11rem;
+    margin: 0.2rem;
+   
+}
+    
+}
+@media (max-width: 359px){
+    .gallery-item {
+    
+    flex: 1 0 10rem;
+    margin: 0.15rem;
+   
+}
+    
+}
+@media (max-width: 340px){
+    .gallery-item {
+    
+    flex: 1 0 10rem;
+    margin: 0.3rem;
+   
+}
+    
+}
+@media (max-width: 310px){
+    .gallery-item {
+    
+    flex: 1 0 10rem;
+    margin: 0.2rem;
+   
+}
+    
+}
+
+@media screen and (max-width: 40rem) {
+
+    .profile {
+        display: flex;
+
+          
+    display: -webkit-flex; */
+    display: -ms-flexbox;
+    
+       
+        flex-wrap: wrap;
+         -webkit-flex-wrap: wrap;
+        padding: 4rem 0;
+    }
+
+    .profile::after {
+        display: none;
+    }
+
+    .profile-image,
+    .profile-user-settings,
+    .profile-bio,
+    .profile-stats {
+        float: none;
+        width: auto;
+    }
+
+    .profile-image img {
+        width: 90px;
+        height: 90px;
+    }
+    .profile-edit-btn{
+        line-height: 0.8;
+    }
+
+    .profile-user-settings {
+       
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    .profile-user-name {
+        font-size: 2.2rem;
+    }
+
+    .profile-edit-btn {
+        order: 1;
+        padding: 0;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .profile-edit-btn {
+        margin-left: 0;
+    }
+
+    .profile-bio {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+
+    .profile-edit-btn,
+    .profile-bio,
+    .profile-stats {
+        flex-basis: 100%;
+    }
+
+    .profile-stats {
+        order: 1;
+        margin-top: 1.5rem;
+    }
+
+    .profile-stats ul {
+        display: flex;
+        text-align: center;
+        padding: 1.2rem 0;
+        border-top: 0.1rem solid #dadada;
+        border-bottom: 0.1rem solid #dadada;
+    }
+
+    .profile-stats li {
+        font-size: 1.4rem;
+        flex: 1;
+        margin: 0;
+    }
+
+    .profile-stat-count {
+        display: block;
+    }
+}
+@media (max-width: 350px){
+    .profile-user-settings {
+         flex-basis: calc(100% - 10.7rem);
+            display: flex;
+
+          
+    display: -webkit-flex; */
+    display: -ms-flexbox;
+    
+       
+       
+       
+        display: flex;
+         flex-wrap: wrap;
+         -webkit-flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+     .profile-edit-btn{
+        line-height: 1.7;
+    }
+    
+}
+@media (max-height: 255px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 22%;
+    width: 55%;
+    height: 170px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 233px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 23%;
+    width: 50%;
+    height: 160px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 223px) and (max-width: 595px) {
+  .imagjd4{
+  margin-left: 25%;
+    width: 45%;
+    height: 150px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 435px) and (min-width: 596px) {
+  .imagjd4{
+  margin-left: 13%;
+    width: 70%;
+    height: 300px;
+    margin-top: 10px;
+
+
+  }
+  .user-k{
+    width: 47px;
+    height: 47px;
+    top: 19%;
+    margin-left: 19px;
+  }
+  .s20a{
+    top: 38%;
+  }
+  .s20a20{
+    top: 53%;
+  }
+  .s20a20shere{
+    top: 68%;
+  }
+  .s20a i {
+    font-size: 32px;
+  }
+  .s20a20 i{
+    font-size: 32px;
+
+  }
+  svg{
+    width: 32px;
+    height: 32px;
+}
+.s55hf{
+  margin-top: 2px;
+}
+.s55hf .sd0{
+  width: 70%;
+
+}
+
+.sd{
+  width: 70%;
+  
+}
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 355px) and (min-width: 596px) {
+  
+    .user-k{
+    width: 45px;
+    height: 45px;
+    top: 17%;
+    margin-left: 21px;
+  }
+  .s20a{
+    top: 36%;
+  }
+  .s20a20{
+    top: 53%;
+  }
+  .s20a20shere{
+    top: 70%;
+  }
+  .s20a i {
+    font-size: 30px;
+  }
+  .s20a20 i{
+    font-size: 30px;
+
+  }
+  svg{
+    width: 30px;
+    height: 30px;
+}
+.s55hf{
+  margin-top: 2px;
+}
+.s55hf .sd0{
+  width: 70%;
+
+}
+
+.sd{
+  width: 70%;
+  
+}
+}
+@media (max-height: 315px) and (min-width: 596px) {
+  .imagjd4{
+  margin-left: 13%;
+    width: 65%;
+    height: 270px;
+    margin-top: 10px;
+
+
+  }
+    .user-k{
+    width: 43px;
+    height: 43px;
+    top: 17%;
+    margin-left: 21px;
+  }
+  .s20a{
+    top: 36%;
+  }
+  .s20a20{
+    top: 53%;
+  }
+  .s20a20shere{
+    top: 70%;
+  }
+  .s20a i {
+    font-size: 28px;
+  }
+  .s20a20 i{
+    font-size: 28px;
+
+  }
+  svg{
+    width: 28px;
+    height: 28px;
+}
+.s55hf{
+  margin-top: -3px;
+}
+.s55hf .sd0{
+  width: 70%;
+
+}
+
+.sd{
+  width: 70%;
+  
+}
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 285px) and (min-width: 596px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 57%;
+    height: 240px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 468px) and (min-width: 606px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 60%;
+    height: 320px;
+    margin-top: 10px;
+
+
+  }
+}
+  
+
+@media (max-height: 437px) and (min-width: 606px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 57%;
+    height: 280px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 300px) and (min-width: 606px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 55%;
+    height: 250px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 270px) and (min-width: 606px) {
+  .imagjd4{
+  margin-left: 18%;
+    width: 50%;
+    height: 240px;
+    margin-top: 10px;
+
+
+  }
+  
+
+    /* CSS stuff */
+}
+@media (max-height: 487px) and (min-width: 681px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 65%;
+    height: 340px;
+    margin-top: 10px;
+
+
+  }
+}
+@media (max-height: 367px) and (min-width: 681px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 60%;
+    height: 320px;
+    margin-top: 10px;
+
+
+  }
+  .user-k{
+    width: 47px;
+    height: 47px;
+    top: 19%;
+    margin-left: 19px;
+  }
+  .s20a{
+    top: 38%;
+  }
+  .s20a20{
+    top: 53%;
+  }
+  .s20a20shere{
+    top: 68%;
+  }
+  .s20a i {
+    font-size: 32px;
+  }
+  .s20a20 i{
+    font-size: 32px;
+
+  }
+  svg{
+    width: 32px;
+    height: 32px;
+}
+.s55hf{
+  margin-top: 2px;
+}
+.s55hf .sd0{
+  width: 70%;
+
+}
+
+.sd{
+  width: 70%;
+  
+}
+
+}
+@media (max-height: 338px) and (min-width: 681px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 55%;
+    height: 280px;
+    margin-top: 10px;
+
+
+  }
+  .user-k{
+    width: 43px;
+    height: 43px;
+    top: 17%;
+    margin-left: 21px;
+  }
+  .s20a{
+    top: 36%;
+  }
+  .s20a20{
+    top: 53%;
+  }
+  .s20a20shere{
+    top: 70%;
+  }
+  .s20a i {
+    font-size: 30px;
+  }
+  .s20a20 i{
+    font-size: 30px;
+
+  }
+  svg{
+    width: 30px;
+    height: 30px;
+}
+.s55hf{
+  margin-top: 2px;
+}
+.s55hf .sd0{
+  width: 70%;
+
+}
+
+.sd{
+  width: 70%;
+  
+}
+
+
+
+}
+@media (max-height: 296px) and (min-width: 681px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 50%;
+    height: 250px;
+    margin-top: 10px;
+
+
+  }
+  .s55hf{
+  margin-top: -3px;
+}
+}
+@media (max-height: 266px) and (min-width: 681px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 50%;
+    height: 240px;
+    margin-top: 10px;
+
+
+  }
+}
+@media (max-height: 513px) and (min-width: 771px) {
+  .imagjd4{
+  margin-left: 15%;
+    width: 60%;
+    height: 370px;
+    margin-top: 10px;
+
+
+  }
+}
+@media (max-height: 392px) and (min-width: 771px) {
+  .imagjd4{
+  margin-left: 17%;
+    width: 55%;
+    height: 340px;
+    margin-top: 10px;
+
+
+  }
+    .user-k{
+    width: 45px;
+    height: 45px;
+    top: 17%;
+    margin-left: 21px;
+  }
+  .s20a{
+    top: 36%;
+  }
+  .s20a20{
+    top: 53%;
+  }
+  .s20a20shere{
+    top: 70%;
+  }
+  .s20a i {
+    font-size: 30px;
+  }
+  .s20a20 i{
+    font-size: 30px;
+
+  }
+  svg{
+    width: 30px;
+    height: 30px;
+}
+.s55hf{
+  margin-top: 2px;
+}
+.s55hf .sd0{
+  width: 70%;
+
+}
+
+.sd{
+  width: 70%;
+  
+}
+}
+@media (max-height: 363px) and (min-width: 771px) {
+  .imagjd4{
+  margin-left: 17%;
+    width: 50%;
+    height: 300px;
+    margin-top: 10px;
+
+
+  }
+}
+@media (max-height: 319px) and (min-width: 771px) {
+  .imagjd4{
+  margin-left: 20%;
+    width: 48%;
+    height: 260px;
+    margin-top: 10px;
+
+
+  }
+}
+
+
+
+
+
+
+
+   </style>
+
+
+   <style>
+    .page-wrapper {
+    height: 100vh;
+}
+   
+.bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    background: #fff;
+    z-index: 10004;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    opacity: .973;
+    transition: all 500ms;
+}
+ .bar {
+    background: #101010;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.7);
+}
+.bar {
+    background: #101010;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.7);
+}
+.user_hh0 {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    margin-left: calc(100% - 120px);
+    font-size: 25px;
+    color: white;
+}
+#search_ik {
+    margin-left: calc(50% - 10px);
+    margin-top: 10px;
+}
+a:visited {
+    color: #615E5E;
+}
+.user_hh {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    margin-left: calc(100% - 80px);
+    font-size: 25px;
+    color: white;
+}
+.user_hh1 {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    margin-left: calc(100% - 40px);
+    font-size: 25px;
+    color: white;
+}
+#show-sidebar {
+    position: fixed;
+    left: 0;
+    top: 10px;
+    border-radius: 0 4px 4px 0px;
+    width: 35px;
+    transition-delay: 0.3s;
+    z-index: 99999999999999;
+}
+#ffghhl {
+    position: relative;
+    color: white;
+    z-index: 9999999;
+}
+.chiller-theme .sidebar-wrapper {
+    background: #151515;
+    z-index: 999999999999;
+}
+.right-area-upper{
+  background: transparent;
+  height: 48px;
+}
+.sidebar-wrapper {
+    width: 260px;
+    height: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 999;
+}
+.sidebar-content {
+    max-height: calc(100% - 30px);
+    height: calc(100% - 30px);
+    overflow-y: auto;
+    position: relative;
+}
+.sidebar-wrapper .sidebar-brand {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+    .loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999999999;
+}
+.sidebar-wrapper .sidebar-brand #close-sidebar {
+    cursor: pointer;
+    font-size: 20px;
+}
+.chiller-theme .sidebar-wrapper .sidebar-header, .chiller-theme .sidebar-wrapper .sidebar-search, .chiller-theme .sidebar-wrapper .sidebar-menu {
+    border-top: 1px solid #3a3f48;
+}
+.sidebar-wrapper .sidebar-header {
+    padding: 20px;
+    overflow: hidden;
+}
+.sidebar-wrapper .sidebar-header .user-pic {
+    float: left;
+    width: 60px;
+    padding: 2px;
+    border-radius: 12px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+sidebar-wrapper .sidebar-header .user-pic img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.sidebar-wrapper .sidebar-header .user-info {
+    float: left;
+}
+.sidebar-wrapper .sidebar-header .user-info > span {
+    display: block;
+}
+.sidebar-wrapper .sidebar-header .user-info .user-role {
+    font-size: 12px;
+}
+.sidebar-wrapper .sidebar-header .user-info .user-status {
+    font-size: 11px;
+    margin-top: 4px;
+}
+.sidebar-wrapper .sidebar-header .user-info .user-status i {
+    font-size: 8px;
+    margin-right: 4px;
+    color: #5cb85c;
+}
+.owl-carousel 
+{
+    touch-action: manipulation; 
+}
+.a4rtyu{
+  width: 50px;height: 50px;position: absolute;right: calc(50% - 25px);
+
+}
+.f46{
+  border-top: 1px solid #0A0A0A;
+}
+@media(max-width: 420px){
+  #search_ik{
+    margin-top: 14px;
+  }
+}
+@media(max-width: 393px){
+  .a4rtyu{
+  width: 45px;height: 45px;position: absolute;right: calc(50% - 14.5px);
+
+
+}
+#search_ik, .user_hh, .user_hh1{
+  font-size: 20px;
+}
+.user_hh{
+  margin-left: calc(100% - 66px);
+}
+.user_hh0{
+  margin-left: calc(100% - 101px);
+}
+.user_hh1{
+  margin-left: calc(100% - 33px);
+}
+
+
+}
+@media(max-width: 339px){
+ #search_ik {
+    margin-top: 18px;
+}
+
+
+}
+@media(max-width: 320px){
+  .a4rtyu{
+  width: 40px;height: 40px;position: absolute;right: calc(50% - 5.5px);margin-top: 5px;
+
+}
+
+}
+     
+
+
+   </style>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+      
+
+
+
+
+<script src='{% static 'css/owl.carousel.min.js' %}'></script><script  src="{% static 'shop/script.js' %}"></script>
+
+
+
+
+</head>
+<body>
+  <div class="loader-wrapper" id="llo" style="position: fixed;display: block;">
+    <img src="{% static 'images/bab.png' %}" style="left: calc(50% - 48px);top: calc(50% - 48px);position: absolute;">
+</div>
+
+<nav id="navigation-widget-small" class="navigation-widget navigation-widget-desktop navigation-widget-closed sidebar1 left navigation-widget-delayed  top_nav  main_name" style="width: 100%;">
+
+<!-- MENU -->
+<ul class="menu small">
+  <!-- MENU ITEM -->
+  <li class="menu-item active">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr tooll k1" href="{% url 'accounts:post_home' %}" data-title="Newsfeed" style="position: absolute; background-color: transparent;">
+    
+<!-- ICON SVG -->
+<svg class="icon-newsfeed menu-item-link-icon">
+  <use href="#svg-newsfeed"><svg id="svg-newsfeed" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet">
+      <path d="M16,0H4C1.791,0,0,1.791,0,4v8c0,2.209,1.791,4,4,4h12c2.209,0,4-1.791,4-4V4C20,1.791,18.209,0,16,0zM18,12c0,1.103-0.897,2-2,2H4c-1.103,0-2-0.897-2-2V4c0-1.103,0.897-2,2-2h12c1.103,0,2,0.897,2,2V12z"></path>
+      <path d="M0,10v2h20v-2H0z M5,20h10v-2H5V20z"></path>
+    </svg></use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -77px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Newsfeed</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr tooll k2" href="{% url 'accounts:homegg' %}" data-title="Members" style="position: absolute;">
+    
+<!-- ICON SVG -->
+<svg class="icon-members menu-item-link-icon">
+  <use href="#svg-inf">
+     <svg  viewBox="0 -30 512 512"  id="svg-inf" xmlns="http://www.w3.org/2000/svg"><path d="m0 160h40v132h-40zm79 212h40v-292h-40zm78 80h40v-452h-40zm78-160h40v-132h-40zm79 110h40v-352h-40zm158-242v142h40v-142zm-79 292h40v-452h-40zm0 0"/></svg>
+
+   </use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -74px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Members</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr tooll k4" href="{% url 'accounts:shop_p' %}" data-title="Groups" style="position: absolute;">
+    
+<!-- ICON SVG -->
+<svg class="icon-group menu-item-link-icon">
+  <use href="#svg-shopping-bag"><!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+     <svg id="svg-shopping-bag" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet">
+      <path d="M15.904,6c0.148,0.117,0.347,0.386,0.406,0.557l0.001,0.017l0.676,11.421c-0.005,0.003-0.01,0.005-0.013,0.006H3.029c-0.004-0.001-0.01-0.003-0.016-0.006L3.689,6.573L3.69,6.556C3.749,6.386,3.947,6.117,4.095,6H15.904 M16.075,4H3.924C2.806,4,1.692,5.563,1.692,6.455L1,18.154C1,19.048,1.906,20,3.024,20h13.95C18.093,20,19,19.048,19,18.154L18.308,6.455C18.308,5.563,17.193,4,16.075,4L16.075,4z"></path>
+      <path d="M8,8V3.893C8,2.849,8.849,2,9.893,2H10h0.054C11.098,2,12,2.849,12,3.893V8h2V3.893C14,1.743,12.257,0,10.107,0H9.893C7.743,0,6,1.743,6,3.893V8H8z"></path>
+    </svg>
+</use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -63px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Groups</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr tooll k5" href="{% url 'accounts:my_profile' %}" data-title="Badges" style="position: absolute;">
+    
+<!-- ICON SVG -->
+<svg class="icon-badges menu-item-link-icon">
+ <use href="#svg-members">
+    <svg id="svg-members" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet">
+      <path d="M10,10c2.762,0,5-2.238,5-5c0-2.762-2.238-5-5-5S5,2.238,5,5C5,7.761,7.238,10,10,10z M10,2c1.654,0,3,1.346,3,3s-1.346,3-3,3S7,6.654,7,5S8.346,2,10,2z M13,12H7c-3.313,0-6,2.686-6,6v2h2v-2c0-2.205,1.794-4,4-4h6c2.206,0,4,1.795,4,4v2h2v-2C19,14.686,16.313,12,13,12z"></path>
+    </svg>
+  </use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -65px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Badges</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr tooll k3 b6" href="#" data-title="Quests" style="position: absolute;"  {% if  l.profile.avatar.url != None %} name = "{{ l.profile.avatar.url }}"   {% else %}   name = "{% static 'images/user_no_photo_300x300.png' %}"{% endif %}  myname = "{{ l.profile.first_name }}">
+     
+<!-- ICON SVG -->
+<svg class="icon-quests menu-item-link-icon">
+<use href="#svg-badges"><svg version="1.1" id="svg-badges" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M392.533,0h-307.2C38.228,0.056,0.056,38.228,0,85.333v307.2c0.056,47.105,38.228,85.277,85.333,85.333h307.2
+      c47.105-0.056,85.277-38.228,85.333-85.333v-307.2C477.81,38.228,439.638,0.056,392.533,0z M443.733,392.533
+      c0,28.277-22.923,51.2-51.2,51.2h-307.2c-28.277,0-51.2-22.923-51.2-51.2v-307.2c0-28.277,22.923-51.2,51.2-51.2h307.2
+      c28.277,0,51.2,22.923,51.2,51.2V392.533z"/>
+  </g>
+</g>
+<g>
+  <g>
+    <path d="M324.267,221.867H256V153.6c0-9.426-7.641-17.067-17.067-17.067s-17.067,7.641-17.067,17.067v68.267H153.6
+      c-9.426,0-17.067,7.641-17.067,17.067S144.174,256,153.6,256h68.267v68.267c0,9.426,7.641,17.067,17.067,17.067
+      S256,333.692,256,324.267V256h68.267c9.426,0,17.067-7.641,17.067-17.067S333.692,221.867,324.267,221.867z"/>
+  </g>
+</g>
+
+</svg>
+</use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -62px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Quests</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+ 
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+ 
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  
+  <!-- /MENU ITEM -->
+</ul>
+<!-- /MENU --></nav>
+
+
+
+  <nav id="navigation-widget-small" class="navigation-widget navigation-widget-desktop navigation-widget-closed sidebar left navigation-widget-delayed  main_name" >
+
+<!-- MENU -->
+<ul class="menu small">
+  <!-- MENU ITEM -->
+  <li class="menu-item active">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr" href="{% url 'accounts:post_home' %}" data-title="Newsfeed" style="position: relative;">
+    
+<!-- ICON SVG -->
+<svg class="icon-newsfeed menu-item-link-icon">
+  <use href="#svg-newsfeed"><svg id="svg-newsfeed" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet">
+      <path d="M16,0H4C1.791,0,0,1.791,0,4v8c0,2.209,1.791,4,4,4h12c2.209,0,4-1.791,4-4V4C20,1.791,18.209,0,16,0zM18,12c0,1.103-0.897,2-2,2H4c-1.103,0-2-0.897-2-2V4c0-1.103,0.897-2,2-2h12c1.103,0,2,0.897,2,2V12z"></path>
+      <path d="M0,10v2h20v-2H0z M5,20h10v-2H5V20z"></path>
+    </svg></use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -77px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Newsfeed</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr" href="{% url 'accounts:homegg' %}" data-title="Members" style="position: relative;">
+    
+<!-- ICON SVG -->
+<svg class="icon-members menu-item-link-icon">
+  <use href="#svg-inf">
+    <svg  viewBox="0 -30 512 512"  id="svg-inf" xmlns="http://www.w3.org/2000/svg"><path d="m0 160h40v132h-40zm79 212h40v-292h-40zm78 80h40v-452h-40zm78-160h40v-132h-40zm79 110h40v-352h-40zm158-242v142h40v-142zm-79 292h40v-452h-40zm0 0"/></svg>
+
+
+
+   </use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -74px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Members</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr" href="{% url 'accounts:shop_p' %}" data-title="Groups" style="position: relative;">
+    
+<!-- ICON SVG -->
+<svg class="icon-group menu-item-link-icon">
+   <use href="#svg-shopping-bag">
+ <!-- Generator: Adobe Illustra tor 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+  <svg id="svg-shopping-bag" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet">
+      <path d="M15.904,6c0.148,0.117,0.347,0.386,0.406,0.557l0.001,0.017l0.676,11.421c-0.005,0.003-0.01,0.005-0.013,0.006H3.029c-0.004-0.001-0.01-0.003-0.016-0.006L3.689,6.573L3.69,6.556C3.749,6.386,3.947,6.117,4.095,6H15.904 M16.075,4H3.924C2.806,4,1.692,5.563,1.692,6.455L1,18.154C1,19.048,1.906,20,3.024,20h13.95C18.093,20,19,19.048,19,18.154L18.308,6.455C18.308,5.563,17.193,4,16.075,4L16.075,4z"></path>
+      <path d="M8,8V3.893C8,2.849,8.849,2,9.893,2H10h0.054C11.098,2,12,2.849,12,3.893V8h2V3.893C14,1.743,12.257,0,10.107,0H9.893C7.743,0,6,1.743,6,3.893V8H8z"></path>
+    </svg>
+</use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -63px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Groups</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr" href="{% url 'accounts:my_profile' %}" data-title="Badges" style="position: relative;">
+    
+<!-- ICON SVG -->
+<svg class="icon-members menu-item-link-icon">
+  <use href="#svg-members">
+    <svg id="svg-members" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet">
+      <path d="M10,10c2.762,0,5-2.238,5-5c0-2.762-2.238-5-5-5S5,2.238,5,5C5,7.761,7.238,10,10,10z M10,2c1.654,0,3,1.346,3,3s-1.346,3-3,3S7,6.654,7,5S8.346,2,10,2z M13,12H7c-3.313,0-6,2.686-6,6v2h2v-2c0-2.205,1.794-4,4-4h6c2.206,0,4,1.795,4,4v2h2v-2C19,14.686,16.313,12,13,12z"></path>
+    </svg>
+  </use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -65px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Badges</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr b6" href="#"   {% if  l.profile.avatar.url != None %} name = "{{ l.profile.avatar.url }}"   {% else %} name = "{% static 'images/user_no_photo_300x300.png' %}"{% endif %} myname = "{{ l.profile.first_name }}"  data-title="Quests" style="position: relative;">
+    
+<!-- ICON SVG -->
+<svg class="icon-quests menu-item-link-icon">
+  <use href="#svg-quests">'
+    <svg version="1.1" id="svg-quests" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M392.533,0h-307.2C38.228,0.056,0.056,38.228,0,85.333v307.2c0.056,47.105,38.228,85.277,85.333,85.333h307.2
+      c47.105-0.056,85.277-38.228,85.333-85.333v-307.2C477.81,38.228,439.638,0.056,392.533,0z M443.733,392.533
+      c0,28.277-22.923,51.2-51.2,51.2h-307.2c-28.277,0-51.2-22.923-51.2-51.2v-307.2c0-28.277,22.923-51.2,51.2-51.2h307.2
+      c28.277,0,51.2,22.923,51.2,51.2V392.533z"/>
+  </g>
+</g>
+<g>
+  <g>
+    <path d="M324.267,221.867H256V153.6c0-9.426-7.641-17.067-17.067-17.067s-17.067,7.641-17.067,17.067v68.267H153.6
+      c-9.426,0-17.067,7.641-17.067,17.067S144.174,256,153.6,256h68.267v68.267c0,9.426,7.641,17.067,17.067,17.067
+      S256,333.692,256,324.267V256h68.267c9.426,0,17.067-7.641,17.067-17.067S333.692,221.867,324.267,221.867z"/>
+  </g>
+</g>
+
+</svg>
+</use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -62px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Quests</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <li class="menu-item ">
+    <!-- MENU ITEM LINK -->
+    <a class="menu-item-link text-tooltip-tfr" href="{% url 'accounts:sign_out' %}" data-title="Ranks" style="position: relative;">
+    
+<!-- ICON SVG -->
+<svg class="icon-ranks menu-item-link-icon">
+  <use href="#id_logaut"><svg  viewBox="0 0 511 512" id="id_logaut" xmlns="http://www.w3.org/2000/svg"><path d="m361.5 392v40c0 44.113281-35.886719 80-80 80h-201c-44.113281 0-80-35.886719-80-80v-352c0-44.113281 35.886719-80 80-80h201c44.113281 0 80 35.886719 80 80v40c0 11.046875-8.953125 20-20 20s-20-8.953125-20-20v-40c0-22.054688-17.945312-40-40-40h-201c-22.054688 0-40 17.945312-40 40v352c0 22.054688 17.945312 40 40 40h201c22.054688 0 40-17.945312 40-40v-40c0-11.046875 8.953125-20 20-20s20 8.953125 20 20zm136.355469-170.355469-44.785157-44.785156c-7.8125-7.8125-20.476562-7.8125-28.285156 0-7.8125 7.808594-7.8125 20.472656 0 28.28125l31.855469 31.859375h-240.140625c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h240.140625l-31.855469 31.859375c-7.8125 7.808594-7.8125 20.472656 0 28.28125 3.90625 3.90625 9.023438 5.859375 14.140625 5.859375 5.121094 0 10.238281-1.953125 14.144531-5.859375l44.785157-44.785156c19.496093-19.496094 19.496093-51.214844 0-70.710938zm0 0"/></svg></use>
+</svg>
+<!-- ICON SVG -->    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; right: -58px; top: 50%; margin-top: -12px; opacity: 0; visibility: hidden; transform: translate(10px, 0px); transition: all 0.3s ease-in-out 0s;"><p class="xm-tooltip-text">Ranks</p></div></a>
+    <!-- /MENU ITEM LINK -->
+
+      </li>
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+ 
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  <!-- /MENU ITEM -->
+  <!-- MENU ITEM -->
+  
+  <!-- /MENU ITEM -->
+</ul>
+<!-- /MENU --></nav>
+
+
+
+
+
+
+<div class="right-area-upper page-wrapper chiller-theme">
+<div class="bar" id="bar">
+
+  <img src="{% static 'images/bab.png' %}" class="a4rtyu" >
+  <form method="GET" action="{% url 'accounts:shop_product_search' %}" id="searchform">
+  <div class="search_bar" style="position: absolute;
+    background-color: #0e0e0e;
+    top: 0;
+    width: 0;
+    margin-left: 60px;
+    z-index: 1;
+    display: none;
+    
+    
+    
+   
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    transition: 2s;">
+    <input type="text" name="q" style="width: calc(100% - 30px);
+    height: 40px;
+    margin-top: 5px;
+    -webkit-border-radius: 6px;
+    border-radius: 20px;
+    background-color: #101010;
+    border: 1px solid #212020;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 0.4px;
+    padding: 0 60px 0 45px;z-index: 1;">
+
+
+
+    <button class="header__search-close" type="button" style="display: block;left: 10px;width:30px;margin-top: -18px;">
+                  <i class="icon ion-md-close"></i>
+                </button>
+                <button class="header__search-button" type="sumbit" style="right: 50px;width:30px;margin-top: -18px;">
+                  <i class="icon ion-ios-search"></i>
+                </button>
+  </div></form>
+  <!--<img src="4414804 (5).png" style="width: 50px;
+  height: 48px;position: absolute;left: 460px; background-color: black;">-->
+  <div class="user_hh0"><i class="fa fa-search" aria-hidden="true" id="search_ik"></i></div>
+  <a class="user_hh" href="/shop/cart">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+   </a>
+    <a  href="{% url 'accounts:my_profile' %}">
+  <div class="user_hh1"><i class="fa fa-user" aria-hidden="true" id="user_ik"></i></div></a>
+  
+  
+
+</div>
+
+
+
+<a id="show-sidebar" class="btn btn-sm btn-dark">
+    
+
+
+
+    <i class="fa fa-bars" id="ffghhl"></i>
+  </a>
+   <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="{% url 'accounts:post_home' %}">NetLife</a>
+        <div id="close-sidebar">
+          <i class="fa fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name">
+            <strong style="font-size: 18px;">{{ profile.first_name }}</strong>
+          
+          </span>
+          <span class="user-role"></span>
+          <span class="user-status">
+            <!--<i class="fa fa-circle"></i>
+            <span>Online</span>-->
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-tachometer" id="left0p"></i>
+              <span>Dashboard</span>
+              <span class="badge badge-pill badge-warning">New</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Dashboard 1
+                    <span class="badge badge-pill badge-success">Pro</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Dashboard 2</a>
+                </li>
+                <li>
+                  <a href="#">Dashboard 3</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-shopping-cart" style="margin-left: 0;"></i>
+              <span>E-commerce</span>
+              <span class="badge badge-pill badge-danger">3</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Products
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Orders</a>
+                </li>
+                <li>
+                  <a href="#">Credit cart</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fas fa-gem"></i>
+              <span>Components</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">General</a>
+                </li>
+                <li>
+                  <a href="#">Panels</a>
+                </li>
+                <li>
+                  <a href="#">Tables</a>
+                </li>
+                <li>
+                  <a href="#">Icons</a>
+                </li>
+                <li>
+                  <a href="#">Forms</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+           <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fas fa-gem"></i>
+              <span>Components</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">General</a>
+                </li>
+                <li>
+                  <a href="#">Panels</a>
+                </li>
+                <li>
+                  <a href="#">Tables</a>
+                </li>
+                <li>
+                  <a href="#">Icons</a>
+                </li>
+                <li>
+                  <a href="#">Forms</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-chart-line" id="left0p"></i>
+              <span>Charts</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Pie chart</a>
+                </li>
+                <li>
+                  <a href="#">Line chart</a>
+                </li>
+                <li>
+                  <a href="#">Bar chart</a>
+                </li>
+                <li>
+                  <a href="#">Histogram</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-globe" id="left0p"></i>
+              <span>Maps</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Google maps</a>
+                </li>
+                <li>
+                  <a href="#">Open street map</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="header-menu">
+            <span>Extra</span>
+          </li>
+          
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    
+  </nav>
+
+
+
+
+
+ 
+    </div>
+
+
+
+
+
+
+<div class="content-line content-line-hero">
+        <div class="line-header">
+         
+        </div>
+        <div class="slider-wrapper owl-carousel owl-theme owl-loaded owl-drag" id="owl-slider-1" style="height: 450px;">
+          
+          
+          
+        <div class="owl-stage-outer"><div class="owl-stage" style="  height: 100%;"><div class="owl-item" style="width: 860px;"><div class="item hero-img-wrapper img-1">
+            <div class="upload-text-wrapper">
+             
+            </div>
+            <img src="{% static 'images/357822246632231.jpg' %}" alt="SlideShow">
+          </div></div><div class="owl-item" ><div class="item hero-img-wrapper img-2">
+            <div class="upload-text-wrapper">
+      
+            </div>
+            <img src="{% static 'images/modern-banner-template-shoes-shop-vector-illustration-147601076.jpg' %}" alt="SlideShow">
+          </div></div><div class="owl-item active" ><div class="item hero-img-wrapper img-3">
+            <div class="upload-text-wrapper">
+             
+            </div>
+            <img src="{% static 'images/online-shopping-banner_82574-3393.jpg' %}" alt="SlideShow">
+          </div></div></div></div>
+      </div>
+
+
+  <div class="d2">
+        
+        <div class="card_categor"><div class="ecom2" style="margin-left: calc(50% - 25px);    margin-top: 15px;"><svg style ="" id="Capa_1" enable-background="new 0 0 512 512" height="50" viewBox="0 0 512 512" width="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="256" x2="256" y1="496" y2="102"><stop offset="0" stop-color="#a93aff"/><stop offset="1" stop-color="#ff81ff"/></linearGradient><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="256" x2="256" y1="409.453" y2="72.549"><stop offset="0" stop-color="#ffbef9"/><stop offset="1" stop-color="#fff1ff"/></linearGradient><g><g><g><path d="m497 106h-204.787l-35.213-4-37.213 4h-204.787c-8.284 0-15 6.716-15 15v300c0 8.284 6.716 15 15 15h166l19 6h111l20-6h166c8.284 0 15-6.716 15-15v-300c0-8.284-6.716-15-15-15zm-121 360h-45l-20-5h-113l-17 5h-45c-8.284 0-15 6.716-15 15s6.716 15 15 15h240c8.284 0 15-6.716 15-15s-6.716-15-15-15z" fill="url(#SVGID_1_)"/></g></g><g><g><path d="m356.606 20.394c-5.857-5.858-15.355-5.858-21.213 0l-79.393 79.393-79.394-79.393c-5.857-5.858-15.355-5.858-21.213 0s-5.858 15.355 0 21.213l64.394 64.393h72.426l64.394-64.394c5.858-5.857 5.858-15.354-.001-21.212zm-175.606 445.606h150v-30h-150zm106.819-175.607c5.858-5.858 5.858-15.355 0-21.213-8.499-8.499-19.799-13.18-31.819-13.18s-23.32 4.681-31.819 13.18c-5.858 5.858-5.858 15.355 0 21.213 5.857 5.858 15.355 5.858 21.213 0 2.833-2.833 6.6-4.393 10.606-4.393s7.773 1.56 10.606 4.393c5.858 5.859 15.357 5.858 21.213 0zm-46.819 40.607c0 8.284 6.716 15 15 15s15-6.716 15-15-6.716-15-15-15-15 6.716-15 15zm15-135c-28.009 0-54.367 10.932-74.218 30.782-5.858 5.858-5.858 15.355 0 21.213 5.856 5.857 15.354 5.858 21.213 0 14.185-14.183 33.009-21.995 53.005-21.995s38.82 7.812 53.004 21.996c5.858 5.858 15.355 5.857 21.213 0 5.858-5.858 5.858-15.355 0-21.213-19.85-19.851-46.207-30.783-74.217-30.783z" fill="url(#SVGID_2_)"/></g></g></g></svg></div></div>
+        <div class="card_categor"><div class="ecom2" style="margin-left: calc(50% - 25px);    margin-top: 15px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="50" height="50" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m331 83.053v-83.053h-180v83.053c56.256-29.394 123.649-29.444 180 0z" fill="#3eaccd" data-original="#000000" style="" class=""/><path d="m151 428.947v83.053h180v-83.053c-56.258 29.395-123.651 29.443-180 0z" fill="#3eaccd" data-original="#000000" style="" class=""/><path d="m255.833 217.946-14.833 14.833-14.833-14.833c-9.247-9.246-24.291-9.246-33.538 0-9.186 9.186-9.246 24.095-.18 33.354l48.551 44.935 48.551-44.935c9.066-9.26 9.006-24.169-.18-33.354-9.247-9.247-24.293-9.245-33.538 0z" fill="#3eaccd" data-original="#000000" style="" class=""/><path d="m405.31 241c-7.604-83.977-78.385-150-164.31-150-90.981 0-165 74.019-165 165s74.019 165 165 165c85.925 0 156.706-66.022 164.31-150h30.69v-30zm-94.726 31.696c-77.339 71.595-68.949 63.829-69.584 64.416l-69.584-64.416c-20.943-20.943-20.943-55.019 0-75.963 18.93-18.931 48.59-20.749 69.584-5.459 20.993-15.291 50.654-13.471 69.584 5.459 20.943 20.944 20.943 55.02 0 75.963z" fill="#3eaccd" data-original="#000000" style="" class=""/></g></g></svg>
+
+</div></div>
+        <div class="card_categor">
+          <div class="ecom2" style="margin-left: calc(50% - 25px);    margin-top: 15px;">
+            <img src="{% static 'shop/sweater.png' %}" style="width: 50px;height: 50px;">
+            
+
+          </div>
+          
+
+
+        </div>
+        <div class="card_categor">
+          <div class="ecom2" style="margin-left: calc(50% - 25px);    margin-top: 15px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="50" height="50" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><circle cx="196" cy="287" r="15" fill="#db7373" data-original="#000000" style=""/><path d="m416.61 214.39c-14.198-14.198-132.992-132.992-150-150-5.86-5.85-15.36-5.85-21.22 0l-61.44 61.44c9.04 31.26 37.92 54.17 72.05 54.17 8.28 0 15 6.72 15 15s-6.72 15-15 15c-42.17 0-78.61-24.98-95.29-60.93l-65.32 65.32c-2.81 2.82-4.39 6.63-4.39 10.61v272c0 8.28 6.72 15 15 15h300c8.28 0 15-6.72 15-15v-272c0-3.98-1.58-7.79-4.39-10.61zm-265.61 72.61c0-24.81 20.19-45 45-45s45 20.19 45 45-20.19 45-45 45-45-20.19-45-45zm34.39 130.61c-5.85-5.86-5.85-15.36 0-21.22l120-120c5.86-5.85 15.36-5.85 21.22 0 5.85 5.86 5.85 15.36 0 21.22l-120 120c-5.86 5.85-15.36 5.86-21.22 0zm130.61 34.39c-24.81 0-45-20.19-45-45s20.19-45 45-45 45 20.19 45 45-20.19 45-45 45z" fill="#db7373" data-original="#000000" style=""/><circle cx="316" cy="407" r="15" fill="#db7373" data-original="#000000" style=""/><path d="m181 105c0-41.252 33.559-75 75-75 33.357 0 62.221 22.024 71.73 53.08l32.71 32.71c6.393-61.685-42.14-115.79-104.44-115.79-57.9 0-105 47.1-105 105 0 14.892 3.125 29.91 9.71 44.07l23.24-23.24c-1.92-6.61-2.95-13.6-2.95-20.83z" fill="#db7373" data-original="#000000" style=""/></g></g></svg>
+
+</div>
+          
+        </div>
+        <div class="card_categor">
+          
+          <div class="ecom2" style="margin-left: calc(50% - 25px);    margin-top: 15px;">
+            <svg height="50" viewBox="-80 0 512 512.00071" width="50" xmlns="http://www.w3.org/2000/svg"><path d="m284.90625 132.957031c-3.484375-5.761719-10.382812-8.5-16.867188-6.691406-6.484374 1.808594-10.972656 7.71875-10.972656 14.449219 0 18.308594-14.894531 33.199218-33.199218 33.199218-18.304688 0-33.199219-14.890624-33.199219-33.199218v-125.714844c0-6.066406-3.65625-11.535156-9.261719-13.855469-5.605469-2.324219-12.054688-1.042969-16.34375 3.25-1.6875 1.683594-41.683594 41.917969-82.207031 102.703125-23.898438 35.84375-42.96875 71.398438-56.679688 105.675782-17.367187 43.425781-26.175781 84.996093-26.175781 123.5625 0 96.859374 78.804688 175.664062 175.667969 175.664062 96.859375 0 175.664062-78.804688 175.664062-175.664062.003907-62.003907-22.347656-130.429688-66.425781-203.378907zm0 0" fill="#ff9f00"/><path d="m284.90625 132.957031c-3.484375-5.761719-10.382812-8.5-16.867188-6.691406-6.484374 1.808594-10.972656 7.71875-10.972656 14.449219 0 18.308594-14.894531 33.199218-33.199218 33.199218-18.304688 0-33.199219-14.890624-33.199219-33.199218v-125.714844c0-6.066406-3.65625-11.535156-9.261719-13.855469-1.855469-.773437-3.804688-1.1367185-5.738281-1.1367185v511.9921875c96.863281 0 175.667969-78.804688 175.667969-175.667969 0-62-22.351563-130.425781-66.429688-203.375zm0 0" fill="#ff641a"/><path d="m260.761719 253.167969h-64.269531c-8.285157 0-15 6.714843-15 15-.003907 8.285156 6.714843 15 14.996093 15h28.058594l-64.085937 64.085937-34.835938-34.835937c-5.855469-5.859375-15.351562-5.859375-21.210938 0l-34.085937 34.078125c-5.859375 5.859375-5.859375 15.355468 0 21.214844 5.855469 5.859374 15.351563 5.859374 21.210937 0l23.480469-23.472657 34.835938 34.835938c2.8125 2.8125 6.628906 4.390625 10.605469 4.390625 3.976562 0 7.792968-1.578125 10.605468-4.390625l74.691406-74.691407v28.050782c0 8.285156 6.714844 15 15 15 8.285157 0 15-6.714844 15-15v-64.265625c0-8.28125-6.714843-15-14.996093-15zm0 0" fill="#e7f0ef"/><path d="m260.761719 253.167969h-64.269531c-8.285157 0-15 6.714843-15 15-.003907 8.285156 6.714843 15 14.996093 15h28.058594l-48.878906 48.878906v42.425781l70.09375-70.089844v28.050782c0 8.285156 6.714843 15 15 15 8.28125 0 15-6.714844 15-15v-64.265625c-.003907-8.28125-6.71875-15-15-15zm0 0" fill="#c5e1e6"/></svg>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+      <div class="content-line content-line-list">
+        <div class="line-header">
+          <span class="header-text">Trending</span>
+        </div>
+        <div id="owl-slider-2" class="slider-wrapper owl-carousel">
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Skinny_Fit_Stretch_Mesh_Polo</p>
+              <p class="video-description-subheader">Polo</p>
+              <p class="video-description-info">116 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+         <a href="/shop/product/1/">  <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="/media/cache/17/c6/17c6b057148e3675f18d27478c174973.jpg" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Tailored Fit Mesh-Panel Polo</p>
+              <p class="video-description-subheader">david</p>
+              <p class="video-description-info">25 $ </p>
+              <button class="btn-play"></button>
+            </div>
+          </div></a>
+         <a href="/shop/product/2/"> <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="/media/cache/19/b0/19b0ff405d564f37fa67960f3b64162c.jpg" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Faxon Canvas Low-Top Sneaker</p>
+              <p class="video-description-subheader">Polo</p>
+              <p class="video-description-info">460 $ </p>
+              <button class="btn-play"></button>
+            </div>
+          </div></a>
+         <a href="/shop/product/3/"> <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="/media/cache/f4/0b/f40bfe8233319465c0b08ce57f9d272a.jpg" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Rounded Cat Eye Sunglasses</p>
+              <p class="video-description-subheader">Fashion</p>
+              <p class="video-description-info">180 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div></a>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/Featherweight_Pima_Hoodie_4_e2b11fbc-2853-488d-a075-f8bf63034128_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Minimal Photography</p>
+              <p class="video-description-subheader">glass</p>
+              <p class="video-description-info">50 $ </p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/Viscose-Cashmere_Scarf_4_1024x1024.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Minimal Photography</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/Saffiano_Leather_Belt_013384fb-f4ca-425a-9865-1a9c0db0f802_1024x1024.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Minimal Photography</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/Relaxed_Painted_Oxford_Shirt_a05b7822-2e2f-40da-986f-4bcd650ba584_1024x1024.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Puppet Theatre</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/Two-Tone_Sleeveless_Dress_0c19f674-98a1-47e0-acd7-c71242e96eb6_1024x1024.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Road Trip</p>
+              <p class="video-description-subheader">By Wallace</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/Woven_Shield_Sunglasses_3890188c-15a3-459b-94c3-4e46e2149215_1024x1024.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Young Folks</p>
+              <p class="video-description-subheader">By Peter</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-line content-line-list">
+        <div class="line-header">
+          <span class="header-text">Public</span>
+        </div>
+        <div id="owl-slider-5" class="slider-wrapper owl-carousel">
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/22.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">D.E.V & CO
+</p>
+              <p class="video-description-subheader">D.E.V & CO
+</p>
+              <p class="video-description-info">116 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/23.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">D.E.V & CO</p>
+              <p class="video-description-subheader">D.E.V & CO</p>
+              <p class="video-description-info">10 $ </p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/24.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Alessio Nesca
+</p>
+              <p class="video-description-subheader">Alessio Nesca
+</p>
+              <p class="video-description-info">160 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+         <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/26.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">ROSSO-STYLE
+</p>
+              <p class="video-description-subheader">ROSSO-STYLE
+</p>
+              <p class="video-description-info">340 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+         <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/27.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Серьги, SOKOLOV
+</p>
+              <p class="video-description-subheader">Серьги, SOKOLOV
+</p>
+              <p class="video-description-info">537 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Puppet Theatre</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Road Trip</p>
+              <p class="video-description-subheader">By Wallace</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Young Folks</p>
+              <p class="video-description-subheader">By Peter</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-line content-line-list">
+        <div class="line-header">
+          <span class="header-text">Tech</span>
+        </div>
+        <div id="owl-slider-6" class="slider-wrapper owl-carousel">
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/2.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Galaxy M31 128Gb: 6.4" 2340x1080/Super AMOLED Exynos 9166 6Gb/128Gb 64+8+5Mp/32Mp 6000mAh, Samsung</p>
+              <p class="video-description-subheader">Samsung</p>
+              <p class="video-description-info">850 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/3.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Mi Smart Band 4, Xiaomi
+</p>
+              <p class="video-description-subheader">Xiaomi</p>
+              <p class="video-description-info">50 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/4.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Mi TV 4A, 32", HD, Smart TV, Wi-Fi, DVB-T2, Xiaomi</p>
+              <p class="video-description-subheader">Xiaomi</p>
+              <p class="video-description-info">1240 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/5.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Airpods (2nd generation), Apple
+</p>
+              <p class="video-description-subheader">Apple</p>
+              <p class="video-description-info">500 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/6.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">
+Coffee machine Philips EP1224/00</p>
+              <p class="video-description-subheader">Philips</p>
+              <p class="video-description-info">460 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Puppet Theatre</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Road Trip</p>
+              <p class="video-description-subheader">By Wallace</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Young Folks</p>
+              <p class="video-description-subheader">By Peter</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="content-line content-line-list">
+        <div class="line-header">
+          <span class="header-text">Public</span>
+        </div>
+        <div id="owl-slider-7" class="slider-wrapper owl-carousel">
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/7.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Boots GEOX</p>
+              <p class="video-description-subheader">GEOX</p>
+              <p class="video-description-info">100 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/8.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Boots FESS</p>
+              <p class="video-description-subheader">FESS</p>
+              <p class="video-description-info">116 $ </p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/9.jpg' %}" alt="video" >
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Galaktika
+</p>
+              <p class="video-description-subheader">Galaktika</p>
+              <p class="video-description-info">240 $></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/10.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Jacket DizzyWay</p>
+              <p class="video-description-subheader">DizzyWay</p>
+              <p class="video-description-info">525 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/11.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Windbreaker  DizzyWay
+
+</p>
+              <p class="video-description-subheader">DizzyWay</p>
+              <p class="video-description-info">320 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Puppet Theatre</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Road Trip</p>
+              <p class="video-description-subheader">By Wallace</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Young Folks</p>
+              <p class="video-description-subheader">By Peter</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="d5">
+        <div class="line-header">
+          <span class="header-text">Stories</span>
+        </div>
+        
+        <div class="card_categor"><img src="{% static 'images/shop.png' %}" style="width: 100%;height: 100%; object-fit: cover;"></div>
+        <div class="card_categor"><img src="{% static 'shop/apple-watch-6s-202009_GEO_RU.jfif' %}" style="width: 100%;height: 100%;object-fit: cover;"></div>
+        <div class="card_categor"><img src="{% static 'shop/c81d013fb1804061b62dfbb858259877.png' %}" style="width: 100%;height: 100%;object-fit: cover;"></div>
+        <div class="card_categor"><img src="{% static 'shop/B0732000_VGD_15_f4e89986-0bf1-4583-b34f-c690ebd2c43f_large.jpg' %}" style="width: 100%;height: 100%;object-fit: cover;"></div>
+        <div class="card_categor"><img src="{% static 'shop/images.jfif' %}" style="width: 100%;height: 100%;object-fit: cover;"></div>
+
+        
+       
+
+
+
+
+
+
+
+
+      </div>
+      <div class="d6">
+       
+        
+        <div class="card_categor"><img src="{% static 'shop/galaxy-s20_highlights_kv_00.jpg' %}" style="width: 100%;height: 100%;object-fit: cover;"></div>
+        <div class="card_categor"><img src="{% static 'shop/unnamed.jpg' %}" style="width: 100%;height: 100%;object-fit: cover;"></div>
+        <div class="card_categor"><img src="{% static 'shop/view.jfif' %}" style="width: 100%;height: 100%;object-fit: cover;"></div>
+        <div class="card_categor"><img src="{% static 'shop/apple-watch-6s-202009_GEO_RU.jfif' %}" style="width: 100%;height: 100%;object-fit: cover;"></div>
+        <div class="card_categor"><img src="{% static 'images/How-to-Keep-Your-E-Commerce-System-Funtioning-at-Optimum-Capacity.png' %}" style="width: 100%;height: 100%; object-fit: cover;"></div>
+        
+        
+       
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="content-line content-line-list">
+        <div class="line-header">
+          <span class="header-text">Public</span>
+        </div>
+        <div id="owl-slider-10" class="slider-wrapper owl-carousel">
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/12.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Constructor
+ Hot Wheels</p>
+              <p class="video-description-subheader">Hot Wheels</p>
+              <p class="video-description-info">110 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/13.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Autotrack  1Toy
+</p>
+              <p class="video-description-subheader">1Toy</p>
+              <p class="video-description-info">116 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/15.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Lazer Mad, Silverlit</p>
+              <p class="video-description-subheader">Silverlit</p>
+              <p class="video-description-info">100 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/14.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Hot Wheels
+
+</p>
+              <p class="video-description-subheader">Hot Wheels</p>
+              <p class="video-description-info">120 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/16.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header"> Laser X</p>
+              <p class="video-description-subheader"> Laser X</p>
+              <p class="video-description-info">20 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/16.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Redmi Note 8 Pro 6/64GB: 6.53'' 2340x1080 IPS/Helio G90T/6Gb/64Gb 64+8+2+2Mp/20Mp 4500mAh, Xiaomi
+</p>
+              <p class="video-description-subheader">Xiaomi</p>
+              <p class="video-description-info">570 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Road Trip</p>
+              <p class="video-description-subheader">By Wallace</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Young Folks</p>
+              <p class="video-description-subheader">By Peter</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-line content-line-list">
+        <div class="line-header">
+          <span class="header-text">Public</span>
+        </div>
+        <div id="owl-slider-8" class="slider-wrapper owl-carousel">
+        <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/17.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Redmi Note 8 Pro 6/64GB: 6.53'' 2340x1080 IPS/Helio G90T/6Gb/64Gb 64+8+2+2Mp/20Mp 4500mAh, Xiaomi
+</p>
+              <p class="video-description-subheader">Xiaomi</p>
+              <p class="video-description-info">570 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+         <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/18.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">20000mAh Redmi 18W Fast Charge Power Bank, Xiaomi
+
+
+</p>
+              <p class="video-description-subheader">Xiaomi</p>
+              <p class="video-description-info">20 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+
+
+           <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/19.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Mi Curved Gaming Monitor 34" (VA, 3440x144, 4 мс, 300 кд/кв.м), Xiaomi
+
+
+</p>
+              <p class="video-description-subheader">Xiaomi</p>
+              <p class="video-description-info">790 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/20.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header"> Dominator CM-362 Красное, класс 4, 50мм, Defender
+
+
+
+
+</p>
+              <p class="video-description-subheader">Defender</p>
+              <p class="video-description-info">690 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/21.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">  Forced оптика, 6 кнопок, 800-3200 dpi, Defender
+857
+
+
+
+
+
+</p>
+              <p class="video-description-subheader">Forced</p>
+              <p class="video-description-info">50 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Road Trip</p>
+              <p class="video-description-subheader">By Wallace</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Young Folks</p>
+              <p class="video-description-subheader">By Peter</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- <div class="content-line content-line-list">
+        <div class="line-header">
+          <span class="header-text">Public</span>
+        </div>
+        <div id="owl-slider-9" class="slider-wrapper owl-carousel">
+           <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'images/22.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">  Forced оптика, 6 кнопок, 800-3200 dpi, Defender
+857
+
+
+
+
+
+</p>
+              <p class="video-description-subheader">Forced</p>
+              <p class="video-description-info">50 $</p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Puppet Theatre</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Road Trip</p>
+              <p class="video-description-subheader">By Wallace</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Young Folks</p>
+              <p class="video-description-subheader">By Peter</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Minimal Photography</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Puppet Theatre</p>
+              <p class="video-description-subheader">By July</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Road Trip</p>
+              <p class="video-description-subheader">By Wallace</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+          <div class="item video-box-wrapper">
+            <div class="img-preview">
+              <img src="{% static 'css/Skinny_Fit_Stretch_Mesh_Polo_4_01eba637-2021-46a6-a8b7-9b60faf6b9e0_2048x2048.jpg' %}" alt="video">
+            </div>
+            <div class="video-description-wrapper">
+              <p class="video-description-header">Young Folks</p>
+              <p class="video-description-subheader">By Peter</p>
+              <p class="video-description-info">116K views <span>1 hour ago</span></p>
+              <button class="btn-play"></button>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+
+<script type="text/javascript">
+
+
+
+
+$("#search_ik").on("click",function(){
+  $(".search_bar").css("display", "block")
+  $(".search_bar").css("width", "calc(100% - 70px)")
+
+  
+
+})
+$(".header__search-close").on("click",function(){
+  $(".search_bar").css("display", "none")
+  $(".search_bar").css("width", "0")
+
+  
+
+})
+
+   $(".sidebar-dropdown > a").click(function(e) {
+      e.preventDefault()
+  $(".sidebar-submenu").slideUp(200);
+  if (
+    $(this)
+      .parent()
+      .hasClass("active")
+  ) {
+    $(".sidebar-dropdown").removeClass("active");
+    $(this)
+      .parent()
+      .removeClass("active");
+  } else {
+    $(".sidebar-dropdown").removeClass("active");
+    $(this)
+      .next(".sidebar-submenu")
+      .slideDown(200);
+    $(this)
+      .parent()
+      .addClass("active");
+  }
+});
+
+$("#close-sidebar").click(function() {
+  $(".page-wrapper").removeClass("toggled");
+});
+
+$("#show-sidebar").click(function() {
+ $(".page-wrapper").addClass("toggled");
+ console.log("aa")
+})
+ $(window).on("load",function(){
+    document.getElementById("llo").style.display="none";
+
+});
+</script>
+
+
+      
+      
+
+
+
+
+
+
+
+
+</body>
+</html>

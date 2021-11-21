@@ -1,0 +1,2019 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - HTML5 Video Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+<link rel="stylesheet" href="bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="bootstrap1-grid.min.css">
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="nouislider.min.css">
+  <link rel="stylesheet" href="ionicons.min.css">
+  <link rel="stylesheet" href="plyr.css">
+  <link rel="stylesheet" href="photoswipe.css">
+  <link rel="stylesheet" href="default-skin.css">
+  <link rel="stylesheet" href="main3.css">
+  <link rel="stylesheet" href="flickity.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="flickity1.css">
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+  <title>HotFlix ‚Äì Online Movies, TV Shows & Cinema HTML Template</title>
+  <style>
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+.actor{
+  position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+}
+.article{
+	height: 91%;
+	width: 750px;
+}  
+
+
+
+.rewuve{
+   position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+
+}
+.sqdOP{
+    font-size: 15px;
+}
+.article{
+	margin-top: 40px;
+}
+.carousel{
+
+	height: 100%;
+
+}
+.carousel-cell{
+	height: 100%;
+	margin-right: 30px;
+	border-radius: 0px;
+}
+.jpg{
+	height: 110px;
+	width: 110px;
+	border-radius: 0px;
+	
+}
+#c45{
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	top: 50px;
+}
+.vic{
+   position: absolute;
+    left: 0px;
+    top: 115px;
+    width: 110px;
+    height: 50px;
+    text-align: center;
+    word-wrap: break-word;
+      
+
+    }
+
+.f45{
+	width: 9%;
+}
+.s50fgh{
+	margin-left: 20px;
+}
+
+.name{
+  position: absolute;
+  color: white;
+  padding-top: 110px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  
+    word-wrap: break-word;
+
+}
+.prof{
+  position: absolute;
+  color: #D22A2A;
+  padding-top: 160px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  
+  font-size: 13px;
+  
+    word-wrap: break-word;
+
+
+}
+
+
+.carousel {
+  width: 93%;
+  left: 3%;
+
+
+}
+
+.carousel-cell {
+  width: 100px;
+  height: 250px;
+  margin-right: 30px;
+  background: transparent;
+  border-radius: 180px;
+  
+}
+
+
+.carousel-cell.is-selected {
+  background: transparent;
+}
+
+/* cell number */
+
+</style>
+  <style type="text/css">
+    body{
+      background: #FAFAFA;
+    }
+    .footer{
+      background: #0E0E0E;
+      border-top: 1px solid rgba(87, 83, 103, 0.1);
+
+
+    }
+    .home{
+      height: 300%;
+      width: 75%;
+      left: 12.5%;
+      top: 5%;
+      background: #0E0E0E;
+      box-shadow: 0 3px 1px 0 rgba(0,0,0,0.14),0 0px 3px -2px rgba(0,0,0,0.12),0 -1px 5px 0 rgba(0,0,0,0.2);
+
+
+
+
+
+    }
+    .header{
+      background: #F9F9F9;
+    }
+    .img{
+      position: absolute;
+      width: 200px;
+      height: 288px;
+      left: 0%;
+      top: 0%;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+          box-sizing: inherit;
+
+
+
+
+
+
+
+    }
+    .span{
+      
+      width: 100%;
+      height: 50px;
+      margin-left: 28%;
+      padding-top: -50px;
+
+      
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+      z-index: 1;
+      float: left;
+
+    }
+    .span1{
+      width: 100%;
+      
+      margin-left: 29%;
+      
+      left: 213px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    .span2{
+      width: 100%;
+      
+      margin-left: 35%;
+      margin-top: -24px;
+      left: 270px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    @media (max-width: 969px){
+      .span2{
+
+      margin-left: 37%;
+      
+    }
+    .span{
+      margin-top: -5px;
+    }
+
+    
+
+  }
+    @media (max-width: 709px){
+      .span2{
+
+      margin-left: 39%;
+      }
+      .span{
+      margin-top: -10px;
+      font-size: 28px;
+      height: 43px;
+    }
+
+
+  }
+    @media (max-width: 595px){
+      .span2{
+
+      margin-left: 41%;
+    }
+    .span{
+      margin-top: -15px;
+      font-size: 25px;
+      height: 38px;
+    }
+  }
+    @media (max-width: 500px){
+      .span2{
+
+      margin-left: 44%;
+    }
+    .span{
+      margin-top: -20px;
+    }
+
+  }
+    @media (max-width: 400px){
+      .span2{
+
+      margin-left: 48%;
+    }}
+    @media (max-width: 290px){
+      .span2{
+
+      margin-left: 51%;
+    }}
+
+
+
+
+    }
+    .images{
+      position: absolute;
+      
+      width: 100%;
+      
+      top: 450px;
+    }
+    .images img{
+      width: 100%;
+    }
+    .b22{
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      left: 500px;
+      top: 200px;
+      
+    }
+    .header__dow{
+      
+      
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow1{
+      
+      margin-left: 25px;
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow2{
+      margin-left: 25px; 
+      
+      
+
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .hidden{
+      margin-top: 12px;
+      margin-left: 13px;
+      color: #fd6060;
+
+      
+      
+      
+
+    }
+     .f46{
+   
+    display: none;
+  }
+
+
+    .hidden .fa{
+      font-size: 25px;
+    }
+    
+    #fa{
+      margin-left: 5px;
+
+    }
+    .bl{
+      position: relative;
+      margin-top: -8%;
+      
+      background: #212121;
+      width: 94%;
+      left: 3%;
+
+      height: 1.5px;
+
+    }
+    .bl1{
+      position: relative;
+      margin-top: 5%;
+      
+      background: #212121;
+      width: 99%;
+      left: 0%;
+
+      height: 1.5px;
+
+    }
+    #bl1{
+      width: 236%;
+      height: 1px;
+
+    }
+.article{
+	width: 825px;
+    
+    right: 4%;
+
+
+  }
+  .root{
+	position: fixed;
+	width: 83%;
+	height: 100%;
+	background: white;
+	right: 2%;
+}
+textarea:focus .chat{
+	position: relative;
+}
+  .w1{
+  	width: 680px;
+  	height: 540px;
+  	object-fit: contain;
+  }
+@media (max-width: 961px){
+  .article{
+    right: 13%;
+  }
+  .f45{
+    width: 9%;
+  }
+}
+.addcomff{
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  overflow: hidden;
+}
+.Ypffh {
+    
+    border: 0;
+    color: #262626;
+    color: black;
+    position: relative;
+   
+    font-size: inherit;
+    height: 40px;
+    width: 80%;
+    background-color: #e0e0e0;
+    background: #fff;
+    max-height: 50px;
+    outline: 0;
+    padding: 0;
+    resize: none;
+    margin-left: 5px;
+    line-height: 1.35em;
+    
+    overflow: auto; /* –∏–ª–∏ auto */
+
+}
+.sqdOP{
+	margin-left: 85%;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #928C8B;
+    bottom: 11%;
+}
+
+
+.massage{
+	position: relative;
+	width: 100%;
+	height: 70px;
+	background: white;
+	margin-top: 50px;
+
+}
+.resived{
+	position: absolute;
+	min-width: 50px;
+	width: 200px;
+	height: 65px;
+	min-height: 40px;
+	
+	margin-top: 5px;
+	border: 1px solid black;
+	border-radius: 170px;
+	word-wrap: break-word;
+
+}
+
+.text{
+	position: absolute;
+	width: 170px;
+	word-wrap: break-word;
+	
+	margin-left: 13px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:hover,
+*:focus {
+  outline: none;
+}
+
+.chat {
+   width: 100%;
+  max-width: calc(100% - 25px);;
+  height: calc(100vh - 150px);
+  
+  padding: 15px 30px;
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-y: auto;
+
+  margin-top: 65px;
+
+  background-color: #fff;
+  transform: rotate(180deg);
+  direction: rtl;
+
+
+}
+.chat__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+
+}
+.chat__message {
+  font-size: 17px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #000;
+  background-color: #e6e7ec;
+  max-width: 600px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin: 15px 0;
+  word-break: break-all;
+  transform: rotate(180deg);
+  direction: ltr;
+}
+.chat__message:after {
+  content: "";
+  width: 20px;
+  height: 12px;
+  display: block;
+  background-image: url("https://stageviewcincyshakes.firebaseapp.com/icon-gray-message.e6296433d6a72d473ed4.png");
+  background-repeat no%rux-e0{  bicjg"oufd-pÔwiti?~: celter;
+0 ¬ccc'vn}nd-sizd: Cootainª  positaonz abcoout%w"  bottgm: l2px;
+  levp: ,5px;˝
+nchat][meÛryGew˜n"[
+$ Cn-~r: #fff3
+""-arOin-Left{ auto;
+  cacKfrownd/colmr: +  a9dmçm
+.ghau]_Maqs·ce-mwnEf|eR {ç
+  {iduh≤ 5ypx;  Leight:`03pxª
+$ left:(i.hmritª
+  ig(t> Ω4py9
+ `bac{gvo}n$-image: urL"xttps:/Øqt·gevieciÓcys»AkÂs~l-vebasea`p.bom/icjn-blu%=gus”ecE2b#5µaf0d9<ee2<64e69.pbg#)ª
+}
+
+>chat_[fnri!{
+  b/rLeræ q`x$Ûolie !(0q9‰e:
+" bo‚dez-radiwsz 180@x;
+0 *      /*(bgtTm: 20px; *+/`  
+m
+,c`atS_'ori form {
+! m·p-v)d‰h:(c!lb(00% - 15px);*  marwmo: 0 cuto;
+0 huagËt8 50p{;"`disphcy: ≠wÂbkitbox{-
+` di{play: -ms-`dmxboy3  disla˘z Flax;
+  -wa`kiÙ-box,alkg~; ceJt%r;J  %Ìw-vlÂp=qlÈgn: centcÚ+
+  a|©gn=hÙgms:`ce~ver;}I
+.fhce__form textarea!{
+ ∞heiwht; <0px;
+ "foNT-sije: ±6px;  mi,-wi‰t»: 90%* $paddin'-,egt$0usx;
+0 Ba√igrÔund%Conor: #f6f;
+  `grder-radIus: 15tx! bor‰er:0nonez
+}M.shat__f?rm butp/n sä†@sidtx:`q0%;H `heIoht:01|0%?
+† font/3ize:`56px;
+  bqckcroUndmkolmr2!taNsPareÆt;
+  boreer. none;
+0 Ù%|t-!ligl8 aenver;
+( tmxt-tzaÓsfor,∫ 5ppUrcAe3
+" sevSms* @o)NteR≥*}-é.cha|_fori budTÎnhGvgr sJ! Êoft-weigHt:`dold;
+}m
+.#Èau∫:-e‚cit-scromm„ar { vidth: 4px9 xeioht: 4ph9 t2anqform: r/p·te(18∏leg©;|-
+k`at8z=wubkiTsczohlbqrÙpack {  b`k+ground-color: #99=; trancnor-: xodateh180Deg);}
+.kh·t::-webkitmq„rmdÏbav%praCk-iecE${ bac+o2ounl-colo2∫ 30DDD ÙRaÍsNorÈ Útqtu(180deg);}
+.c(au*:)webiÈt-scrollbi2-4hqib { height2b50py; bacjgrownfmcOlÎ2: #E9E9E;0b{RdeÚ-badius8 4p8+ tra>sfoRo: rotaÂ(18 deÁ);?ç.Chat::-webkiv-scrodlb·r-„ovﬁ%q![ back'skuÓd-colop†#998? pzao3roÚm:!rotatm(1:0d≈g+/}*.clct:z=Webcit-resÈjes {"bqckgrmuNd-cgLOr> +666; tb·nsfÔ˚m: rorate(t80deg){}
+M
+ä@mu$ia$(mcr-Widv(: 800¯p){
+ †.aÚuicHd{
+   (  !widÙË: ==8p8;*  } ¶ ®,sqfoP
+ d !margin-¸eftz"v61px  }
+` .w˚M  †$vmddh8(100%zä	` }-
+}
+@medka`(m·x%witti: 8v5p{9{
+  .ArpYcl}
+  00bighV:!1„%;†  $width> µ;0vx:
+ `
+  v,{
+  ! uidth: 1∞;
+  }
+( Ju¿medic (m`zw)Dth: 82!p¯)s≠  .`rtkcle{
+"  "right: 12%;8   wmdth: 560px;( }
+ (.f45[    wa`th:$10µ;
+∞ }
+  .sqtOX{	J2   merÁyn-lEft: 43#px
+ "m  ,w1{
+0 !0widthz 16 %;
+ †  huifhp: 4pp0zH $m( >Qp&fl
+ 0  width2 7u$;
+0 ˇ
+}@MÂEiA (mpx,wi`shz*∑8pz-{
+  !rticle{4   right: 849  0 ˜kdth6 580px;
+ 0}
+* $&65{   "rml‰x: 10%:
+  }çZ  ,˜qdOP{
+  † marGij-meft: 4#qpx*
+  o
+ .s{{
+ "  -dtH:"Q00';
+ !  heifh÷:°510pz $? (fngii)r{-
+! " widthz 100';
+  " po3ation: qbÛol5$u;
+    MargMn-op*&≠25Pp;   }
+ (.Ypfgh{
+"  "gidthz†75%;ä  |	
+  .spoilEr[Lini{
+ "  -aÚ7in≠Top; 63"pz{h ˝}@yadie (mqx<wÈ‰th 70px	˚
+  ,article{
+h   right:k8-;
+    widt`88'0p8;("]
+`,n¥5{J   $~ieuh: 10$;	Nº }
+  nsqdOP{:    ÌarGknçlefq2 sx1px
+` x
+ !.w1{=
+!   uyfTh: ±80%;(   h’iwhT: 470p8ù
+ Ç}
+0 .njgMiI2{
+   !w)dÙx:†18%;
+0   `ositIon"(a`sklute;
+ †  merÂyn%vmp: -5µtx; 
+ $}
+$ nYpffhsä    widt‡:07s!3. 0}
+  .sxoiler_mknos{
+ (  oqrgin)top: 601rx;
+  $  marwin%left: :64px;
+$ s
+}
+@me$ia,iax≠gÈetË
+ '52px)s-
+  .esticle{
+    bightz 10%;
+ "† wmdth: 57ttx{
+† }ú
+ †.f¥5kä 0 0width∂$%;
+0`00Disl`y: nole;
+ "}
+  ¢/f4>{
+ 0M    dysplay: blok{
+  }M
+0 .{qdOP{é   $M`Rwmn-meft:($21tx
+
+! }ç
+"†.w1;
+(%! width: 10%)
+ (  (ÂmGht:(5px
+
+  }  /roouz
+  	rie*T: 4%+J †	width: 92!+M  }
+ 
+  ghgkiisq
+    wi`Ë8 002-;
+    pos)tiof:(abqolutE;
+!  0mapgyn-tnp: -07p|: 
+  }ä 0 /ŸPFfhj
+  !(wmdpj: 53e;-` }*  .sxoilev_,ynks{*    mergin-t/p: '6zPx;
+     eargi~-l}fl: 265py9
+  }
+]%
+b-edaa (Ìax-wiLtx™ 69ìx({-
+  .aRtk„le{
+`  (right:†;%;J    widÙh:`5∑00x{
+ §q}
+
+@m%d)a (mix-wi`th: 6•8pxi{# .aRtiblek$!  Úigh|: ;%;
+    width: 7"0z;O( u
+ †.f¥5{
+"   WidtI: 9%9
+!P  digpley8 nonEª
+  }
+ 
+ !.sqdO{-
+    margin-ÏenT:`091px	
+
+  }
+  ÆW1y
+    whttx:†±00%;
+  0 hei˜hÙz 4(0p|
+*° q	
+" .fjFiiIb{ç
+(∞® vidth: 040%ª
+0   posit)on:"!bsg,qtÂªä"   m!rgin-top: -¥5px; 
+ !yç  6YpFfhyH  " widTj: 7r´ä  ˇ-
+0!.{poiler_lÈnJsz!  (mcrgiÓ)top: 612px;-
+Ä ‡(miroi~-nefVz r71Px;
+  =
+®`.f<lïaa[    ` Xeight: 810px;M``}:}-*@Media`(max-w)dth: 628t|	{
+$.axuicle[
+†$† righ|: 8%;    wmDth* 520pÿ;ä 0˝
+` .&4={
+    wiethz 9$;
+   `‰yspha{: nOnÂ;M  }
+` ,3qdNP{M
+ 8  -aRfknm,eftj ≤61‰x-+
+p }
+  .g1y
+$  })duh: 104d;
+  0 heicht: 05ptx
+
+ $}
+ $.fje!iir{
+  $u{d|h: 100;
+ ! "0oritio.: !‡sod5te=
+ !Ä ÌAroen=to0æ %5px3`
+` }
+( 
+Ypffhˇ
+  (!wadt(:70%∫è
+  yç
+  &spoilerüÏÈnks{
+   `ma0gin-dox: 58tp¯õ
+ d " m·rfÈn-dent: 2<5px;* }   *d6h5aa;	 ! $  heisht: ∂0x;  =à}
+H]Udii0(ma¯-width: %pp){-
+d,%rticÏe{
+    r`git:!9'{	
+†  !wilul8 4'2py;ä  }  .f$5;J    whdth: 22E;	$   diÛt,Ay none;
+d!u
+" .wUDOP}
+    icrgin)lgft:!3≥1x
+-
+ 0=*  .w0€
+`  "width* 100%;
+*  "ie)ght 420px
+` }
+  .fjgiairs
+0 $ width∫0100•{
+!   positionz ajRo,ute;
+ d†1eargim=tkp: -105tx; 
+p }  .Ypffh˚J    wif4i: 68%;
+0`}	
+   .spoyleR_ligo{˙
+† $ mavg)n%tÔP: 554p|y
+     e`'gan-meft: 253x¯;
+` }
+"  .f4h5aaˇ	
+ (    hohght: 750px;
+ !.uç
+Bmddia (ÌaË≠wit|h˙ 693p8	{"(.afdIcLe~
+    ri/`|: :%9
+  b -
+† }›ç
+@mÂfia (LA|-widt`:†58®px-{L
+¢.artiglgz    rmghT0∏%;-
+ 0  widtZ:h49pp8;-
+ 
+}	
+@iueia((Ìax-w-wth: 1t4p[){
+ Æ@sticleª	
+   `ryg`d: 7%;
+!   uidti(460tx;ç
+† {"  >f45{	
+    whtuh: :2ß;
+  ! `i3lay8 none9N `}
+  .sqdP{
+ !  marfin$left:(;1#xhäM
+ §}
+  .w1{M
+ 0 †wi$txr 00%;  0 Ëeaght> 401zx
+
+  }
+  .fngiikr{-
+ ( bvklth: 30%    osÈtÈon: absohutu;	(   mcWgio-tmp8 -125x; 
+  u  .pffj{
+† §0wydth: 68%;
+! }
+  .wpnmÏerOliNks{
+$ `mcrg)n=4kp:`538pxª≠
+† "  l`rÁin-ld¶t? 23px;J  
+  .v4`aa{* "    hehgjt: 725Pz{
+ $}
+  ]Jmedii )mex-widTh424‡x)˚J ,artisley-	    si'xt: <%;  ("wkdthz 530xz;j !}
+  .f4{-
+    widtx: 22$;ç
+  $ diqpnay: none;
+  }
+8 .sqdœ@{
+`"  m)rgif-dact: :90pX	
+
+  }
+ †.Û1{
+ $  wÈdth: 104-+*1   heagHt:038px
+-
+a y
+ !>vjgiiiÚ{ä"   wi‰uh: 100%;	
+ "  OSitio.: absolute;("  marginm|op: -14∑py; *  }
+  .Ypffi{
+ (  width+ 67%;J "}0!.rqoilEjO|inis{
+†   mapgin-t/p: 538p⁄9
+   " marÁiŒ-left>`26∞p¯ª
+* i
+00.f2h5ae{
+ (    hGIcht: 710`x;
+( }
+  .da4{ 80 ® m·rÁin)top:`5px;
+( $ † mirgin-‰gfÙ*`∞qx;ù
+ *    width:#60%o	
+0 }  .gommmdnvs y
+   e
+    m`rghn≠tp:†'±0px;-
+   
+|äç
+}
+ƒme‰ya 8max=uidth: 510px+{
+ .art)chtyM    pI'h4: 43pxy≠ !` width: 4±0px;-ä( }à  .f45{    wkdth: 22a*
+    disp|aY: nol%9`¢
+  .sqdOPz  ( margi∆-lewt:¥27Px
+J  w
+1 .u{ ! $ WidÙh*$1"0%;
+    hei'ht:`3v0py
+  }
+  johgiyIr{    widtj:100%;$  0pnÛiphon:†qbsOlutm3ä!  marÁhÓ-vop:†-1v7px; 
+Ë ˝
+ " .Ÿ0vfh{
+    WÈduhö %;
+( {>! NspOIleblinks{
+0  mArgin/Ùop: 520px;
+ $   murGio-left: 220rz:-Ç(0}â
+  $.f4h5Aa
+† †  †(eieht: 690px;ç
+  e}*bmedha  laX-sx,th:04∏4px)k†.a2tikle{
+ "$ riglt: 300¯{
+   "widTh: 418rx;
+  }
+  ,f¥5{
+    wÈduh: 225{ä   $lisplAy: NNa;
+  }
+  .qqdoXs
+    mar%in-deft3 251px
+0 m
+$ .W1{
+0"  sYdtj:$140%:]  † hgmghe: 34Rp~
+-
+  ˝J  .fjgiii2˚
+0   wiethz s0t%:
+ (  zositi/~r c`soluta;!   -as/in-toq: -18µpz; 
+`(}
+  .Ypfdh˚
+    Width: 61e+-
+  }
+  éspoÈ‡dr_minks{
+    ¨aÚÁil-tÔp: 500x9Õ
+ (  †mar'knl%ft: 63pz;
+  
+ (!.f4h5ah{
+ ($  1hÌieht;`460px;
+  }*}
+@hEdii -aZ-7jdth* 4∂$px){ .ar|is|Â{
+ `  ri'htz 35ux;
+    widuh: 390px+
+ °}
+" >f55{
+ $ °widt`: 22%;
+    $ispnay* noNe;
+ (y
+  *sQd_P{
+    mar'`Ó-Óeft:"≤;1px
+
+! 
+ †.v4;
+ "0 vivt®:§100%;(   huiflt: 320Xy
+  }" &fjgiiyr˚ä $  width2 101%;
+    0osi‘ion8 ab3Olutg;
+$   m!rginmpnp: -2058x9`
+" 4* $.Ypf&hs    whf5(:46%;
+  u
+  .sPoalAz_Lajic{ç    eargi./pop:"480px;
+ °  pm!pgij-hufT: 22Px;
+  
+   "f4h5aa€    ` heieht: 6<0Px;! }*" B
+}
+@medis ®Ìah-wilth: 452px)8artkcla{	
+  ( rÈGhT: 50y;
+0  ,widtjz 33∞px9E
+  e-  /f45{
+(  †wiDtz ≤2';  † dkqplq˘:0NolÂ;
+  }
+  .sqDOPs
+    mazgin/leFv:`201p8â  -.  .w1{
+Ä Ä†widtH: 100%;
+   heigx4: 29tpx
+ç
+  }
+  .fhgi)!r{ç (! wiq`: 200%:
+!  "pesitiol: abs/lqve;! `†mqbgmn-top∏0-325px; -*  }ç( .#tohhF{*    wkdth* 2∞≤px;
+  }$ .Ypffh{
+ ( width:2±.µ!;$ }  >syo{lmr^ly>Ks{
+`   m!rwil-top 480x;â     margin-,eft: ≤23px;ç
+0 }
+   ∞&Ê4h5aaz
+      heif(d: 40rx;
+" =]
+  Øroo¸{ä  Riwht:02%
+  width∫ 96%{
+*  
+ t/c`ad{
+` he≠ght; canc(9 vl"- 590px);
+}
+@m%tia (m·~-Wid‰h2$4≤pp+{
+ .irtac,d{
+   (2ighp:025ph;
+ !  wIddh:$3px?
+  y
+  .fv5{
+    wi`tl: 22%;M
+    DhspnÂy: nnnu;
+  }M
+  &cqdwp{
+`  0mergij-Ïevµ: 201px-
+*$°}
+( .s1{ä(  $okÙuh: p0p%;ç
+ " †height: 290pP
+
+§ }" .fjg)iir{   `adtxz 1 %;ç  " position: absonwdmç
+ `  largln-top: -235px"
+ p|â
+  .spckhg{
+    width: 0p0p¯;
+¢ }	
+ 0.Y¯ffh{é   0wifÙh059%;J  }
+  spmilez_HknkSyùã  ° marÊin,tor:"5∞px;
+ $   marg-n-lÂf4: :21p|;
+¢!]
+}ç
+Pmedia(hi·x-Wilph: 422px){
+ ,·rtycle{
+( `righp: 30py;
+    ˜y`tH8(3&0px;
+   
+0 }  .chatˇnorm teptirea{é0†	%©n-wi≈th6 7%;
+ 	
+  
+
+
+=
+Phedi! 8mah-wigth: 418`|9{-
+ .·2tikÂ{
+   0RigHTz 33Px;*     uadWh`3504x;
+ 0 
+  }
+@mÂdia(™-a8-widtj: 9%pp+{	
+ /mrticle[MJ † 0rigjt: 35q∏;M!  !skdth: 7 pt;
+` }
+ a.f4{
+  †`vidtj: 2≤•;	$ 0 dycp<·9: nONe;
+  }
+  .cq‰KP{
+    margin-left:`231p¯-
+$ }™  .W5{*  ( wyDtxz 1  %;
+  " ËmIght:(2>8`l
+
+  }! .fjgiiir{-
+† ( widt»: 00!;   (p/s}PiÔn: cb{ol5ve?
+0   marGin-tÁp†-265rh"
+  }J\
+@omdic (max-widtp: 2;5px){
+ .irdiamm{-#   right: ;0py
+  00wadth: 7"1ph+
+  }-
+B$f55{    viatH:(26%=
+    d-splay: nœÓe;
+  }J" .sq$N 
+   0margin-Ïeguz 7p1qx-	B$(} !.w±{
+  " wadth: p0?
+ !" `eight 230p8
+	( }
+ $.fjGiierÛ
+   width‡±0∞%;
+   "position; ebsmlUte;    masuad-4op* ¨2px; ≠
+" m
+  -sqdOPzç  ` mArnÈj-tor: 5px;0   ma6gÈn,leÊt˙ 5px;
+"8}
+   .ôrfgj[
+† † widpx: 98%;Õ
+†  !he©gÏt2"30pz;  }ç
+  #poil%r^lyÓkÚ{J!   myrcindop: 390tx;
+  (  -argin-l%ft: 382rx;§ }
+   *v4huqaz
+     %h%ic»t: W)px;
+  }*  >Sh·t__foÚm0tgptarea;
+† eh.-v…d4x: 95%ª
+ä 0}
+}ä@melia()Maxwidth; #75px){I
+ /article{
+Ä  †right∫ 2upx;
+  (
+  }
+`$.rmot{
+! rigËt 1%9	! 	width: 98%+ç
+
+  }
+( .c`at{
+ &(eycht> kals380~Ë - 190|X);I
+}
+}
+@med)a (m`r-wkti* 3>5pp){
+ &av|acle{    ÚigH‘: ∫0`p;
+`  
+  =}
+@}e$ia2(mc¯/wid4h: 55px+{ä .kÚt)ele{
+(   riGht: 26px;
+  0 widvh: 31∞px:
+   
+0 }
+ °.chAt^O&orm uextacea{ 	min-width: 70%;
+  	width: 87%;
+
+  }
+
+}
+
+@media (max-width: 345px){
+ .article{
+    right: 20px;
+    width: 300px;
+   
+  }}
+
+@media (max-width: 336px){
+ .article{
+    right: 20px;
+    width: 290px;
+   
+  }}
+
+@media (max-width: 328px){
+ .article{
+    right: 20px;
+    width: 280px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 181px
+
+  }
+  .w1{
+    width: 100%;
+    height: 220px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -315px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 98%;
+  }
+  .spoiler_links{
+    margin-top: 370px;
+     margin-left: 180px;
+  }
+}
+@media (max-width: 315px){
+ .article{
+    right: 20px;
+    width: 270px;
+   
+  }}
+
+
+@media (max-width: 305px){
+ .article{
+    right: 13px;
+     width: 260px;
+   
+  }}
+@media (max-width: 300px){
+ .article{
+    right: 18px;
+   
+  }
+   .chat__form textarea{
+  	min-width: 70%;
+  	width: 85%;
+
+  }
+  .chat__message-own{
+  	right: 25px;
+  }
+  .chat__message{
+  	left: 25px;
+  }
+}
+@media (max-width: 294px){
+ .article{
+    right: 15px;
+    width: 250px;
+   
+  }
+  .hfghtre4i{
+    font-size: 30px;
+  }
+  .hfghtre4i1 img{
+    width: 30px;
+    height: 30px;
+  }
+  .s26d9sf54{
+    margin-top: -16px;
+  }
+  .s26d9sf54 i{
+    font-size: 34px;
+  }
+  .s26d9sf544{
+    font-size: 30px;
+  }
+ 
+}
+@media (max-width: 288px){
+ .article{
+    right: 17px;
+   
+  }}
+@media (max-width: 282px){
+ .article{
+    right: 15px;
+   
+  }}
+@media (max-width: 276px){
+ .article{
+    right: 13px;
+   
+  }}
+ 
+#dropdownMenuCatalog{
+  color: #F94133;
+
+  
+}
+#dropdownMenuHome{
+  color: #F94133;
+
+}
+@media (min-width: 1200px){
+.header__sign-in span{
+  color: black;
+}
+.header__nav-link{
+  line-height: 20px;
+}
+
+}
+
+.spoiler_links{
+   background: transparent;
+}
+
+.result{
+	position: fixed;
+	height: 200px;
+	width: 200px;
+	background: red;
+	z-index: 10000;
+	margin-top: 80px;
+	margin-left: 400px;
+	display: none;
+
+}  
+.article{
+	height: 91%;
+	width: 800px;
+}
+
+
+
+
+</style>
+<link rel="stylesheet" type="text/css" href="style15.css">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body translate="no">
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__content">
+            <!-- header logo -->
+            <a href="index.html" class="header__logo">
+              <img src="logo.svg" alt="">
+            </a>
+            <!-- end header logo -->
+
+            <!-- header nav -->
+            <ul class="header__nav">
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+                  <li><a href="index.html">Home slideshow bg</a></li>
+                  <li><a href="index2.html">Home static bg</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                  <li><a href="catalog.html">Catalog</a></li>
+                  <li><a href="details.html">Movie Detail</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <li class="header__nav-item">
+                <a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="faq.html" class="header__nav-link">Help</a>
+              </li>
+
+              <!-- dropdown -->
+              <li class="dropdown header__nav-item">
+                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="signin.html">Sign In</a></li>
+                  <li><a href="signup.html">Sign Up</a></li>
+                  <li><a href="forgot.html">Forgot password</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="404.html">404 Page</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+            </ul>
+            <!-- end header nav -->
+
+            <!-- header auth -->
+            <div class="header__auth">
+              <form action="#" class="header__search">
+                <input class="header__search-input" type="text" placeholder="Search...">
+                <button class="header__search-button" type="button">
+                  <i class="icon ion-ios-search"></i>
+                </button>
+                <button class="header__search-close" type="button">
+                  <i class="icon ion-md-close"></i>
+                </button>
+              </form>
+
+              <button class="header__search-btn" type="button">
+                <i class="icon ion-ios-search"></i>
+              </button>
+
+              <!-- dropdown -->
+              <div class="dropdown header__lang">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
+                </ul>
+              </div>
+              <!-- end dropdown -->
+
+              <a href="signin.html" class="header__sign-in">
+                <i class="icon ion-ios-log-in"></i>
+                <span>sign in</span>
+              </a>
+            </div>
+            <!-- end header auth -->
+
+            <!-- header menu btn -->
+            <button class="header__btn" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- end header menu btn -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+<div class="result" id="result">
+	
+</div>  
+
+
+
+<div class="f45" >
+  <div class="title"><span class="s26d9sf"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span></div>
+  <div class="title"><span class="s26d9sf"><img src="shopping-bag.png"></span></div>
+  <div class="title"><span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-infinite"></i></span></div>
+  <div class="title"><span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-contact"></i></span></div>
+  <div class="s50fgh"><span class="s26d9sf4"><i class="icon ion-ios-add-circle-outline"></i></span></div>
+  
+</div>
+<div class="f46" >
+  <span class="hfghtre4i"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+   <span class="hfghtre4i1"><img src="shopping-bag.png"></span>
+   <span class="s26d9sf54" ><i class="icon ion-ios-infinite"></i></span>
+   <span class="s26d9sf544"><i class="icon ion-ios-contact"></i></span>
+   <span class="s26d9sf544f"><i class="icon ion-ios-add-circle-outline"></i></span>
+
+  
+</div>
+
+
+
+<div class="root">
+	 <!--<div class="chat">
+	 	<div class="massage">
+	 		<div class="resived">
+	 			<p class="text" id="text">
+	 			GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+	 			GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+	 			</p>
+	 		</div>
+
+	 	</div>
+	 	
+
+
+        	
+       </div>
+	<div class="line"></div>
+	 
+      
+        <div class="addcomff"><textarea aria-label="–î–æ–±–∞–≤—å—Ç–µ –∫–æ–º–º–µ–Ω—Ç–∞—Ä–∏–π..." placeholder=" –î–æ–±–∞–≤—å—Ç–µ –∫–æ–º–º–µ–Ω—Ç–∞—Ä–∏–π..." class="Ypffh"  autocorrect="off" id="textarea"></textarea><button class="sqdOP yWX7d    y3zKF     "  type="submit" id="sm258">–û–ø—É–±–ª–∏–∫–æ–≤–∞—Ç—å</button></div>-->
+        <div class="chat">
+  <div class="chat__wrapper">
+    <div class="chat__message">
+      <div class="date"></div>
+      <div>Message #1</div>
+    </div>
+    
+    <div class="chat__message chat__message-own">
+      <div class="date"></div>
+      <div>Message #2</div>
+    </div>
+  </div>
+</div>
+<div class="chat__form">
+  <form id="chat__form">
+   
+    <textarea aria-label="–î–æ–±–∞–≤—å—Ç–µ –∫–æ–º–º–µ–Ω—Ç–∞—Ä–∏–π..." placeholder=" –î–æ–±–∞–≤—å—Ç–µ –∫–æ–º–º–µ–Ω—Ç–∞—Ä–∏–π..." class="Ypffh"  autocorrect="off" id="text-message"></textarea>
+    <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#03A9F4;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#03A9F4;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></button>
+  </form>
+</div>
+
+
+
+      
+
+ 		
+</div>
+   
+
+
+<!--<div class="article">
+<div>
+ –°–ø–æ–π–ª–µ—Ä ‚Ññ1 <a href="" class="spoiler_links">–ø–æ–∫–∞–∑–∞—Ç—å / —Å–∫—Ä—ã—Ç—å</a>
+  <div class="f4h5aa">
+
+ <div class="spoiler_body">
+  –¢–µ–∫—Å—Ç –≤ –ø–µ—Ä–≤–æ–º —Å–ø–æ–π–ª–µ—Ä–µ
+  –¢–µ–∫—Å—Ç –≤ –ø–µ—Ä–≤–æ–º —Å–ø–æ–π–ª–µ—Ä–µ
+ </div>
+</div>
+</div>
+
+<div>
+ –°–ø–æ–π–ª–µ—Ä ‚Ññ2 <a href="" class="spoiler_links">–ø–æ–∫–∞–∑–∞—Ç—å / —Å–∫—Ä—ã—Ç—å</a>
+  <div class="f4h5aa">
+ <div class="spoiler_body">
+  –¢–µ–∫—Å—Ç –≤–æ –≤—Ç–æ—Ä–æ–º —Å–ø–æ–π–ª–µ—Ä–µ
+  –¢–µ–∫—Å—Ç –≤–æ –≤—Ç–æ—Ä–æ–º —Å–ø–æ–π–ª–µ—Ä–µ
+ </div>
+</div>
+
+</div>
+</div>-->
+
+
+
+
+
+
+
+
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+ <script src='KrYJow.js'></script>
+ 
+  <script src='flickity24.pkgd.js'></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="owl.carousel.min.js"></script>
+  <script src="jquery.mousewheel.min.js"></script>
+  <script src="jquery.mCustomScrollbar.min.js"></script>
+  <script src="wNumb.js"></script>
+  <script src="nouislider.min.js"></script>
+  <script src="jquery.morelines.min.js"></script>
+  <script src="plyr.min.js"></script>
+  <script src="photoswipe.min.js"></script>
+  <script src="photoswipe-ui-default.min.js"></script>
+  <script src="main.js"></script>
+  <script src="device.js"></script>
+
+
+
+<!--<script id="rendered-js">
+ 
+
+  function s20(){
+     var v = document.getElementById("da5").offsetHeight;
+     var s = document.getElementById("ffff44").offsetHeight;
+     console.log(s,v)
+   
+    document.getElementById("ffff44").style.height = s + (v-50) + "px";
+    document.getElementById("dd").style.opacity = "0";
+    
+    
+
+
+
+
+  }
+  $( "#dd" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
+
+</script>-->
+<!--<script type="text/javascript">
+  
+  $( ".f22" ).click(function(event) {
+
+        $('.f4h5aa .da4').css({
+  'height': 'auto',
+  
+});
+  var p=$("#da5");
+  var k=$("#ffff44");
+
+
+  var s=p.outerHeight();
+  var e=k.outerHeight();
+
+  $('#ffff44').css({
+  'height': e+s-50,
+  
+});
+  $('#dd').css({
+  
+  
+});
+  
+
+  console.log(s);
+});
+  
+</script>-->
+
+<script type="text/javascript">
+	document.querySelector('.chat__wrapper > .chat__message:last-child').scrollIntoView(true);
+	if(device.desktop()) alert('–ü–ö');
+if(device.tablet()) alert('–ü–ª–∞–Ω—à–µ—Ç');
+if(device.mobile()) alert('–°–º–∞—Ä—Ç—Ñ–æ–Ω');
+//–û—Ä–∏–µ–Ω—Ç–∞—Ü–∏—è —ç–∫—Ä–∞–Ω–∞
+if(device.landscape()) alert('–ê–ª—å–±–æ–º–Ω–∞—è (–≤ —à–∏—Ä–∏–Ω—É)');
+if(device.portrait()) alert('–ü–æ—Ä—Ç—Ä–µ—Ç–Ω–∞—è (–≤ –≤—ã—Å–æ—Ç—É)');
+//–û–° —É—Å—Ç—Ä–æ–π—Å—Ç–≤–∞
+if(device.ios()) alert('iOS');
+if(device.ipad()) alert('ipad');
+if(device.iphone()) alert('iphone');
+if(device.ipod()) alert('ipod');
+if(device.android()) alert('android');
+if(device.windows()) alert('windows');
+if(device.blackberry()) alert('blackberry');
+if(device.fxos()) alert('fxos');
+if(device.android() && device.tablet()){
+	 $('.chat').css({
+  'position': 'fixed',
+  'height': 'calc(100vh - 285px)',
+  'width': 'calc(100% - 35px)',
+
+  
+  'bottom': 135,
+  
+});
+  $('.chat__form').css({
+  'position': 'fixed',
+  'width': 'calc(100% - 35px)',
+  
+  'bottom': 70,
+  
+});
+
+
+
+ 
+
+var serv = window.innerWidth;
+console.log(serv);
+
+$(window).resize(function(){
+	 $('.chat').css({
+  'position': 'fixed',
+  'height': 'calc(100vh - 285px)',
+   'width': 'calc(100% - 35px)',
+
+  
+  'bottom': 135,
+  
+});
+  $('.chat__form').css({
+  'position': 'fixed',
+  'width': 'calc(100% - 35px)',
+  
+  'bottom': 70,
+  
+});
+
+
+	  if (window.innerWidth > 713){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 130px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 130px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+ if (window.innerWidth > 850){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 140px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 140px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+if (window.innerWidth > 920){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 150px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 150px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+  if (window.innerWidth > 989){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 165px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 165px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+
+});  
+
+
+
+
+}
+if(device.android() && device.mobile()){
+	 $('.chat').css({
+  'position': 'fixed',
+  'height': 'calc(100vh - 285px)',
+  'width': 'calc(100% - 35px)',
+
+  
+  'bottom': 135,
+  
+});
+  $('.chat__form').css({
+  'position': 'fixed',
+  'width': 'calc(100% - 35px)',
+  
+  'bottom': 70,
+  
+});
+
+
+ 
+
+var serv = window.innerWidth;
+console.log(serv);
+
+$(window).resize(function(){
+	 $('.chat').css({
+  'position': 'fixed',
+  'height': 'calc(100vh - 285px)',
+   'width': 'calc(100% - 35px)',
+
+  
+  'bottom': 135,
+  
+});
+  $('.chat__form').css({
+  'position': 'fixed',
+  'width': 'calc(100% - 35px)',
+  
+  'bottom': 70,
+  
+});
+
+
+	  if (window.innerWidth > 713){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 130px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 130px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+ if (window.innerWidth > 850){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 140px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 140px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+if (window.innerWidth > 920){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 150px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 150px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+  if (window.innerWidth > 989){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 165px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 165px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+  if (window.innerWidth < 500){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 25px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 25px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+   if (window.innerWidth < 430){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 15px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 15px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+    if (window.innerWidth < 380){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 9px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 9px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+
+  if (window.innerWidth < 330){
+  $('.chat').css({
+  
+  'width': 'calc(100% - 5px)',
+  
+  
+});
+$(' .chat__form').css({
+  
+  'width': 'calc(100% - 5px)',
+  
+  
+});
+
+ 
+
+
+
+
+  }
+});  
+
+
+
+
+}
+
+
+
+
+
+
+$(function () {
+  $('#chat__form').on('submit', function(e) {
+
+  	if(document.getElementById("text-message").value.length > 0){
+    e.preventDefault();
+    var message = $('#text-message').val();
+    $('#text-message').val('');
+    var date = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+    $('.chat__wrapper').append('<div class="chat__message chat__message-own"><div class="date">' + date + '</div><div>' + message + '</div></div>')}
+    else{
+
+    e.preventDefault();
+    var message = $('#text-message').val();
+    $('#text-message').val('');
+    var date = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+    $('.chat__wrapper').append('<div class="chat__message chat__message-own"><div>' + message + '</div></div>')
+
+
+
+    }
+     
+
+
+
+  })
+});
+  var arr = [];
+$(document).ready(function(){
+	
+	$('#sm258').on('click', function() {
+	var l = document.getElementById("text").offsetWidth;
+ 	var h = l/200;
+ 	var e = (s.value.length)/(1.5);
+
+
+
+ 	var s = document.getElementById("textarea");
+ 	$('.chat').append('<div class="massage"><div class="resived"><p class="text" id="text">' + s.value + '</p></div></div>');
+ 	
+
+
+ 	console.log(l)
+ 	 $('.resived').css({
+ 	 	'height': e,
+  	
+  
+	});
+ 	  $('.text').css({
+ 	 	'height': e,
+  	
+  
+	});
+ 	   $('.massage').css({
+ 	 	'height': e,
+  	
+  
+	});
+      
+
+		
+
+
+ });
+ });
+
+
+
+  
+   
+    
+
+</script>
+<script type="text/javascript">
+	var vk = [];
+	function fn(n){
+
+    for(var s=i=1;i<=n;s+=(i+=3)){};
+
+    //–ò–ª–∏ —Ç–∞–∫
+
+    //for(var i=1,s=i;i<n;i+=3,s+=i){};
+
+ 
+
+    return s;
+    
+
+}
+$( ".header__search-input" ).on( "keydown", function( event ) {
+ 	console.log("fsd");
+s = ' ';
+s = s.replace(/^\s+|\s+$/g, '');
+
+
+
+
+ 	$('.result').css({
+	    	'display': 'none',
+  
+  
+
+
+  
+  
+	});
+
+
+});
+
+
+ 
+
+
+
+</script>
+
+</body>
+</html>

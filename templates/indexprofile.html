@@ -1,0 +1,2058 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/bab (1).ico' %}" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>NetLife</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+
+  
+<link rel="stylesheet" type="text/css" href="{% static 'css/style166.css' %}">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap1-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plyr.css' %}">
+  <link rel="stylesheet" href="{% static 'css/photoswipe.css' %}">
+  <link rel="stylesheet" href="{% static 'css/default-skin.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main8.css' %}">
+  <link rel="stylesheet" href="{% static 'css/flickity.css' %}">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/flickity1.css' %}">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="{% static 'css/swiper-bundle.min_c.css' %}">
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+  <title>HotFlix – Online Movies, TV Shows & Cinema HTML Template</title>
+  <style type="text/css">
+    
+  :root {
+  --custom-width: {{ profile.lavel_dr_s  }}%;
+}
+.nav_p{
+  display: none;
+}
+
+
+
+  .lavel{
+     background: #f44336;
+    padding-top: 15px;
+  width: calc(var(--custom-width) / {{ profile.total_lavel_b  }}); 
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999999999;
+}
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 99999999999;
+}
+.swiper-wrapper1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -webkit-flexbox;
+    display: flex;
+    display: flexbox;
+}
+
+.swiper-wrapper1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-wrapper1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal {
+  background: #0e0e0e;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  
+  height: 95%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 95vh;
+  overflow-y: auto;
+  z-index: 9999999999999;
+}
+.overlay .modal.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal.open .content1 {
+  transform: translate(0, 0px);
+  opacity: 1;
+  height: 80%;
+}
+.overlay .modal .content1 {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay .modal .title2 {
+  margin-top: 0;
+}
+ .ss22_file{
+            width: 100%;
+           
+            height: 100%;
+            
+            background: #0e0e0e;
+            overflow: auto;
+
+            
+        }
+        #s23d{
+            background: #0e0e0e;
+             width: 100%;
+           
+            height: 50px;
+            cursor: pointer;
+            border-top: 1px solid #171616;
+            
+            
+
+        }
+                #sddr{
+            display: none;
+
+        }
+        .swiper-container34 {
+      width: 100%;
+      height: 70%;
+        margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: none;
+    }
+
+
+        label{
+            color: white;
+        }
+        #ss22_file i {
+            font-size: 46px;
+            color: #adb5bd;
+           
+           
+            margin-top: 200px;
+            
+            
+
+        }
+        .a22_filename{
+            width: 100%;
+            height: 7px;
+            
+            position: relative;
+            margin-top: 17px;
+            padding-left: 5px;
+   }
+   .pod23{
+       position: absolute;
+    /* width: 100%; */
+    margin-left: calc(100% - 150px);
+    margin-top: 0;
+   }
+
+.f22poj{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#description {
+    background-color: #1d1c1c;
+    color: white;
+    border: 1px solid #1d1c1c;
+}
+input, #description, select, fieldset {
+    margin-bottom: 1.5rem;
+}
+#description {
+    padding: 15px;
+    border: 1px solid #c4d8d7;
+    box-shadow: none;
+    box-sizing: border-box;
+    min-height: 200px;
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+#description {
+    overflow: auto;
+}
+button, input, optgroup, select, #description {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+#description{
+  top: 90px;
+   border-radius: 8px;
+  overflow: hidden; resize: none; height: 314px;
+
+  width: calc(100% - 12px);
+  left: 6px;
+  margin-left: 0;
+}
+
+#id_heshtegs{
+  margin-top: 31px;
+    padding: 15px;
+    border: 1px solid #c4d8d7;
+    box-shadow: none;
+    box-sizing: border-box;
+    width: calc(100% - 12px);
+  left: 6px;
+   background-color:#1d1c1c;
+   
+    font-size: 1.6rem;
+    line-height: 1.8;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+.niu8991{
+  display: none;
+}
+.heshtegs_add{
+      position: absolute;
+    margin-top: 40px;
+    font-size: 50px;
+    margin-left: calc(50% - 40px);
+}
+.heshteg_title{
+  font-size: 30px;
+}
+#Capa_1ewtt {
+    width: 15px;
+    height: 15px;
+    fill: #e64033;
+    margin-left: 5px;
+    margin-top: 1px;
+    position: absolute;
+    display: inline-block;
+}
+ @media(max-height: 624px){
+  #description{
+    height: 200px;
+  }
+  .heshtegs_add{
+    margin-top: 25px;
+  }
+  #id_heshtegs{
+    margin-top: 25px;
+  }
+}
+.close{
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  right: 5%;
+  margin-top: -50px;
+
+  z-index: 50001;
+
+
+}
+
+.stup1{
+  display: inline-block;
+  position: absolute;
+  width: 70px;
+  height: 5px;
+
+  margin-top: 20px;
+  margin-left: -9px;
+  transform: rotate(45deg);
+  background: #f94133;
+
+
+}
+
+
+.stup2{
+  display: inline-block;
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  margin-top: 20px;
+  margin-left: -9px;
+  transform: rotate(135deg);
+  background: #f94133;
+
+
+}
+@media(max-width: 525px){
+  .close{
+    margin-top: -70px;
+    width: 30px;
+    height: 30px;
+    background: black;
+
+  }
+  .stup1{
+  display: inline-block;
+  position: absolute;
+  width: 40px;
+  height: 4px;
+
+  margin-top: 20px;
+  margin-left: -9px;
+  transform: rotate(45deg);
+  background: #f94133;
+
+
+}
+.stup2{
+  display: inline-block;
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  margin-top: 20px;
+  margin-left: -9px;
+  transform: rotate(135deg);
+  background: #f94133;
+
+
+}
+
+}
+.f22gt4 {
+    display: none;
+}
+.btn3 {
+ 
+  display: inline-block;
+  position: relative;
+  background: #EF233C;
+  
+  text-decoration: none;
+  transition: 0.35s ease-in-out;
+  font-weight: 700;
+  margin-left: calc(100% - 120px);
+  margin-top: 40px;
+
+
+}
+#form{
+  
+  margin-top: 60px;
+  height: calc(100% - 60px);
+}
+#s20 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.6rem;
+    padding: 18px 30px;
+    border: 0;
+    margin-left: calc(100% - 120px);
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    line-height: 1;
+    text-decoration: none;
+    color: #689b98;
+    background: none;
+    box-shadow: 0 0 0 2px #689b98 inset;
+    position: relative;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+@media (max-width: 400px){
+.f22gt4, .f22gt4 span {
+    display: block;
+}}
+
+@media(max-width: 1199px){
+  .nav_p{
+  display: block;
+}
+.nav_o{
+  display: none;
+}
+.lavel{
+  margin-top: 15px;
+}
+  
+
+
+}
+@media(min-width: 1199px){
+  .nav_o:nth-child(1){
+    display: none;
+  }
+}
+
+
+.header__dropdown-menu a {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    color: #40a28c;
+    line-height: 40px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+  </style>
+  {% block style %}
+
+
+
+  {% endblock %}
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  window.console = window.console || {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="loader-wrapper" id="llo" style="position: fixed;display: block;">
+    <img src="{% static 'images/bab.png' %}" style="left: calc(50% - 48px);top: calc(50% - 48px);position: absolute;">
+</div>
+
+
+
+  
+  <header class="header" id="btn-id">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__content">
+            <!-- header logo -->
+            <a href="" class="header__logo">
+              <img src="{% static 'images/bab.png' %}" alt="" class="a25" id="loia" >
+              <img src="{% static 'images/bab.png' %}" alt="" class="a26" id="loia" >
+
+            </a>
+            <!-- end header logo -->
+
+            <!-- header nav -->
+            <ul class="header__nav">
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+                  <li><a href="index.html">Home slideshow bg</a></li>
+                  <li><a href="index2.html">Home static bg</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link nav_o" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Music</a>
+                <a class=" header__nav-link nav_p" href="{% url 'accounts:tasks' %}" id="" ><i class="fa fa-star" aria-hidden="true"></i><span style="margin-left: 10px;">{{ profile.lavel }}</span>
+                 
+
+
+                </a>
+                <a class="dropdown-toggle header__nav-link nav_o" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Music <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1ewtt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+   viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M472.184,4.347c-3.631-3.209-8.441-4.75-13.261-4.25l-307.2,34.133c-8.647,0.957-15.19,8.265-15.189,16.964V355.34
+      c-15.468-9.256-33.174-14.102-51.2-14.012C38.281,341.329,0,371.946,0,409.595s38.281,68.267,85.333,68.267
+      s85.333-30.601,85.333-68.267V151.889l273.067-30.413v199.68c-15.473-9.238-33.179-14.066-51.2-13.961
+      c-47.053,0-85.333,30.618-85.333,68.267c0,37.649,38.281,68.267,85.333,68.267s85.333-30.601,85.333-68.267v-358.4
+      C477.866,12.208,475.8,7.584,472.184,4.347z"/>
+  </g>
+</g>
+
+</svg>
+</a>
+                <a class=" header__nav-link nav_p" href="#" id="" style="border: 1px solid #f44336;margin-top: 10px;border-radius: 5px;height: 17px;">
+                  
+                  <div class="lavel"></div>
+
+
+                </a>
+
+
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                  <li><a href="catalog.html">Catalog</a></li>
+                  <li><a href="details.html">Movie Detail</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Movies <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1ewtt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M28.457,0v512h455.087V0H28.457z M91.333,482H58.457v-31.936h32.877V482z M91.333,420.064H58.457v-30.003h32.877V420.064z
+       M91.333,360.061H58.457v-30.004h32.877V360.061z M91.333,300.057H58.457v-30.004h32.877V300.057z M91.333,240.053H58.457v-30.004
+      h32.877V240.053z M91.333,180.048H58.457v-30.003h32.877V180.048z M91.333,120.045H58.457V90.042h32.877V120.045z M91.333,60.042
+      H58.457V30h32.877V60.042z M390.666,482H121.333V270.053h269.332V482z M390.666,240.053H121.333V30h269.332V240.053z M453.542,482
+      h-32.877v-31.936h32.877V482z M453.542,420.064h-32.877v-30.003h0h32.877V420.064z M453.542,360.061h-32.877v-30.004h32.877
+      V360.061z M453.542,300.057h-32.877v-30.004h32.877V300.057z M453.542,240.053h-32.877v-30.004h32.877V240.053z M453.542,180.049
+      h-32.877v-30.003h32.877V180.049z M453.542,120.046h-32.877v-0.001V90.042h32.877V120.046z M453.543,60.042h-32.877V30h32.877
+      V60.042z"/>
+  </g>
+</g>
+
+</svg>
+</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="faq.html" class="header__nav-link">Help</a>
+              </li>
+
+              <!-- dropdown -->
+              <li class="dropdown header__nav-item">
+                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                  <li><a href="about.html" id="money_appp">{{  profile.mymoney|stringformat:".2f" }} $</a></li>
+
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="{% url 'accounts:tasks' %}" ><i class="fa fa-star" aria-hidden="true"></i><span style="margin-left: 10px;">{{ profile.lavel }}</span></a></li>
+                  <li><a href="#" style="border: 1px solid #f44336;border-radius: 5px;"><div class="lavel" style="border-radius: 5px;"></div></a></li>
+                  <li><a href="#">Forgot password</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Contacts</a></li>
+                  <li><a href="#">404 Page</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+            </ul>
+            <!-- end header nav -->
+
+            <!-- header auth -->
+            <div class="header__auth">
+              <div action="#" class="header__search">
+                 <div id="myUL">
+
+
+</div>
+
+                <input class="header__search-input" type="text" placeholder="Search..."    id="search" autocomplete="off">
+
+
+
+
+
+
+                 <button class="header__search-button" type="button" id="oklisearch">
+                  <i class="icon ion-ios-search"></i>
+                </button>
+                <div class="lds-ring header__search-button" id="loader_ppojhd"><div></div><div></div><div></div><div></div></div>
+                <button class="header__search-close" type="button">
+                  <i class="icon ion-md-close"></i>
+                </button>
+
+
+
+              </div>
+
+              <button class="header__search-btn" type="button">
+                <i class="icon ion-ios-search"></i>
+              </button>
+
+
+
+
+              <!-- dropdown -->
+              <div class="dropdown header__lang">
+                 <a class="dropdown-toggle header__nav-link" href="/messager/" role="button" id="dropdownMenuLang" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#32b0ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#32b0ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                  {% if  mes_len != 0 %}
+                  <div class="num_mess" style="width: 15px;height: 15px;
+                  background: red; position: absolute;margin-top: -33px;margin-left: 25px;border-radius: 180px;"><p style="text-align: center;line-height: 13px;" id="i9ouyyt">{{ mes_len }}</p></div>
+
+                  {% else %}
+                  <div class="num_mess" id="er0okj" style="width: 15px;height: 15px;
+                  background: red; position: absolute;margin-top: -33px;margin-left: 25px;border-radius: 180px;display: none;"><p style="text-align: center;line-height: 13px; " id="i9ouyyt">1</p></div>
+                  {% endif %}
+
+                 </a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
+                </ul>
+              </div>
+              <!-- end dropdown -->
+              {% if l.is_authenticated %}
+              <div  class="header__sign-in" style="height: 40px;width: 40px;">
+                {% if  l.profile.avatar.url != None %}
+                <img src="{{ l.profile.avatar.url }}" style="width: 100%;height: 100%;border-radius: 180px;">
+                {% else %}
+                <img src="{% static 'images/user_no_photo_300x300.png' %}" style="width: 100%;height: 100%;border-radius: 180px;">
+
+                {% endif %}
+
+               <div class="haraai93" >
+                <a href="about.html" id="money_app0">
+
+
+
+                {{  profile.mymoney|stringformat:".2f" }} $</a>
+
+                
+                   <a href="{% url 'accounts:tasks' %}" class="f22gt4">
+                    <div class="iconnn1" style="padding-bottom: 10px;margin-top: -3px;">
+                  <i class="fa fa-star" aria-hidden="true" style="display: block;"></i><span style="margin-left: 40px;margin-top: -18px;
+    ">{{ profile.lavel }}</span>
+
+                </div></a>
+
+
+                    <div class="iconnn1 f22gt4" style="padding-bottom: 10px;margin-top: 5px;">
+                  <a href="#" style="border: 1px solid #f44336;border-radius: 5px;display: block;height: 15px;"><div class="lavel" style="border-radius: 5px;margin-top: 0;"></div></a>
+
+                </div>
+
+
+
+                 <a href="{% url 'accounts:edit_profile' %}"><div class="iconnn1" >
+                  <span style="display: block;">Settings<span style="display: block;">
+                  <i class="fa fa-cog fly1" aria-hidden="true" style="display: block;"></i>
+
+                </div></a>
+                <a href="{% url 'accounts:sign_out' %}"><div class="iconnn">
+                  <span style="display: block;">Sign_out<span style="display: block;">
+                  <i class="fa fa-sign-out fty" aria-hidden="true" style="display: block;"></i>
+
+                </div></a>
+
+
+
+              </div>
+
+
+              </div>
+
+              {% else %}
+
+
+              <a href="signin.html" class="header__sign-in">
+                <i class="icon ion-ios-log-in"></i>
+                <span>sign in</span>
+              </a>
+              {% endif %}
+
+            </div>
+            <!-- end header auth -->
+
+            <!-- header menu btn -->
+            <button class="header__btn" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- end header menu btn -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <div class='modal' id='modal1'>
+  <div class='content1'>
+    <a class='btn3 close-modal' data-modal="#modal1" href="#"><span class="stup1" style="margin-top: 0;"></span><span style="margin-top: 0;" class="stup2"></span></a>
+    <form method="POST" name="form" id="form" enctype="multipart/form-data" name1="{{ l.profile.id }}" >
+       <label class="ss22_file" id="ss22_file" for="sddr" >
+         {{ form2.as_p }}
+ <i class="fa fa-plus" aria-hidden="true" id="s30a"></i>
+ <div class="swiper-container34" id="swiper-container34">
+    <div class="swiper-wrapper" id="nbyuo00">
+     
+      
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+                
+
+
+            </label>
+
+
+            <div class="kukulala" style="width: 100%;height: 100%;display: none;">
+              {{ form.as_p }}
+
+
+              <div class="heshtegs_add">
+                <div class="heshteg_title">Heshtegs</div>
+
+                <i class="fa fa-plus" aria-hidden="true" id="s30a"></i></div>
+                <div id="heshteg_form"></div>
+
+             
+
+
+              
+            </div>
+      
+           
+      
+
+     <div class="pod23" id="pod23">
+      <input type="button" class="button niu899" value="
+next" id="s20" style="display: block;" / >
+  <input type="submit" class="button niu8991" value="
+finish" id="s20" style="display: none;" / >
+
+
+
+
+</div>
+      
+    </form>
+    
+   
+      
+    
+    
+  </div>  
+</div>  
+
+{% block body %}
+
+
+
+{% endblock %}
+
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+ <script src="{% static 'js/KrYJow.js' %}"></script>
+ 
+  <script src="{% static 'js/flickity1.pkgd.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.mCustomScrollbar.min.js' %}"></script>
+  <script src="{% static 'js/wNumb.js' %}"></script>
+  <script src="{% static 'js/nouislider.min.js' %}"></script>
+  <script src="{% static 'js/jquery.morelines.min.js' %}"></script>
+  <script src="{% static 'js/plyr.min.js' %}"></script>
+  <script src="{% static 'js/photoswipe.min.js' %}"></script>
+  <script src="{% static 'js/photoswipe-ui-default.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+<script>
+
+
+   $(window).on("load",function(){
+    document.getElementById("llo").style.display="none";
+     
+});
+    $(".modal").each( function(){
+  $(this).wrap('<div class="overlay"></div>')
+});
+
+$(".open-modal").on('click', function(e){
+    e.preventDefault();
+  e.stopImmediatePropagation;
+
+  
+  var $this = $(this),
+      modal = $($this).data("modal");
+
+  
+  $(modal).parents(".overlay").addClass("open");
+  console.log($this)
+
+  setTimeout( function(){
+    $(modal).addClass("open");
+  }, 350);
+
+  
+  $(document).on('click', function(e){
+    var target = $(e.target);
+    
+    if ($(target).hasClass("overlay")){
+      $(target).find(".modal").each( function(){
+        $(this).removeClass("open");
+      });
+      setTimeout( function(){
+        $(target).removeClass("open");
+      }, 350);
+    }
+    
+  });
+  
+});
+
+$(".close-modal").on('click', function(e){
+  e.preventDefault();
+  e.stopImmediatePropagation;
+  document.getElementById("sddr").value = "";
+  document.getElementById("nbyuo00").innerHTML = ""
+  document.getElementById("swiper-container34").style.display="none"
+  document.getElementById("s30a").style.display="block";
+  
+  var $this = $(this),
+      modal = $($this).data("modal");
+  
+  $(modal).removeClass("open");
+  setTimeout( function(){ 
+    $(modal).parents(".overlay").removeClass("open");
+  }, 350);
+  
+});
+
+
+  time_line_unread_messages = 30000;
+function fname(){
+
+
+ $.ajax({
+
+           url: "{% url 'accounts:unread_messages' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: { 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            console.log(data.len)
+            if (data.len !=0){
+
+              document.getElementById("i9ouyyt").innerHTML=String(data.len)
+              document.getElementById("er0okj").style.display= "block";
+              time_line_unread_messages = 5000;
+             
+            }
+            else{
+               document.getElementById("er0okj").style.display= "none";
+               if (time_line_unread_messages <30000){
+                time_line_unread_messages += 5000;
+
+               }
+               else{
+                
+               }
+               
+
+            }
+
+
+
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+
+
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+}
+
+
+ var refreshIntervalId = setInterval(fname, time_line_unread_messages);
+
+  
+
+
+   $('.spo').click(function () {
+    console.log("sadf")
+
+
+   })
+
+//setInterval(function(){
+/*  console.log("a")
+  
+   $.ajax({
+                type: "Post",
+                url: "{% url 'accounts:new_message' %}",
+                dataType: 'json',
+                data: {
+
+                   
+                },
+               success: function(data) {
+                console.log(data.count)
+
+
+               }
+                
+            });
+
+
+
+
+
+
+
+ }, 3000);*/
+
+$(function() {
+
+    $('#search').keyup(function() {
+        document.getElementById("myUL").innerHTML = "";
+        document.getElementById("myUL").style.display = "block";
+
+
+
+        if ($('#search').val().length !=0){
+
+            $.ajax({
+                type: "Post",
+                url: "{% url 'accounts:search_status' %}",
+                dataType: 'json',
+                data: {
+                    'search_text' : $('#search').val(),
+                    'csrfmiddlewaretoken': '{{csrf_token}}'
+                },
+                success: searchSuccess,
+                
+            });
+        }
+        else{
+          document.getElementById("myUL").style.display = "none";
+
+
+        }
+
+        });
+
+});
+
+function searchSuccess(statuss, textStatus, jqXHR)
+
+{
+    const text_box = '<li><a href="#"><div class="pr_info"><div class="imge25"><img src="/media/4k" class="e25"></div><div class="title_pr"><p>Adele</p></div></div></a></li>'
+    const text_box1 = '<li сlass = "li_no_res" style = "font-size: 35px;margin-top: 50%;margin-left:30%;color:#C3C3C3;">No Resoult</li>'
+        
+
+
+
+      
+
+
+
+    l = JSON.parse(statuss)
+    console.log(l)
+
+if(l != ''){
+  for (var i = 0, len = l.length; i < len; ++i) {
+
+        var result = l[i];
+        console.log(result['fields']['first_name'])
+        var box = text_box.replace('Adele', result['fields']['first_name']);
+        e = result['pk']
+        box = box.replace('#', "/profile/" + e + "/");
+        if (result['fields']['avatar'] == ''){
+          box = box.replace('/media/4k', '/assets/images/no-img.jpg');
+          
+
+        }
+        else{
+          box = box.replace('4k', result['fields']['avatar']);
+
+
+
+        }
+
+
+       
+        
+        $('#myUL').append(box);
+        //$('#search-results').append(result['fields']['first_name']);
+        
+        
+    }
+   
+
+
+
+}
+else{
+
+  $('#myUL').append(text_box1);
+
+
+
+}
+
+
+
+    
+    
+}
+
+
+
+
+function searchResult(data) {
+    $( "#txtSearch" ).autocomplete ({
+        source: data
+    });
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<!--<div class="article">
+<div>
+ Спойлер №1 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+
+ <div class="spoiler_body">
+  Текст в первом спойлере
+  Текст в первом спойлере
+ </div>
+</div>
+</div>
+
+<div>
+ Спойлер №2 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+ <div class="spoiler_body">
+  Текст во втором спойлере
+  Текст во втором спойлере
+ </div>
+</div>
+
+</div>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<!--<script id="rendered-js">
+ 
+
+  function s20(){
+     var v = document.getElementById("da5").offsetHeight;
+     var s = document.getElementById("ffff44").offsetHeight;
+     console.log(s,v)
+   
+    document.getElementById("ffff44").style.height = s + (v-50) + "px";
+    document.getElementById("dd").style.opacity = "0";
+    
+    
+
+
+
+
+  }
+  $( "#dd" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
+
+</script>-->
+<!--<script type="text/javascript">
+  
+  $( ".f22" ).click(function(event) {
+
+        $('.f4h5aa .da4').css({
+  'height': 'auto',
+  
+});
+  var p=$("#da5");
+  var k=$("#ffff44");
+
+
+  var s=p.outerHeight();
+  var e=k.outerHeight();
+
+  $('#ffff44').css({
+  'height': e+s-50,
+  
+});
+  $('#dd').css({
+  
+  
+});
+  
+
+  console.log(s);
+});
+  
+</script>-->
+
+  
+
+  <script>
+
+
+
+$(".header__sign-in").click(function(){
+  $(".haraai93").toggle(400);
+});    
+$('.gallery-item').on('click', function() {
+  const text_box = '<div class="sdfgj4" id="gg11">'+
+        '<span  class="spo" id="dd">ещё</span>'+
+        
+        '<div class="jghyfg">'+
+        '<div class="imagefgh"><img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" class="img144dfs"></div>' + 
+        '<div class="wrap">' + 
+        '<div class="cont" tabindex="0">ffff</div></div><span class="likes"><i class="fa fa-heart-o" aria-hidden="true"></i></span></div>'
+        + 
+        '</div>'+
+        
+
+
+
+      '</div>'
+      
+
+    var name = $(this).attr('data_id');
+    var id = $(this).attr('data_post_id');
+    var heart_id = $(this).attr('heart_c');
+    var s29 = document.getElementById("heart_box")
+    var s30 = document.getElementById("s20a20")
+    var s31 = document.getElementsByClassName("gg")[0]
+    var s32 = document.getElementById("com_tt")
+    var s33 = document.getElementById("com_tt0")
+    var s34 = document.getElementById("com_tt1")
+
+   
+
+    s29.setAttribute("name", id);
+    s30.setAttribute("name", id);
+    s31.setAttribute("name", id);
+    s32.setAttribute("href", "/comments/" + String(name))
+    s33.setAttribute("href", "/comments/" + String(name))
+    s34.setAttribute("href", "/comments/" + String(name))
+    if (heart_id == 0){
+    s29.innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+     s30.innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+      s31.innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+    console.log(heart_id)
+
+  }
+    else{
+      s29.innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+      s30.innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+      s31.innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+      console.log(heart_id)
+    }
+    alert(id);
+      $.ajax({
+          url: '{% url "accounts:comments_url" %}',
+          type: 'POST',
+          dataType: 'json',
+          data: { 
+                      'name': name,
+                      'id': id,  
+                      'csrfmiddlewaretoken': '{{csrf_token}}'
+                  },  // This is the default though, you don't actually need to always mention it
+          success: function(data, fields) {
+            l = JSON.parse(data)
+            console.log(data)
+            console.log(l)
+
+            for (var i = 0, len = l.length; i < len; ++i) {
+            // Setup the result...
+                        
+            var result = l[i];
+            var box = text_box.replace('ffff', result['fields']['comment_title']);
+
+            $('.hpljfjs').append(box);
+
+            // Name
+            
+            console.log(result['fields']['comment_title'])
+
+
+            
+        }
+        let arr = [];
+
+    $(document).ready(function(){
+
+        if($('.cont').height() > 75){
+        $('.cont').height(75);
+        $('.open').addClass('visible');
+    }
+  
+    $('.spo').click(function () {
+        console.log("asasdsfg")
+       
+        $(this).parent().find('.cont').addClass('full');
+        var p=$(this).parent().find('.cont');
+         var s=p.outerHeight();
+         var k=$(this).parent().find('.spo');
+         
+         arr.splice(1, 0, s);
+          $(this).parent().find('.jghyfg').css({
+  'height': s+5,
+  
+  
+});
+          $(this).parent().find('.spo').css({
+  'display': 'none',
+
+  
+  
+});
+$(this).parent().find('.likes').css({
+  
+  
+
+
+  
+  
+});
+
+        $('.open').removeClass('visible');
+        $('.close').removeClass('hide');
+       
+        
+        
+        console.log(arr);
+
+    });
+  $('.close').click(function () {
+        $('.cont').removeClass('full');
+        $('.open').addClass('visible');
+        $('.close').addClass('hide');
+    });
+
+  
+
+
+
+});
+              
+
+              
+              
+
+             
+
+              
+
+
+          },
+          failure: function() { 
+              alert('Got an error dude');
+          }
+      }); 
+
+
+
+
+
+     var src = $(this).attr('data-full');
+      
+        // Change src attribute of image
+        $("#imghhh").attr("src", src);
+        $(".s258").css("display", "block");
+        $(".spo").css({
+  'position': 'relative',
+   'top': '100px',
+   'left': '85%',
+   'display': 'block'
+
+  
+  
+});
+  });
+
+
+
+$('.s55hf').on('click', function() {
+      
+          $('.cont').removeClass('full');
+          $(this).parent().find('.jghyfg').css({
+              'height': 50,
+  
+  
+          });
+          var parent = document.getElementById("das");
+          //document.getElementById("gg11").outerHTML='';
+      //var child = document.getElementById("gg11");
+      //parent.removeChild(child);
+      var myNode = document.getElementById("das");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+    }
+          
+  });
+
+
+
+
+
+
+$('.btn').click(function(event){
+  var pk = $(this).attr('name');
+  $.ajax({
+           
+           url: "{% url 'accounts:subscribe' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+                {% if my_profile %}
+                  
+                  document.getElementById('test').innerHTML = data.f;
+                  {% if album.sponsor %}
+                  document.getElementById('subscribe').innerHTML = data.j;
+                  {% else %}
+                   document.getElementById('sub').innerHTML = data.j;
+                  {% endif %}
+                 
+                  
+                {% else %}
+                  document.getElementById('test').innerHTML = data.f;
+                   {% if album.sponsor %}
+                  document.getElementById('subscribe').innerHTML = data.j;
+                  {% else %}
+                   document.getElementById('sub').innerHTML = data.j;
+                  {% endif %}
+                  
+
+                {% endif %}
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+
+
+$(document).on("click", ".box12", function(event){
+  var pk = $(this).attr('name');
+
+  
+  
+  e =  String(pk + 123)
+  status_name = String(pk) + 'aw'
+  console.log(e)
+
+    
+  $.ajax({
+           
+           url: "{% url 'accounts:post_like' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+                
+                
+                if (data.status=='False'){
+                  document.getElementById("heart_box").innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+                  document.getElementById("s20a20").innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+                   document.getElementsByClassName("gg")[0].innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+                  
+                  document.getElementsByName(status_name)[0].setAttribute("heart_c", 0)
+                  
+                  console.log(document.getElementsByName(status_name))
+                  
+                }
+                else{
+                  document.getElementsByName(status_name)[0].setAttribute("heart_c", 1)
+                  console.log(document.getElementsByName(status_name))
+                  document.getElementById("heart_box").innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+                   document.getElementById("s20a20").innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+                    document.getElementsByClassName("gg")[0].innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+                   
+                }
+                
+
+
+                
+                 //find('#test').innerHTML = data.f;
+
+                  
+                  
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+
+
+</script> 
+  <script type="text/javascript">
+  
+  
+  var i = [];
+  var are = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+  var arrr = [];
+  var n = $("div.gallery-item").length;
+    var A = $('div.gallery-item'), max = 0, elem;
+
+   
+    
+    
+    for (i.length; i.length < n;  i.push(A[i.length])) {
+      arrr.push(A[i.length].offsetWidth);
+
+      
+
+
+    }
+  
+        
+    if (arrr.length > 2){
+    delete arrr[0];
+    delete arrr[1];
+    var gh  = arrr[2];
+    var f = arrr.length;
+    var aree = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+    
+    
+    var judoIndex = are.lastIndexOf(i.length);
+    var judoIndexg = are.lastIndexOf(i.length - 1);
+
+   
+    
+    
+    if (judoIndex > -1 ){
+         $('.gallery-item:nth-child(' + f + ')').css({
+        'max-width': gh,
+        'height': gh,
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    if (judoIndexg > -1){
+       
+      $('.gallery-item:nth-child(' + f + ')').css({
+        'max-width': gh ,
+        'height': gh,
+  
+  
+
+
+  
+  
+  });
+    var gb = f - 1;
+
+
+  $('.gallery-item:nth-child(' + gb + ')').css({
+      'max-width': gh,
+      'height': gh,
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    
+   
+   
+    
+    
+      
+
+    }
+    else{
+
+
+  var serv = window.innerWidth;
+  console.log(arrr.length);
+  if( arrr.length == 1){
+    
+    $(".gallery-item:nth-child(1)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+
+  }
+  if(arrr.length == 2) {
+    $(".gallery-item:nth-child(2)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+    $(".gallery-item:nth-child(1)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+
+  }
+
+
+
+
+
+
+}
+   
+        
+  $(window).resize(function(){
+    var i = [];
+  var are = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+  var arrr = [];
+  var n = $("div.gallery-item").length;
+    var A = $('div.gallery-item'), max = 0, elem;
+
+   
+    
+    
+    for (i.length; i.length < n;  i.push(A[i.length])) {
+      arrr.push(A[i.length].offsetWidth);
+
+      
+
+
+    }
+    if (arrr.length > 2){
+    delete arrr[0];
+    delete arrr[1];
+    var gh  = arrr[2];
+    var f = arrr.length;
+    var aree = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+    
+    
+    var judoIndex = are.lastIndexOf(i.length);
+    var judoIndexg = are.lastIndexOf(i.length - 1);
+    
+    
+    if (judoIndex > -1 ){
+         $('.gallery-item:nth-child(' + f + ')').css({
+        'max-width': gh,
+        'height': gh,
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    if (judoIndexg > -1 ){
+        
+      $('.gallery-item:nth-child(' + f + ')').css({
+        'max-width': gh ,
+        'height': gh,
+  
+  
+
+
+  
+  
+  });
+    var gb = f - 1;
+
+
+  $('.gallery-item:nth-child(' + gb + ')').css({
+      'max-width': gh,
+      'height': gh,
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    
+   
+   
+    
+    
+      
+
+    }
+        else{
+
+
+  var serv = window.innerWidth;
+  
+  if( arrr.length == 1){
+    console.log(serv);
+    $(".gallery-item:nth-child(1)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+  }
+  if(arrr.length == 2) {
+    $(".gallery-item:nth-child(2)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+    $(".gallery-item:nth-child(1)").css({
+        'max-width': (serv)/4,
+        'height': (serv)/4,
+    
+    
+
+
+    
+    
+  });
+
+  }
+
+
+
+
+
+
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    });
+    
+
+
+     var swiper34 = new Swiper('.swiper-container34', {
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        hide: true,
+      },
+
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+       observer: true, 
+        observeParents: true,
+        observeSlideChildren: true,
+        rebuildOnUpdate: true
+
+
+    
+    });
+
+     var files_m = []
+        var i23 = -1;
+        box_video = `  <div class="swiper-slide"><img src="jpg" class="f22poj"></div>`
+
+        
+
+        
+          $('#sddr').on('change',function(){
+            document.getElementById("s30a").style.display="none";
+            $(".swiper-container34").css("display","block")
+            
+            
+
+            
+            
+           
+            if (this.files.length > 1){
+
+                for (var i1 = 0; i1 < this.files.length; i1++) {
+                files_m.push(this.files[i1])
+
+                
+            } 
+            
+            }
+            else{
+                if (this.files.length == 0){
+
+
+                }else{
+
+                
+                files_m.push(this.files[0])
+                 
+                 
+            }}
+
+                if (this.files.length > 1){
+
+                    for (var i1 = 0; i1 < this.files.length; i1++) {
+                        i23++
+                 box=`<div class="a22_filename">` + this.files[i1]["name"] +`</div>`
+                   let render = new FileReader();
+        render.addEventListener("load", function(){
+            console.log(this)
+           
+
+                         var box_video1 = box_video.replace('jpg',  this.result);
+                
+
+                 swiper34.appendSlide(box_video1);
+                 $(".swiper-pagination").css("display", "block")
+                 swiper34.update();
+            
+
+        })
+        
+
+        render.readAsDataURL(this.files[i1])
+          
+    
+
+
+
+
+
+
+
+                 console.log( this.files[i1])
+
+
+
+
+
+            
+               
+            } 
+                   
+
+                }
+                else{
+                i23++
+
+
+                box=`<div class="a22_filename" id="` + i23 +`">` + this.files[0]["name"] +`</div>`
+                  let render = new FileReader();
+        render.addEventListener("load", function(){
+            console.log(this)
+           
+
+                         var box_video1 = box_video.replace('jpg',  this.result);
+                
+
+                 swiper34.appendSlide(box_video1);
+                 $(".swiper-pagination").css("display", "none")
+
+                 swiper34.update();
+            
+
+        })
+        
+
+        render.readAsDataURL(this.files[0])
+
+
+
+
+
+
+               
+                
+            }
+        
+
+
+            });
+
+          $(".niu899").on("click", function(){
+  if (files_m.length >= 1){
+    $("#ss22_file").css("display", "none")
+    $(".kukulala").css("display", "block")
+    $(".niu8991").css("display", "block")
+    $(".niu899").css("display", "none")
+    
+
+    
+
+
+
+
+  }
+
+
+
+
+})
+          $(".heshtegs_add").on("click", function(){
+            document.getElementById("heshteg_form").innerHTML=`{{ form1.as_p }}`
+            $(this).css("display", "none")
+
+
+          })
+
+
+        
+          $(document).ready(function(){
+
+           
+
+
+            
+           
+
+
+
+
+        $('#form').on('submit', function(e){
+
+
+
+
+            
+            e.preventDefault();
+            var data = new FormData($('form').get(0));
+             for (var i = 0; i < files_m.length; i++) {
+                data.append('images' + i, files_m[i])
+            }
+            data.append('length', files_m.length)
+            data.append('pk', $(this).attr('name1'))
+            console.log(data)
+            $.ajax({
+
+            xhr : function() {
+                var xhr = new window.XMLHttpRequest();
+
+                xhr.upload.addEventListener('progress', function(e) {
+
+                    if (e.lengthComputable) {
+
+                        console.log('Bytes Loaded: ' + e.loaded);
+                        console.log('Total Size: ' + e.total);
+                        console.log('Percentage Uploaded: ' + (e.loaded / e.total))
+
+                        var percent = Math.round((e.loaded / e.total) * 100);
+
+                        $('#progressBar').attr('aria-valuenow', percent).css('width', percent + '%').text(percent + '%');
+
+                    }
+
+                });
+
+                return xhr;
+            },    
+            url: '{% url "accounts:crf_song" %}',
+            method: "POST",
+            data: data,
+            success: function(data){ 
+            location.replace("/profile/")},
+            error: function(data){},
+            processData: false,
+            contentType: false,
+        });
+    });
+});
+
+    
+    
+  </script>
+  <script type="text/javascript">
+    
+  
+
+        //For sending
+        
+            
+            
+            
+          
+</script>
+
+
+
+
+
+</body>
+</html>

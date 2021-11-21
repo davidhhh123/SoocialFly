@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple Step with Javascript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static 'css/login/style.css' %}">
+<style type="text/css">
+ .checkbox_pr {
+    position: relative;
+    width: 125px;
+    margin-top: 10px;
+    left: 10px;
+    white-space: nowrap;
+
+
+    float: left;
+}
+.bnt{
+  background-color: #0c0c0ccc;
+  border-color: #6a6c6d; 
+}
+.kjh{
+  position: absolute;
+    right: 0;
+    margin-top: -40px;
+}
+@media(max-width: 410px){
+  
+.checkbox_pr{
+  width: 118px;
+}
+.kjh{
+  position: absolute;
+    left: 0;
+    margin-top: 20px;
+}
+
+}
+@media(max-width: 395px){
+  
+
+
+}
+@media(max-width: 267px){
+  .form_reg{
+    left: -15px;
+    position: absolute;
+  }
+  
+.ikd {
+    margin-top: 290px;
+    margin-left: -14px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="outer">
+  <div class="container">
+    <div class="steps-wrapper">
+      <div class="steps" style="display: none;">
+      
+        <div class="steps__step step-2 step--active" data-target="steps-content__step-2"><span class="step-label">Profile</span></div>
+        
+       
+      </div>
+      <div class="steps-content">
+       
+        <div class="step-content steps-content__step-1" id="steps-content__step-2">
+          <h3 class="headline">Setting up your profile</h3>
+          <p class="sub-headline">Fill in your profile</p>
+          <div class="form">
+            <form method="get">
+              <div class="form__control">
+                <label class="label form__label" for="first-name">First name</label>
+                <input class="form__input  bnt" type="text" id="first-name_ps" placeholder="John" value="{{ profile.first_name }}"/>
+              </div>
+
+             
+              <div class="form__control">
+                <label class="label form__label" for="email">Email</label>
+                <input class="form__input bnt" type="email" id="email_ps" placeholder="example@example.com"/ value="{{ profile.email }}">
+              </div>
+              <div class="form__control">
+                <label class="label form__label" for="about">Description</label>
+                <textarea class="form__input input--3-quarter bnt" id="description" placeholder="short description about youself" rows="4" >{{ profile.bio }}</textarea>
+              </div>
+              <!-- <div class="form__control">
+                <label class="label form__label" for="checkbox">Sponsor</label>
+               <input name="0" type="checkbox" id="checkbox" value="sponsor">
+              </div>-->
+                <div class="form__control">
+                <label class="label form__label" for="file1">Profile Image</label>
+               <input name="myFile" type="file" id="file1">
+              </div>
+             
+            </form>
+          </div>
+          <div class="form__control">
+            <button class="next btn btn--primary submit__btn"  type="submit">Next</button>
+          </div>
+
+        </div>
+       
+      
+      
+    </div>
+  </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script type="text/javascript">
+  
+  
+
+
+</script>
+
+  <script  src="{% static 'css/login/script_edit.js' %}"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {% csrf_token %}
+    <title>SoocialFly Music</title>
+     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/bab (1).ico' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.0.2/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <style>
+        @font-face {
+            font-family: LineAwesome;
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: Ionicons;
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: slick;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            @font-face {
+                font-family: LineAwesome;
+            }
+        }
+      
+
+        }
+      
+    </style>
+    {% include 'includes/stylesheets.html' %}
+    <link type="text/css" href="{% static 'css/custom.css' %}">
+    {% block stylesheets %}{% endblock %}
+    <style type="text/css">
+       
+     #audioPlayer {
+    right: .5rem;
+    bottom: .5rem;
+    left: 18rem;
+}
+@media (max-width: 768px){
+#audioPlayer {
+    left: .5rem;
+    bottom: 3.8rem;
+}
+#customSettings{
+    bottom: 9.5rem;
+    }}
+          @media(max-width: 500px){
+              #audioPlayer {
+   left: .5rem;
+    right: .5rem;
+}}
+
+@media(max-width: 303px){
+
+.audio .song-image {
+    
+    max-width: 3.8rem;
+}
+.btn-icon-only [class*=" ion-"], .btn-icon-only [class*=" la-"], .btn-icon-only [class^=ion-], .btn-icon-only [class^=la-] {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+    line-height: 1;
+}
+.amplitude-repeat{
+  display: none;
+} 
+}
+@media(max-width: 263px){
+
+.audio-controls--left .btn, .audio-controls--right .btn {
+    
+    display: none;
+}
+}
+    </style>
+</head>
+<body>
+<div class="loader-wrapper " id="llo" style="position: fixed;display: block;">
+    <img src="{% static 'images/bab.png' %}" style="left: calc(50% - 48px);top: calc(50% - 48px);position: absolute;">
+</div>
+<div id="wrapper" data-scrollable="true" class="main_name">
+    {% include 'includes/sidebar.html' %}
+    {% include 'includes/nav.html' %}
+    {% block content %}{% endblock %}
+</div>
+
+<div class="backdrop header-backdrop"></div>
+<div class="backdrop sidebar-backdrop"></div>
+{% include 'includes/javascripts.html' %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

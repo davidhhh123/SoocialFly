@@ -1,0 +1,396 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Skateboard Video Platform</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://vjs.zencdn.net/5-unsafe/video-js.css'><link rel="stylesheet" href="{% static 'css/style_courses.css' %}">
+
+</head>
+<body>
+  {% if data_req == "data_req" %}
+  <div class="id_ppp_channel">
+    <div class="req_data">
+      <div class="but_pii">Create Channel</div>
+      
+
+
+
+    </div>
+     <div class="req_data1" >
+      <div class="add_ppoo"><svg version="1.1" id="Capa_1" class="Capa_1_paaa" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+      v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"></path>
+  </g>
+</g>
+
+</svg></div>
+      <div class="profile_name_ppa">
+        <p>Name</p>
+        <input type="text" name="text" class="profile_name_ppa_input" placeholder="Name" value="{{ profile.first_name }}">
+
+        
+
+
+      </div>
+      <div class="profile_des_ppa">
+        <p>Description</p>
+        
+        <textarea cols="20" rows="20" class="profile_des_ppa_input" placeholder="Description"></textarea>
+
+        
+
+
+      </div>
+
+
+
+    </div>
+    
+
+
+  </div>
+
+  {% else %}
+  {% endif %}
+    
+<!-- partial:index.partial.html -->
+<div class="container">
+{% include 'intex.html' %}
+
+
+
+ 
+  {% include 'courses/intex_main.html' %}
+  
+  <div class="main-container show">
+  
+  
+   <div class="stream-area">
+    <div class="video-stream">
+     <video id="my_video_1" class="video-js vjs-default-skin anim" width="640px" height="267px" controls preload="none" poster='{{ video.video.url }}' data-setup='{ "aspectRatio":"940:620", "playbackRates": [1, 1.5, 2] }'>
+      <source src="{{ video.video.url }}" type='video/mp4' />
+      <source src="{{ video.video.url }}" type='video/webm' />
+     </video>
+     <div class="video-detail">
+      <div class="video-content">
+       <div class="video-p-wrapper anim" style="--delay: .1s">
+        <div class="author-img__wrapper video-author video-p">
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+          <path d="M20 6L9 17l-5-5" />
+         </svg>
+         <img class="author-img" src="https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+        </div>
+        <div class="video-p-detail">
+         <div class="video-p-name">{{ video.my_channel.name }}</div>
+         <div class="video-p-sub"><span class="span_count">{{ video.my_channel.subscribe.count }}</span> subscribers</div>
+        </div>
+        <div class="button-wrapper">
+         <button class="like shere_m" name="{{ video.my_channel.pk }}">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="258" x2="512" y2="258" gradientTransform="matrix(1 0 0 -1 0 514)">
+  <stop  offset="0" style="stop-color:#80D8FF"/>
+  <stop  offset="1" style="stop-color:#EA80FC"/>
+</linearGradient>
+<path style="fill:url(#SVGID_1_);" d="M315.409,249.231C345.854,225.711,365.5,188.86,365.5,147.5C365.5,76.645,307.855,19,237,19
+  S108.5,76.645,108.5,147.5c0,41.359,19.646,78.211,50.091,101.731C68.293,280.793,0,367.427,0,473c0,11.046,8.954,20,20,20h434
+  c11.046,0,20-8.954,20-20C474,367.401,405.656,280.775,315.409,249.231z M148.5,147.5c0-48.799,39.701-88.5,88.5-88.5
+  s88.5,39.701,88.5,88.5S285.799,236,237,236S148.5,196.299,148.5,147.5z M41.008,453C51.061,353.73,135.123,276,237,276
+  s185.939,77.73,195.992,177H41.008z M512,147.5c0,11.046-8.954,20-20,20h-18v18c0,11.046-8.954,20-20,20s-20-8.954-20-20v-18h-18
+  c-11.046,0-20-8.954-20-20s8.954-20,20-20h18v-18c0-11.046,8.954-20,20-20s20,8.954,20,20v18h18
+  C503.046,127.5,512,136.454,512,147.5z"/>
+<g>
+</g>
+
+</svg>
+          <span class="id_shere_poo">
+            {% if profile in  video.my_channel.subscribe.all %}
+            UnFollow
+            {% else %}
+            Follow
+            {% endif %}
+
+          </span>
+         </button>
+         <button class="like red like_m" name="{{ video.pk }}">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M15.85 2.5c.63 0 1.26.09 1.86.29 3.69 1.2 5.02 5.25 3.91 8.79a12.728 12.728 0 01-3.01 4.81 38.456 38.456 0 01-6.33 4.96l-.25.15-.26-.16a38.093 38.093 0 01-6.37-4.96 12.933 12.933 0 01-3.01-4.8c-1.13-3.54.2-7.59 3.93-8.81.29-.1.59-.17.89-.21h.12c.28-.04.56-.06.84-.06h.11c.63.02 1.24.13 1.83.33h.06c.04.02.07.04.09.06.22.07.43.15.63.26l.38.17c.092.05.195.125.284.19.056.04.107.077.146.1l.05.03c.085.05.175.102.25.16a6.263 6.263 0 013.85-1.3zm2.66 7.2c.41-.01.76-.34.79-.76v-.12a3.3 3.3 0 00-2.11-3.16.8.8 0 00-1.01.5c-.14.42.08.88.5 1.03.64.24 1.07.87 1.07 1.57v.03a.86.86 0 00.19.62c.14.17.35.27.57.29z" />
+          </svg>
+          Liked
+
+         </button>
+           <div class="likes_count">{{ video.likes.count }}</div>
+
+        </div>
+       </div>
+       <div class="video-p-title anim" style="--delay: .2s">{{ video.name }}</div>
+       <div class="video-p-subtitle anim" style="--delay: .3s">{{ video.description }}</div>
+  
+      </div>
+     </div>
+    </div>
+    <div class="chat-stream">
+     <div class="chat">
+      <div class="chat-header anim">Comments<span><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.212 7.762c0 2.644-2.163 4.763-4.863 4.763-2.698 0-4.863-2.119-4.863-4.763C4.486 5.12 6.651 3 9.35 3c2.7 0 4.863 2.119 4.863 4.762zM2 17.917c0-2.447 3.386-3.06 7.35-3.06 3.985 0 7.349.634 7.349 3.083 0 2.448-3.386 3.06-7.35 3.06C5.364 21 2 20.367 2 17.917zM16.173 7.85a6.368 6.368 0 01-1.137 3.646c-.075.107-.008.252.123.275.182.03.369.048.56.052 1.898.048 3.601-1.148 4.072-2.95.697-2.675-1.35-5.077-3.957-5.077a4.16 4.16 0 00-.818.082c-.036.008-.075.025-.095.055-.025.04-.007.09.019.124a6.414 6.414 0 011.233 3.793zm3.144 5.853c1.276.245 2.115.742 2.462 1.467a2.107 2.107 0 010 1.878c-.531 1.123-2.245 1.485-2.912 1.578a.207.207 0 01-.234-.232c.34-3.113-2.367-4.588-3.067-4.927-.03-.017-.036-.04-.034-.055.002-.01.015-.025.038-.028 1.515-.028 3.145.176 3.747.32z" />
+        </svg>
+        15,988 people
+       </span>
+      </div>
+      <div class="message-container">
+
+
+
+
+
+      
+       {% for i in video_comments %}
+        <div class="message anim" style="--delay: .1s">
+        <div class="author-img__wrapper video-author video-p">
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+          <path d="M20 6L9 17l-5-5" />
+         </svg>
+         {% if i.profile_com.avatar.url != None  %}
+
+     <img class="author-img" src="{{ profile.avatar.url }}" />
+    {% else %}
+    <img class="author-img" src="https://images.unsplash.com/photo-1560941001-d4b52ad00ecc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" />
+    {% endif %}
+         
+        </div>
+        <div class="msg-wrapper">
+         <div class="msg__name video-p-name"> {{ i.profile_com.first_name }}</div>
+         <div class="msg__content video-p-sub">{{ i.description }}</div>
+        </div>
+       </div>
+       {% endfor %}
+     
+
+
+
+
+
+      </div>
+      <div class="chat-footer anim" style="--delay: .1s">
+       <input type="text" placeholder="Write your message" class="comment_id_add">
+       <div class="ooii_llkjk" name_id = "{{ video.pk }}"></div>
+      </div>
+     </div>
+     <div class="chat-vid__container">
+      <div class="chat-vid__title anim" style="--delay: .3s">Related Videos</div>
+      <div class="chat-vid anim" style="--delay: .4s">
+       <div class="chat-vid__wrapper">
+        <img class="chat-vid__img" src="https://cdn.nohat.cc/thumb/f/720/3b55eddcfffa4e87897d.jpg" />
+        <div class="chat-vid__content">
+         <div class="chat-vid__name">Prepare for your first skateboard jump</div>
+         <div class="chat-vid__by">Jordan Wise</div>
+         <div class="chat-vid__info">125.908 views <span class="seperate"></span>2 days ago</div>
+        </div>
+       </div>
+      </div>
+      <div class="chat-vid anim" style="--delay: .5s">
+       <div class="chat-vid__wrapper">
+        <img class="chat-vid__img" src="https://iamaround.it/wp-content/uploads/2015/02/pexels-photo-4663818.jpeg" />
+        <div class="chat-vid__content">
+         <div class="chat-vid__name">Prepare for your first skateboard jump</div>
+         <div class="chat-vid__by">Jordan Wise</div>
+         <div class="chat-vid__info">125.908 views <span class="seperate"></span>2 days ago</div>
+        </div>
+       </div>
+      </div>
+      <div class="chat-vid__button anim" style="--delay: .6s">See All related videos (32)</div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://vjs.zencdn.net/5-unsafe/video.js'></script><script  src="{% static 'css/script_courses.js' %}"></script>
+<script type="text/javascript">
+ 
+
+
+  $(".but_pii").on("click", function(){
+    $(".req_data").css("visibility", "hidden")
+     $(".req_data1").css({"visibility":"visible", "opacity":1})
+
+  })
+  $(".add_ppoo").on("click", function(){
+
+    var name = $(".profile_name_ppa_input").val()
+    var description = $(".profile_des_ppa_input").val()
+    if (name.length>0 && description.length>0){
+       $(".profile_name_ppa_input").css("background-color", "#1b1a1a")
+        $(".profile_des_ppa_input").css("background-color", "#1b1a1a")
+      console.log(name, description)
+      $.ajax({
+           
+           url: "{% url 'accounts:create_mychannel' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'name': name,'description':description, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+            if (data=="success"){
+              location.replace("/mychannel/")
+            }
+               
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+    }
+    else if (name.length==0 ||  description.length==0){
+      if (name.length==0 && description.length!=0){
+        $(".profile_name_ppa_input").css("background-color", "red")
+      
+         $(".profile_des_ppa_input").css("background-color", "#1b1a1a")
+
+
+
+      }
+      else if(description.length==0 && name.length!=0){
+        $(".profile_des_ppa_input").css("background-color", "red")
+          $(".profile_name_ppa_input").css("background-color", "#1b1a1a")
+
+      }
+      else{
+        $(".profile_des_ppa_input").css("background-color", "red")
+        $(".profile_name_ppa_input").css("background-color", "red")
+
+
+      }
+
+
+
+    }
+    
+  })
+
+  $(".like_m").on("click", function(){
+    var pk = $(this).attr("name")
+    $.ajax({
+           
+           url: "{% url 'accounts:likes_videos' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+            
+            $(".likes_count").html(data)
+               
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+    
+
+
+  })
+   $(".shere_m").on("click", function(){
+    var pk = $(this).attr("name")
+    $.ajax({
+           
+           url: "{% url 'accounts:subscribe_channel_v' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+             $(".span_count").html(data.count)
+            if (data.status=="remove"){
+              $(".id_shere_poo").html("Follow")
+
+            }
+            else{
+               $(".id_shere_poo").html("UnFollow")
+
+
+            }
+          
+            
+            
+               
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+    
+
+
+  })
+   $(".ooii_llkjk").on("click", function(){
+    var input = $(".comment_id_add")
+    var pk = $(this).attr("name_id")
+    console.log(pk)
+    var jj_picture_my_profile = $(".user-img").attr("src")
+    
+    var user_name = $("#user_name").eq(0).attr("ppdlsaf")
+    console.log(user_name)
+    var add_column = `<div class="message anim" style="--delay: .1s">
+        <div class="author-img__wrapper video-author video-p">
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+          <path d="M20 6L9 17l-5-5"></path>
+         </svg>
+         <img class="author-img" src="`+ jj_picture_my_profile +`">
+        </div>
+        <div class="msg-wrapper">
+         <div class="msg__name video-p-name">` + user_name + `</div>
+         <div class="msg__content video-p-sub">lorem</div>
+        </div>
+       </div>`
+    if (input.val().length>0){
+      $.ajax({
+           
+           url: "{% url 'accounts:video_comment_add' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {"pk": pk,"description":input.val(), 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+            
+            if (data.success=="success"){
+              console.log("aaaa")
+              add_c = add_column.replace("lorem", input.val())
+             
+              
+              
+              $(".message-container").append(add_c);
+              
+
+              }
+          
+            
+            
+               
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      })
+    }
+
+   })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% load  static %}
+
+{% block title %}Edit Profile | {{ user }} {{ super }}{% endblock %}
+
+{% block body %}
+    <div class="grid-100">
+      
+        
+            
+           <!-- <input type="text" name="song_title" required="" id="id_song_title" maxlength="250">
+
+            <input type="file" name="avatar" id="id_avatar">
+            <input type="submit" class="button" value="save" id="s20" />
+        
+    </div>-->
+
+    <form method="POST" name="form" id="form" enctype="multipart/form-data">
+     {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="button" value="save" id="s20" />
+</form>
+<!--    <script type="text/javascript">
+		$('#s20').click(function(event) {
+
+
+		var name = $("#id_song_title").val()
+		var name1 = $("#id_avatar").val()
+		$.ajax({
+    url: '{% url "accounts:hello" %}',
+    type: 'POST',
+    dataType: 'json',
+    enctype: 'multipart/form-data',
+    data: { 
+                'name': name,
+                'name1': name1, 
+                'csrfmiddlewaretoken': '{{csrf_token}}'
+            },  // This is the default though, you don't actually need to always mention it
+    success: function(data) {
+        document.getElementById('test').innerHTML = data;
+        alert(name1);
+    },
+    failure: function() { 
+        alert('Got an error dude');
+    }
+}); 
+		}); 
+
+
+
+
+$(document).ready(function(){
+    $('form').on('submit', function(e){
+        e.preventDefault();
+        var data = new FormData($('form').get(0));
+        $.ajax({
+            url: '{% url "accounts:saveprof" %}',
+            method: "POST",
+            data: data,
+            success: function(data){},
+            error: function(data){},
+            processData: false,
+            contentType: false,
+        });
+    });
+});
+	</script>-->
+{% endblock %}

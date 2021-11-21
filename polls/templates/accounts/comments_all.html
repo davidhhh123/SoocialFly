@@ -1,0 +1,198 @@
+{% extends 'com.html' %}
+
+{% block pagetitle %}Home{% endblock %}
+
+{% block javascript %}
+  <script>
+    var infinite = new Waypoint.Infinite({
+      element: $('.article')[0],
+
+      onBeforePageLoad: function () {
+        $('.loading').show();
+        
+      },
+      onAfterPageLoad: function ($items) {
+        $('.loading').hide();
+        
+        
+      }
+    });
+
+  </script>
+  
+{% endblock %}
+{% block styleww %}
+<style type="text/css">
+.comments_url{
+  width: calc(100% - 86.66px);
+  color: white;
+  
+  height: calc(100vh - 70px);
+  position: absolute;
+  margin-left: 86.66px;
+  margin-top: 70px;
+}
+.block_comments{
+  
+  width: calc(100% - 90px);
+  min-height: 100px;
+  height: auto;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 85px;
+  padding-bottom:55px;
+  background: #0c0c0c;
+
+
+}
+.block_user_cmm{
+  
+  width: calc(100% - 90px);
+  min-height: 100px;
+  height: auto;
+  position: relative;
+  margin-top: 90px;
+  margin-left: 85px;
+  padding-bottom:20px;
+  border-bottom: 1px solid #585858;
+
+}
+@media(max-width: 1365px){
+  .block_user_cmm{
+    width: calc(100% - 10px);
+     margin-left: 5px;
+}
+ .block_comments{
+    width: calc(100% - 10px);
+     margin-left: 5px;
+}
+
+}
+.a_cmm{
+  color: #888787;
+  position: absolute;
+  font-size: 15px;
+  margin-left: 30px;
+  
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: 0 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    padding: 5px 9px;
+    text-align: center;
+    text-transform: inherit;
+    text-overflow: ellipsis;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: auto;
+
+}
+.content_cmm{
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 10px);
+  height: auto;
+
+  font-size: 15px;
+  padding-top: 40px;
+  padding-left: 11px;
+  line-height: 20px;
+  color: white;
+
+  word-wrap: break-word;
+}
+.love_cmm{
+  position: absolute;
+  margin-top: 10px;
+  width: 80px;
+  margin-left: calc(100% - 80px);
+  font-size: 20px;
+  color: white;
+}
+.love_cmm i{
+  margin-left: 30px
+}
+.count_cmm{
+   
+  
+  
+  margin-top: 4px;
+  
+  text-align: center;
+
+  
+  font-size: 15px;
+
+}
+@media(max-width: 713px){
+  .comments_url{
+    width: 100%;
+    margin-left: 0;
+  }
+
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="block_user_cmm main_name" ><div class="img_cmm12" style="width: 32px;height: 32px;border-radius: 180px;position: absolute;margin-top: 5px;margin-left: 10px;">{% if profile_cm.profile.avatar %}<img src="{{ profile_cm.profile.avatar.url }}"  style="width: 32px;height: 32px;border-radius: 180px;position: absolute;">{% else %}{% endif %}<a class="a_cmm">{{ profile_cm.profile }}</a></div>
+<span class="content_cmm">{{ profile_cm.description }}</span>
+</div>
+{% if profile_cm.comments %}
+
+{% for comment in profile_cm.comments.all %}
+
+<div class="block_comments main_name">
+  
+  <div class="img_comments"><div class="img_cmm12" style="width: 32px;height: 32px;border-radius: 180px;position: absolute;margin-top: 5px;margin-left: 10px;">{% if comment.profile.avatar %}<img src="{{ comment.profile.avatar.url }}"  style="width: 32px;height: 32px;border-radius: 180px;position: absolute;">{% else %}{% endif %}<a class="a_cmm">{{ comment.profile }}</a></div><span class="content_cmm">{{ comment.comment_title }}</span>
+  <div class="love_cmm" name="{{ comment.id }}" ><span id="{{ comment.id }}1wwe">
+    {% if comment.likes_comments.all  %}
+   
+        {% if user_cmm in  comment.likes_comments.all %}
+          
+          <i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>
+          
+          
+        {% else %}
+          <i class="fa fa-heart-o" aria-hidden="true" ></i>
+
+        {% endif %}
+        {% else %}
+        <i class="fa fa-heart-o" aria-hidden="true" ></i>
+
+
+
+        
+        {% endif %}
+
+
+   </span>
+    <div class="count_cmm" id="{{ comment.id }}">{{ comment.likes_comments.count }}</div>
+
+</div>
+
+  
+
+
+</div>
+  
+
+</div>
+{% endfor %}
+{% endif %}
+
+
+
+
+
+ 
+{% endblock %}

@@ -1,0 +1,32 @@
+<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_4_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="null" id="svg_2" fill="#3f9e9e" d="m15.875692,28.37131l0,-0.682472l-5.78051,0l0,0.682472c0,0.754396 -0.766525,1.364402 -1.712291,1.364402l-1.412199,0l0,1.363321l12.028811,0l0,-1.363321l-1.41152,0c-0.945087,0 -1.712291,-0.610006 -1.712291,-1.364402z"/>
+  <path stroke="null" id="svg_3" fill="#3f9e9e" d="m21.403634,11.315198l-17.138925,0l-0.008013,0l-1.027614,0l0,1.127884c-0.002003,0.030688 -0.008013,0.060431 -0.008013,0.092063l0,12.457714l0,0.73414l0,1.219947l1.035627,0l0.69389,0l16.059228,0l0.393819,0l1.027214,0l0,-1.127884c0.002003,-0.030215 0.008013,-0.060903 0.008013,-0.092063l0,-0.156742l0,-13.035111l0,-1.219947l-1.035226,0zm-8.573469,14.905633c-0.278838,0 -0.505194,-0.266273 -0.505194,-0.59581s0.226356,-0.59581 0.505194,-0.59581c0.279239,0 0.505594,0.266273 0.505594,0.59581s-0.226356,0.59581 -0.505594,0.59581zm-8.565456,-1.80537l0,-11.993624l17.138925,0l0,11.993624l-17.138925,0z"/>
+  <path filter="url(#svg_4_blur)" stroke="null" id="svg_4" fill="#3f9e9e" d="m51.838558,16.380243l-34.83183,0.00262l-0.005,0l-0.64111,0l0,1.44129c-0.00125,0.03922 -0.005,0.07722 -0.005,0.11765l0,15.91943l0,0.93814l0,1.55894l0.64611,0l0.4329,0l10.01904,0l0.24569,0l0.64087,0l0,-1.4413c0.00125,-0.03861 0.00499,-0.07782 0.00499,-0.11764l0,-0.2003l0,-16.65727l0,-1.55894m-11.33849,16.74052l0,-15.32637l10.69263,0l0,15.32637l-10.69263,0z"/>
+  <ellipse ry="1.085927" rx="0.982505" id="svg_5" cy="34.600716" cx="22.448676" stroke-opacity="null" stroke-width="null" stroke="null" fill="#ffffff"/>
+  <ellipse id="svg_7" cy="37.341389" cx="9.882949" stroke-opacity="null" stroke-width="null" stroke="null" fill="#ffffff"/>
+  <ellipse stroke="null" ry="0.775662" rx="0.930795" id="svg_11" cy="34.704138" cx="22.396965" stroke-opacity="null" stroke-width="null" fill="#ffffff"/>
+  <path stroke="null" filter="url(#svg_4_blur)" id="svg_12" fill="#3f9e9e" d="m31.774766,20.000001l-29.857163,0.001901l-0.004286,0l-0.549547,0l0,1.045846c-0.001071,0.028459 -0.004286,0.056033 -0.004286,0.085371l0,11.551644l0,0.680745l0,1.131216l0.553833,0l0.371073,0l8.588125,0l0.210601,0l0.549341,0l0,-1.045853c0.001071,-0.028017 0.004277,-0.056469 0.004277,-0.085363l0,-0.145344l0,-12.087045l0,-1.131217m-9.719132,12.147454l0,-11.121302l9.165513,0l0,11.121302l-9.165513,0z"/>
+  <line stroke="null" stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="37.755058" x2="47.735261" y1="40.030359" x1="29.015949" stroke-opacity="null" stroke-width="null" fill="none"/>
+  <rect stroke="null" id="svg_17" height="1.654747" width="10.031897" y="25.344482" x="1.712641" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#3f9e9e"/>
+  <rect stroke="null" id="svg_18" height="2.068433" width="2.068432" y="34.031896" x="7.297409" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#3f9e9e"/>
+  <rect stroke="null" id="svg_19" height="2.171854" width="2.171853" y="21.724724" x="2.643435" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#3f9e9e"/>
+  <rect stroke="null" id="svg_20" height="2.068433" width="2.068432" y="34.135317" x="2.540014" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#3f9e9e"/>
+  <rect stroke="null" id="svg_21" height="2.068433" width="2.068432" y="28.653971" x="2.746858" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#3f9e9e"/>
+  <rect id="svg_24" height="0" width="0.103422" y="39.823508" x="44.839456" stroke-opacity="0" stroke-width="null" stroke="#000000" fill="none"/>
+  <rect id="svg_26" height="0.103422" width="0.206843" y="39.513243" x="31.498067" stroke-opacity="0" stroke-width="null" stroke="#000000" fill="none"/>
+  <rect id="svg_29" height="0" width="0.103422" y="35.169535" x="35.014402" stroke-opacity="null" stroke-width="null" stroke="null" fill="#3f9e9e"/>
+  <rect id="svg_34" height="0.103422" width="0.103422" y="39.202978" x="6.159771" stroke-opacity="null" stroke-width="null" stroke="null" fill="#3f9e9e"/>
+  <rect stroke="null" id="svg_39" height="0" width="0.206843" y="39.3064" x="15.777982" stroke-opacity="null" stroke-width="null" fill="#3f9e9e"/>
+ </g>
+</svg>

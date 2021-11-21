@@ -1,0 +1,223 @@
+{% extends "layout.html" %}
+{% load  static %}
+
+{% block title %}Edit Profile | {{ user }} {{ super }}{% endblock %}
+
+{% block body %}
+    <div class="grid-100">
+        <h1 id="test">Profile</h1>
+        
+            
+           <!-- <input type="text" name="song_title" required="" id="id_song_title" maxlength="250">
+
+            <input type="file" name="avatar" id="id_avatar">
+            <input type="submit" class="button" value="save" id="s20" />
+        
+    </div>-->
+
+<form method="POST" name="form" id="form" enctype="multipart/form-data" name1="{{ albumid }}">
+     {% csrf_token %}
+       
+
+        <span class="s202">
+            {{ form.as_p }}
+
+
+        
+      
+
+
+    </span>
+          
+        
+        <input type="submit" class="button" value="save" id="s20" />
+</form>
+<div class="progress">
+  <div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+    0%
+  </div>
+</div>
+
+<!--<div  name="form" id="form" >
+     
+        <p>Avatar p: <input type="file" name="avatar_p" required="" id="name6"></p>
+<p>First name: <input type="text" name="first_name" maxlength="255" required="" id="text"></p>
+        <span class="s202"><p><label for="id_name">Name:</label> <input type="text" name="name" maxlength="255" required="" id="id_name"></p></span>
+        
+</div>
+
+
+
+<input type="file" id="sddr" multiple >
+<input type="submit" class="button" value="save" id="saveBtn" name="{{ albumid }}">-->
+
+<script>
+     
+        var files_m = []
+        var i23 = -1;
+        
+
+        
+          $('#sddr').on('change',function(){
+            
+            
+           
+            if (this.files.length > 1){
+
+                for (var i1 = 0; i1 < this.files.length; i1++) {
+                files_m.push(this.files[i1])
+                
+            } 
+            
+            }
+            else{
+                if (this.files.length == 0){
+
+
+                }else{
+
+                
+                files_m.push(this.files[0])
+                 
+                 
+            }}
+
+                if (this.files.length > 1){
+
+                    for (var i1 = 0; i1 < this.files.length; i1++) {
+                        i23++
+                 box=`<div class="a22_filename">` + this.files[i1]["name"] +`</div>`
+
+                $('#ss22_file').append(box);
+               
+            } 
+                   
+
+                }
+                else{
+                i23++
+
+                box=`<div class="a22_filename" id="` + i23 +`">` + this.files[0]["name"] +`</div>`
+                $('#ss22_file').append(box);
+                
+            }
+        
+
+
+            });
+
+        
+          $(document).ready(function(){
+
+           
+
+
+            
+           
+
+
+
+
+        $('form').on('submit', function(e){
+
+
+
+
+            alert($(this).attr('name1'))
+            e.preventDefault();
+            var data = new FormData($('form').get(0));
+             
+            data.append('length', files_m.length)
+            data.append('pk', $(this).attr('name1'))
+            console.log(data)
+            $.ajax({
+
+            xhr : function() {
+                var xhr = new window.XMLHttpRequest();
+
+                xhr.upload.addEventListener('progress', function(e) {
+
+                    if (e.lengthComputable) {
+
+                        console.log('Bytes Loaded: ' + e.loaded);
+                        console.log('Total Size: ' + e.total);
+                        console.log('Percentage Uploaded: ' + (e.loaded / e.total))
+
+                        var percent = Math.round((e.loaded / e.total) * 100);
+
+                        $('#progressBar').attr('aria-valuenow', percent).css('width', percent + '%').text(percent + '%');
+
+                    }
+
+                });
+
+                return xhr;
+            },    
+            url: '{% url "accounts:create_art_collection" %}',
+            method: "POST",
+            data: data,
+            success: function(data){},
+            error: function(data){},
+            processData: false,
+            contentType: false,
+        });
+    });
+});
+
+
+  
+
+
+    
+  
+</script>
+
+
+
+
+<!--    <script type="text/javascript">
+		$('#s20').click(function(event) {
+
+
+		var name = $("#id_song_title").val()
+		var name1 = $("#id_avatar").val()
+		$.ajax({
+    url: '{% url "accounts:hello" %}',
+    type: 'POST',
+    dataType: 'json',
+    enctype: 'multipart/form-data',
+    data: { 
+                'name': name,
+                'name1': name1, 
+                'csrfmiddlewaretoken': '{{csrf_token}}'
+            },  // This is the default though, you don't actually need to always mention it
+    success: function(data) {
+        document.getElementById('test').innerHTML = data;
+        alert(name1);
+    },
+    failure: function() { 
+        alert('Got an error dude');
+    }
+}); 
+		}); 
+
+
+
+
+$(document).ready(function(){
+    $('form').on('submit', function(e){
+        e.preventDefault();
+        var data = new FormData($('form').get(0));
+        $.ajax({
+            url: '{% url "accounts:saveprof" %}',
+            method: "POST",
+            data: data,
+            success: function(data){},
+            error: function(data){},
+            processData: false,
+            contentType: false,
+        });
+    });
+});
+	</script>-->
+{% endblock %}

@@ -1,0 +1,771 @@
+{% extends 'profile_list.html' %}
+{% load static %}
+
+{% block pagetitle %}Home{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+
+ 
+
+  
+<!-- or -->
+
+ <script>
+  swiper2 = new Swiper('.swiper-container', {
+          
+
+     pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        hide: true,
+      },
+
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+       observer: true, 
+        observeParents: true,
+        observeSlideChildren: true,
+        rebuildOnUpdate: true
+
+
+    }
+  
+
+
+    );
+   function upd(){
+    swiper.update()
+   }
+  $(".article").infiniteScroll({
+  path: '.infinite-more-link',
+  append: '.infinite-item',
+ history: false,
+  
+});
+  $(".article").on( 'load.infiniteScroll', function( event, response, path ) {
+  console.log( 'Loaded: ' + path );
+
+});
+   $(".article").on( 'append.infiniteScroll', function( event, response, path, items ) {
+  console.log( 'Loaded: ' + path );
+  
+
+  swiper2 = new Swiper('.swiper-container', {
+          
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+       observer: true, 
+        observeParents: true,
+        observeSlideChildren: true,
+        rebuildOnUpdate: true
+
+
+    }
+  
+
+
+    );
+ 
+});
+   $(".article").on( 'request.infiniteScroll', function( event, path ) {
+  console.log( 'Loading page: ' + path );
+});
+
+   
+    
+
+
+
+
+   
+   
+
+
+
+
+
+  </script>
+
+  
+  
+{% endblock %}
+
+{% block styleww %}
+<style type="text/css">
+  .app{
+  position: absolute;
+  margin-left: calc(100% - 80px);
+  margin-top: calc(100% - 130px);
+  z-index: 100;
+  
+}
+.shere:hover svg path{
+  stroke: #32b0ca;
+}.article{
+  margin-top: 0;
+  padding-bottom: 0;
+}
+@media(max-width: 713px){
+  .app{
+  
+  margin-left: calc(100% - 80px);
+  margin-top: calc(100% - 200px);
+  
+  
+}
+
+}
+@media(max-width: 420px){
+  .app{
+  
+  margin-left: calc(100% - 80px);
+  margin-top: calc(100% - 180px);
+  
+  
+}
+
+}
+@media(max-width: 355px){
+  .app{
+  
+  margin-left: calc(100% - 80px);
+  margin-top: calc(100% - 140px);
+  
+  
+}
+.base-timer{
+  width: 70px;
+  height: 70px;
+
+}
+.base-timer__label{
+      width: 70px;
+      height: 70px;
+    }
+
+}
+@media(max-width: 320px){
+  .app{
+  
+  margin-left: calc(100% - 70px);
+  margin-top: calc(100% - 120px);
+  
+  
+}
+.base-timer{
+  width: 70px;
+  height: 70px;
+
+}
+.base-timer__label{
+      width: 70px;
+      height: 70px;
+      font-size: 25px;
+    }
+
+}
+@media(max-width: 290px){
+  .app{
+  
+  margin-left: calc(100% - 65px);
+  margin-top: calc(100% - 100px);
+  
+  
+}
+.base-timer{
+  width: 65px;
+  height: 65px;
+
+}
+.base-timer__label{
+      width: 65px;
+      height: 65px;
+      font-size: 23px;
+    }
+
+}
+@media(max-width: 275px){
+  .app{
+  
+  margin-left: calc(100% - 65px);
+  margin-top: calc(100% - 80px);
+  
+  
+}
+.base-timer{
+  width: 65px;
+  height: 65px;
+
+}
+.base-timer__label{
+      width: 65px;
+      height: 65px;
+      font-size: 23px;
+    }
+
+}
+
+
+
+
+
+
+
+ 
+
+ 
+  @media (max-width: 350px){
+   
+    .base-timer{
+      width: 70px;
+      height: 70px;
+
+    }
+    .base-timer__label{
+      width: 70px;
+      height: 70px;
+    }
+
+  }
+  @media (max-width: 335px){
+    
+    .base-timer{
+      width: 70px;
+      height: 70px;
+
+    }
+    .base-timer__label{
+      width: 70px;
+      height: 70px;
+    }
+
+  }
+  @media (max-width: 315px){
+    
+    .base-timer{
+      width: 70px;
+      height: 70px;
+
+    }
+    .base-timer__label{
+      width: 70px;
+      height: 70px;
+    }
+
+  }
+  @media (max-width: 295px){
+    
+    .base-timer{
+      width: 64px;
+      height: 64px;
+
+    }
+    .base-timer__label{
+      width: 64px;
+      height: 64px;
+      font-size: 25px;
+    }
+
+  }
+    @media (max-width: 290px){
+      .span2{
+
+      margin-left: 51%;
+    }}
+     @media (max-width: 275px){
+    
+    .base-timer{
+      width: 64px;
+      height: 64px;
+
+    }
+    .base-timer__label{
+      width: 64px;
+      height: 64px;
+      font-size: 25px;
+    }
+
+  }
+   .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /*background: #fff;*/
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: -webkit-flexbox;
+      display: flex;
+      display: flexbox;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-flex-shrink: 0;
+    }
+    .swiper-wrapper{
+       display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: -webkit-flexbox;
+      display: flex;
+      display: flexbox;
+
+    }
+
+
+    .w1{
+      top: 0;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="article" style="margin-top: 40px;">
+    {% for number in numbers %}
+   
+
+    
+      <div class="infinite-item" style="width: 100%;position: relative;">
+
+
+         <div class="d4558 ">
+
+
+           <a  class="spoiler_links" id="dd">{{ number.times }} {{ number.city_pr }}</a>
+    
+  <div class="f4h5aa" id="ffff44">
+    <header class="h458aad">
+       <div class="dgghh54">
+        <a href="{% url 'accounts:profile_s' number.profile.pk %}">
+
+      {% if number.profile.avatar %}
+          <img src="{{ number.profile.avatar.url }}" style="width: 120%;
+          height: 120%;border-radius: 180px;
+           ">
+        
+        {% else %}
+        <img src="{% static 'images/user_no_photo_300x300.png' %}" style="width: 120%;
+          height: 120%;border-radius: 180px;
+           ">
+        {% endif %}</a>
+
+
+        <img src="">
+
+
+
+
+       </div>
+         <a href="{% url 'accounts:profile_s' number.profile.pk %}">  <div class="f44456s">{{ number.profile_catgory }}</div></a>
+
+
+
+
+
+    </header>
+     <img src="#" style="display: none;z-index: 100;background-color: black;" class=" w2" id="{{ number.id }}129" ><span id="{{ number.id }}1292" class="eee12" ><button id="{{ number.id }}1291" class="eee1212"  class="btuu"></button>
+    
+
+    
+
+
+
+
+    </span>
+    {% if number.postimage.all %}
+    <div class="swiper-container" data-pagination = ".swiper-pagination" data-prev-button = ".swiper-button-prev" data-next- button = ".swiper-button-next" data-pagination-clickable = "true" data-grab-cursor = "true">
+    <div class="swiper-wrapper">
+       <div class="swiper-slide">
+
+       {% if number.file_type == "mp4" %}
+      <div class="w1 e4" style="z-index: 2;">
+         <div class="w1 e4" style="z-index: 2;">
+              <div class="play_but_pause"  video_play_id="{{ number.id }}" id="frt{{ number.id }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+    </svg></div>
+
+       
+            <video style="width: 100%;height: 100%;object-fit: unset;" class="video vli{{ number.id }}" id="myvideo" muted="muted" play_pause_id = "frt{{ number.id }}">
+              <source src="{{ number.avatar_p.url }}{{ number.profile_post.avatar_p.url }}" type="video/mp4">
+
+            </video>
+             <div class="mute" video_mute_id="{{ number.id }}"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E04F5F;" d="M496.159,248.086c0-137.022-111.07-248.082-248.076-248.082C111.071,0.004,0,111.063,0,248.086
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.086z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M259.432,128.917c-3.409-1.851-7.559-1.688-10.813,0.425l-95.137,61.791h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.582v92.728c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.754,1.708,5.765,1.708c1.733,0,3.471-0.426,5.049-1.283c3.41-1.852,5.534-5.42,5.534-9.301V138.219
+    C264.966,134.339,262.842,130.768,259.432,128.917z"/>
+  <path style="fill:#FFFFFF;" d="M355.405,248.079l30.384-30.384c3.515-3.516,3.515-9.213,0-12.729
+    c-3.515-3.514-9.213-3.514-12.728,0l-30.384,30.385l-30.384-30.385c-3.515-3.514-9.213-3.514-12.728,0
+    c-3.515,3.516-3.515,9.213,0,12.729l30.385,30.384l-30.384,30.384c-3.515,3.516-3.515,9.213,0,12.729
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636l30.384-30.385l30.384,30.385
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636c3.515-3.516,3.515-9.213,0-12.729L355.405,248.079z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+
+            
+            
+
+            
+
+          </div>
+
+      
+      {% else %}
+
+
+      <img src="{{ number.avatar_p.url }}{{ number.profile_post.avatar_p.url }}" class="w1"
+
+
+    id="{{ number.id }}" style="z-index: 99;">
+    {% endif %}
+  </div>
+    {% for i in number.postimage.all %}
+        <div class="swiper-slide">{% if i.file_type == "mp4" %}
+          <div class="w1 e4" style="z-index: 2;">
+             <div class="play_but_pause"  video_play_id="{{ i.id }}" id="frt{{ i.id }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+    </svg></div>
+            <video style="width: 100%;height: 100%;object-fit: unset;" class="video vli{{ i.id }}" id="myvideo" muted="muted" play_pause_id = "frt{{ i.id }}">
+              <source src="{{ i.avatar_e.url }}" type="video/mp4">
+            </video>
+
+             <div class="mute" video_mute_id="{{ i.id }}"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E04F5F;" d="M496.159,248.086c0-137.022-111.07-248.082-248.076-248.082C111.071,0.004,0,111.063,0,248.086
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.086z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M259.432,128.917c-3.409-1.851-7.559-1.688-10.813,0.425l-95.137,61.791h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.582v92.728c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.754,1.708,5.765,1.708c1.733,0,3.471-0.426,5.049-1.283c3.41-1.852,5.534-5.42,5.534-9.301V138.219
+    C264.966,134.339,262.842,130.768,259.432,128.917z"/>
+  <path style="fill:#FFFFFF;" d="M355.405,248.079l30.384-30.384c3.515-3.516,3.515-9.213,0-12.729
+    c-3.515-3.514-9.213-3.514-12.728,0l-30.384,30.385l-30.384-30.385c-3.515-3.514-9.213-3.514-12.728,0
+    c-3.515,3.516-3.515,9.213,0,12.729l30.385,30.384l-30.384,30.384c-3.515,3.516-3.515,9.213,0,12.729
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636l30.384-30.385l30.384,30.385
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636c3.515-3.516,3.515-9.213,0-12.729L355.405,248.079z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+            
+
+          </div>
+           
+          {% else %}
+
+
+          <img src="{{ i.avatar_e.url }}" class="w1" style="z-index: 2;">
+          {% endif %}</div>
+      <!-- <img src="{{ i.avatar_e.url }}" class="w1" style="z-index: 2;">-->
+
+      {% endfor %}
+      </div>
+      <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+    {% else %}
+     <div class="swiper-container1" data-pagination = ".swiper-pagination" data-prev-button = ".swiper-button-prev" data-next- button = ".swiper-button-next" data-pagination-clickable = "true" data-grab-cursor = "true" >
+    <div class="swiper-wrapper1">
+      
+      <div class="swiper-slide">
+        {% if number.file_type == "mp4" %}
+         <div class="w1 e4" style="z-index: 2;">
+           <div class="play_but_pause"  video_play_id="{{ number.id }}" id="frt{{ number.id }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+    </svg></div>
+            <video style="width: 100%;height: 100%;object-fit: unset;" class="video vli{{ number.id }}" id="myvideo" muted="muted" play_pause_id = "frt{{ number.id }}">
+              <source src="{{ number.avatar_p.url }}" type="video/mp4">
+            </video>
+             <div class="mute" video_mute_id="{{ number.id }}"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E04F5F;" d="M496.159,248.086c0-137.022-111.07-248.082-248.076-248.082C111.071,0.004,0,111.063,0,248.086
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.086z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M259.432,128.917c-3.409-1.851-7.559-1.688-10.813,0.425l-95.137,61.791h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.582v92.728c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.754,1.708,5.765,1.708c1.733,0,3.471-0.426,5.049-1.283c3.41-1.852,5.534-5.42,5.534-9.301V138.219
+    C264.966,134.339,262.842,130.768,259.432,128.917z"/>
+  <path style="fill:#FFFFFF;" d="M355.405,248.079l30.384-30.384c3.515-3.516,3.515-9.213,0-12.729
+    c-3.515-3.514-9.213-3.514-12.728,0l-30.384,30.385l-30.384-30.385c-3.515-3.514-9.213-3.514-12.728,0
+    c-3.515,3.516-3.515,9.213,0,12.729l30.385,30.384l-30.384,30.384c-3.515,3.516-3.515,9.213,0,12.729
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636l30.384-30.385l30.384,30.385
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636c3.515-3.516,3.515-9.213,0-12.729L355.405,248.079z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+            
+
+          </div>
+           
+        {% else %}
+
+
+
+
+        <img src="{{ number.avatar_p.url }}" class="w2"
+
+
+    id="{{ number.id }}" style="z-index: 99;top: 0;">
+     {% endif %}
+
+
+       </div>
+      </div>
+      
+  </div>
+
+
+
+    {% endif %}
+
+      <span>
+   
+      
+      
+
+
+    </span>
+     <div class="fjgiiir">
+       <div class="heart">
+      
+
+       <a name="{{number.id}}" class="btn" id="{{number.id}}a12444">{% if number.likes.all  %}
+        {% if l in  number.likes.all %}
+          
+          <i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>
+          
+          
+        {% else %}
+          <i class="fa fa-heart-o" aria-hidden="true" ></i>
+
+        {% endif %}
+        {% else %}
+        <i class="fa fa-heart-o" aria-hidden="true" ></i>
+
+
+        
+        {% endif %}
+</a></div>
+<div class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i></div>
+     <div class="shere"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></div>
+      <div class="money" id="money" name="{{ l.profile.id }}" i_name = "{{ number.id }}"><i class="fa fa-usd" aria-hidden="true"></i><span class="downkk" id="{{ number.id }}008" style="color: #41ad49; font-size: 18px;position: absolute;line-height: 20px;display: none;">&nbsp;&nbsp;0.2$</span></div>
+       <div class="bfgg55"><span>Lovid:</span><span id="{{number.id}}123"> {{ number.likes.count }}</span><span class="f456">и другим</span></div>
+
+
+        <div class="skkgfh"><div class="gf">{{ number.profile.first_name }}:</div><div class="da4" tabindex="0" id="da5"> {{ number.description }}</div></div>
+        <div class="commments">
+          
+
+          <a href="#" class="crs778sj"> view all comments</a>
+        <div class="ffff" id="{{number.id}}845">
+
+          <div class="commeftht" id = "{{number.id}}85">
+          {% for a in number.comments.all %}
+            
+          {% if forloop.counter == 1  %}
+              <div class="sdfgth"><a href="#">{{ a.profile }}</a>&nbsp;<span class="spojhg">{{ a.comment_title }}</span></div>
+          {% endif %}
+          {% if forloop.counter == 2  %}
+              <div class="sdfgth"><a href="#">{{ a.profile }}</a>&nbsp;<span class="spojhg">{{ a.comment_title }}</span></div>
+          {% endif %}
+           {% if forloop.counter == 3  %}
+              <div class="sdfgth"><a href="#">{{ a.profile }}</a>&nbsp;<span class="spojhg">{{ a.comment_title }}</span></div>
+          {% endif %}
+            
+
+
+          {% endfor %}
+        </div>
+
+
+        </div>
+        </div>
+
+        <div class="line"></div>
+
+         <div class="addcomff">
+        
+          
+
+          <textarea aria-label="add comments..." placeholder=" add comments..." class="Ypffh"  autocorrect="off"  id="{{ number.id }}11"></textarea >
+          <button class="sqdOP yWX7d    y3zKF     "   data-catid="{{ number.id }}" id="btn1" type="button" name="{{ number.id }}">publish</button>
+        </div>
+       
+
+
+
+
+     </div>
+
+
+
+
+
+
+         
+        </div>
+
+
+
+         </div>
+               
+  </div>
+  
+
+
+    {% endfor %}
+    
+
+
+  </div>
+
+  <div class="loading" style="display: none;">
+    Loading...
+  </div>
+   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+
+  {% if numbers.has_next %}
+    <a class="infinite-more-link" href="?page={{ numbers.next_page_number }}">More</a>
+    <script type="text/javascript">
+   
+
+  </script>
+
+  {% endif %}
+  
+  
+
+
+{% endblock %}

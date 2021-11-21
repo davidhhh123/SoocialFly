@@ -1,0 +1,256 @@
+@use "@material/theme" with (
+  $primary: blue,
+  $secondary: #000000,
+  $background: #fff,
+);
+@use "@material/icon-button";
+@use "@material/slider";
+
+@include slider.core-styles;
+@include icon-button.core-styles;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+body.loading::before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../assets/spinner.svg) no-repeat center center;
+}
+
+.ui .mdc-icon-button.material-icons-outlined {
+  @include icon-button.icon-size(24px, 24px, 14px);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.5s;
+  overflow: hidden;
+}
+
+.loading .container {
+  opacity: 0;
+}
+
+.info {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 8;
+}
+
+.info.show {
+  display: flex;
+}
+
+.info-content {
+  background: #00000070;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3em;
+  color: white;
+  font-size: 28px;
+  padding: 1em 1.5em;
+  max-width: 800px;
+
+  h1 {
+    margin: 0;
+    line-height: 72px;
+  }
+  a {
+    color: white;
+  }
+}
+
+.alt-bts {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  
+  > * {
+    margin: 0.5em;
+  }
+}
+
+#bt-info {
+  background: white;
+  border-radius: 5em;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1), 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/** Canvas **/
+
+.three-canvas {
+  transform: scale(-1, 1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 2em;
+}
+
+.paused .three-canvas {
+  opacity: 0.5;
+}
+
+/** UI **/
+
+.ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9em;
+  padding: 0 .5em;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1), 0 2px 15px rgba(0, 0, 0, 0.05);
+  background: white;
+  margin-top: 1.25em;
+}
+
+/** Color picker **/
+
+.picker .a-color-picker {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.color {
+  position: relative;
+  display: inline-block;
+}
+
+.picker {
+  position: absolute;
+  z-index: 3;
+  bottom: 65px;
+  left: -100px;
+  display: none;
+}
+
+.close-color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+#bt-picker {
+  border-radius: 1em;
+}
+
+/** Slider **/
+
+.slider {
+  width: 150px;
+  display: inline-block;
+  margin: 0.5em 1em;
+}
+
+.mdc-slider__track-container {
+  position: absolute;
+  top: calc(1em + 5px);
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 7em;
+}
+
+.mdc-slider__track-marker-container {
+  display: none;
+}
+
+.mdc-slider--discrete.mdc-slider--active .mdc-slider__pin {
+  transform: rotate(-45deg) scale(1) translate(30px, -30px);
+}
+
+.mdc-slider:not(.mdc-slider--disabled) .mdc-slider__track-container::after {
+  opacity: 0.1;
+}
+
+/** CURSOR **/
+
+$cursorSize : 12px;
+
+.cursor {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  width: $cursorSize;
+  height: $cursorSize;
+  border-radius: 75px;
+  background: white;
+  pointer-events: none;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+}
+
+.hover-face .container {
+  cursor:none;
+}
+
+.hover-face .cursor {
+  display: block;
+}
+
+/** LAPTOP **/
+
+@media only screen and (max-height: 800px) and (min-width: 600px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    position: relative;
+    width: 640px;
+    height: 640px;
+    border-radius: 2em;
+  }
+
+  .three-canvas {
+    border-radius: 0;
+  }
+
+  .ui {
+    position: absolute;
+    bottom: 1em;
+  }
+}
+
+/** MOBILE **/
+
+@media only screen and (max-width: 600px) {
+  .ui {
+    position: absolute;
+    bottom: 1em;
+  }
+
+  .picker {
+    left: -20px;
+  }
+}

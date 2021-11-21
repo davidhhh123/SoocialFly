@@ -1,0 +1,1034 @@
+{% extends 'mainpage.html' %}
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style_new.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+  <style type="text/css">
+    :root {
+      --color-header-input-placeholder: #8b88ff;
+      --color-header-logo-background: rgb(35 35 35 / 90%);
+      --color-wplogin-body: #3e3f5e;
+      --color-wplogin-header-text: rgb(35 35 35 / 90%);
+      --color-header-background: #080808;
+      --color-header-text: #fff;
+      --color-header-icon: rgb(35 35 35 / 90%);
+      --color-header-icon-hover: #fff;
+      --color-header-profile-settings-icon: #fff;
+      --color-header-mobilemenu-trigger-icon: #fff;
+      --color-header-divider: rgb(35 35 35 / 90%);
+      --color-header-input-background: rgb(0 0 0 / 100%);
+      --color-header-progressbar-line-gradient-start: #41efff;
+      --color-header-progressbar-line-gradient-end: #41efff;
+      --color-header-progressbar-underline: rgb(35 35 35 / 90%);
+      --color-body: rgb(2 2 2 / 94%);
+      --color-box-background: rgb(12 12 12 / 80%);
+      --color-box-background-alt: rgb(35 35 35 / 90%);
+      --color-box-over-box-background: #fff;
+      --color-box-over-box-light-background: #fff;
+      --color-box-highlight-background: #f7f7fb;
+      --color-box-hover-background: #f2f2f9;
+      --color-box-shadow: 0 0 40px 0 rgba(94, 92, 154, .06);
+      --color-overbox-shadow: 3px 5px 20px 0 rgba(94, 92, 154, .12);
+      --color-overbox-dark-shadow: 0 0 40px 0 rgba(94, 92, 154, .12);
+      --color-overbox-big-shadow: 3px 5px 40px 0 rgba(94, 92, 154, .1);
+      --color-text: #ffffff;
+      --color-text-alt: #8f91ac;
+      --color-text-alt-2: #adafca;
+      --color-icon: #adafca;
+      --color-icon-highlighted: #3e3f5e;
+      --color-border: #dedeea;
+      --color-divider: #eaeaf5;
+      --color-progressbar-line-gradient-start: #615dfa;
+      --color-progressbar-line-gradient-end: #41efff;
+      --color-progressbar-underline: #e7e8ee;
+      --color-avatar-rank-hexagon: #45437f;
+      --color-primary: #23d2e2;
+      --color-primary-hover: #1bc5d4;
+      --color-primary-light: #41efff;
+      --color-primary-dark: #00c7d9;
+      --color-primary-shadow: 4px 7px 12px 0 rgba(35, 210, 226, .2);
+      --color-secondary: #615dfa;
+      --color-secondary-hover: #5753e4;
+      --color-secondary-dark: #45437f;
+      --color-secondary-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+      --color-tertiary: #fd4350;
+      --color-tertiary-hover: #dd343f;
+      --color-tertiary-shadow: 4px 7px 12px 0 rgba(253, 67, 80, .2);
+      --color-loading-screen-background: #3e3f5e;
+      --color-loading-bar-1: #615dfa;
+      --color-loading-bar-2: #5d71fb;
+      --color-loading-bar-3: #5983fb;
+      --color-loading-bar-4: #549afc;
+      --color-loading-bar-5: #4eb2fd;
+      --color-loading-bar-6: #49c9fe;
+      --color-loading-bar-7: #45ddfe;
+      --color-loading-bar-8: #41efff;
+      --color-notice-overlay-background-primary: rgba(35, 210, 226, .14);
+      --color-notice-overlay-background-secondary: rgba(97, 93, 250, .14);
+      --color-notice-overlay-background-tertiary: rgba(253, 67, 80, .14);
+    }
+    body{
+      font-family: sans-serif;
+    }
+    .icon-comment, .icon-thumbs-up, .icon-friend, .icon-info, .icon-success, .icon-error, .icon-group, .icon-marketplace, .icon-add-friend, .icon-remove-friend, .icon-delete, .icon-send-message, .icon-settings, .icon-cross-thin, .icon-newsfeed, .icon-overview, .icon-members, .icon-badges, .icon-quests, .icon-streams, .icon-events, .icon-events-monthly, .icon-events-weekly, .icon-events-daily, .icon-pin, .icon-ticket, .icon-forums, .icon-profile, .icon-timeline, .icon-photos, .icon-videos, .icon-headphones, .icon-blog-posts, .icon-forum, .icon-store, .icon-share, .icon-pinned, .icon-favorite, .icon-status, .icon-big-grid-view, .icon-small-grid-view, .icon-list-grid-view, .icon-poll, .icon-camera, .icon-emoji, .icon-gif, .icon-tags, .icon-trophy, .icon-return, .icon-clock, .icon-earnings, .icon-wallet, .icon-item, .icon-revenue, .icon-credits, .icon-ranks, .icon-admin-crown, .icon-mod-shield, .icon-ban, .icon-remove-user {
+    fill: var(--color-icon);
+    width: 20px;
+    height: 20px;
+}
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.sqdOP {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: 0 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    padding: 5px 9px;
+    text-align: center;
+    text-transform: inherit;
+    text-overflow: ellipsis;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: auto;
+    position: absolute;
+   margin-left: calc(100% - 80px);
+    /* top: -38px; */
+    /* background: red; */
+    margin-top: -50px;color: #0095f6;
+}
+.Ypffh{
+  border: 1px solid transparent;
+  border-top: 1px solid white;
+  border-radius: 0;
+  
+}
+.Ypffh::placeholder {
+  color: white;
+  line-height: 40px;
+  
+}
+.tooll{position: absolute;margin-top: -30px;width: 50px;height: 50px;float: left;}
+
+
+.k1{
+    margin-left: 0px;
+
+}
+.k2{
+  margin-left: 21%;
+}
+
+.k3{
+ margin-left: 45%;
+}
+.k4{
+     margin-left: 67%;
+    
+}
+.k5{
+     margin-left:90%;
+    
+}
+.top_nav{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 22px;
+   opacity: 1;
+   background: #0f0f0f;
+    color: #fff;
+    width: 100%;
+    z-index: 100;
+    
+    
+
+
+}
+
+
+@media (max-width: 980px){
+.k1{
+    margin-left: 0px;
+
+}
+.k2{
+  margin-left: 20%;
+}
+
+.k3{
+ margin-left: 44%;
+}
+.k4{
+     margin-left: 67%;
+    
+}
+.k5{
+     margin-left:88%;
+    
+}
+
+}
+
+@media (max-width: 770px){
+.k1{
+    margin-left: -20px;
+
+}
+.k2{
+  margin-left: 18%;
+}
+
+.k3{
+ margin-left: 41%;
+}
+.k4{
+     margin-left: 64%;
+    
+}
+.k5{
+     margin-left:86%;
+    
+}
+
+}
+@media (max-width: 670px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: calc(18% - 13px);
+}
+
+.k3{
+ margin-left: 40%;
+}
+.k4{
+     margin-left: 64%;
+    
+}
+.k5{
+     margin-left:84%;
+    
+}
+
+}
+
+@media (max-width: 580px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 15%;
+}
+
+.k3{
+ margin-left: 38%;
+}
+.k4{
+     margin-left: 61%;
+    
+}
+.k5{
+     margin-left:83%;
+    
+}
+
+}
+
+@media (max-width: 500px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 13%;
+}
+
+.k3{
+ margin-left: 36%;
+}
+.k4{
+     margin-left: 58%;
+    
+}
+.k5{
+     margin-left:78%;
+    
+}
+
+}
+
+@media (max-width: 390px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 12%;
+}
+
+.k3{
+ margin-left: 34%;
+}
+.k4{
+     margin-left: 56%;
+    
+}
+.k5{
+     margin-left: 76%;
+    
+    
+}
+
+}
+@media (max-width: 350px){
+ .k1{
+    margin-left: -28px;
+
+}
+.k2{
+  margin-left: 10%;
+}
+
+.k3{
+ margin-left: 32%;
+}
+.k4{
+     margin-left: 54%;
+    
+}
+.k5{
+     margin-left: 74%;
+    
+    
+}
+
+}
+@media (max-width: 300px){
+ .k1{
+    margin-left: -34px;
+
+}
+.k2{
+  margin-left: 8%;
+}
+
+.k3{
+ margin-left: 30%;
+}
+.k4{
+     margin-left: 52%;
+    
+}
+.k5{
+     margin-left: 72%;
+    
+    
+}
+
+}
+
+@media (max-width: 290px){
+  .quick-filters .quick-filters-tabs .quick-filters-tab{
+    font-size: 0.705rem;
+    margin-right: 18px;
+  }
+
+}
+@media (max-width: 270px){
+ .k1{
+    margin-left: -38px;
+
+}
+.k2{
+  margin-left: 6%;
+}
+
+.k3{
+ margin-left: 27%;
+}
+.k4{
+     margin-left: 49%;
+    
+}
+.k5{
+     margin-left: 68%;
+    
+    
+}
+
+}
+
+
+
+
+</style>
+
+
+ {% block javascript %}
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+ <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+  
+
+
+ 
+
+  
+<!-- or -->
+
+ <script>
+   sw3 = new Swiper('.swiper-container', {
+          
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+       observer: true, 
+        observeParents: true,
+        observeSlideChildren: true,
+        rebuildOnUpdate: true
+
+
+    }
+  
+
+
+    );
+  
+
+
+
+
+   function upd(){
+    swiper.update()
+   }
+  $(".article").infiniteScroll({
+  path: '.infinite-more-link',
+  append: '.infinite-item',
+ history: false,
+  
+});
+
+  $(".article").on( 'load.infiniteScroll', function( event, response, path ) {
+  console.log( 'Loaded: ' + path );
+  
+
+
+});
+   $(".article").on( 'append.infiniteScroll', function( event, response, path, items ) {
+  console.log( 'Loaded: ' + path );
+  sw3 = new Swiper('.swiper-container', {
+          
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+       observer: true, 
+        observeParents: true,
+        observeSlideChildren: true,
+        rebuildOnUpdate: true
+
+
+    }
+  
+
+
+    );
+
+ 
+  
+
+ 
+ 
+});
+   $(".article").on( 'request.infiniteScroll', function( event, path ) {
+  console.log( 'Loading page: ' + path );
+
+});
+
+
+console.log("aaaaaaaaaaa")
+   
+    
+
+
+
+
+
+
+  </script>
+  
+
+  {% endblock %}
+
+
+
+</head>
+
+<body>
+
+
+
+            {% block body %}
+             {% for number in numbers %}
+            
+           
+             
+            <div class="widget-box no-padding animate-slide-down infinite-item">
+              <div class="tag-stickers"></div>
+              <div class="widget-box-status">
+                <div class="widget-box-status-content">
+                  <div class="user-status">
+                    <div class="user-status-avatar"><a class="user-avatar small no-outline " href="{% url 'accounts:profile_s' number.profile.pk %}">
+                        <div class="user-avatar-content">
+                          <div class="hexagon-image-30-32" data-src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/avatars/1/5f6d2c93a53d1-bpfull.jpg" style="width: 50px; height: 50px; position: relative;margin-left: -15px;">
+                            {% if number.profile.avatar %}
+                               <img src="{{ number.profile.avatar.url }}" style="width: 100%;
+          height: 100%;border-radius: 180px;object-fit:cover;
+           ">
+                              {% else %}
+                                <img src="{% static 'images/user_no_photo_300x300.png' %}" style="width: 100%;
+          height: 100%;border-radius: 180px;object-fit:cover;">
+                              {% endif %}
+                            
+                            
+
+
+                          </div>
+                        </div>
+                        <div class="user-avatar-progress">
+                          <div class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                        </div>
+                        <div class="user-avatar-progress-border">
+                          <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                        </div>
+                        <div class="user-avatar-badge">
+                          <div class="user-avatar-badge-border">
+                            <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                          </div>
+                          <div class="user-avatar-badge-content">
+                            <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                          </div>
+                          <p class="user-avatar-badge-text"></p>
+                        </div>
+                      </a></div>
+                    <div class="user-status-title medium"><span><a href="{% url 'accounts:profile_s' number.profile.pk %}">{{ number.profile.first_name }}</a></span></div>
+                    <p class="user-status-text small">3 months ago</p>
+                  </div>
+                  <p class="widget-box-status-text">{{ number.description }}
+
+                    {% for proof in number.pl.all %}<a href="{% url 'accounts:heshteg' proof.heshtegs %}"><span>&nbsp;&nbsp;&nbsp;#{{ proof.heshtegs }}</span></a>{% endfor %}
+
+
+                  </p>
+                </div>
+                <figure class="widget-box-picture" style="z-index: 2;">
+
+                 <img src="#" style="display: none;z-index: 100;background-color: black;" class=" w2" id="{{ number.id }}129" >
+               </figure>
+               <span id="{{ number.id }}1292" class="eee12" ><button id="{{ number.id }}1291" class="eee1212"  class="btuu"></button>
+                 </span>
+                {% if number.postimage.all %}
+                 <div class="swiper-container">
+    <div class="swiper-wrapper">
+      
+    <div class="swiper-slide">
+
+                  {% if number.file_type == "mp4" %}
+                    <figure class="widget-box-picture" style="z-index: 2;">
+                         <div class="play_but_pause"  video_play_id="{{ number.id }}" id="frt{{ number.id }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+    </svg></div>
+
+            <video style="width: 100%;height: 100%;object-fit: unset;left: 0;" class="video vli{{ number.id }}  giphy" id="myvideo" muted="muted" play_pause_id = "frt{{ number.id }}">
+              <source src="{{ number.avatar_p.url }}" type="video/mp4">
+            </video>
+
+
+
+
+                                   
+            <div class="mute" video_mute_id="{{ number.id }}"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E04F5F;" d="M496.159,248.086c0-137.022-111.07-248.082-248.076-248.082C111.071,0.004,0,111.063,0,248.086
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.086z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M259.432,128.917c-3.409-1.851-7.559-1.688-10.813,0.425l-95.137,61.791h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.582v92.728c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.754,1.708,5.765,1.708c1.733,0,3.471-0.426,5.049-1.283c3.41-1.852,5.534-5.42,5.534-9.301V138.219
+    C264.966,134.339,262.842,130.768,259.432,128.917z"/>
+  <path style="fill:#FFFFFF;" d="M355.405,248.079l30.384-30.384c3.515-3.516,3.515-9.213,0-12.729
+    c-3.515-3.514-9.213-3.514-12.728,0l-30.384,30.385l-30.384-30.385c-3.515-3.514-9.213-3.514-12.728,0
+    c-3.515,3.516-3.515,9.213,0,12.729l30.385,30.384l-30.384,30.384c-3.515,3.516-3.515,9.213,0,12.729
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636l30.384-30.385l30.384,30.385
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636c3.515-3.516,3.515-9.213,0-12.729L355.405,248.079z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+
+            
+
+         
+
+
+
+                </figure>
+
+
+
+
+
+
+
+                  {% else %}
+                   <figure class="widget-box-picture">
+
+
+
+
+                  <img src="{{ number.avatar_p.url }}" alt="giphy" id="{{ number.id }}" style="z-index: 99;top: 0;left: 0;" class="giphy"></figure>
+
+
+
+                  {% endif %}  
+
+</div>
+
+                  {% for i in number.postimage.all %}
+                  <div class="swiper-slide" style="height: auto;">
+                    {% if i.file_type == "mp4" %}
+                     <figure class="widget-box-picture" style="z-index: 2;max-height: 480px;height: 100%;">
+                        <div class="play_but_pause"  video_play_id="{{ i.id }}" id="frt{{ i.id }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+    </svg></div>
+            <video style="width: 100%;max-height: 480px;height: 100%;height: 100%;object-fit: contain;left: 0;" class="video vli{{ i.id }}" id="myvideo" muted="muted" play_pause_id = "frt{{ i.id }}">
+              <source src="{{ i.avatar_e.url }}" type="video/mp4">
+            </video>
+           
+
+        <div class="mute" video_mute_id="{{ i.id }}"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E04F5F;" d="M496.159,248.086c0-137.022-111.07-248.082-248.076-248.082C111.071,0.004,0,111.063,0,248.086
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.086z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M259.432,128.917c-3.409-1.851-7.559-1.688-10.813,0.425l-95.137,61.791h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.582v92.728c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.754,1.708,5.765,1.708c1.733,0,3.471-0.426,5.049-1.283c3.41-1.852,5.534-5.42,5.534-9.301V138.219
+    C264.966,134.339,262.842,130.768,259.432,128.917z"/>
+  <path style="fill:#FFFFFF;" d="M355.405,248.079l30.384-30.384c3.515-3.516,3.515-9.213,0-12.729
+    c-3.515-3.514-9.213-3.514-12.728,0l-30.384,30.385l-30.384-30.385c-3.515-3.514-9.213-3.514-12.728,0
+    c-3.515,3.516-3.515,9.213,0,12.729l30.385,30.384l-30.384,30.384c-3.515,3.516-3.515,9.213,0,12.729
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636l30.384-30.385l30.384,30.385
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636c3.515-3.516,3.515-9.213,0-12.729L355.405,248.079z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+            
+
+        
+           
+          
+            
+
+         
+
+
+
+                </figure>
+
+
+
+                     {% else %}
+                     <figure class="widget-box-picture " style="max-height: 480px;height: 100%;">
+
+
+
+
+                  <img src="{{ i.avatar_e.url }}" alt="giphy" id="{{ i.id }}" style="z-index: 99;top: 0;left: 0;width: 100%;max-height: 480px;height: 100%;height: 100%;object-fit: contain;left: 0;" class="giphy"></figure>
+                    
+
+                     {% endif %}
+                   </div>
+                  {% endfor %} 
+                   </div>
+      <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div> 
+
+                  {% else %}
+                    {% if number.file_type == "mp4" %}
+                                       
+
+                     <figure class="widget-box-picture" style="z-index: 2;">
+                         <div class="play_but_pause"  video_play_id="{{ number.id }}" id="frt{{ number.id }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+    </svg></div>
+
+            <video style="width: 100%;height: 100%;object-fit: unset;left: 0;" class="video vli{{ number.id }}  giphy" id="myvideo" muted="muted" play_pause_id = "frt{{ number.id }}">
+              <source src="{{ number.avatar_p.url }}" type="video/mp4">
+            </video>
+
+
+
+
+                                   
+            <div class="mute" video_mute_id="{{ number.id }}"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E04F5F;" d="M496.159,248.086c0-137.022-111.07-248.082-248.076-248.082C111.071,0.004,0,111.063,0,248.086
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.086z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M259.432,128.917c-3.409-1.851-7.559-1.688-10.813,0.425l-95.137,61.791h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.582v92.728c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.754,1.708,5.765,1.708c1.733,0,3.471-0.426,5.049-1.283c3.41-1.852,5.534-5.42,5.534-9.301V138.219
+    C264.966,134.339,262.842,130.768,259.432,128.917z"/>
+  <path style="fill:#FFFFFF;" d="M355.405,248.079l30.384-30.384c3.515-3.516,3.515-9.213,0-12.729
+    c-3.515-3.514-9.213-3.514-12.728,0l-30.384,30.385l-30.384-30.385c-3.515-3.514-9.213-3.514-12.728,0
+    c-3.515,3.516-3.515,9.213,0,12.729l30.385,30.384l-30.384,30.384c-3.515,3.516-3.515,9.213,0,12.729
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636l30.384-30.385l30.384,30.385
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636c3.515-3.516,3.515-9.213,0-12.729L355.405,248.079z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+
+            
+
+         
+
+
+
+                </figure>
+
+                    {% else %}
+                     <figure class="widget-box-picture">
+
+
+
+
+                  <img src="{{ number.avatar_p.url }}" alt="giphy" id="{{ number.id }}" style="z-index: 99;top: 0;left: 0;" class="giphy"></figure>
+                    
+
+
+                    {% endif %}
+
+
+                  {% endif %}  
+
+
+               
+
+
+
+
+
+
+              </div>
+              <div class="post-footer">
+                <div class="content-actions">
+                  <div class="content-action">
+                    <div class="meta-line">
+                      <div class="reaction-item-list meta-line-list">
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/love.png" alt="reaction-love">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/love.png" alt="reaction-love"><span class="bold">Love</span></p>
+                              <p class="simple-dropdown-text">Marina Valentine</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/like.png" alt="reaction-like">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/like.png" alt="reaction-like"><span class="bold">Like</span></p>
+                              <p class="simple-dropdown-text">Nicholas Grissom</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/funny.png" alt="reaction-funny">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/funny.png" alt="reaction-funny"><span class="bold">Funny</span></p>
+                              <p class="simple-dropdown-text">Neko Bebop</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="meta-line-text meta-line-text-trigger" id="{{number.id}}123">{{ number.likes.count }}</p>
+
+                       <div class="heart" style="margin-top: 70px;margin-left: -75px;font-size: 23px;" >
+     <a name="{{number.id}}" class="btn" id="{{number.id}}a12444">
+        
+
+        {% if number.likes.all  %}
+        {% if l in  number.likes.all %}
+          
+          <i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>
+          
+          
+        {% else %}
+          <i class="fa fa-heart-o" aria-hidden="true" ></i>
+
+        {% endif %}
+        {% else %}
+        <i class="fa fa-heart-o" aria-hidden="true" ></i>
+
+
+        
+        {% endif %}
+
+
+        </a>
+
+        <a href="{% url 'accounts:url_c' number.pk %}" class="comment btn"><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 23px;margin-left: 8px;margin-top: -2px;position: absolute;"></i></a>
+
+        <a class="shere" style="margin-left: 38px;margin-top: -1px;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#F3F1F1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#F3F1F1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line></svg></a>
+
+        <a class="money" id="money" name="{{ l.profile.id }}" i_name = "{{ number.id }}" v_name = "{{number.profile.pk}}" style="position: absolute;margin-left: 68px;"><i class="fa fa-usd" aria-hidden="true" style="font-size: 23px;color: #41ad49;"></i><span class="downkk" id="{{ number.id }}008" style="color: #41ad49; font-size: 18px;position: absolute;line-height: 20px;display: none;">&nbsp;&nbsp;0.2$</span></a>
+
+
+    </div>
+                    </div>
+                  </div>
+                  <div class="content-action">
+                  
+                    <div class="meta-line">
+                      <a href="{% url 'accounts:url_c' number.pk %}"><p class="meta-line-text" id="{{number.id}}comment_count" count = "{{ number.comments.count }}">{{ number.comments.count }} Comments</p></a>
+                    </div>
+                    <div class="meta-line">
+                      <p class="meta-line-text">0 Shares</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-comments"></div>
+                <div class="addcomff" style="margin-top: -40px;">
+
+
+                    <div class="commments " id="{{number.id}}commments5" >
+       
+        <div class="ffff" id="{{number.id}}845">
+        <div class="commeftht" id = "{{number.id}}85">
+          
+          
+         
+
+         
+
+          
+        </div>
+        </div>
+
+       </div>
+        
+          
+
+          <textarea aria-label="Добавьте комментарий..." placeholder=" add comment" class="Ypffh" autocorrect="off" id="{{ number.id }}11"></textarea>
+          <button class="sqdOP yWX7d    y3zKF     " data-catid="{{ number.id }}" id="btn1" type="button" name="{{ number.id }}" this_comments_count="{{ number.comments.count }}">publish</button>
+
+
+       
+      
+
+     
+
+
+
+        
+
+
+     
+    
+
+  </div>
+              </div>
+            </div>
+
+            {% endfor %}
+
+             <div class="loading" style="display: none;">
+     <div class="page-loader-indicator">
+              <div class="loader-bars">
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+              </div>
+            </div>
+  </div>
+
+            {% if numbers.has_next %}
+    <a class="infinite-more-link" href="?page={{ numbers.next_page_number }}"></a>
+  {% endif %}
+    <script src="{% static 'js/swiper-bundle.js' %}"></script>
+
+            {% endblock %}
+
+
+
+
+             
+           
+
+ 
+
+  
+ 
+
+
+  {% if numbers.has_next %}
+    <a class="infinite-more-link" href="?page={{ numbers.next_page_number }}"></a>
+  {% endif %}
+    <script src="{% static 'js/swiper-bundle.js' %}"></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

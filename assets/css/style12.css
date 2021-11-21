@@ -1,0 +1,50 @@
+.slack {
+   /* This controls the logo size, everything else is em's */
+  position: relative;
+  width: 4.75em;
+  height: 4.75em;
+}
+
+.slack div {
+  display: block;
+  margin-top: 1.25em;
+  width: 1.9em;
+  height: 0.65em;
+  border-radius: 1em;
+  position: absolute;
+  transform-origin: 100% 100%;
+  color: #36c5f0;
+  background: currentColor;
+}
+
+.slack div::after {
+  content: '';
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: -1.25em;
+  right: 0;
+  border-radius: 1em 1em 0 1em;
+  background: currentColor;
+}
+
+.slack div:nth-child(2) {
+  transform: rotate(90deg);
+  left: .25em;
+  color: #2eb67d;
+}
+
+.slack div:nth-child(3) {
+  transform: rotate(180deg);
+  top: .25em;
+  left: .25em;
+  color: #ecb22e;
+}
+
+.slack div:nth-child(4) {
+  transform: rotate(-90deg);
+  top: .25em;
+  color: #e01e5a;
+}
+
+/* Just some presentation styles */

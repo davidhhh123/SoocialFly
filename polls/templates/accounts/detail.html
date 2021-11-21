@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>{{ album.first_name }}</p>
+	<p>{{ album.likes }}</p>
+  <img src="{{ album.avatar_p.url }}">
+	<p id="test">{{ l }}</p>
+	<div class="s20">
+		{{ comments.count }}
+
+	{% for song in comments %}
+
+		<div id="test1">{{ song.comment_title }}
+			<span> <button id="{{ song.id }}" data-catid="{{ song.id }}" class="btn2 btn-primary" type="button" name="{{ song.id }}">{{ song.comment_title }}</span><span id="ttt">{{ song.likes_comments_sum}}</span>
+
+
+		</div>
+			
+		
+		
+		
+	{% endfor %}
+  {% for number in numbers_list %}
+    <p>{{ number.id }}</p>
+
+
+  {% endfor %}
+	</div>
+	
+
+	<button id="likes" data-catid="{{album.id}}" class="btn btn-primary" type="button" name="{{album.id}}">
+      <span class="ajax_{{album.id}}">{{album.likes}}</span></button><br><br><br>
+
+
+
+      <input type="text" name="s20" id="id_song_title">
+      <button id="likes" data-catid="{{album.id}}" class="btn1 btn-primary" type="button" name="{{album.id}}">
+ <script type="text/javascript"
+            src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<script>
+
+$('.btn').click(function(event){
+  var pk = $(this).attr('name');
+  $.ajax({
+           
+           url: "{% url 'accounts:post_like' %}",
+           type: 'POST',
+    	   dataType: 'json',
+    	   enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+                  
+                  document.getElementById('test').innerHTML = data.f;
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+$('.btn1').click(function(event){
+  var pk = $(this).attr('name');
+  var name = $("#id_song_title").val()
+  
+  $.ajax({
+           
+           url: "{% url 'accounts:comments' %}",
+           type: 'POST',
+    	   dataType: 'json',
+    	   enctype: 'multipart/form-data',
+           data: {'pk': pk, 'name':name, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+                  
+                  document.getElementById('test1').innerHTML = data.f;
+                  
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+$('.btn2').click(function(event){
+  var pk = $(this).attr('name');
+  var sum = $("ttt").val()
+  
+  
+  $.ajax({
+           
+           url: "{% url 'accounts:comments_like' %}",
+           type: 'POST',
+    	   dataType: 'json',
+    	   enctype: 'multipart/form-data',
+           data: {'pk': pk,'sum':sum, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+                  
+                  
+                  document.getElementById(pk).innerHTML = data.f;
+                  
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+
+   
+</script>
+
+     
+</body>
+</html>

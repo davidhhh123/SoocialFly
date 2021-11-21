@@ -1,0 +1,234 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Record Audio Test</title>
+    <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+
+.middle {
+  position: relative;
+  width: 50%;
+  max-width: 500px;
+}
+
+.slider {
+  position: relative;
+  z-index: 1;
+  height: 10px;
+  margin: 0 15px;
+}
+.slider > .track {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #c6aee7;
+}
+.slider > .range {
+  position: absolute;
+  z-index: 2;
+  left: 25%;
+  right: 25%;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #6200ee;
+}
+.slider > .thumb {
+  position: absolute;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  background-color: #6200ee;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(98,0,238,.1);
+  transition: box-shadow .3s ease-in-out;
+}
+.slider > .thumb.left {
+  left: 25%;
+  transform: translate(-15px, -10px);
+}
+.slider > .thumb.right {
+  right: 25%;
+  transform: translate(15px, -10px);
+}
+.slider > .thumb.hover {
+  box-shadow: 0 0 0 20px rgba(98,0,238,.1);
+}
+.slider > .thumb.active {
+  box-shadow: 0 0 0 40px rgba(98,0,238,.2);
+}
+
+input[type=range] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 2;
+  height: 10px;
+  width: 100%;
+  opacity: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  border: 0 none;
+  background-color: red;
+  -webkit-appearance: none;
+}
+
+
+.youtube-link {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+}</style>
+<style type="text/css">
+    div.thumbnailContainer {
+        overflow: hidden;
+        position: relative;
+    }
+
+    img {
+        display: block;
+        position: absolute;
+    }
+</style>
+
+<script type="text/javascript">
+  
+</script>
+
+
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="thumbnailContainer"></div>
+    <canvas id="canvas1" style="margin-top: -300px;
+"></canvas>
+<div style="display:none;">
+  <img id="source"
+       src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+       width="300" height="227">
+</div>
+
+ <input type="file"  id="myfile">
+    
+    
+   
+  <video style="width: 50%;height: 50%;object-fit: unset;left: 0;" class="video" id="myvideo" muted="muted" play_pause_id="frt184" controls="controls">
+              <source src="/media/The_Best_TikTok_Compilation_of_October_2019_Part_4_online-video-cutter.com_5.mp4" type="video/mp4">
+            </video>
+
+      
+
+<div class="btn_pk" id="action">button</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script type="text/javascript">
+var video = document.getElementById("myvideo"); // added for clarity: this is needed
+var i = 0;
+
+video.addEventListener('loadeddata', function() {
+    this.currentTime = i;
+});
+video.addEventListener('seeked', function() {
+
+  // now video has seeked and current frames will show
+  // at the time as we expect
+  generateThumbnail(i);
+
+  // when frame is captured, increase here by 5 seconds
+  i += 5;
+
+  // if we are not past end, seek to next interval
+  /*if (i <= this.duration) {
+    // this will trigger another seeked event
+    this.currentTime = i;
+  }
+  else {
+    // Done!, next action
+  }*/
+});
+function generateThumbnail(i) {   
+thecanvas = document.getElementById("canvas")  
+ var myimg = document.getElementById("source");
+    //generate thumbnail URL data
+    var context = thecanvas.getContext('2d');
+    context.drawImage(video, 0, 0, 220, 150);
+    var dataURL = thecanvas.toDataURL();
+                  myimg.src = dataURL;
+              drawimg(dataURL);
+
+    //create img
+    var img = document.createElement('img');
+    img.setAttribute('src', dataURL);
+
+
+    //append img in container div
+    document.getElementById('thumbnailContainer').appendChild(img);
+   
+}
+
+ 
+   const canvas = document.getElementById('canvas1');
+const ctx = canvas.getContext('2d');
+image = document.getElementById("source");
+ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
+
+function readURL() {
+          var myimg = document.getElementById("source");
+          var input = document.getElementById("myfile");
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+            console.log("changed");
+              myimg.src = e.target.result;
+              drawimg(e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+          }
+}
+
+document.querySelector('#myfile').addEventListener('change',function(){
+    readURL()
+});
+
+function drawimg(idata) {
+  var img = new Image();
+  img.onload = function(){
+    ctx.drawImage(img, 0, 0, 200, 200);
+  };
+  img.src = idata;
+} 
+
+
+
+
+</script>
+
+
+
+  </body>
+</html>
+
+
+
+

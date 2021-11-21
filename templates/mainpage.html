@@ -1,0 +1,4996 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SoocialFly</title>
+ 
+
+  <link href="{% static 'css/styles.bundle.css' %}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.0.2/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style_new.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/bab (1).ico' %}" />
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="{% static 'css/swiper-bundle.min_c.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/simplebar.css' %}">
+
+    <!-- lib styles -->
+    <link rel="stylesheet" href="{% static 'css/zuck.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/snapgram.css' %}">
+    
+
+
+
+
+  <style type="text/css">
+    #stories{
+  max-width: 100%;
+  
+  margin-left: 130px;
+
+}
+
+#audioPlayer {
+    left: 7rem;
+   
+}
+.item-preview img{
+  background: #101010;
+}
+.s400mp{
+  max-height: calc(100% - 55px);
+}
+.s400{
+  max-height: calc(100% - 55px);
+
+}
+.comments_icon_p{
+  display: none;
+  position: absolute;
+    margin-top: -5px;
+}
+.comments_title_p{
+  display: inline-block;
+}
+progress {
+    vertical-align: baseline;
+}
+.pl-3, .px-3 {
+    padding-left: 1rem !important;
+}
+.text-truncate {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.d-inline-block {
+    display: inline-block !important;
+}
+.text-muted {
+    color: #6c757d !important;
+}
+.d-block {
+    display: block !important;
+}
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}
+.d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+.pr-4, .px-4 {
+    padding-right: 1.5rem !important;
+}
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: .875rem;
+    color: #222629;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0 solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+}
+.dropdown, .dropleft, .dropright, .dropup {
+    position: relative;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .5rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #222629;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.btn_pok {
+    display: inline-block;
+    font-weight: 400;
+    color: #222629;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .625rem 1.5rem;
+    font-size: .875rem;
+    line-height: 1;
+    border-radius: .25rem;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+
+.i_top_music{
+  display: none;
+}
+
+#svg-magnifying-glass:hover{
+  cursor: pointer;
+  background: red;
+
+}
+@media (max-width: 1365px){
+#audioPlayer {
+   left: .5rem;
+    right: .5rem;
+     bottom: 3rem;
+}
+}
+@media (max-width: 1200px){
+.audio-info {
+    display: none !important;
+}}
+
+
+
+
+.sticky {
+  position: fixed;
+  top: 76px;
+  height: calc(100% - 76px);
+  overflow-y: auto;
+  width: 284px;
+ 
+}
+
+
+#gridl::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#gridl::-webkit-scrollbar-track {
+  background: #0d0d0d; 
+}
+ 
+/* Handle */
+#gridl::-webkit-scrollbar-thumb {
+  background: #1d1d1d; 
+}
+
+/* Handle on hover */
+#gridl::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.ffff::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.ffff::-webkit-scrollbar-track {
+  background: #0d0d0d; 
+}
+ 
+/* Handle */
+.ffff::-webkit-scrollbar-thumb {
+  background: #1d1d1d; 
+}
+
+/* Handle on hover */
+.ffff::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+  font-size: 23px;
+    /* background: red; */
+    color: #32b0ca;
+    width: 100%;
+    font-weight: 800;
+}
+
+@media(max-width: 1365px){
+  .sticky {
+ 
+  width: 30%;
+ 
+}
+
+}
+
+.sticky + .content {
+  padding-top: 200px;
+}
+.story_create{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 180px;
+  margin-left: 11px;
+  margin-top: 10px
+
+}
+.story_create img{
+  width: 75px;
+  height: 75px;
+  border-radius: 180px;
+  object-fit: cover;
+
+
+}
+.w2 {
+    width: 100%;
+   
+    height: 533.26px;
+    position: absolute;
+
+    
+    object-fit: contain;
+}
+.app {
+    position: absolute;
+  top: calc(100% - 60px) ;
+
+    left: calc(100% - 100px);    z-index: 100;
+}
+
+.base-timer {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+.base-timer {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #F44336;
+}
+@media(max-width: 420px){
+  .app{
+  
+ top: calc(100%  - 40px) ;
+    left: calc(100% - 60px);    z-index: 100;
+  
+  
+}
+.base-timer svg{
+  width: 60px;
+}
+.base-timer {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+.base-timer__label {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #F44336;
+}
+
+
+
+}
+    :root {
+      --color-header-input-placeholder: #8b88ff;
+      --color-header-logo-background: rgb(35 35 35 / 90%);
+      --color-wplogin-body: #3e3f5e;
+      --color-wplogin-header-text: rgb(35 35 35 / 90%);
+      --color-header-background: #080808;
+      --color-header-text: #fff;
+      --color-header-icon: rgb(35 35 35 / 90%);
+      --color-header-icon-hover: #fff;
+      --color-header-profile-settings-icon: #fff;
+      --color-header-mobilemenu-trigger-icon: #fff;
+      --color-header-divider: rgb(35 35 35 / 90%);
+      --color-header-input-background: rgb(0 0 0 / 100%);
+      --color-header-progressbar-line-gradient-start: #41efff;
+      --color-header-progressbar-line-gradient-end: #41efff;
+      --color-header-progressbar-underline: rgb(35 35 35 / 90%);
+      --color-body: rgb(2 2 2 / 94%);
+      --color-box-background: rgb(12 12 12 / 80%);
+      --color-box-background-alt: rgb(35 35 35 / 90%);
+      --color-box-over-box-background: #fff;
+      --color-box-over-box-light-background: #fff;
+      --color-box-highlight-background: #f7f7fb;
+      --color-box-hover-background: #f2f2f9;
+      --color-box-shadow: 0 0 40px 0 rgba(94, 92, 154, .06);
+      --color-overbox-shadow: 3px 5px 20px 0 rgba(94, 92, 154, .12);
+      --color-overbox-dark-shadow: 0 0 40px 0 rgba(94, 92, 154, .12);
+      --color-overbox-big-shadow: 3px 5px 40px 0 rgba(94, 92, 154, .1);
+      --color-text: #ffffff;
+      --color-text-alt: #8f91ac;
+      --color-text-alt-2: #adafca;
+      --color-icon: #adafca;
+      --color-icon-highlighted: #3e3f5e;
+      --color-border: #dedeea;
+      --color-divider: #eaeaf5;
+      --color-progressbar-line-gradient-start: #615dfa;
+      --color-progressbar-line-gradient-end: #41efff;
+      --color-progressbar-underline: #e7e8ee;
+      --color-avatar-rank-hexagon: #45437f;
+      --color-primary: #23d2e2;
+      --color-primary-hover: #1bc5d4;
+      --color-primary-light: #41efff;
+      --color-primary-dark: #00c7d9;
+      --color-primary-shadow: 4px 7px 12px 0 rgba(35, 210, 226, .2);
+      --color-secondary: #615dfa;
+      --color-secondary-hover: #5753e4;
+      --color-secondary-dark: #45437f;
+      --color-secondary-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+      --color-tertiary: #fd4350;
+      --color-tertiary-hover: #dd343f;
+      --color-tertiary-shadow: 4px 7px 12px 0 rgba(253, 67, 80, .2);
+      --color-loading-screen-background: #3e3f5e;
+      --color-loading-bar-1: #615dfa;
+      --color-loading-bar-2: #5d71fb;
+      --color-loading-bar-3: #5983fb;
+      --color-loading-bar-4: #549afc;
+      --color-loading-bar-5: #4eb2fd;
+      --color-loading-bar-6: #49c9fe;
+      --color-loading-bar-7: #45ddfe;
+      --color-loading-bar-8: #41efff;
+      --color-notice-overlay-background-primary: rgba(35, 210, 226, .14);
+      --color-notice-overlay-background-secondary: rgba(97, 93, 250, .14);
+      --color-notice-overlay-background-tertiary: rgba(253, 67, 80, .14);
+    }
+    body{
+      font-family: sans-serif;
+    }
+    .icon-comment, .icon-thumbs-up, .icon-friend, .icon-info, .icon-success, .icon-error, .icon-group, .icon-marketplace, .icon-add-friend, .icon-remove-friend, .icon-delete, .icon-send-message, .icon-settings, .icon-cross-thin, .icon-newsfeed, .icon-overview, .icon-members, .icon-badges, .icon-quests, .icon-streams, .icon-events, .icon-events-monthly, .icon-events-weekly, .icon-events-daily, .icon-pin, .icon-ticket, .icon-forums, .icon-profile, .icon-timeline, .icon-photos, .icon-videos, .icon-headphones, .icon-blog-posts, .icon-forum, .icon-store, .icon-share, .icon-pinned, .icon-favorite, .icon-status, .icon-big-grid-view, .icon-small-grid-view, .icon-list-grid-view, .icon-poll, .icon-camera, .icon-emoji, .icon-gif, .icon-tags, .icon-trophy, .icon-return, .icon-clock, .icon-earnings, .icon-wallet, .icon-item, .icon-revenue, .icon-credits, .icon-ranks, .icon-admin-crown, .icon-mod-shield, .icon-ban, .icon-remove-user {
+    fill: var(--color-icon);
+    width: 20px;
+    height: 20px;
+}
+.ffff {
+    height: 70px;
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    overflow-x: hidden;
+}
+.sdfgth {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-top: 8px;
+    position: relative;
+}
+.spojhg {
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.commments{
+      position: relative;
+    top: -20px;
+    left: 10px;
+    display: none;
+}
+.play_but_pause{
+  width: 50px;height: 50px;
+  
+  position: absolute;
+      left: calc(50% - 25px);
+    top: calc(50% + 25px);
+
+}
+.play_but_pause_music{
+  width: 50px;height: 50px;
+  
+  position: absolute;
+      left: calc(50% - 40px);
+    top: calc(50% + 50px);
+
+}
+.mute{
+   width: 50px;height: 50px;
+  
+  position: absolute;
+  margin-top: -13%;
+  margin-left: calc(100% - 75px);
+
+}
+
+ .play_but_pause svg{
+    fill: #2e9eb5;
+ }
+ .play_but_pause svg polygon{
+    fill: #2e9eb5;
+ }
+
+ .play_but_pause_music svg{
+    fill: #2e9eb5;
+ }
+ .play_but_pause_music svg polygon{
+    fill: #2e9eb5;
+ }
+ .h458aad{
+  border-bottom: 1px solid #222323;
+}
+.dgghh54{
+  margin-top: 5px;
+}
+.w1:hover .play_but_pause_music{
+  display: block;
+}
+.fjgiiir{
+  z-index: 10000;
+}
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+.sqdOP {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: 0 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    padding: 5px 9px;
+    text-align: center;
+    text-transform: inherit;
+    text-overflow: ellipsis;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: auto;
+    position: absolute;
+   margin-left: calc(100% - 80px);
+    /* top: -38px; */
+    /* background: red; */
+    margin-top: -50px;color: #0095f6;
+}
+.Ypffh{
+  border: 1px solid transparent;
+  border-top: 1px solid white;
+  border-radius: 0;
+  
+}
+.Ypffh::placeholder {
+  color: white;
+  line-height: 40px;
+  
+}
+.tooll{position: absolute;margin-top: -30px;width: 50px;height: 50px;float: left;}
+
+
+.k1{
+    margin-left: 0px;
+
+}
+.k2{
+  margin-left: 21%;
+}
+
+.k3{
+ margin-left: 45%;
+}
+.k4{
+     margin-left: 67%;
+    
+}
+.k5{
+     margin-left:90%;
+    
+}
+.top_nav{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 22px;
+   opacity: 1;
+   background: #0f0f0f;
+    color: #fff;
+    width: 100%;
+    z-index: 100;
+    
+    
+
+
+}
+
+
+@media (max-width: 980px){
+.k1{
+    margin-left: 0px;
+
+}
+.k2{
+  margin-left: 20%;
+}
+
+.k3{
+ margin-left: 44%;
+}
+.k4{
+     margin-left: 67%;
+    
+}
+.k5{
+     margin-left:88%;
+    
+}
+
+}
+@media(max-width: 960px){
+  .story_create{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 180px;
+  margin-left: 11px;
+  margin-top: -50px
+
+}
+.interactive-input .interactive-input-icon-wrap{
+  right: 40px;
+
+}
+.interactive-input input{
+  padding-right: 100px;
+}
+
+#stories{
+margin-left: 100px;
+}
+.sch_b{
+  margin-left: -100px;
+
+  
+}
+.sch_b1{
+  display: block;
+ margin-right: -100px;
+    margin-left: -100px;
+
+  
+}
+
+
+}
+
+@media (max-width: 770px){
+.k1{
+    margin-left: -20px;
+
+}
+.k2{
+  margin-left: 18%;
+}
+
+.k3{
+ margin-left: 41%;
+}
+.k4{
+     margin-left: 64%;
+    
+}
+.k5{
+     margin-left:86%;
+    
+}
+.s400{
+    max-height: calc(100% - 55px);
+  }
+
+}
+@media (max-width: 713px){
+
+  .play_but_pause{
+
+    
+
+  }
+  .story_create{
+  margin-left: 15px;
+}
+
+}
+@media (max-width: 670px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: calc(18% - 13px);
+}
+
+.k3{
+ margin-left: 40%;
+}
+.k4{
+     margin-left: 64%;
+    
+}
+.k5{
+     margin-left:84%;
+    
+}
+
+}
+
+@media (max-width: 580px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 15%;
+}
+
+.k3{
+ margin-left: 38%;
+}
+.k4{
+     margin-left: 61%;
+    
+}
+.k5{
+     margin-left:83%;
+    
+}
+
+}
+
+@media (max-width: 500px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 13%;
+}
+
+.k3{
+ margin-left: 36%;
+}
+.k4{
+     margin-left: 58%;
+    
+}
+.k5{
+     margin-left:78%;
+    
+}
+
+#audioPlayer {
+   left: .5rem;
+    right: .5rem;
+}
+
+}
+
+@media (max-width: 425px){
+
+
+ .play_but_pause{
+    
+       left: calc(50% - 25px);
+    top: calc(50% + 25px);
+
+  }
+
+ .play_but_pause_music{
+    
+       left: calc(50% - 30px);
+    top: calc(50% + 50px);
+
+  }
+  .mute{
+    margin-top: -70px;
+    margin-left: calc(100% - 65px);
+  }
+
+}
+@media(max-width: 410px){
+   {% if story_us or st %}
+  .story_create{
+   max-height: 75px;
+    height: 18vw;
+   width: 19%;
+    margin-top: -40px;
+
+  }
+  .story_create img{
+    height: 100%;width: 100%;}
+  {% else %}
+  .story_create{
+    width: 60px;
+    height: 60px;
+
+  }.story_create img{
+    height: 100%;
+    width: 100%;
+  }
+  {% endif %}
+}
+@media(max-width: 395px){
+  .play_but_pause{
+    
+   
+
+  }
+}
+
+@media (max-width: 390px){
+ .k1{
+    margin-left: -26px;
+
+}
+.k2{
+  margin-left: 12%;
+}
+
+.k3{
+ margin-left: 34%;
+}
+.k4{
+     margin-left: 56%;
+    
+}
+.k5{
+     margin-left: 76%;
+    
+    
+}
+
+}
+@media(max-width: 371px){
+ .play_but_pause_music {
+  
+    top: calc(50% + 75px);
+}
+}
+@media(max-width: 350px){
+  #stories {
+    margin-left: 85px;
+}
+}
+@media(max-width: 328px){
+   .play_but_pause{
+    
+   
+
+  }
+  .mute{
+    margin-top: -65px;
+    margin-left: calc(100% - 60px);
+  }
+  .mute svg{
+   height: 45px;
+  }
+  .s400{
+    max-height: calc(100% - 65px);
+  }
+  .s400mp{
+ max-height: calc(100% - 65px);
+}
+
+
+}
+
+
+
+
+@media (max-width: 350px){
+ .k1{
+    margin-left: -28px;
+
+}
+.k2{
+  margin-left: 10%;
+}
+
+.k3{
+ margin-left: 32%;
+}
+.k4{
+     margin-left: 54%;
+    
+}
+.k5{
+     margin-left: 74%;
+    
+    
+}
+
+}
+@media(max-width: 320px){
+  .comments_title_p{
+  display: none;
+}
+.comments_icon_p{
+  display: inline-block;
+}
+.comments_title_p_p{
+  margin-left: -50px;
+  display: none;
+}
+.shere_title_p_p{
+  margin-left: -10px;
+   display: none;
+}
+}
+@media(max-width: 303px){
+
+.audio .song-image {
+    
+    max-width: 3.8rem;
+}
+.btn-icon-only [class*=" ion-"], .btn-icon-only [class*=" la-"], .btn-icon-only [class^=ion-], .btn-icon-only [class^=la-] {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+    line-height: 1;
+}
+.amplitude-repeat{
+  display: none;
+} 
+}
+@media (max-width: 300px){
+ .k1{
+    margin-left: -34px;
+
+}
+.k2{
+  margin-left: 8%;
+}
+
+.k3{
+ margin-left: 30%;
+}
+.k4{
+     margin-left: 52%;
+    
+}
+.k5{
+     margin-left: 72%;
+    
+    
+}
+ #stories {
+    margin-left: 70px;
+}
+
+}
+
+@media (max-width: 313px){
+  .quick-filters .quick-filters-tabs .quick-filters-tab{
+    font-size: 0.705rem;
+    margin-right: 18px;
+  }
+
+}
+@media (max-width: 270px){
+ .k1{
+    margin-left: -38px;
+
+}
+.k2{
+  margin-left: 6%;
+}
+
+.k3{
+ margin-left: 27%;
+}
+.k4{
+     margin-left: 49%;
+    
+}
+.k5{
+     margin-left: 68%;
+    
+    
+}
+
+}
+{% if story_us or st %}
+
+{% else %}
+.content-grid {
+   
+    padding: 150px 0 100px;
+   
+}
+.story_create{
+  margin-top: -30px;
+}
+{% endif %}
+
+
+@media(max-width: 263px){
+
+.audio-controls--left .btn, .audio-controls--right .btn {
+    
+    display: none;
+}
+ .quick-filters .quick-filters-tabs .quick-filters-tab{
+    font-size: 0.605rem;
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 960px){
+.content-grid {
+    padding: 92px 0 100px;
+}}
+
+
+
+.swiper-container{
+  z-index: 8;
+}
+.dropdown-menu.show {
+    display: block;
+}
+
+.t4t4{
+  padding: 0 0px !important;
+}
+.t4{
+  left: 46px !important;
+}
+</style>
+
+
+</head>
+
+<body>
+  <div class="loader-wrapper" id="llo" style="position: fixed;display: block;">
+    <img src="{% static 'images/bab.png' %}" style="left: calc(50% - 48px);top: calc(50% - 48px);position: absolute;">
+</div>
+  
+
+
+
+
+ {% include "front_main.html" %}
+
+  <div class="content-grid main_name" style="">
+
+    <!-- SECTION BANNER -->
+    <div class="section-banner" >
+  {% if k %}
+  {% else %}
+    {% if my_story %}
+    <a href="{% url 'accounts:storie_view_list' %}"><div class="story_create">
+    {% if l.profile.avatar.url != None %}
+    
+    <img src="{{ l.profile.avatar.url }}" type></div></a>
+    {% else %}
+     <img src="{% static 'images/user_no_photo_300x300.png' %}" type></div></a>
+    {% endif %}
+    {% else %}
+  <a href="{% url 'accounts:storie_view_list' %}"><div class="story_create">
+  <img src="{% static 'images/user_no_photo_300x300.png'' %}" type></div></a>
+
+  {% endif %}
+  {% endif %}
+      <!-- SECTION BANNER ICON -->
+<div id="stories" class="storiesWrapper">
+
+  
+
+</div>
+      <!-- /SECTION BANNER TEXT -->
+    </div>
+    <!-- /SECTION BANNER -->
+    <!-- GRID -->
+    <div class="grid grid-3-6-3 mobile-prefer-content">
+      <!-- GRID COLUMN -->
+      <div class="grid-column" id="gridl" style="overflow-x: hidden;">
+
+        <!-- WIDGET BOX -->
+        <div class="widget-box">
+          <!-- WIDGET BOX TITLE -->
+          <p class="widget-box-title">Newest Members</p>
+          <!-- /WIDGET BOX TITLE -->
+
+          <!-- WIDGET BOX CONTENT -->
+          <div class="widget-box-content">
+
+            <!-- USER STATUS LIST -->
+            <div class="user-status-list" >
+
+              <!-- USER STATUS -->
+               {% for i in recomindation_users %}
+              <div class="user-status">
+
+
+
+                <!-- RANKED USER AVATAR -->
+                <a class="user-avatar small user-status-avatar no-outline" href="{% url 'accounts:profile_s' i.pk %}">
+
+                  <!-- USER AVATAR CONTENT -->
+                  <div class="user-avatar-content">
+                    <!-- HEXAGON -->
+                    <div class="hexagon-image-30-32" data-src="" style="width: 30px; height: 32px; position: relative;"><canvas width="30" height="32" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                    <!-- /HEXAGON -->
+                  </div>
+                  <!-- /USER AVATAR CONTENT -->
+
+                  <!-- USER AVATAR PROGRESS -->
+                  <div class="user-avatar-progress">
+                    <!-- HEXAGON -->
+                    <div class="hexagon-progress-40-44" data-scalestop="1" data-scaleend="6" style="width: 40px; height: 44px; position: relative;">
+                      {% if i.avatar.url != None %}
+                      <img src="{{ i.avatar.url }}" style="width: 40px;height: 40px; object-fit: cover;border-radius: 180px;">
+                      {% else %}
+                      <img src="{% static 'images/user_no_photo_300x300.png' %}" style="width: 40px;height: 40px; object-fit: cover;border-radius: 180px;">
+                      {% endif %}
+                     
+                      
+                    </div>
+                    <!-- /HEXAGON -->
+                  </div>
+                  <!-- /USER AVATAR PROGRESS -->
+
+                  <!-- USER AVATAR PROGRESS BORDER -->
+                  <div class="user-avatar-progress-border">
+                    <!-- HEXAGON -->
+                    <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                    <!-- /HEXAGON -->
+                  </div>
+                  <!-- /USER AVATAR PROGRESS BORDER -->
+
+                  <!-- USER AVATAR BADGE -->
+                  <div class="user-avatar-badge">
+                    <!-- USER AVATAR BADGE BORDER -->
+                    <div class="user-avatar-badge-border">
+                      <!-- HEXAGON -->
+                      <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                      <!-- /HEXAGON -->
+                    </div>
+                    <!-- /USER AVATAR BADGE BORDER -->
+
+                    <!-- USER AVATAR BADGE CONTENT -->
+                    <div class="user-avatar-badge-content">
+                      <!-- HEXAGON -->
+                      <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                      <!-- /HEXAGON -->
+                    </div>
+                    <!-- /USER AVATAR BADGE CONTENT -->
+
+                    <!-- USER AVATAR BADGE TEXT -->
+                    <!-- <p class="user-avatar-badge-text">1</p>-->
+                    <!-- /USER AVATAR BADGE TEXT -->
+                  </div>
+                  <!-- /USER AVATAR BADGE -->
+                </a>
+                <!-- /RANKED USER AVATAR -->
+                <!-- USER STATUS TITLE -->
+                <p class="user-status-title"><a class="bold" href="{% url 'accounts:profile_s' i.pk %}">{{ i.first_name }}</a></p>
+                <!-- /USER STATUS TITLE -->
+
+                <!-- USER STATUS TEXT -->
+                <p class="user-status-text small">@{{ i.user }}</p>
+                <!-- /USER STATUS TEXT -->
+              </div>
+              <!-- /USER STATUS -->
+              <!-- USER STATUS -->
+             {% endfor %}
+              <!-- /USER STATUS -->
+            </div>
+            <!-- /USER STATUS LIST -->
+          </div>
+          <!-- /WIDGET BOX CONTENT -->
+        </div>
+        <!-- /WIDGET BOX -->
+        <!-- WIDGET BOX -->
+        <div class="widget-box" >
+          <!-- WIDGET BOX TITLE -->
+          <p class="widget-box-title">Quests</p>
+          <!-- /WIDGET BOX TITLE -->
+
+          <!-- WIDGET BOX CONTENT -->
+          <div class="widget-box-content">
+
+            <!-- ACHIEVEMENT PREVIEW LIST -->
+            <div class="achievement-preview-list">
+
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/img/quest/quest-open.png" alt="quest-open">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">The Publisher</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Successfully published a new blog post</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="1" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/img/quest/quest-open.png" alt="quest-open">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">VIP Pass</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Got successfully accepted in a private group</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="1" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/img/quest/quest-open.png" alt="quest-open">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">I Have The Power</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Was promoted to group moderator or admin</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="1" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/img/quest/quest-open.png" alt="quest-open">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">Hear Me Out</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Posted more than 10 profile activities in one day</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="1" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/img/quest/quest-open.png" alt="quest-open">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">BestSeller Post</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Received more than 100 total visits on any post</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="1" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+            </div>
+            <!-- /ACHIEVEMENT PREVIEW LIST -->
+          </div>
+          <!-- /WIDGET BOX CONTENT -->
+        </div>
+        <!-- /WIDGET BOX -->
+      </div>
+      <!-- /GRID COLUMN -->
+
+      <div id="activity-filterable-list" class="grid-column">
+        <div class="grid">
+          <div class="quick-filters">
+            <div class="quick-filters-tabs">
+              <p class="quick-filters-tab active" onclick="openCity(event, 'paris')" id="paris_tab">Posts</p>
+               <p class="quick-filters-tab  " onclick="openCity(event, 'london')" id="london_tab">Shop</p>
+               <p class="quick-filters-tab "  onclick="openCity(event, 'music')" id="music_tab">Music</p>
+               <p class="quick-filters-tab " onclick="openCity(event, 'books')" id="books_tab">Books</p>
+
+              <p class="quick-filters-tab">All</p>
+            </div>
+            <form class="quick-filters-form quick-filters-form-mobile">
+              <div class="form-row">
+                <div class="form-item">
+                  <div class="form-select"><label for="activity-scope">Scope</label><select id="activity-scope" name="scope">
+                      <option value="false">All Updates</option>
+                    </select><svg class="icon-small-arrow form-select-icon">
+                      <use href="#svg-small-arrow"></use>
+                    </svg></div>
+                </div>
+              </div>
+            </form>
+            <form class="quick-filters-form">
+              <div class="form-row">
+                <div class="form-item">
+                 
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="grid article tabcontent" id="paris">
+
+            {% block body %}
+             
+            {% endblock %}
+            <div class="loading" style="display: none;">
+     <div class="page-loader-indicator">
+              <div class="loader-bars">
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+                <div class="loader-bar"></div>
+              </div>
+            </div>
+  </div>
+
+
+             
+           
+       
+           
+          </div>
+           <div class="grid article1 tabcontent" id="london" style="display: none;">
+            
+             
+
+           </div>
+
+             <div class="grid article2 tabcontent" id="music" style="display: none;">
+            
+             
+
+           </div>
+            <div class="grid article3 tabcontent" id="books" style="display: none;">
+            
+             
+
+           </div>
+
+
+
+
+        </div>
+      </div>
+      <!-- /ACTIVITY FILTERABLE LIST -->
+
+      <!-- GRID COLUMN -->
+      <div class="grid-column" id="gridl1">
+
+        <!-- WIDGET BOX -->
+        <div class="widget-box" >
+          
+          <!-- WIDGET BOX TITLE -->
+          <p class="widget-box-title">Popular Musics</p>
+          <!-- /WIDGET BOX TITLE -->
+
+          <!-- WIDGET BOX CONTENT -->
+          <div class="widget-box-content">
+
+            <!-- USER STATUS LIST -->
+            <div class="user-status-list">
+              {% for obj in obj_musics %}
+
+              <!-- USER STATUS -->
+             
+                  <!-- /USER AVATAR CONTENT -->
+              <div class="user-status user-status-with-icon user_view_music_p" data-src="{{ obj.song }}" data_song_name = "{{ obj.title }}"  style="cursor: pointer;">
+
+                <!-- USER AVATAR -->
+                <div class="user-avatar small no-stats user-status-avatar no-border music_tab" href="#" data-src="#" video_play_id="4">
+
+                  <!-- USER AVATAR CONTENT -->
+                  <div class="user-avatar-content">
+                    <!-- HEXAGON -->
+                    <div class="hexagon-image-40-44" style="width: 40px; height: 44px; position: relative;"><img src="/assets/images/Apple-Music-Web-1.jpg" style="width: 40px;height: 40px;border-radius: 180px;object-fit: cover;" data-stories_space_upload_el_handled="1"></div>
+                    <!-- /HEXAGON -->
+                  </div>
+                  <!-- /USER AVATAR CONTENT -->
+                </div>
+                <!-- /USER AVATAR -->
+                <!-- USER STATUS TITLE -->
+                <p class="user-status-title" style="overflow: hidden;
+    white-space: nowrap;
+    max-width: 155px;
+    width: 155px;
+    text-overflow: ellipsis;"><a class="bold" href="#">{{ obj.title }}</a></p>
+                <!-- /USER STATUS TITLE -->
+
+                <!-- USER STATUS TEXT 
+                <p class="user-status-text small">4 members</p>-->
+                <!-- /USER STATUS TEXT -->
+
+
+                <!-- ICON SVG -->
+                <svg class="icon-public user-status-icon user-status-privacy-icon">
+                  <use href="#svg-public"></use>
+                </svg>
+                <!-- ICON SVG -->
+              </div>
+              {% endfor %}
+            </div>
+            <!-- /USER STATUS LIST -->
+          </div>
+          <!-- /WIDGET BOX CONTENT -->
+        </div>
+        <!-- /WIDGET BOX -->
+        <!-- WIDGET BOX -->
+        <div class="widget-box">
+          <!-- WIDGET BOX TITLE -->
+          <p class="widget-box-title">Badges</p>
+          <!-- /WIDGET BOX TITLE -->
+
+          <!-- WIDGET BOX CONTENT -->
+          <div class="widget-box-content">
+
+            <!-- ACHIEVEMENT PREVIEW LIST -->
+            <div class="achievement-preview-list">
+
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/2020/09/Silver-Cup.png" alt="Silver Cup">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">Silver Cup</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Won second place on a verified community competition</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="0" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/2020/09/Bronze-User.png" alt="Bronze User">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">Bronze User</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Has posted more than 1 post on their profile</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="1" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/2020/09/The-Warrior.png" alt="The Warrior">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">The Warrior</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Helped the team enforce the community rules</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="0" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/2020/09/Gold-Cup.png" alt="Gold Cup">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">Gold Cup</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Won first place on a verified community competition</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="0" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+              <!-- ACHIEVEMENT PREVIEW -->
+              <div class="achievement-preview">
+                <!-- ACHIEVEMENT PREVIEW INFO -->
+                <div class="achievement-preview-info">
+                  <img class="achievement-preview-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/2020/09/Gold-Amasser.png" alt="Gold Amasser">
+
+                  <!-- ACHIEVEMENT PREVIEW TITLE -->
+                  <p class="achievement-preview-title">Gold Amasser</p>
+                  <!-- /ACHIEVEMENT PREVIEW TITLE -->
+
+                  <!-- ACHIEVEMENT PREVIEW TEXT -->
+                  <p class="achievement-preview-text">Has reached a balance of 400 gold credits</p>
+                  <!-- /ACHIEVEMENT PREVIEW TEXT -->
+                </div>
+                <!-- /ACHIEVEMENT PREVIEW INFO -->
+
+                <!-- PROGRESS STAT -->
+                <div class="progress-stat">
+                  <!-- PROGRESS STAT BAR -->
+                  <div class="progress-stat-bar achievement-simple-progress" data-scalestop="0" data-scaleend="1" style="width: 0px; height: 4px; position: relative;">
+                    <canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas><canvas width="0" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+                  </div>
+                  <!-- /PROGRESS STAT BAR -->
+                </div>
+                <!-- /PROGRESS STAT -->
+              </div>
+              <!-- /ACHIEVEMENT PREVIEW -->
+            </div>
+            <!-- /ACHIEVEMENT PREVIEW LIST -->
+          </div>
+          <!-- /WIDGET BOX CONTENT -->
+        </div>
+        <!-- /WIDGET BOX -->
+      </div>
+      <!-- /GRID COLUMN -->
+    </div>
+    <!-- /GRID -->
+  </div>
+
+
+  <div class="i_top_music" style="z-index: 999999999;">
+    <div class="icon_play_pause" style="">
+      <img src="{% static 'images/icons8-play-64 (1).png' %}" style="width: 100%;height: 100%;" id="play_pause">
+       <img src="{% static 'images/icons8-pause-64.png' %}" style="width: 100%;height: 100%;display: none;" id="play_pause1">
+
+      
+
+
+    </div>
+    
+
+
+      <div class="date_list" style="font-weight: 800;
+     right: 20px;margin-top: -30px;position: absolute;">0:0</div>
+
+     <div class="slidecontainer">
+  <input type="range" min="0" max="100"  class="slider" id="myRange" value="0" >
+  <audio controls class="llkiu" style="display: none;z-index: 99999999999999;" id="video1"  preload="metadata">
+  <source src="#" type="audio/ogg" class ="musicsource">
+  <source src="#" type="audio/mpeg" class ="musicsource">
+
+</audio>
+</div> </div>
+
+
+<div id="audioPlayer" class="player-primary player-dark" style="visibility: hidden;">
+    <div id="progress-container">
+        <input type="range" class="amplitude-song-slider">
+        <progress id="song-played-progress" class="audio-progress audio-progress--played amplitude-song-played-progress" value="0"></progress>
+        <progress id="song-buffered-progress" class="audio-progress audio-progress--buffered amplitude-buffered-progress" value="1"></progress>
+    </div>
+    <div class="audio">
+        <div class="song-image">
+            <img data-amplitude-song-info="cover_art_url" src="/assets/images/Apple-Music-Web-1.jpg" alt="">
+            <div class="loader15"></div>
+        </div>
+        <div class="song-info pl-3">
+            <span class="song-name d-inline-block text-truncate" data-amplitude-song-info="name"></span>
+            <span class="song-artists d-block text-muted" data-amplitude-song-info="artist"></span>
+        </div>
+    </div>
+    <div class="audio-controls">
+        <div class="audio-controls--left d-flex mr-auto">
+            <button class="btn btn-icon-only amplitude-repeat amplitude-repeat-off btn_pok">
+                <i class="ion-md-sync"></i>
+            </button>
+        </div>
+        <div class="audio-controls--main d-flex">
+            <button class="btn btn-icon-only amplitude-prevx btn_pok" id_for_music="">
+                <i class="ion-md-skip-backward"></i>
+            </button>
+            <button class="btn btn-air btn-pill btn-default btn-icon-only amplitude-play-pause amplitude-paused btn_pok">
+                <i class="ion-md-play"></i> <i class="ion-md-pause"></i>
+            </button>
+            <button class="btn btn-icon-only amplitude-nextx btn_pok" id_for_music="">
+                <i class="ion-md-skip-forward"></i>
+            </button>
+        </div>
+        <div class="audio-controls--right d-flex ml-auto">
+            <button class="btn btn-icon-only amplitude-shuffle amplitude-shuffle-off btn_pok">
+                <i class="ion-md-shuffle"></i>
+            </button>
+        </div>
+    </div>
+    <div class="audio-info d-flex align-items-center pr-4">
+        <span class="mr-4">
+            <span class="amplitude-current-minutes">00</span>:<span class="amplitude-current-seconds">00</span> /
+            <span class="amplitude-duration-minutes">00</span>:<span class="amplitude-duration-seconds">00</span>
+        </span>
+        <div class="audio-volume dropdown">
+            <button class="btn btn-icon-only btn_pok btn_volume_change" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ion-md-volume-low"></i>
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-right volume-dropdown-menu valume_change_dropdown"  status="noshow"x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-50px, -45px, 0px);" x-out-of-boundaries="">
+                <input type="range" class="amplitude-volume-slider">
+            </div>
+        </div>
+        <div class="dropleft">
+            <button class="btn btn-icon-only btn_pok" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="la la-ellipsis-v"></i></button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                    <a href="javascript:void(0);" class="dropdown-link">
+                        <i class="la la-heart-o"></i>
+                        <span>Favorite</span>
+                    </a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="javascript:void(0);" class="dropdown-link">
+                        <i class="la la-plus"></i> <span>Add to Playlist</span>
+                    </a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="javascript:void(0);" class="dropdown-link">
+                        <i class="la la-download"></i> <span>Download</span>
+                    </a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="javascript:void(0);" class="dropdown-link">
+                        <i class="la la-share-alt"></i> <span>Share</span>
+                    </a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#" class="dropdown-link">
+                        <i class="la la-info-circle"></i> <span>Song Info</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn btn-icon-only btn_pok" id="playList"><i class="ion-md-musical-note"></i></button>
+    </div>
+</div>
+    <div id="waveform-load"></div>
+                <div id="waveform" style="display: none;"></div>
+    
+
+
+ 
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.0.2/dist/amplitude.min.js"></script>
+    <script src="{% static 'js/wavesurfer1.js' %}"></script>
+    {% if profile_status == "no_profile" %}
+    <script type="text/javascript">
+      var profile_status_no_pr = "no_profile"
+
+       
+
+
+    </script>
+    {% else %}
+    <script type="text/javascript">
+      var profile_status_no_pr = undefined
+
+       
+
+
+    </script>
+    {% endif %}
+    
+   <script type="text/javascript">
+
+
+
+
+var my_id_pk = {{ l.profile.pk }}
+      name_active = 1
+      
+      
+       function decode_utf8(s)
+{
+  return decodeURIComponent( escape( s ) );
+}
+function encode_utf8(s)
+{
+  return unescape( encodeURIComponent( s ) );
+}
+
+var pause_video_id = null
+var muted_indication = null
+var focused = true;
+var music_array = []
+var  r_play_pause_icon_change =  ` <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+<linearGradient id="SVGID_4r_" gradientUnits="userSpaceOnUse" x1="35.0291" y1="257.3129" x2="478.0292" y2="257.3129" gradientTransform="matrix(0.9983 0 0 -0.9983 -0.0849 512.8665)">
+  <stop  offset="0" style="stop-color:#00F2FE"/>
+  <stop  offset="0.021" style="stop-color:#03EFFE"/>
+  <stop  offset="0.293" style="stop-color:#24D2FE"/>
+  <stop  offset="0.554" style="stop-color:#3CBDFE"/>
+  <stop  offset="0.796" style="stop-color:#4AB0FE"/>
+  <stop  offset="1" style="stop-color:#4FACFE"/>
+</linearGradient>
+<path style="fill:url(#SVGID_4r_);" d="M104.967,511.999c-0.104,0-0.209-0.001-0.313-0.001c-38.47-0.21-69.77-31.983-69.77-70.829
+  V70.058c0-25.691,13.39-48.512,35.819-61.041c22.429-12.531,48.88-11.971,70.758,1.497l302.4,186.405
+  c20.869,12.848,33.305,35.16,33.255,59.678c-0.05,24.52-12.576,46.781-33.507,59.55L224.997,449.999
+  c-9.405,5.758-21.695,2.802-27.452-6.602c-5.758-9.404-2.802-21.694,6.602-27.452l218.639-133.869
+  c9.139-5.576,14.378-14.886,14.4-25.56c0.022-10.673-5.179-20.004-14.268-25.601L120.517,44.511
+  c-9.374-5.771-20.718-6.011-30.339-0.636c-9.62,5.375-15.364,15.162-15.364,26.183v371.112c0,18.385,15.541,30.819,30.056,30.898
+  c4.735,0.001,10.08-1.726,15.553-5.064c9.411-5.743,21.698-2.768,27.441,6.645c5.743,9.413,2.767,21.698-6.645,27.441
+  C129.517,508.23,116.989,511.998,104.967,511.999z"/>
+
+</svg>`
+
+     
+      function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  name_active = cityName
+  if (name_active=='london'){
+   // defpp(name_active)
+    
+     if (pause_video_id!=null){
+      document.getElementById(pause_video_id).innerHTML = r_play_pause_icon_change
+
+      document.getElementsByClassName(pause_video_id + "frt")[0].pause()
+
+     }
+     $("#paris_tab").removeClass("active")
+     $("#music_tab").removeClass("active")
+     $("#books_tab").removeClass("active")
+     $("#london_tab").addClass("active")
+     $("#audioPlayer").css("visibility", "hidden")
+     
+     Amplitude.pause()
+   
+     
+     $(".i_top_music").css("display", "none")
+    
+
+  }
+  else if (name_active=='music'){
+    defpp(name_active)
+    $("#paris_tab").removeClass("active")
+     $("#london_tab").removeClass("active")
+     $("#books_tab").removeClass("active")
+
+     $("#music_tab").addClass("active")
+      if (pause_video_id!=null){
+        console.log(pause_video_id)
+         document.getElementById(pause_video_id).innerHTML = r_play_pause_icon_change
+      document.getElementsByClassName(pause_video_id + "frt")[0].pause()
+     }
+     
+
+
+  }
+
+  else if (name_active=='books'){
+    defpp(name_active)
+    
+      $("#paris_tab").removeClass("active")
+     $("#london_tab").removeClass("active")
+     $("#music_tab").removeClass("active")
+     $("#books_tab").addClass("active")
+    $("#audioPlayer").css("visibility", "hidden")
+     $(".i_top_music").css("display", "none")
+      if (pause_video_id!=null){
+         document.getElementById(pause_video_id).innerHTML = r_play_pause_icon_change
+      document.getElementsByClassName(pause_video_id + "frt")[0].pause()
+     }
+      Amplitude.pause()
+    
+
+  }
+  else{
+   console.log($("#video1")[0])
+ 
+      Amplitude.pause()
+     $(".i_top_music").css("display", "none")
+      $("#books_tab").removeClass("active")
+      $("#audioPlayer").css("visibility", "hidden")
+     $("#london_tab").removeClass("active")
+     $("#music_tab").removeClass("active")
+     $("#paris_tab").addClass("active")
+    
+  }
+  
+
+  document.getElementById(cityName).style.display = "grid";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+
+  {% block javascript %}
+  
+  {% endblock %}
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+     <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+
+
+
+    <script type="text/javascript" src="{% static 'css/new_main.js' %}"></script>
+     <script src="{% static 'js/zuck.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+
+
+    <script type="text/javascript">
+
+counter = 0
+counter1 = 0
+counter3 = 0
+var status_song_or_res=""
+
+
+  $(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    if (name_active=="london"){
+      console.log("aa")
+     defpp(name_active)
+
+    }
+    else if(name_active=="music"){defpp(name_active)}
+      else if(name_active=="books"){defpp(name_active)}
+      else {
+
+      }
+    
+
+
+
+   }
+
+  })
+
+  
+
+function defpp(name_active){
+  if (name_active=="london"){
+
+  
+    $.ajax({
+
+           url: "{% url 'accounts:callajax' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'counter': counter, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            //console.log(data)
+            lr = JSON.parse(data)
+            //console.log(lr.length, lr, name_active)
+             counter+=3
+             
+
+
+            for (var i = 0, len = lr.length; i < len; i++) {
+               var result = lr[i];
+               var image_profile=null
+
+
+              if (String(result["fields"]["profile_image"])!=""){
+                image_profile="/media/"+ String(result["fields"]["profile_image"])
+
+
+              }
+              else{
+                image_profile = "/assets/images/user_no_photo_300x300.png"
+
+
+              }
+
+            // Setup the result...
+                        
+           
+            f = `<div class="widget-box no-padding animate-slide-down infinite-item">
+              <div class="tag-stickers"></div>
+              <div class="widget-box-status">
+                <div class="widget-box-status-content">
+                  <div class="user-status">
+                    <div class="user-status-avatar"><a class="user-avatar small no-outline " href="/profile/` +result["fields"]["profile"]+ `/">
+                        <div class="user-avatar-content">
+                          <div class="hexagon-image-30-32" data-src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/avatars/1/5f6d2c93a53d1-bpfull.jpg" style="width: 50px; height: 50px; position: relative;margin-left: -15px;">
+                             
+                               <img src="`+ image_profile +`" style="width: 100%;
+          height: 100%;border-radius: 180px;object-fit:cover;
+           ">
+                              
+                            
+                            
+
+
+                          </div>
+                        </div>
+                        <div class="user-avatar-progress">
+                          <div class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                        </div>
+                        <div class="user-avatar-progress-border">
+                          <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                        </div>
+                        <div class="user-avatar-badge">
+                          <div class="user-avatar-badge-border">
+                            <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                          </div>
+                          <div class="user-avatar-badge-content">
+                            <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                          </div>
+                          <p class="user-avatar-badge-text"></p>
+                        </div>
+                      </a></div>
+                    <div class="user-status-title medium"><span><a href="/profile/` +result["fields"]["profile"]+ `/">`+result["fields"]["profile_name"]+`</a></span></div>
+                    <p class="user-status-text small">3 months ago</p>
+                  </div>
+                  <p class="widget-box-status-text">g
+
+                    <a href="/heshteg/g/"><span>&nbsp;&nbsp;&nbsp;#g</span></a>
+
+
+                  </p>
+                </div>
+                <figure class="widget-box-picture" style="z-index: 2;">
+
+                 <img src="#" style="display: none;z-index: 100;background-color: black;" class=" w2" id="206129">
+               </figure>
+               <span id="2061292" class="eee12"><button id="2061291" class="eee1212"></button>
+                 </span>
+                
+                    
+                     <figure class="widget-box-picture">
+
+
+
+
+                  <img src="/media/` + result['fields']['avatar_p'] +`" alt="giphy" id="206" style="z-index: 99;top: 0;left: 0;" class="giphy"></figure>
+                    
+
+
+                    
+
+
+                    
+
+
+               
+
+
+
+
+
+
+              </div>
+              <div class="post-footer">
+                <div class="content-actions">
+                  <div class="content-action">
+                    <div class="meta-line">
+                      <div class="reaction-item-list meta-line-list">
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/love.png" alt="reaction-love">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/love.png" alt="reaction-love"><span class="bold">Love</span></p>
+                              <p class="simple-dropdown-text">Marina Valentine</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/like.png" alt="reaction-like">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/like.png" alt="reaction-like"><span class="bold">Like</span></p>
+                              <p class="simple-dropdown-text">Nicholas Grissom</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/funny.png" alt="reaction-funny">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/funny.png" alt="reaction-funny"><span class="bold">Funny</span></p>
+                              <p class="simple-dropdown-text">Neko Bebop</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="meta-line-text meta-line-text-trigger" id="35123" style="margin-bottom: 0rem;">0</p>
+
+                       <div class="heart" style="margin-top: 70px;margin-left: -75px;font-size: 23px;">
+     <a name="35" class="btn" id="35a12444">
+        
+
+        
+        <i class="fa fa-heart-o" aria-hidden="true"></i>
+
+
+        
+        
+
+
+        </a>
+
+        <a href="#" class="comment"><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 23px;margin-left: 8px;margin-top: -2px;position: absolute;"></i></a>
+
+        <a class="shere" style="margin-left: 38px;margin-top: -1px;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#F3F1F1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#F3F1F1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line></svg></a>
+
+        <a class="money" id="money" name="38" i_name="206" v_name="3" style="position: absolute;margin-left: 68px;"><i class="fa fa-usd" aria-hidden="true" style="font-size: 23px;color: #41ad49;"></i><span class="downkk" id="206008" style="color: #41ad49; font-size: 18px;position: absolute;line-height: 20px;display: none;">&nbsp;&nbsp;0.2$</span></a>
+
+
+    </div>
+                    </div>
+                  </div>
+                  <div class="content-action">
+                  
+                    <div class="meta-line">
+                      <a href="#"><p class="meta-line-text comments_title_p_p" id="35comment_count" count="0">0 Comments</p></a>
+                    </div>
+                    <div class="meta-line">
+                      <p class="meta-line-text shere_title_p_p">0 Shares</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-comments"></div>
+                <div class="addcomff" style="margin-top: -40px;">
+
+
+                    <div class="commments " id="35commments5">
+       
+        <div class="ffff" id="35845">
+        <div class="commeftht" id="3585">
+          
+          
+         
+
+         
+
+          
+        </div>
+        </div>
+
+       </div>
+        
+          
+
+          <textarea aria-label="Добавьте комментарий..." placeholder=" add comment" class="Ypffh" autocorrect="off" id="3511"></textarea>
+          <button class="sqdOP yWX7d    y3zKF     " data-catid="206" id="btn1" type="button" name="35" this_comments_count="0">publish</button>
+
+
+       
+      
+
+     
+
+
+
+        
+
+
+     
+    
+
+  </div>
+              </div>
+            </div>`
+            $(".article1").append(f);
+
+           
+           
+
+
+
+
+
+         }
+
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });}
+
+
+ else if (name_active=="books"){
+  var statusx_books = ""
+  var download_field = ""
+  var likes_indikator = 0
+  console.log("books")
+   if (profile_status_no_pr != undefined){
+    var class_name_like = ""
+    
+
+  }
+  else{
+    var class_name_like = "btn_books"
+    
+
+  }
+
+  
+    $.ajax({
+
+           url: "{% url 'accounts:callajaxbooks' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'counter': counter3, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            //console.log(data)
+            lr = JSON.parse(data)
+            //console.log(lr.length, lr, name_active)
+             counter3+=3
+
+
+            for (var i = 0, len = lr.length; i < len; i++) {
+            // Setup the result...
+                        
+            var result = lr[i];
+            statusx_books = result["fields"]["status_x"]
+            if (statusx_books=="False"){
+              download_field = result['fields']["books"]
+              likes_indikator = 1
+
+
+            }
+            else{
+              download_field = "/media/"+result['fields']["books"]
+              likes_indikator = 0
+
+            }
+             if (result["fields"]["likes"].indexOf(my_id_pk)!=-1){
+              var like_icon = `<i class="fa fa-heart" aria-hidden="true" style="color:#fd4350;" ></i>`
+
+            }
+            else{
+              var like_icon = `<i class="fa fa-heart-o" aria-hidden="true" ></i>`
+
+            }
+             f = `<div class="widget-box no-padding animate-slide-down infinite-item">
+              <div class="tag-stickers"></div>
+              <div class="widget-box-status">
+                <div class="widget-box-status-content">
+                  <div class="user-status">
+                    <div class="user-status-avatar"><a class="user-avatar small no-outline " href="#">
+                        <div class="user-avatar-content">
+                          <div class="hexagon-image-30-32" data-src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/avatars/1/5f6d2c93a53d1-bpfull.jpg" style="width: 50px; height: 50px; position: relative;margin-left: -15px;">
+                             
+                                <img src="/assets/images/2ee62eeaf77b6184289c6338f58779b4.jpg" style="width: 100%;
+          height: 100%;border-radius: 180px;object-fit:cover;
+           ">
+                              
+                            
+                            
+
+
+                          </div>
+                        </div>
+                        <div class="user-avatar-progress">
+                          <div class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                        </div>
+                        <div class="user-avatar-progress-border">
+                          <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                        </div>
+                        <div class="user-avatar-badge">
+                          <div class="user-avatar-badge-border">
+                            <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                          </div>
+                          <div class="user-avatar-badge-content">
+                            <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                          </div>
+                          <p class="user-avatar-badge-text"></p>
+                        </div>
+                      </a></div>
+                    <div class="user-status-title medium"><span><a href="#">Books</a></span></div>
+                    <p class="user-status-text small">3 months ago</p>
+                  </div>
+                  <p class="widget-box-status-text">`+  result['fields']["name"]+`
+
+                    
+
+
+                  </p>
+                </div>
+                <figure class="widget-box-picture" style="z-index: 2;">
+
+                 <img src="#" style="display: none;z-index: 100;background-color: black;" class=" w2" id="206129">
+               </figure>
+               <span id="2061292" class="eee12"><button id="2061291" class="eee1212"></button>
+                 </span>
+                
+                    
+                     <figure class="widget-box-picture " video_play_id="`+ result['pk'] +`">
+                    
+
+
+
+
+                  <img src="/assets/images/2ee62eeaf77b6184289c6338f58779b4.jpg" alt="giphy" id="206" style="z-index: 99;top: 0;left: 0;" class="giphy" video_play_id="`+ result['pk'] +`">
+                
+
+
+
+                  </figure>
+                    
+
+
+                    
+
+
+                    
+
+
+               
+
+
+
+
+
+
+              </div>
+              <div class="post-footer">
+                <div class="content-actions">
+                  <div class="content-action">
+                    <div class="meta-line">
+                      <div class="reaction-item-list meta-line-list">
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/love.png" alt="reaction-love">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/love.png" alt="reaction-love"><span class="bold">Love</span></p>
+                              <p class="simple-dropdown-text">Marina Valentine</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/like.png" alt="reaction-like">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/like.png" alt="reaction-like"><span class="bold">Like</span></p>
+                              <p class="simple-dropdown-text">Nicholas Grissom</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/funny.png" alt="reaction-funny">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/funny.png" alt="reaction-funny"><span class="bold">Funny</span></p>
+                              <p class="simple-dropdown-text">Neko Bebop</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="meta-line-text meta-line-text-trigger" id="`+ result['pk'] +`likes_b" name="` + result["fields"]["likes"].length + `" style="margin-bottom: 0rem;">`+ result["fields"]["likes"].length +`</p>
+
+                       <div class="heart" style="margin-top: 70px;margin-left: -75px;font-size: 23px;">
+     <a name="`+ result['pk'] +`" class="`+ class_name_like +`" id="35a12444" likes_indikator="`+likes_indikator+`">
+     `+ like_icon +`
+
+
+        
+        
+
+
+        </a>
+
+        <a href="#" class="comment"><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 23px;margin-left: 8px;margin-top: -2px;position: absolute;"></i></a>
+
+        <a class="shere" style="margin-left: 38px;margin-top: -1px;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#F3F1F1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#F3F1F1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line></svg></a>
+
+        <a href="`+download_field +`" download="`+download_field+`" style="z-index:9;position: absolute;margin-left: 68px;margin-top:-2px;"
+    ><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" style="fill: #F3F1F1;
+    width: 23px;" viewBox="0 0 512 512" xml:space="preserve">
+<g>
+  <g>
+    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+      c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+      c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"></path>
+  </g>
+</g>
+<g>
+  <g>
+    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"></path>
+  </g>
+</g>
+</svg></a>
+
+
+    </div>
+                    </div>
+                  </div>
+                  <div class="content-action">
+                  
+                     <div class="meta-line">
+                      <a href="#"><p class="meta-line-text comments_title_p_p" id="35comment_count" count="0">0 Comments</p></a>
+                    </div>
+                    <div class="meta-line">
+                      <p class="meta-line-text shere_title_p_p">0 Shares</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-comments"></div>
+                <div class="addcomff" style="margin-top: -40px;">
+
+
+                    <div class="commments " id="35commments5">
+       
+        <div class="ffff" id="35845">
+        <div class="commeftht" id="3585">
+          
+          
+         
+
+         
+
+          
+        </div>
+        </div>
+
+       </div>
+        
+          
+
+        
+
+
+       
+      
+
+     
+
+
+
+        
+
+
+     
+    
+
+  </div>
+              </div>
+            </div>`
+            $(".article3").append(f);
+
+           
+           
+
+
+
+
+
+         }
+
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });}
+else if (name_active=="music"){
+  if (profile_status_no_pr != undefined){
+    var class_name_like = ""
+    var add_play_list_l = ""
+
+  }
+  else{
+    var class_name_like = "btn_music"
+    var add_play_list_l = "add_play_list_l"
+
+  }
+  var likes_indikator = 0
+  
+ 
+  
+   $.ajax({
+
+           url: "{% url 'accounts:callajaxmusic' %}",
+           type: 'GET',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'counter': counter1, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            //console.log(data)
+            lr = JSON.parse(data)
+            
+           
+             counter1+=3
+
+
+            for (var i = 0, len = lr.length; i < len; i++) {
+            // Setup the result...
+                        
+            var result = lr[i];
+
+            music_array.push(result)
+            //console.log(result["fields"]["likes"].indexOf(my_id_pk))
+            if (result["fields"]["likes"].indexOf(my_id_pk)!=-1){
+              var like_icon = `<i class="fa fa-heart" aria-hidden="true" style="color:#fd4350;" ></i>`
+
+            }
+            else{
+              var like_icon = `<i class="fa fa-heart-o" aria-hidden="true" ></i>`
+
+            }
+            url_by_audio = "/media/"+result['fields']['song']
+            status_song_or_res = "song"
+            if (result['fields']["status_x"]=="False"){
+              url_by_audio = result['fields']['song']
+              status_song_or_res = "song_res"
+              likes_indikator = 1
+
+            }
+            
+            
+            else{
+              
+              likes_indikator = 0
+
+            }
+            var t = result['fields']["title"]
+            
+            var elkj = encode_utf8(t)
+            var name_pluy = decode_utf8(elkj)
+            //console.log("num_count", elkj, name_pluy)
+            
+            
+            f = `<div class="widget-box no-padding animate-slide-down infinite-item">
+              <div class="tag-stickers"></div>
+              <div class="widget-box-status">
+                <div class="widget-box-status-content">
+                  <div class="user-status">
+                    <div class="user-status-avatar"><a class="user-avatar small no-outline " href="#">
+                        <div class="user-avatar-content">
+                          <div class="hexagon-image-30-32" data-src="https://odindesignthemes.com/vikinger-theme/wp-content/uploads/avatars/1/5f6d2c93a53d1-bpfull.jpg" style="width: 50px; height: 50px; position: relative;margin-left: -15px;">
+                             
+                               <img src="/assets/images/Apple-Music-Web-1.jpg" style="width: 100%;
+          height: 100%;border-radius: 180px;object-fit:cover;
+           ">
+                              
+                            
+                            
+
+
+                          </div>
+                        </div>
+                        <div class="user-avatar-progress">
+                          <div class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                        </div>
+                        <div class="user-avatar-progress-border">
+                          <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                        </div>
+                        <div class="user-avatar-badge">
+                          <div class="user-avatar-badge-border">
+                            <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                          </div>
+                          <div class="user-avatar-badge-content">
+                            <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                          </div>
+                          <p class="user-avatar-badge-text"></p>
+                        </div>
+                      </a></div>
+                    <div class="user-status-title medium"><span><a href="/songs/`+ result['fields']["audio_id"] +`">Musics</a></span></div>
+                    <p class="user-status-text small"></p>
+                  </div>
+                  <p class="widget-box-status-text">`+ result['fields']["title"] +`
+
+                   
+
+
+                  </p>
+                </div>
+                <figure class="widget-box-picture" style="z-index: 2;">
+
+                 <img src="#" style="display: none;z-index: 100;background-color: black;" class=" w2" id="206129">
+               </figure>
+               <span id="2061292" class="eee12"><button id="2061291" class="eee1212"></button>
+                 </span>
+                
+                    
+                     <figure class="widget-box-picture kliouu" video_play_id="`+ result['pk'] +`" my_name_audio="`+  result['fields']["title"] +`" statusx="`+ result['fields']["status_x"] +`"  id_for_music = "`+ music_array.length +`">
+                     <div class="play_but_pause_music" video_play_id="`+ result['pk'] +`" id="frtt`+ result['pk'] +`" style="display: block;"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"></polygon>
+      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"></path>
+    </svg></div>
+
+
+
+
+                  <img src="/assets/images/Apple-Music-Web-1.jpg" alt="giphy" id="206" style="z-index: 99;top: 0;left: 0;" class="giphy" video_play_id="`+ result['pk'] +`">
+                  <div controls class="llkiu" style="display:none;" id="` + result['pk'] +`pkl" play_pause_id = "` + result['pk'] +`"
+      >
+  <source src="` + url_by_audio +`" type="audio/ogg" id="`+  result['pk'] +`jhytt">
+  <source src="` + url_by_audio +`" type="audio/mpeg">
+Your browser does not support the audio element.
+</div>
+
+
+
+
+                  </figure>
+                    
+
+
+                    
+
+
+                    
+
+
+               
+
+
+
+
+
+
+              </div>
+              <div class="post-footer">
+                <div class="content-actions">
+                  <div class="content-action">
+                    <div class="meta-line">
+                      <div class="reaction-item-list meta-line-list">
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/love.png" alt="reaction-love">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/love.png" alt="reaction-love"><span class="bold">Love</span></p>
+                              <p class="simple-dropdown-text">Marina Valentine</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/like.png" alt="reaction-like">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/like.png" alt="reaction-like"><span class="bold">Like</span></p>
+                              <p class="simple-dropdown-text">Nicholas Grissom</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reaction-item-wrap">
+                          <div class="reaction-item" style="position: relative;"><img class="reaction-image" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/funny.png" alt="reaction-funny">
+                            <div class="simple-dropdown padded" style="position: absolute; z-index: 9999; bottom: 38px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
+                              <p class="simple-dropdown-text"><img class="reaction" src="https://odindesignthemes.com/vikinger-theme/wp-content/plugins/vkreact//img/funny.png" alt="reaction-funny"><span class="bold">Funny</span></p>
+                              <p class="simple-dropdown-text">Neko Bebop</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="meta-line-text meta-line-text-trigger" id="`+ result['pk'] +`likes" name="` + result["fields"]["likes"].length + `" style="margin-bottom: 0rem;">`+ result["fields"]["likes"].length +`</p>
+
+                       <div class="heart" style="margin-top: 70px;margin-left: -75px;font-size: 23px;">
+     <a name="`+ result['pk'] +`" class="`+ class_name_like +`" id="35a12444" likes_indikator="`+likes_indikator+`">
+     `+ like_icon +`
+        
+
+        
+       
+
+
+        
+        
+
+
+        </a>
+
+        
+
+        <a class="shere" style="margin-left: 5px;margin-top: -1px;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#F3F1F1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#F3F1F1;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line></svg></a>
+        <a class="`+ add_play_list_l +`" id="`+ add_play_list_l +`" name="` + result['pk'] + `" i_name="23" v_name="1" status="`+ status_song_or_res+`" style="position: absolute;margin-left: 40px;"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+   viewBox="0 0 320 320" style="width:28px;fill:white;" xml:space="preserve">
+<g>
+  <g>
+    <rect y="96" width="256" height="33.667"/>
+  </g>
+</g>
+<g>
+  <g>
+    <rect y="10.667" width="256" height="33.667"/>
+  </g>
+</g>
+<g>
+  <g>
+    <rect y="181.333" width="170.667" height="33.667"/>
+  </g>
+</g>
+<g>
+  <g>
+    <polygon points="213.333,181.333 213.333,309.333 320,245.333    "/>
+  </g>
+</g>
+
+</svg>
+<span class="downkk" id="23008" style="color: #41ad49; font-size: 18px;position: absolute;line-height: 20px;display: none;">&nbsp;&nbsp;0.2$</span></a>
+
+       
+
+
+    </div>
+                    </div>
+                  </div>
+                  <div class="content-action">
+                  
+                   <div class="meta-line">
+                      
+                    </div>
+                    <div class="meta-line">
+                      <p class="meta-line-text shere_title_p_p">0 Shares</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-comments"></div>
+                <div class="addcomff" style="margin-top: -40px;">
+
+
+                    <div class="commments " id="35commments5">
+       
+        <div class="ffff" id="35845">
+        <div class="commeftht" id="3585">
+          
+          
+         
+
+         
+
+          
+        </div>
+        </div>
+
+       </div>
+        
+          
+
+         
+
+
+       
+      
+
+     
+
+
+
+        
+
+
+     
+    
+
+  </div>
+              </div>
+            </div>`
+            $(".article2").append(f)
+
+           
+          
+
+           
+            
+            
+
+           
+           
+
+
+
+
+
+         }
+
+
+
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+
+
+
+
+
+}
+
+
+}
+
+
+
+seeking=0
+myVar=null
+var my_src = []
+var my_src_2 = []
+var my_id = []
+i = -1
+j = 0
+music_num = 0
+function myOnCanPlayFunction() { console.log('Can play'); }
+function myOnCanPlayThroughFunction() { console.log('Can play through'); }
+function myOnLoadedData() { console.log('Loaded data'); }
+function settime() {
+    video = document.getElementById("video1");
+   
+    
+    
+    // output 10
+}
+seekslider = document.getElementById("myRange");
+$(document).on("click", ".btn_music", function(event){
+ 
+  var pk = $(this).attr("name")
+  var count_like_id = String(pk)+"likes" 
+  
+  var count_liker = parseInt($("#"+count_like_id).eq(0).attr("name"))
+  var likes_indikator = $(this).attr("likes_indikator")
+ 
+  var $this = $(this)
+   $.ajax({
+
+           url: "{% url 'accounts:ajax_like_musics' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk': pk,'likes_indikator':likes_indikator, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {//console.log(data)
+            if (data==1){
+              count_liker++;
+
+               $this.html(`<i class="fa fa-heart" aria-hidden="true" style="color:#fd4350;" ></i>`)
+               document.getElementById(count_like_id).innerHTML=count_liker
+               $("#"+count_like_id).eq(0).attr("name", count_liker)
+
+            }
+            else{
+               count_liker--;
+               $this.html(`<i class="fa fa-heart-o" aria-hidden="true"  ></i>`)
+               document.getElementById(count_like_id).innerHTML=count_liker
+               $("#"+count_like_id).eq(0).attr("name", count_liker)
+            }
+           
+
+
+           },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      })
+
+
+
+
+
+})
+
+$(document).on("click", ".btn_books", function(event){
+ 
+  var pk = $(this).attr("name")
+  var likes_indikator = $(this).attr("likes_indikator")
+
+  var count_like_id = String(pk)+"likes_b" 
+  
+  var count_liker = parseInt($("#"+count_like_id).eq(0).attr("name"))
+ 
+  var $this = $(this)
+   $.ajax({
+
+           url: "{% url 'accounts:ajax_books_likes' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk': pk,'likes_indikator':likes_indikator, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {//console.log(data)
+            if (data==1){
+              count_liker++;
+
+               $this.html(`<i class="fa fa-heart" aria-hidden="true" style="color:#fd4350;" ></i>`)
+               document.getElementById(count_like_id).innerHTML=count_liker
+               $("#"+count_like_id).eq(0).attr("name", count_liker)
+
+            }
+            else{
+               count_liker--;
+               $this.html(`<i class="fa fa-heart-o" aria-hidden="true"  ></i>`)
+               document.getElementById(count_like_id).innerHTML=count_liker
+               $("#"+count_like_id).eq(0).attr("name", count_liker)
+            }
+           
+
+
+           },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      })
+
+
+
+
+
+})
+
+
+myarr = []
+ Amplitude.init({
+            songs: myarr,
+            "bindings": {
+                32: 'play_pause'
+            },
+            "callbacks": {
+                'play': function () {
+                    wavesurfer.play();
+                    wavesurfer.setCurrentTime(Amplitude.getSongPlayedSeconds());
+                },
+                'timeupdate': function () {
+                    wavesurfer.setCurrentTime(Amplitude.getSongPlayedSeconds());
+                },
+                'seeked': function () {
+                    wavesurfer.setCurrentTime(Amplitude.getSongPlayedSeconds());
+                },
+                'pause': function () {
+                    wavesurfer.setCurrentTime(Amplitude.getSongPlayedSeconds());
+                    wavesurfer.pause();
+                }
+               
+
+            }
+        });
+
+ window.onkeydown = function (e) {
+            return !(e.keyCode === 32);
+        };
+
+        document.getElementById('song-played-progress').addEventListener('click', function (e) {
+            let offset = this.getBoundingClientRect();
+            let x = e.pageX - offset.left;
+
+            Amplitude.setSongPlayedPercentage((parseFloat(x) / parseFloat(this.offsetWidth)) * 100);
+        });
+
+
+        let volumeIconClick = function () {
+
+            $(document).on("click", ".volume-dropdown-menu", function (s) {
+                s.stopPropagation();
+            });
+
+            let s = $('.audio-volume input[type="range"]'), t = $(".audio-volume .btn");
+            s.on("change", function () {
+                let s = $(this), e = parseInt(s.val(), 10);
+                0 === e ? t.html('<i class="ion-md-volume-mute"></i>') : e > 0 && e < 70 ? t.html('<i class="ion-md-volume-low"></i>') : e > 70 && t.html('<i class="ion-md-volume-high"></i>')
+            })
+        };
+
+        volumeIconClick();
+
+
+        $(".btn_volume_change").on("click", function(){
+          var attribute_show = $(".valume_change_dropdown")
+          var this_attr = $(this)
+          if (this_attr.attr("status")=="show"){
+            attribute_show.removeClass("show")
+            this_attr.attr("status", "noshow")
+
+          }
+          else{
+            attribute_show.addClass("show")
+            this_attr.attr("status", "show")
+
+          }
+
+
+
+        })
+$(document).on("click", ".kliouu", function(event){
+   $('#audioPlayer').css('visibility', 'visible');
+   
+
+  
+  
+  var id  = String($(this).attr("video_play_id"))
+   var id_p = id+ "pkl"
+    var music_src = String(id)+"jhytt"
+    var icon_play = $("#frtt"+String(id))
+    var my_name_audio = $(this).attr("my_name_audio")
+    var statusx = $(this).attr("statusx")
+    var id_for_music = $(this).attr("id_for_music")
+    //console.log(id_for_music, "id_for_music", $(".amplitude-nextx"))
+    $(".amplitude-nextx").attr("id_for_music", parseInt(id_for_music))
+    $(".amplitude-prevx").attr("id_for_music", parseInt(id_for_music))
+    music_num=parseInt(id_for_music)
+    //console.log(statusx, "statusx")
+    
+    
+
+    
+    var src = document.getElementById(music_src).getAttribute("src")
+
+    my_src.push(src)
+
+    myarr=[
+    {
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg",
+
+            }]
+
+    my_id.push(icon_play)
+
+    
+      
+      let wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#733ce6',
+            progressColor: '#bfbfbf',
+            height: 150,
+            scrollParent: false,
+            responsive: true,
+            
+            backend: 'MediaElement',
+           
+            xhr:{ cache: 'default', mode: 'no-cors', method: 'GET', credentials: 'same-origin', redirect: 'follow', referrer: 'client', headers: [ { key: 'Authorization', value: 'my-token', 'Access-Control-Allow-Credentials' : false,
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods':'GET',
+    'Access-Control-Allow-Headers':'application/json', } ]}
+});
+
+
+        wavesurfer.on('loading', function (integer) {
+          console.log("loading:::")
+            $('#waveform-load').html("Generating waves.. (" + integer + '%)');
+            if (integer<100){
+              $(".loader15").css({"display":"block", "position":"absolute", "margin-left": "20px", "margin-top":"-40px", "color":"#252323"})
+            }
+            if (integer==100){
+             
+             $(".loader15").css({"display":"none", "position":"relative", "margin-left": "10px", "margin-top":"7px", "color":"#ffffff"})
+              
+              if (my_src.length==1){
+                
+
+                 if (statusx!="False"){
+             Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            })  ;}
+
+                
+
+ 
+  $("#play_pause").css("display", "none")
+    $("#play_pause1").css("display", "block")
+ $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+ icon_play.css("display", "none")
+
+              }
+              else if (my_src[i-1]!=my_src[i]){
+                if (my_id[i-1-j] ==undefined  || my_id[i-j] ==undefined  ){
+                  console.log(i, "i")
+                   
+
+                }
+                else{
+                  my_id[i-1-j].css("display", "block")
+                   my_id[i-j].css("display", "none")
+               
+
+                }
+                
+
+
+               
+                Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;
+                $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+                
+
+  
+  
+
+
+  
+
+
+                
+                
+
+              }
+              else if (my_src[i-1]==my_src[i]){
+                Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;
+                 $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+              }
+             
+
+
+            }
+        });
+
+        
+    
+
+
+
+
+
+
+       
+       
+        wavesurfer.on('ready', function (percents) {
+          console.log("ready:::")
+            wavesurfer.setVolume(0);
+
+
+            
+            $('#waveform-load').empty();
+            console.log("successx")
+            if (statusx=="False"){
+              
+              Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;}
+             
+        });
+
+         wavesurfer.on('seek', function (seeks) {
+        });
+          if (my_src[i-1]!=my_src[i]){
+      Amplitude.pause()
+
+
+    }
+    wavesurfer.load(src)
+
+
+   
+  
+
+    
+    i++
+
+
+
+
+    
+     
+    
+
+
+     
+
+
+
+
+})
+
+$(document).on("click", ".amplitude-nextx", function(){
+  var next_id  =$(this).attr("id_for_music")
+  var music_src = ""
+  var statusx ="" 
+  var my_name_audio = ""
+  //console.log(music_array)
+  
+  if (music_array[next_id]!=undefined){
+    if (music_num==0){
+    music_num+=2
+
+  }
+  else{
+     music_num++;
+
+  }
+   
+    console.log("i", music_num)
+    $(this).attr("id_for_music", music_num)
+    $(".amplitude-prevx").attr("id_for_music", music_num)
+    statusx=music_array[next_id]["fields"]["status_x"]
+
+    console.log(next_id, "id_for_music")
+    if (statusx=="False"){
+      music_src = music_array[next_id]["fields"]["song"]
+
+    }
+    else{
+      music_src = "/media/"+music_array[next_id]["fields"]["song"]
+
+    }
+    my_name_audio = music_array[next_id]["fields"]["title"]
+    my_src.push(music_src)
+
+
+     let wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#733ce6',
+            progressColor: '#bfbfbf',
+            height: 150,
+            scrollParent: false,
+            responsive: true,
+            
+            backend: 'MediaElement',
+           
+            xhr:{ cache: 'default', mode: 'no-cors', method: 'GET', credentials: 'same-origin', redirect: 'follow', referrer: 'client', headers: [ { key: 'Authorization', value: 'my-token', 'Access-Control-Allow-Credentials' : false,
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods':'GET',
+    'Access-Control-Allow-Headers':'application/json', } ]}
+});
+
+
+        wavesurfer.on('loading', function (integer) {
+          console.log("loading:::")
+            $('#waveform-load').html("Generating waves.. (" + integer + '%)');
+            if (integer<100){
+              $(".loader15").css({"display":"block", "position":"absolute", "margin-left": "20px", "margin-top":"-40px", "color":"#252323"})
+            }
+            if (integer==100){
+             
+             $(".loader15").css({"display":"none", "position":"relative", "margin-left": "10px", "margin-top":"7px", "color":"#ffffff"})
+              
+              if (my_src.length==1){
+                console.log("salmdk")
+
+                 if (statusx!="False"){
+             Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: music_src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            })  ;}
+
+                
+
+ 
+  $("#play_pause").css("display", "none")
+    $("#play_pause1").css("display", "block")
+ $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+ //icon_play.css("display", "none")
+
+              }
+              
+             
+             
+
+
+            }
+        });
+
+        
+    
+
+
+
+
+
+
+       
+       
+        wavesurfer.on('ready', function (percents) {
+          console.log("ready:::")
+            wavesurfer.setVolume(0);
+
+
+            
+            $('#waveform-load').empty();
+            console.log("successx")
+            
+              
+              Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: music_src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;
+             
+        });
+
+         wavesurfer.on('seek', function (seeks) {
+        });
+
+          
+    wavesurfer.load(music_src)
+    
+
+    console.log(i)
+    
+  }
+  
+
+
+})
+$(document).on("click", ".amplitude-prevx ", function(){
+  var next_id  =$(this).attr("id_for_music")
+  var music_src = ""
+  var statusx ="" 
+  var my_name_audio = ""
+  console.log(music_array)
+  
+  if (music_array[music_num-1]!=undefined && music_num-1!=0){
+    music_num--;
+   
+    console.log("i", music_num)
+    $(this).attr("id_for_music", music_num)
+    $(".amplitude-nextx").attr("id_for_music", music_num)
+    statusx=music_array[music_num-1]["fields"]["status_x"]
+
+    console.log(music_num-1, "id_for_music")
+    if (statusx=="False"){
+      music_src = music_array[music_num-1]["fields"]["song"]
+
+    }
+    else{
+      music_src = "/media/"+music_array[music_num-1]["fields"]["song"]
+
+    }
+    my_name_audio = music_array[music_num-1]["fields"]["title"]
+    my_src.push(music_src)
+
+
+     let wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#733ce6',
+            progressColor: '#bfbfbf',
+            height: 150,
+            scrollParent: false,
+            responsive: true,
+            
+            backend: 'MediaElement',
+           
+            xhr:{ cache: 'default', mode: 'no-cors', method: 'GET', credentials: 'same-origin', redirect: 'follow', referrer: 'client', headers: [ { key: 'Authorization', value: 'my-token', 'Access-Control-Allow-Credentials' : false,
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods':'GET',
+    'Access-Control-Allow-Headers':'application/json', } ]}
+});
+
+
+        wavesurfer.on('loading', function (integer) {
+          console.log("loading:::")
+            $('#waveform-load').html("Generating waves.. (" + integer + '%)');
+            if (integer<100){
+              $(".loader15").css({"display":"block", "position":"absolute", "margin-left": "20px", "margin-top":"-40px", "color":"#252323"})
+            }
+            if (integer==100){
+             
+             $(".loader15").css({"display":"none", "position":"relative", "margin-left": "10px", "margin-top":"7px", "color":"#ffffff"})
+              
+              if (my_src.length==1){
+                console.log("salmdk")
+
+                 if (statusx!="False"){
+             Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: music_src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            })  ;}
+
+                
+
+ 
+  $("#play_pause").css("display", "none")
+    $("#play_pause1").css("display", "block")
+ $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+ //icon_play.css("display", "none")
+
+              }
+              
+             
+             
+
+
+            }
+        });
+
+        
+    
+
+
+
+
+
+
+       
+       
+        wavesurfer.on('ready', function (percents) {
+          console.log("ready:::")
+            wavesurfer.setVolume(0);
+
+
+            
+            $('#waveform-load').empty();
+            console.log("successx")
+            
+              
+              Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: music_src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;
+             
+        });
+
+         wavesurfer.on('seek', function (seeks) {
+        });
+
+          
+    wavesurfer.load(music_src)
+    
+
+    console.log(i)
+    
+  }
+  
+
+
+})
+//aaaa
+$(document).on("click", ".user_view_music_p", function(event){
+   $('#audioPlayer').css('visibility', 'visible');
+  
+  
+  //var id  = String($(this).attr("video_play_id"))
+   //var id_p = id+ "pkl"
+    //var music_src = String(id)+"jhytt"
+    //var icon_play = $("#frtt"+String(id))
+    var my_name_audio = $(this).attr("data_song_name")
+    //console.log(icon_play)
+    
+    
+
+    
+    //var src = document.getElementById(music_src).getAttribute("src")
+    var src = $(this).attr("data-src")
+    my_src.push(src)
+    console.log(src)
+
+   
+
+    //my_id.push(icon_play)
+      
+      let wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#733ce6',
+            progressColor: '#bfbfbf',
+            height: 150,
+            scrollParent: false,
+            responsive: true,
+            
+            backend: 'MediaElement',
+           
+            xhr:{ cache: 'default', mode: 'no-cors', method: 'GET', credentials: 'same-origin', redirect: 'follow', referrer: 'client', headers: [ { key: 'Authorization', value: 'my-token', 'Access-Control-Allow-Credentials' : false,
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods':'GET',
+    'Access-Control-Allow-Headers':'application/json', } ]}
+});
+
+        wavesurfer.on('loading', function (integer) {
+            $('#waveform-load').html("Generating waves.. (" + integer + '%)');
+            if (integer<100){
+              $(".loader15").css({"display":"block", "position":"absolute", "margin-left": "20px", "margin-top":"-40px", "color":"#252323"})
+            }
+            if (integer==100){
+             
+             $(".loader15").css({"display":"none", "position":"relative", "margin-left": "10px", "margin-top":"7px", "color":"#ffffff"})
+              
+              if (my_src.length==1){
+
+                
+
+ Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;
+  $("#play_pause").css("display", "none")
+    $("#play_pause1").css("display", "block")
+ $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+ //icon_play.css("display", "none")
+
+              }
+              else if (my_src[i-1]!=my_src[i]){
+                //my_id[i-1].css("display", "block")
+                //my_id[i].css("display", "none")
+
+
+               
+                Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;
+                $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+                
+
+  
+  
+
+
+  
+
+
+                
+                
+
+              }
+              else if (my_src[i-1]==my_src[i]){
+                Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;
+                 $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+              }
+             
+
+
+            }
+        });
+
+        wavesurfer.on('ready', function (percents) {
+            wavesurfer.setVolume(0);
+            $('#waveform-load').empty();
+             Amplitude.playNow ({
+                name: String(my_name_audio),
+                artist: "",
+                album: "",
+                url: src,
+                cover_art_url: "/assets/images/Apple-Music-Web-1.jpg"
+            }) ;
+                 $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+ $(".amplitude-play-pause").addClass("kiouhh")
+              
+             
+
+
+            
+        });
+
+         wavesurfer.on('seek', function (seeks) {
+        });
+          if (my_src[i-1]!=my_src[i]){
+      Amplitude.pause()
+
+
+    }
+
+
+        wavesurfer.load(src);
+
+    
+    i++
+    j++
+
+
+
+    
+     
+    
+
+
+     
+
+
+
+})
+
+$(document).on("click", ".amplitude-play-pause", function(event){
+ 
+  
+  if ($(".kiouhh").length==1){
+    $(".amplitude-play-pause").removeClass("..amplitude-playing amplitude-playing")
+    $(".amplitude-play-pause").removeClass("kiouhh")
+    Amplitude.pause()
+
+  }
+  else{
+    $(".amplitude-play-pause").addClass("..amplitude-playing amplitude-playing")
+    $(".amplitude-play-pause").addClass("kiouhh")
+    Amplitude.play()
+  }
+  
+
+})
+$(document).on("click", ".music_tab", function(event){
+ 
+
+
+
+     
+
+      
+
+
+    
+     
+
+       
+
+    
+     
+
+
+    
+
+   
+
+     
+    
+
+
+     
+
+
+
+})
+
+
+
+
+/*$(document).on("click", ".kliouu", function(event){
+  var id  = String($(this).attr("video_play_id"))
+   var id_p = id+ "pkl"
+   var music_src = String(id)+"jhytt"
+    var id_this = "frtt"+String(id)
+     var src = document.getElementById(music_src).getAttribute("src")
+     myAudio = document.getElementById("llkiu")
+     a = $("#"+String(id_p)).get(0)
+    
+
+     console.log(a)
+     myVar = setInterval(ww, 1000)
+
+
+     
+
+     console.log($("#llkiu").attr("src"))
+
+
+
+
+ 
+   $("#"+String(id_p))[0].load();
+
+
+     
+
+     
+
+
+
+
+ 
+   if (a.paused){
+     $("#play_pause").css("display", "none")
+      $("#play_pause1").css("display", "block")
+     
+    
+    
+    
+    
+  $("#"+String(id_p)).on('load', () => {
+     
+     $("#"+String(id_p))[0].play();
+
+     
+  });
+     
+
+  
+
+
+     
+      
+      
+      
+     
+  
+
+    
+   
+   
+    
+    
+
+   
+     
+
+    
+    document.getElementById(id_this).style.display = "none"
+  }
+  else{
+
+    $("#play_pause1").css("display", "none")
+      $("#play_pause").css("display", "block")
+   
+     a.pause();
+
+     clearInterval(myVar)
+     console.log(myVar)
+     
+
+     document.getElementById(id_this).style.display = "block"
+
+  }
+
+
+})*/
+myAudio = document.getElementById("llkiu")
+$(".icon_play_pause").on("click", function(){
+   
+  if (myAudio.paused){
+    $("#play_pause").css("display", "none")
+      $("#play_pause1").css("display", "block")
+      mywr()
+    
+    
+    
+    myAudio.play();
+   
+
+  }
+  else{
+    $("#play_pause1").css("display", "none")
+      $("#play_pause").css("display", "block")
+      myAudio.pause();
+      clearInterval(myVar)
+
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+      
+      $(document).ready(function() {
+            // Get media - with autoplay disabled (audio or video)
+            
+            var tolerancePixel = 160;
+
+            function checkMedia(){
+              if (name_active=="music"){
+                 var media = $('.kliouu').not("[autoplay='autoplay']");
+                // Get current browser top and bottom
+                var scrollTop = $(window).scrollTop() + tolerancePixel;
+                var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+
+                media.each(function(index, el) {
+                    var yTopMedia = $(this).offset().top;
+                    var yBottomMedia = $(this).height() + yTopMedia;
+
+                    if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
+                     //view explaination in `In brief` section above
+                        
+                    } else {
+                       
+                       
+                        
+    
+                        
+                    }
+                });
+
+              }
+              else{
+
+
+              var media = $('.video').not("[autoplay='autoplay']");
+                // Get current browser top and bottom
+                var scrollTop = $(window).scrollTop() + tolerancePixel;
+                var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+
+                media.each(function(index, el) {
+                    var yTopMedia = $(this).offset().top;
+                    var yBottomMedia = $(this).height() + yTopMedia;
+
+                    if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
+                     //view explaination in `In brief` section above
+                     if ($(this).get(0).paused){
+                       var id = String($(this).attr("play_pause_id"))
+                     
+                      if ($(this).attr("post_all") != "true" && pause_video_id !=  id){
+                         $(this).get(0).play();
+                         document.getElementById(id).innerHTML = ``
+                         pause_video_id = id
+
+                      }
+                      
+                       var idmute1 = String($(this).attr("video_play_id"))
+                       
+                      
+
+
+  var id_mute1 = "vli" + String(idmute1);
+  console.log(id_mute1)
+  var obj= document.getElementsByClassName(id_mute1)[0]
+  var a_icon_id_mute = "mutee" +  String(idmute1);
+  var obj_mute_icon = document.getElementById(a_icon_id_mute)
+
+ 
+  if(obj.muted == true &&  muted_indication=="unmute"){
+    obj.muted = ""
+
+    obj_mute_icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E5AA17;" d="M496.159,248.085c0-137.023-111.07-248.082-248.076-248.082C111.071,0.003,0,111.063,0,248.085
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.085z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M247.711,125.252c-3.41-1.851-7.559-1.688-10.813,0.426l-95.137,61.789h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.584v92.727c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.753,1.707,5.765,1.707c1.733,0,3.471-0.425,5.049-1.281c3.41-1.852,5.534-5.421,5.534-9.301V134.553
+    C253.244,130.672,251.121,127.103,247.711,125.252z"/>
+  <path style="fill:#FFFFFF;" d="M282.701,319.271c0.894,0,1.801-0.162,2.685-0.504c24.239-9.412,40.524-38.49,40.524-72.359
+    c0-29.957-13.2-57.049-33.63-69.018c-3.534-2.072-8.08-0.885-10.153,2.65c-2.073,3.536-0.885,8.082,2.651,10.153
+    c15.971,9.358,26.291,31.424,26.291,56.214c0,27.359-12.77,51.424-31.055,58.525c-3.82,1.481-5.714,5.781-4.231,9.602
+    C276.924,317.474,279.729,319.271,282.701,319.271z"/>
+  <path style="fill:#FFFFFF;" d="M302.073,350.217c0.895,0,1.802-0.162,2.684-0.504c34.046-13.219,57.822-55.979,57.822-103.988
+    c0-43.187-18.884-82.156-48.11-99.279c-3.534-2.072-8.082-0.885-10.152,2.652c-2.073,3.535-0.885,8.081,2.651,10.152
+    c24.768,14.512,40.771,48.455,40.771,86.475c0,42.027-19.883,79.1-48.353,90.154c-3.82,1.481-5.715,5.781-4.231,9.602
+    C296.295,348.418,299.1,350.217,302.073,350.217z"/>
+  <path style="fill:#FFFFFF;" d="M322.025,379.715c-3.005,0-5.841-1.818-6.994-4.788c-1.499-3.861,0.416-8.206,4.277-9.706
+    c38.764-15.051,65.837-64.404,65.837-120.019c0-50.136-21.609-95.192-55.052-114.786c-3.574-2.094-4.773-6.688-2.68-10.262
+    c2.094-3.574,6.688-4.774,10.263-2.68c37.948,22.232,62.469,72.369,62.469,127.728c0,61.66-31.009,116.764-75.409,134.002
+    C323.846,379.551,322.928,379.715,322.025,379.715z"/>
+</g>
+`
+   
+   
+  }
+  else if (obj.muted == false &&  muted_indication=="mute"){
+    obj.muted = "muted"
+    obj_mute_icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E04F5F;" d="M496.159,248.086c0-137.022-111.07-248.082-248.076-248.082C111.071,0.004,0,111.063,0,248.086
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.086z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M259.432,128.917c-3.409-1.851-7.559-1.688-10.813,0.425l-95.137,61.791h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.582v92.728c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.754,1.708,5.765,1.708c1.733,0,3.471-0.426,5.049-1.283c3.41-1.852,5.534-5.42,5.534-9.301V138.219
+    C264.966,134.339,262.842,130.768,259.432,128.917z"/>
+  <path style="fill:#FFFFFF;" d="M355.405,248.079l30.384-30.384c3.515-3.516,3.515-9.213,0-12.729
+    c-3.515-3.514-9.213-3.514-12.728,0l-30.384,30.385l-30.384-30.385c-3.515-3.514-9.213-3.514-12.728,0
+    c-3.515,3.516-3.515,9.213,0,12.729l30.385,30.384l-30.384,30.384c-3.515,3.516-3.515,9.213,0,12.729
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636l30.384-30.385l30.384,30.385
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636c3.515-3.516,3.515-9.213,0-12.729L355.405,248.079z"/>
+</g>
+
+</svg>`
+    
+    
+  }
+
+                     }
+                     else{
+
+                     }
+                     
+                        
+                    } else {
+                        $(this).get(0).pause();
+                        var id = String($(this).attr("play_pause_id"))
+                        document.getElementById(id).style.display="block"
+                        document.getElementById(id).innerHTML =  ` <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+<linearGradient id="SVGID_4r_" gradientUnits="userSpaceOnUse" x1="35.0291" y1="257.3129" x2="478.0292" y2="257.3129" gradientTransform="matrix(0.9983 0 0 -0.9983 -0.0849 512.8665)">
+  <stop  offset="0" style="stop-color:#00F2FE"/>
+  <stop  offset="0.021" style="stop-color:#03EFFE"/>
+  <stop  offset="0.293" style="stop-color:#24D2FE"/>
+  <stop  offset="0.554" style="stop-color:#3CBDFE"/>
+  <stop  offset="0.796" style="stop-color:#4AB0FE"/>
+  <stop  offset="1" style="stop-color:#4FACFE"/>
+</linearGradient>
+<path style="fill:url(#SVGID_4r_);" d="M104.967,511.999c-0.104,0-0.209-0.001-0.313-0.001c-38.47-0.21-69.77-31.983-69.77-70.829
+  V70.058c0-25.691,13.39-48.512,35.819-61.041c22.429-12.531,48.88-11.971,70.758,1.497l302.4,186.405
+  c20.869,12.848,33.305,35.16,33.255,59.678c-0.05,24.52-12.576,46.781-33.507,59.55L224.997,449.999
+  c-9.405,5.758-21.695,2.802-27.452-6.602c-5.758-9.404-2.802-21.694,6.602-27.452l218.639-133.869
+  c9.139-5.576,14.378-14.886,14.4-25.56c0.022-10.673-5.179-20.004-14.268-25.601L120.517,44.511
+  c-9.374-5.771-20.718-6.011-30.339-0.636c-9.62,5.375-15.364,15.162-15.364,26.183v371.112c0,18.385,15.541,30.819,30.056,30.898
+  c4.735,0.001,10.08-1.726,15.553-5.064c9.411-5.743,21.698-2.768,27.441,6.645c5.743,9.413,2.767,21.698-6.645,27.441
+  C129.517,508.23,116.989,511.998,104.967,511.999z"/>
+
+</svg>`
+                        
+                    }
+                });}
+
+                //}
+            }
+            $(document).on('scroll', checkMedia);
+        });
+ 
+ $(document).on("click", ".video", function(event){
+  var id  = String($(this).attr("play_pause_id"))
+  console.log(id)
+
+   if ($(this)[0].paused){
+
+
+   
+    $(this)[0].play()
+    
+    document.getElementById(id).style.display = "none"
+  }
+  else{
+   
+     $(this)[0].pause()
+     pause_video_id = id
+      document.getElementById(id).innerHTML =  ` <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+<linearGradient id="SVGID_4r_" gradientUnits="userSpaceOnUse" x1="35.0291" y1="257.3129" x2="478.0292" y2="257.3129" gradientTransform="matrix(0.9983 0 0 -0.9983 -0.0849 512.8665)">
+  <stop  offset="0" style="stop-color:#00F2FE"/>
+  <stop  offset="0.021" style="stop-color:#03EFFE"/>
+  <stop  offset="0.293" style="stop-color:#24D2FE"/>
+  <stop  offset="0.554" style="stop-color:#3CBDFE"/>
+  <stop  offset="0.796" style="stop-color:#4AB0FE"/>
+  <stop  offset="1" style="stop-color:#4FACFE"/>
+</linearGradient>
+<path style="fill:url(#SVGID_4r_);" d="M104.967,511.999c-0.104,0-0.209-0.001-0.313-0.001c-38.47-0.21-69.77-31.983-69.77-70.829
+  V70.058c0-25.691,13.39-48.512,35.819-61.041c22.429-12.531,48.88-11.971,70.758,1.497l302.4,186.405
+  c20.869,12.848,33.305,35.16,33.255,59.678c-0.05,24.52-12.576,46.781-33.507,59.55L224.997,449.999
+  c-9.405,5.758-21.695,2.802-27.452-6.602c-5.758-9.404-2.802-21.694,6.602-27.452l218.639-133.869
+  c9.139-5.576,14.378-14.886,14.4-25.56c0.022-10.673-5.179-20.004-14.268-25.601L120.517,44.511
+  c-9.374-5.771-20.718-6.011-30.339-0.636c-9.62,5.375-15.364,15.162-15.364,26.183v371.112c0,18.385,15.541,30.819,30.056,30.898
+  c4.735,0.001,10.08-1.726,15.553-5.064c9.411-5.743,21.698-2.768,27.441,6.645c5.743,9.413,2.767,21.698-6.645,27.441
+  C129.517,508.23,116.989,511.998,104.967,511.999z"/>
+
+</svg>`
+
+
+
+     document.getElementById(id).style.display = "block"
+
+
+  }
+
+
+})
+
+$(document).on("click", ".mute", function(event){
+  const unmute = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E5AA17;" d="M496.159,248.085c0-137.023-111.07-248.082-248.076-248.082C111.071,0.003,0,111.063,0,248.085
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.085z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M247.711,125.252c-3.41-1.851-7.559-1.688-10.813,0.426l-95.137,61.789h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.584v92.727c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.753,1.707,5.765,1.707c1.733,0,3.471-0.425,5.049-1.281c3.41-1.852,5.534-5.421,5.534-9.301V134.553
+    C253.244,130.672,251.121,127.103,247.711,125.252z"/>
+  <path style="fill:#FFFFFF;" d="M282.701,319.271c0.894,0,1.801-0.162,2.685-0.504c24.239-9.412,40.524-38.49,40.524-72.359
+    c0-29.957-13.2-57.049-33.63-69.018c-3.534-2.072-8.08-0.885-10.153,2.65c-2.073,3.536-0.885,8.082,2.651,10.153
+    c15.971,9.358,26.291,31.424,26.291,56.214c0,27.359-12.77,51.424-31.055,58.525c-3.82,1.481-5.714,5.781-4.231,9.602
+    C276.924,317.474,279.729,319.271,282.701,319.271z"/>
+  <path style="fill:#FFFFFF;" d="M302.073,350.217c0.895,0,1.802-0.162,2.684-0.504c34.046-13.219,57.822-55.979,57.822-103.988
+    c0-43.187-18.884-82.156-48.11-99.279c-3.534-2.072-8.082-0.885-10.152,2.652c-2.073,3.535-0.885,8.081,2.651,10.152
+    c24.768,14.512,40.771,48.455,40.771,86.475c0,42.027-19.883,79.1-48.353,90.154c-3.82,1.481-5.715,5.781-4.231,9.602
+    C296.295,348.418,299.1,350.217,302.073,350.217z"/>
+  <path style="fill:#FFFFFF;" d="M322.025,379.715c-3.005,0-5.841-1.818-6.994-4.788c-1.499-3.861,0.416-8.206,4.277-9.706
+    c38.764-15.051,65.837-64.404,65.837-120.019c0-50.136-21.609-95.192-55.052-114.786c-3.574-2.094-4.773-6.688-2.68-10.262
+    c2.094-3.574,6.688-4.774,10.263-2.68c37.948,22.232,62.469,72.369,62.469,127.728c0,61.66-31.009,116.764-75.409,134.002
+    C323.846,379.551,322.928,379.715,322.025,379.715z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+`
+const mute = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 496.159 496.159" style="enable-background:new 0 0 496.159 496.159;" xml:space="preserve">
+<path style="fill:#E04F5F;" d="M496.159,248.086c0-137.022-111.07-248.082-248.076-248.082C111.071,0.004,0,111.063,0,248.086
+  c0,137.001,111.07,248.07,248.083,248.07C385.089,496.155,496.159,385.086,496.159,248.086z"/>
+<g>
+  <path style="fill:#FFFFFF;" d="M259.432,128.917c-3.409-1.851-7.559-1.688-10.813,0.425l-95.137,61.791h-35.164
+    c-5.845,0-10.583,4.738-10.583,10.582v92.728c0,5.845,4.738,10.583,10.583,10.583h35.164l95.137,61.79
+    c1.748,1.135,3.754,1.708,5.765,1.708c1.733,0,3.471-0.426,5.049-1.283c3.41-1.852,5.534-5.42,5.534-9.301V138.219
+    C264.966,134.339,262.842,130.768,259.432,128.917z"/>
+  <path style="fill:#FFFFFF;" d="M355.405,248.079l30.384-30.384c3.515-3.516,3.515-9.213,0-12.729
+    c-3.515-3.514-9.213-3.514-12.728,0l-30.384,30.385l-30.384-30.385c-3.515-3.514-9.213-3.514-12.728,0
+    c-3.515,3.516-3.515,9.213,0,12.729l30.385,30.384l-30.384,30.384c-3.515,3.516-3.515,9.213,0,12.729
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636l30.384-30.385l30.384,30.385
+    c1.757,1.757,4.061,2.636,6.364,2.636c2.303,0,4.606-0.879,6.364-2.636c3.515-3.516,3.515-9.213,0-12.729L355.405,248.079z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>`
+
+  var id = $(this).attr("video_mute_id");
+
+  var id_mute = "vli" + String(id);
+  console.log()
+  var obj= document.getElementsByClassName(id_mute)[0]
+
+ 
+  if(obj.muted == true){
+    obj.muted = ""
+    $(this).html(unmute)
+    muted_indication = "unmute"
+   
+  }
+  else{
+    obj.muted = "muted"
+    $(this).html(mute)
+    muted_indication = "mute"
+    
+  }
+ 
+
+
+
+
+})
+
+
+$(document).on("click", ".btn_like", function(event){
+  var pk = $(this).attr('name');
+
+
+
+  e =  String(pk + 123)
+  status_name = String(pk) + 'a12444'
+  console.log(e)
+
+
+  $.ajax({
+
+           url: "{% url 'accounts:post_like' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+
+                document.getElementById(e).innerHTML = " " + data.f
+                if (data.status=='False'){
+
+                  document.getElementById(status_name).innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+                  console.log(document.getElementById(status_name))
+                }
+                else{
+                  document.getElementById(status_name).innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+                }
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+num_count = 0
+$(document).on("click", "#btn1", function(event){
+  var pk = $(this).attr('name');
+  var pk1 = $(this).attr('data-catid');
+
+
+
+
+  var l = $('pk1').val();
+
+
+
+  g =  String(pk + 11);
+  ds =  String(pk) + "commments5";
+  e =  String(pk + 85);
+  fgt =  String(pk + 845);
+  var comments_count_id = String(pk)+"comment_count"
+
+  var comments_count = $(this).attr("this_comments_count")
+  var count = parseInt(document.getElementById(comments_count_id).getAttribute("count"))
+  
+
+
+  var name  =  document.getElementById(g).value;
+  
+
+
+
+  console.log(name);
+
+  $.ajax({
+
+           url: "{% url 'accounts:comments' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk': pk, 'name':name, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            document.getElementById(ds).style.display="block";
+            count++;
+            document.getElementById(comments_count_id).setAttribute("count", count)
+            
+           
+
+
+
+                  const node ='<div class="sdfgth"><a href="#">'+ data.e + '</a>&nbsp;<span class="spojhg">' + data.f + '</span></div>' ;
+                  $("")
+
+
+
+                  var k = document.getElementById(e);
+                  var jf = document.getElementById(fgt);
+                  document.getElementById(comments_count_id).innerHTML= String(count) + " Comments";
+                  
+
+                  k.insertAdjacentHTML('beforeend', node);
+                  jf.style.overflowY="scroll"
+                  jf.scrollTop = jf.scrollHeight;
+                  document.getElementById(g).value="";
+                 console.log()
+
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      })
+
+  });
+
+
+
+
+    f = [
+      "ramon","gorillaz", "ramon1","gorillaz2", "ramosn","gorillsaz", 
+      ]
+      st = []
+      var vk_leng=[]
+      k=0
+      {% if story_us  or st %}
+
+
+
+      {% for story in story_us %}
+      vk_leng.push("a")
+      {% endfor %}
+      {% endif %}
+
+
+
+
+     {% if story_us  or st %}
+
+
+
+
+
+
+ 
+
+      
+
+
+
+
+
+
+
+      {% for story in story_us %}
+     
+      
+      
+
+
+
+        st.push(Zuck.buildTimelineItem(
+          String(k++),
+
+            
+            {% if story.profile_his.avatar.url != None %}"{{ story.profile_his.avatar.url }}"{% else %}"{% static 'images/user_no_photo_300x300.png' %}" {% endif %},
+
+           "{{ story.profile_his.first_name }}",
+
+            "{%  url 'accounts:profile_s' story.profile_his.pk  %}",
+
+
+            timestamp(),
+            [
+            {% for i in story.historys.all %}
+           
+            
+            
+          
+           ["ramon-1",  {% if i.file_type == "mp4" %}"video"{% else %}"photo"{% endif %}, 0, "{{ i.avatar_a.url }}", "{{ i.avatar_a.url }}", '', false, false, timestamp()],
+          {% endfor %}
+             
+            
+            ],
+            
+             {% if l.profile in story.view_users.all %}
+       
+        {% if  l.profile in  story.new_storie_profiles.all %}
+            "seen"
+
+        {% else %}
+        "noseen"   
+
+
+        {% endif %} 
+
+        {% else %} 
+        "noseen"  
+        {% endif %}
+
+
+
+
+            ,
+            "{{ story.profile_his.id }}",
+            
+          ))
+          {% endfor %}
+
+
+      {% for story in st %}
+      
+      
+      
+
+
+
+        st.push(Zuck.buildTimelineItem(
+          String(k++),
+
+            
+           {% if story.profile_his.avatar.url != None %}"{{ story.profile_his.avatar.url }}"{% else %}"{% static 'images/user_no_photo_300x300.png' %}" {% endif %},
+
+           "{{ story.profile_his.first_name }}",
+
+             "{%  url 'accounts:profile_s' story.profile_his.pk  %}",
+
+
+            timestamp(),
+            [
+            {% for i in story.historys.all %}
+           
+            
+            
+          
+           ["ramon-1",  {% if i.file_type == "mp4" %}"video"{% else %}"photo"{% endif %}, 0, "{{ i.avatar_a.url }}", "{{ i.avatar_a.url }}", '', false, false, timestamp()],
+          {% endfor %}
+             
+            
+            ],
+            
+             {% if l.profile in story.view_users.all %}
+       
+        {% if  l.profile in  story.new_storie_profiles.all %}
+            "seen"
+
+        {% else %}
+        "noseen"    
+
+
+        {% endif %} 
+
+        {% else %} 
+        "noseen"  
+        {% endif %}
+
+
+
+
+            ,
+            "{{ story.profile_his.id }}",
+            
+          ))
+          {% endfor %}
+
+
+          {% endif %}
+
+
+
+      var currentSkin = getCurrentSkin();
+      var stories = new Zuck('stories', {
+        backNative: true,
+        previousTap: true,
+        skin: currentSkin['name'],
+        autoFullScreen: currentSkin['params']['autoFullScreen'],
+        avatars: currentSkin['params']['avatars'],
+        paginationArrows: currentSkin['params']['paginationArrows'],
+        list: currentSkin['params']['list'],
+        cubeEffect: currentSkin['params']['cubeEffect'],
+        localStorage: true,
+
+
+        stories: st
+      });
+      console.log(st)
+
+
+      $(document).on("click", ".money", function(event){
+  var pk = $(this).attr('name');
+  var id = $(this).attr('i_name')
+  var pk_pr = $(this).attr('v_name');
+  var name_time_id = $(this).attr('name_time_id')
+  var $this = $(this)
+
+
+
+
+
+$.ajax({
+
+           url: "{% url 'accounts:ads_view' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk': pk,  'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+                if (String(data.data_status) == "success"){
+                   console.log("ak")
+                 
+                
+
+                var e = String(id) + "129";
+                var f = String(id) + "1292";
+                var k = String(name_time_id) + "1291";
+                var jl = String(id) + "1297";
+                var jl008 = String(id) + "008";
+                if (data.k_yes_no!=1){
+                  document.getElementById(e).src = data.file
+
+                }
+                else {
+                  document.getElementById(e).src = '/media/'+ data.file
+
+                }
+
+
+
+
+
+               
+                document.getElementById(jl008).innerHTML='&nbsp;&nbsp;' + 1 + '&nbsp;point'
+                document.getElementById(jl008).className = data.pk
+                document.getElementById(e).style.display = "block";
+                document.getElementById(jl008).style.display = "inline-block";
+                
+                document.getElementById(k).style.display = "none";
+
+
+
+                document.getElementById(String(name_time_id) + "1292").style.display = "inline-block";
+                 console.log(e, f, k, jl, jl008)
+                var parent = document.createElement("div");
+                parent.id = jl
+                parent.className = 'app'
+                document.getElementById(String(name_time_id) + "1292").appendChild(parent);
+                $this.find("i").css("display", "none")
+                function_ads_timer(e)
+                }
+                else{
+                  
+
+                }
+
+
+
+function function_ads_timer(e){
+
+
+
+document.getElementById(e).onload = function(){
+
+
+
+                const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 3;
+const ALERT_THRESHOLD = 1.5;
+
+const COLOR_CODES = {
+  info: {
+    color: "green"
+  },
+  warning: {
+    color: "green",
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: "green",
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 10;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+var jll = '.' + String(jl)
+var jlll = 'ddd' + String(jl)
+console.log()
+const af = `<div class="base-timer btuu" id="`+ k + `" v_name = "` + pk_pr +`" name_time_id = `+ id +`  style="display: block;"><svg id="Layer_1" style="enable-background:new 0 0 612 792;" version="1.1" viewBox="0 0 612 792" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+  .st0{fill:#41AD49;}
+</style><g><path class="st0" d="M562,396c0-141.4-114.6-256-256-256S50,254.6,50,396s114.6,256,256,256S562,537.4,562,396L562,396z    M501.7,296.3l-241,241l0,0l-17.2,17.2L110.3,421.3l58.8-58.8l74.5,74.5l199.4-199.4L501.7,296.3L501.7,296.3z"/></g></svg></div>`
+document.getElementById(jl).innerHTML = `
+<div class="base-timer" >
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="` + jlll +`"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining ${remainingPathColor}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="` + String(jll) +  `" class="base-timer__label">${formatTime(
+    timeLeft
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById(jll).innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+      //document.getElementById(k).style.display = "block";
+      document.getElementById(jl).innerHTML=af
+     // var d = document.getElementById(f);
+      //var d_nested = document.getElementById(jl);
+      //var throwawayNode = d.removeChild(d_nested);
+
+
+
+
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft <= alert.threshold) {
+    document
+      .getElementById(jlll)
+      .classList.remove(warning.color);
+    document
+      .getElementById(jlll)
+      .classList.add(alert.color);
+  } else if (timeLeft <= warning.threshold) {
+    document
+      .getElementById(jlll)
+      .classList.remove(info.color);
+    document
+      .getElementById(jlll)
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById(jlll)
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+
+
+}
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            }},
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+
+$(document).on("click", ".btuu", function(event){
+  var pk = $(this).attr('id');
+  var pk_pr = $(this).attr('v_name');
+  var name_time_id = $(this).attr('name_time_id')
+
+
+  var d = pk.substring(0, pk.length - 4)
+  var id = String(d) + "129"
+  var id1 = String(d) + "1291"
+  var jl008 = String(d) + "008"
+  $(this).css(
+    'display', 'none'
+    )
+
+  document.getElementById(name_time_id + "129").style.display="none"
+  
+  document.getElementById(id1).style.display="none"
+  var ue = document.getElementById(name_time_id + "008")
+  
+  ue.style.display = "none";
+
+
+  $.ajax({
+
+           url: "{% url 'accounts:mymoney_ads' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'money_ads_pk': ue.className,'pk_pr':pk_pr, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(dataa) {
+            var l  = Math.round(dataa.profile_money *100)/100
+            jhy = document.getElementsByClassName("money_pokllsi")[0].innerHTML = (l) + ' $'
+            document.getElementsByClassName("money_pokllsi")[1].innerHTML = (l) + ' $'
+
+
+
+                //alert(data.a);Math.round(1.7777777 * 100)/100
+                //alert($("#" + data.a).val());
+
+
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+
+
+
+
+
+
+
+})
+    
+
+
+    window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("gridl");
+var header1 = document.getElementById("gridl1");
+var sticky = header.offsetTop;
+
+
+function myFunction() {
+ 
+  if (window.pageYOffset > 180) {
+    header.classList.add("sticky");
+    header1.classList.add("sticky1");
+  } else {
+    header.classList.remove("sticky");
+     header1.classList.remove("sticky1");
+  }
+}  
+
+
+$(document).on("click",'.add_play_list_l', function(){
+
+
+  $(".main_name").addClass("none_display")
+  var content_p = ``
+
+  var pk_music = $(this).attr("name")
+  var status = $(this).attr("status")
+  $.ajax({
+
+           url: "/api/get_ajax_playlist/",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            lr = JSON.parse(data)
+            console.log(lr, "lr")
+            
+
+
+            for (var i = 0, len = lr.length; i < len; i++) {
+
+            // Setup the result...
+                        
+            var result = lr[i];
+             console.log(result["fields"]["poster"])
+            if (String(result["fields"]["poster"]) != "now" ){
+                          content_p+=` <div class="list_p" pk="`+ result["pk"] +`"><div class="image_list_p"><img class="image_list_p_img" src="/media/`+ result["fields"]["poster"] +`">
+
+
+      </div>
+      <div class="play_name">`+ result["fields"]["name"] +`</div>
+      </div>`
+
+            }
+            else{
+              console.log("aa")
+                          content_p+=` <div class="list_p"  pk="`+ result["pk"] +`"><div class="image_list_p"><img class="image_list_p_img" src="/assets/images/playlist.png">
+
+
+      </div>
+      <div class="play_name">`+ result["fields"]["name"] +`</div>
+      </div>`
+            }
+
+            
+
+            
+
+
+
+
+          }
+            var v = ` <div class="body_2_add_post" id="ahgty">
+      <div class="close_icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12
+      C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084
+      c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864
+      l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"/>
+  </g>
+</g>
+<g>
+
+</svg>
+        
+      </div>
+      <div class="shere_icon_playlist">
+  <svg version="1.1" id="Capa_1" class="Capa_1_paaa"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+      v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"/>
+  </g>
+</g>
+
+</svg>
+<div class="loader14"></div>
+        
+      </div>
+      <form>
+      <div class="playList_list">
+      `+ content_p +`
+     
+      </div>
+
+
+     
+
+        <div class="swiper-container1 kkaa" style="display:none;max-height: 600px;">
+    <div class="swiper-wrapper wr_po" id="wrap_pooo0" style="max-height: 600px;">
+
+
+    
+   
+      
+
+
+    
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination pag_po" ></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next next_po"></div>
+    <div class="swiper-button-prev prev_po"></div>
+  </div>
+        
+
+      </form>
+
+
+
+
+
+
+      
+    </div>
+` 
+
+
+$('body').append(v);
+$(".close_icon").on("click", function(){
+  $("#ahgty").remove();
+ $(".main_name").removeClass("none_display")
+
+        
+      
+
+})
+            
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      })
+
+
+  $(document).on("click",".list_p", function(){
+    var pk = $(this).attr("pk")
+    $.ajax({
+      url: "/api/add_audio_playlist/",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk':pk,'song_pk':pk_music,'status':status,'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+             location.replace("/playlist/"+ String(pk))
+            console.log("success")
+
+          },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+
+    })
+
+
+  })
+
+
+  
+ 
+
+})
+
+
+$(".icon_ihjg985f").on("click", function(){
+  var pk = $(this).attr("pk")
+  var this_l = $(this)
+   $.ajax({
+
+           url: "{% url 'accounts:add_likes_ads' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            console.log("success")
+
+            this_l.html(`<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;font-size: 30px;"></i>`)
+
+
+
+           },
+           error :  function(data){
+
+           }
+         })
+
+
+})
+
+ 
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

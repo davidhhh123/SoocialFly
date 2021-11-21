@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="test">Hello {{ variable }}, welcome to my awesome site</h1>
+	<input type="text" name="name" id="name">
+	<div id="s20" class="s20" style="width: 50px;
+	height: 50px; background: black;"></div>
+
+
+
+
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript">
+		$('#s20').click(function(event) {
+
+
+		var name = $("#name").val()
+		$.ajax({
+    url: '{% url "accounts:hello" %}',
+    type: 'POST',
+    dataType: 'json',
+    data: { 
+                'name': name, 
+                'csrfmiddlewaretoken': '{{csrf_token}}'
+            },  // This is the default though, you don't actually need to always mention it
+    success: function(data) {
+        document.getElementById('test').innerHTML = data;
+    },
+    failure: function() { 
+        alert('Got an error dude');
+    }
+}); 
+		}); 
+
+	</script>
+
+</body>
+</html>

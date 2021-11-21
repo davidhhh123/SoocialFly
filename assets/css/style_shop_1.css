@@ -1,0 +1,705 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body{
+  margin:0;
+  padding:0;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  
+  
+  transition: all 500ms; 
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.button {
+  
+  z-index: 10000;
+  background:transparent;
+  width:50px;
+  height:40px;
+  overflow:hidden;
+  cursor:pointer;
+}
+.b{
+  position: fixed;
+  left: 0px;
+  top: 5px;
+  transition: all 500ms;
+  z-index: 10010;
+
+}
+
+
+
+#toggle12{
+  position: absolute;
+  left: -9999px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+a:hover {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.app {
+  height: 100vh;
+}
+
+/* -------------
+Sidebar
+----------------*/
+
+
+
+#toggle12:checked ~ .menu {
+  left: 0px;
+}
+  
+   
+
+
+
+
+
+
+
+
+
+/*----------------- button ---------*/
+
+.button:hover{
+  cursor:pointer;
+}
+.line{
+  background: #A7A7A7;
+}
+
+.button > .line{
+  display:block;
+  width:70%;
+  height:2px;
+  
+
+  margin:8px auto;
+}
+
+.button .line:nth-child(1), .button .line:nth-child(3){
+  -webkit-transform:rotate(0deg) translateY(0);
+  -moz-transform:rotate(0deg) translateY(0);
+  transform:rotate(0deg) translateY(0);
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition:         all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+}
+
+.button .line:nth-child(2){
+  -webkit-transform:translateX(0);
+  -moz-transform:translateX(0);
+  transform:translateX(0);
+   -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition:         all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+}
+
+
+#toggle12:checked ~ .content{
+  display: block;
+  
+  left: 0px;
+  animation: fade 440ms 1;
+
+  
+  
+
+
+
+
+} 
+.dog{
+  position: absolute;
+  left: -50px;
+
+
+  
+
+}
+#toggle12:checked ~ .c{
+  background:#e91e63;
+  
+
+  
+  
+
+
+
+
+} 
+
+.navbar12{
+  background: #FFFFFF;
+      position: fixed;
+      
+      left: 0px;
+      z-index: 9999;
+      border: 2px solid #F1F3EF ;
+  
+
+  
+  
+#C7C7C7
+
+
+
+} 
+.navbar12 .ico6{
+ 
+     
+      
+      left: 10px;
+      
+      
+  
+
+  
+  
+
+
+
+
+}
+.swiper-container{
+ 
+     
+      
+      left: left: 160px;
+      
+      width: 840px;
+      
+      
+  
+
+  
+  
+
+
+
+
+}
+.swiper-container2{
+ 
+     
+      
+      left: 160px;
+      
+      
+      
+  
+
+  
+  
+
+
+
+
+}
+.swiper-container4{
+ 
+     
+      
+      left: 160px;
+      width: 840px;
+      
+      
+  
+  
+  
+
+
+
+
+}
+.dfg{
+ 
+     
+      
+      left: 400px;
+      
+      
+  
+
+  
+  
+
+
+
+
+}
+.f .form-control{
+
+ 
+     
+      
+      left: 400px;
+
+}
+.f .ico1{
+
+ 
+     
+      
+      left: 595px;
+      top: 98px;
+      z-index: 9999;
+
+}
+.b{
+ 
+     
+      
+      left: 75px;
+      
+      
+  
+
+  
+  
+
+
+
+
+}
+.navbar12 .ico7{
+ 
+      
+      left: -50px;
+     
+  
+
+  
+  
+
+
+
+
+} 
+.aaa{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 1024px;
+}
+.image{
+ 
+      
+      left: 155px;
+     
+  
+
+} 
+.blockpanel{
+ 
+      
+      left: 220px;
+     
+  
+
+  
+  
+
+
+
+
+} 
+
+.navbar12 .ico8{
+ 
+      
+      left: -50px;
+      
+  
+
+  
+  
+
+
+
+
+} 
+.navbar12 .ico10{
+ 
+      
+      left: -50px;
+      
+  
+
+  
+  
+
+
+
+
+} 
+.navbar12 .ico9{
+ 
+      
+      left: -50px;
+      
+  
+
+  
+  
+
+
+
+
+} 
+.navbar12 .menu-icon{
+      z-index: 10000;
+ 
+      
+      
+      
+  
+
+  
+  
+
+
+
+
+}
+.button{
+ 
+      
+      left: -100px;
+      
+  
+
+  
+  
+
+
+
+
+}  
+
+
+/*-------------- the close button ---------*/
+
+.close .line:nth-child(1) {
+  -webkit-transform:rotate(45deg) translateY(15px);
+  -moz-transform:rotate(45deg) translateY(15px);
+  transform:rotate(45deg) translateY(15px);
+  
+}
+
+.close .line:nth-child(3) {
+  -webkit-transform:rotate(-45deg) translateY(-15px);
+  -moz-transform:rotate(-45deg) translateY(-15px);
+  transform:rotate(-45deg) translateY(-15px);
+}
+
+.close .line:nth-child(2){
+  -webkit-transform:translateX(-100px);
+  -moz-transform:translateX(-100px);
+  transform:translateX(-100px);
+}
+
+
+/*---------------- menu -----------*/
+.menu {
+  position: fixed;
+  top: 0px;
+  left: -250px;
+  bottom: 0px;
+  width: 250px;
+  height:610px;
+  overflow:hidden;
+  padding-left: 0;
+  background:white;
+  transition: all 0.5s;
+  
+
+  z-index: 10508;
+
+}
+
+
+.menu nav ul {
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.menu nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.menu nav ul li a{
+  color:black;
+  text-decoration:none;
+  display: block;
+  padding: 10px 20px;
+  padding-left: 50px;
+  top: 100px;
+  -webkit-transform:translateX(0px);
+  transform:translateX(0px);
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition:         all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  z-index: 100000;
+}
+
+.menu nav ul li a:hover{
+  background: rgba(1,1,1,.3);
+  -webkit-transform:translateX(20px);
+  transform:translateX(20px);
+}
+.menu nav ul li .apple1{
+  display: block;
+  padding: 10px 20px;
+  padding-left: 50px;
+  position: absolute;
+
+}
+
+
+
+.menu nav ul li .apple1:hover{
+  background: transparent;
+  -webkit-transform:translateX(0px);
+  transform:translateX(0px);
+  
+}
+/*-- class of show and hide the menu --*/
+
+
+
+
+.bosy{
+  background:white;
+}
+/*----------------- content ---------------*/
+.content {
+  display: none;
+  position: absolute;
+  width: 710px;
+  height: 1787px;
+  padding: 30px 10%;
+  left: -1000px;
+  font-size: 18px;
+  transform: translateX(100%);
+
+transition: color 1s ease 1s, background 0.5s ease 1s, transform 1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
+}
+
+.content  h1 {
+  font-size: 60px;
+  color: rgba(230,230,230,0.9);
+ 
+}
+
+.content  p {
+  margin-bottom: 100px;
+  line-height: 2.4;
+  color: rgba(230,230,230,0.9);
+}
+
+.content .wrapper{
+   -webkit-transform:translateX(300%);
+  transform:translateX(300%);
+      -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.home_is_visible .home .wrapper,
+.aboutus_is_visible .aboutus .wrapper,
+.clients_is_visible .clients .wrapper,
+.contactus_is_visible .contactus .wrapper{
+  -webkit-transform:translateX(0);
+  transform:translateX(0);
+}
+
+
+/*--------------- effect ---------------*/
+.home_is_visible .home, 
+.aboutus_is_visible .aboutus, .clients_is_visible .clients, .contactus_is_visible .contactus {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  z-index:1;
+}
+
+
+.home_is_visible .home {
+  
+  background: #212529;
+  color: rgba(230,230,230,0.9);
+}
+
+
+.aboutus_is_visible .aboutus {
+  
+  background: black;
+  opacity: .8;
+}
+
+
+.clients_is_visible .clients {
+  
+  background: black;
+  opacity: .8;
+}
+
+.contactus_is_visible .contactus {
+  
+  background: black;
+  opacity: .8;
+}
+
+@keyframes fade{
+  0%{left: -1000px;}
+  10%{left: -900px;}
+  20%{left: -800px;}
+  30%{left: -700px;}
+
+  40%{left: -600px;}
+  50%{left: -500px; }
+  60%{left: -400px;}
+  70%{left: -300px;}
+  80%{left: -200px;}
+  90%{left: -100px;}
+  100%{left: 0px;}
+
+
+
+}
+
+.swiper-container{margin:0 auto;position: absolute;overflow:hidden;list-style:none;padding:0;z-index:2;}
+.swiper-container1{margin:0 auto;position: absolute;overflow:hidden;list-style:none;padding:0;z-index:3;}
+.swiper-container2{margin:0 auto;position: absolute;overflow:hidden;list-style:none;padding:0;z-index:4;}
+.swiper-container3{margin:0 auto;position: absolute;overflow:hidden;list-style:none;padding:0;z-index:5;}
+
+#toggle12:checked ~ .line{
+  background:white;
+  
+
+  
+  
+
+
+
+
+} 
+.image{
+  width: 900px;
+  
+
+  
+  
+
+
+
+
+} 
+
+.bar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 48px;
+  background: #fff;
+  z-index: 10004;
+  opacity: .973;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+
+  transition: all 500ms; 
+}
+.bar1{
+  position: absolute;
+  left: 45px;
+  top: 1024px;
+  width: 1024px;
+  height: 50px;
+  background: #242529;
+  z-index: 1;
+}
+.ss6{
+  height: 140px;
+  width: 140px;
+  
+   /* отнимем margin и скажем растягиваться */
+  margin:8px;
+
+  box-sizing:border-box; /* чтобы внутренний отступ не влиял когда там будет текст... */
+  min-width:100px;
+   /* мин. ширина блока, чтобы переносились на другой ряд */
+
+  
+
+
+
+  
+
+  
+}
+
+.ss7{
+  position: absolute;
+  margin-left: 18rem;
+
+
+
+  
+
+  
+}
+.ss8{
+  position: absolute;
+  margin-left: 27rem;
+
+
+
+  
+
+  
+}
+
+.ss10{
+  position: absolute;
+  margin-left: 36rem;
+
+
+
+  
+
+  
+}
+.ss11{
+  position: absolute;
+  margin-left: 45rem;
+
+
+
+  
+
+  
+}
+
+

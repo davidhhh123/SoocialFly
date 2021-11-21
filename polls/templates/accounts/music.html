@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Green Audio Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/green-audio-player.css' %}">
+    <style>
+        html, body { height: 100%; }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #F8FFAE;
+            background: -webkit-linear-gradient(-65deg, #43C6AC, #F8FFAE);
+            background: linear-gradient(-65deg, #43C6AC, #F8FFAE);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body>
+    {% for i in a.1 %}
+     <div class="ready-player-1 player">
+        <audio crossorigin>
+            <source src="{{ i.music.url }}" type="audio/mpeg">
+        </audio>
+    </div>
+
+    {% endfor %}
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+   
+
+    <script src="{% static 'css/green-audio-player.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            GreenAudioPlayer.init({
+                selector: '.player',
+                stopOthersOnPlay: true
+            });
+
+           
+        });
+    </script>
+</body>
+</html>

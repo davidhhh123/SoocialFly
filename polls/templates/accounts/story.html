@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img src="{{ album.avatar_a.url }}">
+	
+	{% for al in albums %}
+		<img src="{{ al.avatar_a.url }}">
+
+
+	{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,1476 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - HTML5 Video Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+<link rel="stylesheet" href="bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="bootstrap-grid.min.css">
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="nouislider.min.css">
+  <link rel="stylesheet" href="ionicons.min.css">
+  <link rel="stylesheet" href="plyr.css">
+  <link rel="stylesheet" href="photoswipe.css">
+  <link rel="stylesheet" href="default-skin.css">
+  <link rel="stylesheet" href="main3.css">
+  <link rel="stylesheet" href="flickity.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="flickity1.css">
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+  <title>HotFlix – Online Movies, TV Shows & Cinema HTML Template</title>
+  <style>
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+.actor{
+  position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+}
+.rewuve{
+   position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+
+}
+.name{
+  position: absolute;
+  color: white;
+  padding-top: 110px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  
+    word-wrap: break-word;
+
+}
+.prof{
+  position: absolute;
+  color: #D22A2A;
+  padding-top: 160px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  
+  font-size: 13px;
+  
+    word-wrap: break-word;
+
+
+}
+.carousel {
+  width: 93%;
+  left: 3%;
+
+
+}
+
+.carousel-cell {
+  width: 100px;
+  height: 250px;
+  margin-right: 30px;
+  background: transparent;
+  border-radius: 180px;
+  
+}
+
+
+.carousel-cell.is-selected {
+  background: transparent;
+}
+
+/* cell number */
+
+</style>
+  <style type="text/css">
+    body{
+      background: #FAFAFA;
+    }
+    .footer{
+      background: #0E0E0E;
+      border-top: 1px solid rgba(87, 83, 103, 0.1);
+
+
+    }
+    .home{
+      height: 300%;
+      width: 75%;
+      left: 12.5%;
+      top: 5%;
+      background: #0E0E0E;
+      box-shadow: 0 3px 1px 0 rgba(0,0,0,0.14),0 0px 3px -2px rgba(0,0,0,0.12),0 -1px 5px 0 rgba(0,0,0,0.2);
+
+
+
+
+
+    }
+    .header{
+      background: #F9F9F9;
+    }
+    .img{
+      position: absolute;
+      width: 200px;
+      height: 288px;
+      left: 0%;
+      top: 0%;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+          box-sizing: inherit;
+
+
+
+
+
+
+
+    }
+    .span{
+      
+      width: 100%;
+      height: 50px;
+      margin-left: 28%;
+      padding-top: -50px;
+
+      
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+      z-index: 1;
+      float: left;
+
+    }
+    .span1{
+      width: 100%;
+      
+      margin-left: 29%;
+      
+      left: 213px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    .span2{
+      width: 100%;
+      
+      margin-left: 35%;
+      margin-top: -24px;
+      left: 270px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    @media (max-width: 969px){
+      .span2{
+
+      margin-left: 37%;
+      
+    }
+    .span{
+      margin-top: -5px;
+    }
+
+    
+
+  }
+    @media (max-width: 709px){
+      .span2{
+
+      margin-left: 39%;
+      }
+      .span{
+      margin-top: -10px;
+      font-size: 28px;
+      height: 43px;
+    }
+
+
+  }
+    @media (max-width: 595px){
+      .span2{
+
+      margin-left: 41%;
+    }
+    .span{
+      margin-top: -15px;
+      font-size: 25px;
+      height: 38px;
+    }
+  }
+    @media (max-width: 500px){
+      .span2{
+
+      margin-left: 44%;
+    }
+    .span{
+      margin-top: -20px;
+    }
+
+  }
+    @media (max-width: 400px){
+      .span2{
+
+      margin-left: 48%;
+    }}
+    @media (max-width: 290px){
+      .span2{
+
+      margin-left: 51%;
+    }}
+
+
+
+
+    }
+    .images{
+      position: absolute;
+      
+      width: 100%;
+      
+      top: 450px;
+    }
+    .images img{
+      width: 100%;
+    }
+    .b22{
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      left: 500px;
+      top: 200px;
+      
+    }
+    .header__dow{
+      
+      
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow1{
+      
+      margin-left: 25px;
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow2{
+      margin-left: 25px; 
+      
+      
+
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .hidden{
+      margin-top: 12px;
+      margin-left: 13px;
+      color: #fd6060;
+
+      
+      
+      
+
+    }
+     .f46{
+   
+    display: none;
+  }
+
+
+    .hidden .fa{
+      font-size: 25px;
+    }
+    
+    #fa{
+      margin-left: 5px;
+
+    }
+    .bl{
+      position: relative;
+      margin-top: -8%;
+      
+      background: #212121;
+      width: 94%;
+      left: 3%;
+
+      height: 1.5px;
+
+    }
+    .bl1{
+      position: relative;
+      margin-top: 5%;
+      
+      background: #212121;
+      width: 99%;
+      left: 0%;
+
+      height: 1.5px;
+
+    }
+    #bl1{
+      width: 236%;
+      height: 1px;
+
+    }
+
+@media (max-width: 961px){
+  .article{
+    right: 8%;
+  }
+  .f45{
+    width: 21%;
+  }
+}
+.Ypffh {
+    
+    border: 0;
+    color: #262626;
+    color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: inherit;
+    height: 38px;
+    width: 79%;
+    background: black;
+    max-height: 80px;
+    outline: 0;
+    padding: 0;
+    resize: none;
+    margin-left: 5px;
+    
+    overflow: hidden; /* или auto */
+
+}
+
+@media (max-width: 900px){
+  .article{
+   
+    width: 590px;
+  }
+  
+  .sqdOP{
+    margin-left: 461px
+
+  }
+  .w1{
+    width: 100%;
+
+  }
+}
+@media (max-width: 865px){
+  .article{
+    right: 4%;
+    width: 590px;
+  }
+  .f45{
+    width: 22%;
+  }
+  
+}
+@media (max-width: 820px){
+  .article{
+    right: 4%;
+    width: 560px;
+  }
+  .f45{
+    width: 22%;
+  }
+  .sqdOP{
+    margin-left: 431px
+
+  }
+  .w1{
+    width: 100%;
+    height: 520px
+
+  }
+  .Ypffh{
+    width: 77.5%;
+  }
+}
+@media (max-width: 785px){
+  .article{
+    right: 4%;
+    width: 540px;
+  }
+  .f45{
+    width: 22%;
+  }
+  .sqdOP{
+    margin-left: 411px
+
+  }
+  .w1{
+    width: 100%;
+    height: 500px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -25px; 
+  }
+  .Ypffh{
+    width: 76.5%;
+  }
+  .spoiler_links{
+    margin-top: 632px;
+  }
+}
+@media (max-width: 760px){
+  .article{
+    right: 4%;
+    width: 510px;
+  }
+  .f45{
+    width: 22%;
+  }
+  .sqdOP{
+    margin-left: 381px
+
+  }
+  .w1{
+    width: 100%;
+    height: 470px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -55px; 
+  }
+  .Ypffh{
+    width: 75%;
+  }
+  .spoiler_links{
+    margin-top: 601px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 713px){
+  .article{
+    right: 10%;
+    width: 550px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+   .f46{
+   
+    display: block;
+  }
+  .sqdOP{
+    margin-left: 421px
+
+  }
+  .w1{
+    width: 100%;
+    height: 510px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -15px; 
+  }
+   .Ypffh{
+    width: 77%;
+  }
+  .spoiler_links{
+    margin-top: 642px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 9%;
+    width: 550px;
+  }}
+
+
+@media (max-width: 658px){
+ .article{
+    right: 9%;
+    width: 520px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+ 
+  .sqdOP{
+    margin-left: 391px
+
+  }
+  .w1{
+    width: 100%;
+    height: 480px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -45px; 
+  }
+  .Ypffh{
+    width: 76%;
+  }
+  .spoiler_links{
+    margin-top: 612px;
+     margin-left: 255px;
+  }
+}
+@media (max-width: 628px){
+ .article{
+    right: 8%;
+    width: 490px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 361px
+
+  }
+  .w1{
+    width: 100%;
+    height: 450px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -75px; 
+  }
+  .Ypffh{
+    width: 74%;
+  }
+  .spoiler_links{
+    margin-top: 584px;
+     margin-left: 255px;
+  }
+}
+
+@media (max-width: 588px){
+ .article{
+    right: 9%;
+    width: 460px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 331px
+
+  }
+  .w1{
+    width: 100%;
+    height: 420px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -105px; 
+  }
+  .Ypffh{
+    width: 72.5%;
+  }
+   .spoiler_links{
+    margin-top: 554px;
+     margin-left: 243px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 8%;
+    
+  }}
+
+@media (max-width: 544px){
+ .article{
+    right: 8%;
+    width: 440px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 311px
+
+  }
+  .w1{
+    width: 100%;
+    height: 400px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -125px; 
+  }
+  .Ypffh{
+    width: 71%;
+  }
+  .spoiler_links{
+    margin-top: 534px;
+     margin-left: 243px;
+  }
+}
+@media (max-width: 524px){
+ .article{
+    right: 8%;
+    width: 420px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 291px
+
+  }
+  .w1{
+    width: 100%;
+    height: 380px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -145px; 
+  }
+  .Ypffh{
+    width: 70%;
+  }
+  .spoiler_links{
+    margin-top: 514px;
+     margin-left: 233px;
+  }
+}
+@media (max-width: 500px){
+ .article{
+    right: 43px;
+    width: 400px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 271px
+
+  }
+  .w1{
+    width: 100%;
+    height: 360px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -165px; 
+  }
+   .Ypffh{
+    width: 68%;
+  }
+  .spoiler_links{
+    margin-top: 494px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 484px){
+ .article{
+    right: 45px;
+    width: 380px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 251px
+
+  }
+  .w1{
+    width: 100%;
+    height: 340px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -185px; 
+  }
+  .Ypffh{
+    width: 67%;
+  }
+  .spoiler_links{
+    margin-top: 474px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 464px){
+ .article{
+    right: 45px;
+    width: 360px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 320px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -205px; 
+  }
+  .Ypffh{
+    width: 65%;
+  }
+  .spoiler_links{
+    margin-top: 454px;
+     margin-left: 213px;
+  }
+  
+
+}
+@media (max-width: 452px){
+ .article{
+    right: 50px;
+    width: 330px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 290px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -235px; 
+  }
+  .spojhg{
+    width: 200px;
+  }
+  .Ypffh{
+    width: 61.5%;
+  }
+  .spoiler_links{
+    margin-top: 424px;
+     margin-left: 213px;
+  }
+}
+@media (max-width: 422px){
+ .article{
+    right: 40px;
+   
+  }}
+@media (max-width: 408px){
+ .article{
+    right: 35px;
+   
+  }}
+@media (max-width: 395px){
+ .article{
+    right: 35px;
+    width: 300px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 260px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -265px; 
+  }
+
+}
+@media (max-width: 395px){
+ .article{
+    right: 45px;
+    width: 270px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 230px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -295px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 170%;
+  }
+  .spoiler_links{
+    margin-top: 360px;
+     margin-left: 190px;
+  }
+}
+@media (max-width: 355px){
+ .article{
+    right: 35px;
+   
+  }}
+
+@media (max-width: 336px){
+ .article{
+    right: 30px;
+   
+  }}
+
+@media (max-width: 328px){
+ .article{
+    right: 35px;
+    width: 250px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 181px
+
+  }
+  .w1{
+    width: 100%;
+    height: 220px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -315px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 155%;
+  }
+  .spoiler_links{
+    margin-top: 340px;
+     margin-left: 190px;
+  }
+}
+@media (max-width: 315px){
+ .article{
+    right: 30px;
+   
+  }}
+
+
+@media (max-width: 305px){
+ .article{
+    right: 25px;
+   
+  }}
+@media (max-width: 300px){
+ .article{
+    right: 22px;
+   
+  }}
+@media (max-width: 294px){
+ .article{
+    right: 20px;
+   
+  }
+  .hfghtre4i{
+    font-size: 30px;
+  }
+  .hfghtre4i1 img{
+    width: 30px;
+    height: 30px;
+  }
+  .s26d9sf54{
+    margin-top: -16px;
+  }
+  .s26d9sf54 i{
+    font-size: 34px;
+  }
+  .s26d9sf544{
+    font-size: 30px;
+  }
+ 
+}
+@media (max-width: 288px){
+ .article{
+    right: 17px;
+   
+  }}
+@media (max-width: 282px){
+ .article{
+    right: 15px;
+   
+  }}
+@media (max-width: 276px){
+ .article{
+    right: 13px;
+   
+  }}
+#dropdownMenuCatalog{
+  color: #F94133;
+
+  
+}
+#dropdownMenuHome{
+  color: #F94133;
+
+}
+@media (min-width: 1200px){
+.header__sign-in span{
+  color: black;
+}
+.header__nav-link{
+  line-height: 20px;
+}
+
+}
+
+</style>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__content">
+            <!-- header logo -->
+            <a href="index.html" class="header__logo">
+              <img src="logo.svg" alt="">
+            </a>
+            <!-- end header logo -->
+
+            <!-- header nav -->
+            <ul class="header__nav">
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+                  <li><a href="index.html">Home slideshow bg</a></li>
+                  <li><a href="index2.html">Home static bg</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                  <li><a href="catalog.html">Catalog</a></li>
+                  <li><a href="details.html">Movie Detail</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <li class="header__nav-item">
+                <a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="faq.html" class="header__nav-link">Help</a>
+              </li>
+
+              <!-- dropdown -->
+              <li class="dropdown header__nav-item">
+                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="signin.html">Sign In</a></li>
+                  <li><a href="signup.html">Sign Up</a></li>
+                  <li><a href="forgot.html">Forgot password</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="404.html">404 Page</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+            </ul>
+            <!-- end header nav -->
+
+            <!-- header auth -->
+            <div class="header__auth">
+              <form action="#" class="header__search">
+                <input class="header__search-input" type="text" placeholder="Search...">
+                <button class="header__search-button" type="button">
+                  <i class="icon ion-ios-search"></i>
+                </button>
+                <button class="header__search-close" type="button">
+                  <i class="icon ion-md-close"></i>
+                </button>
+              </form>
+
+              <button class="header__search-btn" type="button">
+                <i class="icon ion-ios-search"></i>
+              </button>
+
+              <!-- dropdown -->
+              <div class="dropdown header__lang">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
+                </ul>
+              </div>
+              <!-- end dropdown -->
+
+              <a href="signin.html" class="header__sign-in">
+                <i class="icon ion-ios-log-in"></i>
+                <span>sign in</span>
+              </a>
+            </div>
+            <!-- end header auth -->
+
+            <!-- header menu btn -->
+            <button class="header__btn" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- end header menu btn -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+
+<div class="f45">
+  <div class="title">News<span class="s26d9sf"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span></div>
+  <div class="title">Market<span class="s26d9sf"><img src="shopping-bag.png"></span></div>
+  <div class="title">Posts<span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-infinite"></i></span></div>
+  <div class="title">Profile<span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-contact"></i></span></div>
+  <div class="s50fgh"><span class="s26d9sf4"><i class="icon ion-ios-add-circle-outline"></i></span></div>
+  
+</div>
+<div class="f46">
+  <span class="hfghtre4i"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+   <span class="hfghtre4i1"><img src="shopping-bag.png"></span>
+   <span class="s26d9sf54" ><i class="icon ion-ios-infinite"></i></span>
+   <span class="s26d9sf544"><i class="icon ion-ios-contact"></i></span>
+   <span class="s26d9sf544f"><i class="icon ion-ios-add-circle-outline"></i>
+
+  
+</div>
+
+
+<div class="article">
+  <div class="d4558">
+     <a  class="spoiler_links" id="dd">ещё</a>
+  <div class="f4h5aa" id="ffff44">
+    <header class="h458aad">
+      <div class="dgghh54"></div>
+      <div class="f44456s">adigest</div>
+    </header>
+    <img src="s2.jpg" class="w1">
+    <div class="fjgiiir">
+    <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+    <div class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i></div>
+     <div class="shere"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></div>
+      <div class="money"><i class="fa fa-usd" aria-hidden="true"></i></div>
+
+      <div class="bfgg55"><span>Lovid:</span><a href="#">dabgfh</a><span class="f456">и другим</span></div>
+       <div class="skkgfh"><div class="gf">Namedgdfghfh:</div><div class="da4" tabindex="0" id="da5"> gfdokhgpokjgpohfgjgfdghgfhjghjkhk561651562015616501652001651968549415641564154564413151566546846465165fddgfgfdhЯ люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!Я люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!</div></div>
+       <div class="commments">
+        <a href="#" class="crs778sj">all comments</a>
+        <div class="commeftht">
+          <div class="sdfgth"><a href="#">s200</a>&nbsp;<span class="spojhg">54d55d45f5gfhjgfjghjghjhgghkjhkhjkjhkljjkljkljk5555555555555555</span></div><!---->
+          <div  class="sdfgth"><a href="#">s200</a>&nbsp;<span class="spojhg">54d55d45f5gfhjgfjghjghjhgghkjhkhjkjhkljjkljkljk5555555555555555</span></div>
+          
+        </div>
+
+       </div>
+       <div class="line"></div>
+       <form method="POST">
+       <div class="addcomff"><textarea aria-label="Добавьте комментарий..." placeholder=" Добавьте комментарий..." class="Ypffh" autocomplete="off" autocorrect="off"></textarea><button class="sqdOP yWX7d    y3zKF     " disabled="" type="submit">Опубликовать</button></div></form></div>
+
+     
+    
+
+  </div>
+  </div>
+  <div class="d4558">
+     <a href="#" class="spoiler_links" id="dd">ещё</a>
+  <div class="f4h5aa" id="ffff44">
+    <header class="h458aad">
+      <div class="dgghh54"></div>
+      <div class="f44456s">adigest</div>
+    </header>
+    <img src="s2.jpg" class="w1">
+    <div class="fjgiiir">
+    <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+    <div class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i></div>
+     <div class="shere"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></div>
+      <div class="money"><i class="fa fa-usd" aria-hidden="true"></i></div>
+
+      <div class="bfgg55"><span>Lovid:</span><a href="#">dabgfh</a><span class="f456">и другим</span></div>
+       <div class="skkgfh"><div class="gf">Namedgdfghfh:</div><div class="da4" tabindex="0" id="da5"> gfdokhgpokjgpohfgjgfdghgfhjghjkhk561651562015616501652001651968549415641564154564413151566546846465165fddgfgfdhЯ люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!Я люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!</div></div>
+       <div class="commments">
+        <a href="#" class="crs778sj">all comments</a>
+        <div class="commeftht">
+          <div class="sdfgth"><a href="#">s200</a>&nbsp;<span class="spojhg">54d55d45f5gfhjgfjghjghjhgghkjhkhjkjhkljjkljkljk5555555555555555</span></div><!---->
+          <div  class="sdfgth"><a href="#">s200</a>&nbsp;<span class="spojhg">54d55d45f5gfhjgfjghjghjhgghkjhkhjkjhkljjkljkljk5555555555555555</span></div>
+          
+        </div>
+
+       </div>
+       <div class="line"></div>
+       <form method="POST">
+       <div class="addcomff"><textarea aria-label="Добавьте комментарий..." placeholder=" Добавьте комментарий..." class="Ypffh" autocomplete="off" autocorrect="off"></textarea><button class="sqdOP yWX7d    y3zKF     " disabled="" type="submit">Опубликовать</button></div></form></div>
+
+     
+    
+
+  </div>
+  </div>
+  <div class="d4558">
+     <a href="#" class="spoiler_links" id="dd">ещё</a>
+  <div class="f4h5aa" id="ffff44">
+    <header class="h458aad">
+      <div class="dgghh54"></div>
+      <div class="f44456s">adigest</div>
+    </header>
+    <img src="s2.jpg" class="w1">
+    <div class="fjgiiir">
+    <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+    <div class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i></div>
+     <div class="shere"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></div>
+      <div class="money"><i class="fa fa-usd" aria-hidden="true"></i></div>
+
+      <div class="bfgg55"><span>Lovid:</span><a href="#">dabgfh</a><span class="f456">и другим</span></div>
+       <div class="skkgfh"><div class="gf">Namedgdfghfh:</div><div class="da4" tabindex="0" id="da5"> gfdokhgpokjgpohfgjgfdghgfhjghjkhk561651562015616501652001651968549415641564154564413151566546846465165fddgfgfdhЯ люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!Я люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!</div></div>
+       <div class="commments">
+        <a href="#" class="crs778sj">all comments</a>
+        <div class="commeftht">
+          <div class="sdfgth"><a href="#">s200</a>&nbsp;<span class="spojhg">54d55d45f5gfhjgfjghjghjhgghkjhkhjkjhkljjkljkljk5555555555555555</span></div><!---->
+          <div  class="sdfgth"><a href="#">s200</a>&nbsp;<span class="spojhg">54d55d45f5gfhjgfjghjghjhgghkjhkhjkjhkljjkljkljk5555555555555555</span></div>
+          
+        </div>
+
+       </div>
+       <div class="line"></div>
+       <form method="POST">
+       <div class="addcomff"><textarea aria-label="Добавьте комментарий..." placeholder=" Добавьте комментарий..." class="Ypffh" autocomplete="off" autocorrect="off" id="textarea"></textarea><button class="sqdOP yWX7d    y3zKF     " disabled="" type="submit">Опубликовать</button></div></form></div>
+
+     
+    
+
+  </div>
+  </div>
+  <div class="d4558">
+     <a href="#" class="spoiler_links" id="dd">ещё</a>
+  <div class="f4h5aa" id="ffff44">
+    <header class="h458aad">
+      <div class="dgghh54"></div>
+      <div class="f44456s">adigest</div>
+    </header>
+    <img src="s2.jpg" class="w1">
+    <div class="fjgiiir">
+    <div class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+    <div class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i></div>
+     <div class="shere"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#585A5D;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></div>
+      <div class="money"><i class="fa fa-usd" aria-hidden="true"></i></div>
+
+      <div class="bfgg55"><span>Lovid:</span><a href="#">dabgfh</a><span class="f456">и другим</span></div>
+       <div class="skkgfh"><div class="gf">Namedgdfghfh:</div><div class="da4" tabindex="0" id="da5"> gfdokhgpokjgpohfgjgfdghgfhjghjkhk561651562015616501652001651968549415641564154564413151566546846465165fddgfgfdhЯ люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!Я люблю овый год! В этот день случаются чудеса. Я желаю вам в новом году успехов, счастья, любви, много репутации на StackOverflow, новых проэктов и конечно же денег. С наступающим!</div></div>
+       <div class="commments">
+        <a href="#" class="crs778sj">all comments</a>
+        <div class="commeftht">
+          <div class="sdfgth"><a href="#">s200</a>&nbsp;<span class="spojhg">54d55d45f5gfhjgfjghjghjhgghkjhkhjkjhkljjkljkljk5555555555555555</span></div><!---->
+          <div  class="sdfgth"><a href="#">s200</a>&nbsp;<span class="spojhg">54d55d45f5gfhjgfjghjghjhgghkjhkhjkjhkljjkljkljk5555555555555555</span></div>
+          
+        </div>
+
+       </div>
+       <div class="line"></div>
+       <form method="POST">
+       <div class="addcomff"><textarea aria-label="Добавьте комментарий..." placeholder=" Добавьте комментарий..." class="Ypffh" autocomplete="off" autocorrect="off"></textarea><button class="sqdOP yWX7d    y3zKF     " disabled="" type="submit">Опубликовать</button></div></form></div>
+
+     
+    
+
+  </div>
+  </div>
+   
+
+   
+
+</div>
+<!--<div class="article">
+<div>
+ Спойлер №1 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+
+ <div class="spoiler_body">
+  Текст в первом спойлере
+  Текст в первом спойлере
+ </div>
+</div>
+</div>
+
+<div>
+ Спойлер №2 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+ <div class="spoiler_body">
+  Текст во втором спойлере
+  Текст во втором спойлере
+ </div>
+</div>
+
+</div>
+</div>-->
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src="jquery.ui.touch-punch.js"></script>
+<script src='KrYJow.js'></script>
+ 
+  <script src='flickity1.pkgd.js'></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="owl.carousel.min.js"></script>
+  <script src="jquery.mousewheel.min.js"></script>
+  <script src="jquery.mCustomScrollbar.min.js"></script>
+  <script src="wNumb.js"></script>
+  <script src="nouislider.min.js"></script>
+  <script src="jquery.morelines.min.js"></script>
+  <script src="plyr.min.js"></script>
+  <script src="photoswipe.min.js"></script>
+  <script src="photoswipe-ui-default.min.js"></script>
+  <script src="main.js"></script>
+<!--<script id="rendered-js">
+ 
+
+  function s20(){
+     var v = document.getElementById("da5").offsetHeight;
+     var s = document.getElementById("ffff44").offsetHeight;
+     console.log(s,v)
+   
+    document.getElementById("ffff44").style.height = s + (v-50) + "px";
+    document.getElementById("dd").style.opacity = "0";
+    
+    
+
+
+
+
+  }
+  $( "#dd" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
+
+</script>-->
+<!--<script type="text/javascript">
+  
+  $( ".f22" ).click(function(event) {
+
+        $('.f4h5aa .da4').css({
+  'height': 'auto',
+  
+});
+  var p=$("#da5");
+  var k=$("#ffff44");
+
+
+  var s=p.outerHeight();
+  var e=k.outerHeight();
+
+  $('#ffff44').css({
+  'height': e+s-50,
+  
+});
+  $('#dd').css({
+  
+  
+});
+  
+
+  console.log(s);
+});
+  
+</script>-->
+<script type="text/javascript">
+  let arr = [];
+$(document).ready(function(){
+ $('.spoiler_links').click(function(){
+  $(this).parent().find('.da4').css({
+  'height': "auto",
+  'width': "auto",
+  'white-space': "normal",
+  
+});
+  var p=$(this).parent().find('.da4');
+  var k=$(this).parent().find('.f4h5aa');
+  var s=p.outerHeight();
+
+
+  var e=k.outerHeight();
+  arr.splice(1, 0, e);
+
+  $(this).parent().find('.f4h5aa').css({
+  'height': arr[0]+s+10,
+  
+});
+  $(this).parent().find('.commments').css({
+  'margin-top': s+695,
+  
+  
+});
+  $(this).parent().find('.addcomff').css({
+  'margin-top': s+810,
+  
+  
+});
+   $(this).parent().find('.line').css({
+  'margin-top': s+795,
+  
+  
+});
+  $(this).parent().find('.spoiler_links').css({
+  'display': "none",
+  
+});
+  return false;
+
+
+</script>
+
+</body>
+</html>

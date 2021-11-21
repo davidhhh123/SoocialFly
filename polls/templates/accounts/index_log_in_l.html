@@ -1,0 +1,425 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SoocialFly</title>
+   <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/bab (1).ico' %}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static 'css/login/style.css' %}">
+<style type="text/css">
+ .checkbox_pr {
+    position: relative;
+    width: 125px;
+    margin-top: 10px;
+    left: 10px;
+    white-space: nowrap;
+
+
+    float: left;
+}
+   .loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999999999;
+}
+.bt_facebook{
+  width: 250px;
+    margin-left: calc(50% - 125px);
+
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+}
+.button_f {
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    -webkit-appearance: none;
+    font-size: 1rem;
+    text-shadow: none;
+    line-height: 1.2;
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 0 10px 0 0;
+    position: relative;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    background: #444857;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none !important;
+    text-align: center;
+    font-weight: normal !important;
+}
+.button-fullwidth {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+.button>svg, .button>span>svg {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    pointer-events: none;
+    vertical-align: bottom;
+    fill: currentColor;
+}
+
+.social-account-button svg {
+    width: 26px;
+    height: 26px;
+    fill: #fff;
+    position: absolute;
+    left: 14px;
+    top: 6px;
+}
+
+.social-account-button {
+    padding-left: 60px;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+.facebook-button {
+    background: #199be2;
+    color: white;
+}
+
+
+
+.welcome_my{
+  
+  width: 100%;height: 100%;position: fixed;background: #000000e5;top: 0;left: 0;z-index: 99999999999;
+   opacity: 1;
+  visibility: visible;
+  transition: opacity 2s ease, visibility 2s ease;
+}
+.welcome_my.active{
+  opacity: 0;
+  visibility: hidden;
+}
+.welcome_my.unactive{
+  opacity: 0;
+  visibility: hidden;
+}
+.welcome_my p{
+  font-size: 35px;color: white;position: absolute;font-weight: bold;width: 100%;top: calc(50% - 75px);text-align: center;
+}
+body {
+    line-height: 1.6;
+    font-smoothing: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+    color: #ffffff;
+    background: #020202f0;
+}
+.bnt{
+  background-color: #0c0c0ccc;
+  border-color: #6a6c6d; 
+}
+.kjh{
+  position: absolute;
+    right: 0;
+    margin-top: -40px;
+}
+.form__label {
+   
+    color: #f6f6f7;
+}
+@media(max-width: 410px){
+  
+.checkbox_pr{
+  width: 118px;
+}
+.kjh{
+  position: absolute;
+    left: 0;
+    margin-top: 20px;
+}
+
+}
+@media(max-width: 369px){
+  #myVideo {
+ display: none;
+}
+  
+
+
+}
+@media(max-width: 320px){
+  .bt_facebook{
+  width: 100%;
+    margin-left: 5px;
+
+}
+}
+@media(max-width: 273px){
+.button_f {
+   
+    padding: 11px 60px;
+   font-size: 15px;
+}
+}
+@media(max-width: 267px){
+  .form_reg{
+    left: -15px;
+    position: absolute;
+  }
+  
+.ikd {
+    margin-top: 290px;
+    margin-left: -14px;
+}
+
+}
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 1;
+    }
+
+    1% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 1;
+    }
+
+    1% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 1;
+    }
+
+    1% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 1;
+    }
+
+    1% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+</style>
+
+</head>
+<body>
+  <div class="loader-wrapper" id="llo" style="position: fixed;display: block;">
+    <img src="{% static 'images/bab.png' %}" style="left: calc(50% - 48px);top: calc(50% - 48px);position: absolute;"></div>
+  <video autoplay muted loop id="myVideo">
+  <source src="{% static 'images/intro1.mp4' %}" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+  <div style="width: 100px;height: 100px;position: absolute;margin-left: calc(50% - 50px);margin-top: -50px;"><img class="logo-image" src="{% static 'images/bab.png' %}" alt="logo" style="width:100%;height: 100%;"></div>
+<!-- partial:index.partial.html -->
+<div class="outer">
+  <div class="container">
+    <div class="steps-wrapper">
+      
+      <div class="steps-content">
+        <div class="step-content steps-content__step-1" id="steps-content__step-1" style="display: block;margin-top: 100px;">
+          <h3 class="headline">Login an account</h3>
+         
+          <div class="bt_facebook">           
+          <a href="{% url 'accounts:social:begin' 'facebook' %}" style="text-decoration: none;" > <button id="login-with-facebook" type="submit" data-network="Facebook" class="button button_f social-account-button facebook-button button-fullwidth">
+<svg class="icon-facebook" viewBox="-574 359 75 75" width="26" height="26">
+<path d="M-511.49899,359h-50.00003C-568.37402,359-574,364.62601-574,371.50201v49.99698C-574,428.379-568.37402,434-561.49902,434
+              h50.00003C-504.62299,434-499,428.379-499,421.49799v-49.99597C-499,364.62601-504.62399,359-511.49899,359z M-510.23599,396.5
+              h-12.20102v32.81299H-536.5V396.5h-6.77698v-10.73499H-536.5V378.793c0-9.47299,4.086-15.10501,15.22498-15.10501H-508.44V375.302
+              h-10.48297c-3.11102-0.005-3.49701,1.62201-3.49701,4.65201l-0.01703,5.811h14.06302L-510.23599,396.5z"></path>
+</svg>
+<span>Log In with Facebook</span>
+</button></a></div>
+          <div class="form">
+            <form method="get" id="form">
+              <div class="form__control">
+                <label class="label form__label" for="first-name">Login</label>
+                <input class="form__input bnt" type="text" id="first-name" placeholder="John"/>
+              </div>
+              <div class="form__control">
+                <label class="label form__label" for="last-name">Password</label>
+                <input class="form__input bnt" type="Password" id="last-name" placeholder=""/>
+              </div>
+            
+             
+            </form>
+          </div>
+          <div class="form__control">
+            <button class="next btn btn--primary submit__btn" type="submit">Sign in </button>
+          </div>
+
+          <div class="kjh">
+          
+           Dont have an account? <a href="{% url 'accounts:sign_up' %}" style="color: #20d481;">Sign up</a>
+          </div>
+        </div>
+       
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <script  >
+   /* myStorage = window.localStorage;
+    let myview = localStorage.getItem('myview');
+    var element = document.querySelector(".welcome_my")
+
+    if ( myview != undefined){
+      localStorage.removeItem('myview');
+
+
+
+    }
+    else{
+
+      
+      element.classList.toggle("active");
+
+      localStorage.setItem('myview', '1');
+
+
+    }
+    
+    
+    console.log(myview)*/
+    $(window).on("load",function(){
+    document.getElementById("llo").style.display="none";
+
+});
+    $(".submit__btn").on("click", function(){
+      if ($("#first-name").val().length > 0 && $("#last-name").val().length > 0){
+        $.ajax({
+
+           url: "/api/login/",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'username': $("#first-name").val(), 'password': $("#last-name").val(), 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            if(data==1){
+              location.replace("{% url 'accounts:post_home' %}")
+
+            }
+            else{
+              $("#first-name").css("background-color", "#ff3f3f")
+              $("#last-name").css("background-color", "#ff3f3f")
+
+
+            }
+           
+          
+
+
+                //alert(data.a);Math.round(1.7777777 * 100)/100
+                //alert($("#" + data.a).val());
+
+
+
+
+
+
+                 //find('#test').innerHTML = data.f;
+
+
+
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+       
+      }
+      else{
+        if ($("#first-name").val().length==0){
+          $("#first-name").css("background-color", "#ff3f3f")
+
+
+        }
+         if ($("#last-name").val().length==0){
+          $("#last-name").css("background-color", "#ff3f3f")
+
+
+        }
+
+        
+      }
+
+    })
+    function rf(){
+      
+    }
+    $(window).resize(rf)
+    
+
+
+  </script>
+
+
+
+
+</body>
+</html>

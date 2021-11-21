@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SoocialFly Cloud price</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'><link rel="stylesheet" href="{% static 'css/style_cloud_pricing_plan.css' %}">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/bab (1).ico' %}" />
+ <style type="text/css">
+  body{
+    background:  #101010;
+
+  }
+   .pricing-price {
+    color: #016FF9;
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+}
+.error_box{
+  position:fixed;
+  width: 240px;height: 30px;background: #efefef;top: 10px;margin-left: calc(50% - 120px);border-radius: 20px;z-index: 99999999999999;
+  visibility:hidden;
+    opacity:0;
+    transition:visibility 0.5s linear,opacity 0.5s linear;
+
+}
+.error_box p{
+  text-align: center;
+  margin-top: 5px;
+}
+.back_cabinet {
+    margin-top: -70px;
+    position: absolute;
+    margin-left: 100px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    z-index: 99999999999999;
+}
+@media (max-width: 713px){
+.back_cabinet {
+    margin-top: 55px;
+    position: absolute;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}}
+
+@media screen and (max-width: 1365px){
+.back_cabinet {
+    margin-top: 55px;
+    position: absolute;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}}
+ </style>
+
+
+
+</head>
+<body>
+  <div class="error_box"><p class="error_box_title" id="error_box_title">Error insufficient funds</p></div>
+<!-- partial:index.partial.html -->
+
+<div class="background">
+  <a href="{% url 'accounts:post_home' %}"><div class="back_cabinet main_name"><img src="{% static 'css/icons8-back-48.png' %}"></img></div></a>
+
+  <div class="container">
+    <div class="panel pricing-table">
+      
+      <div class="pricing-plan">
+        <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Personal</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">1gb</li>
+          <li class="pricing-features-item"></li>
+        </ul>
+        <span class="pricing-price">Free</span>
+       
+      </div>
+      
+      <div class="pricing-plan">
+        <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Standart</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">5gb</li>
+          <li class="pricing-features-item"></li>
+        </ul>
+        <span class="pricing-price">$2 or 500point</span>
+        {% if profile.cloud_size_max_value_my_plan < 5 %}
+        {% if profile.points >= 500 and profile.mymoney >= 2   %}
+        
+          <div  class="pricing-button is-featured btn_buy_tarif"size="5" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="500" tarif_money="2" type_f="money">Buy_money</div>
+           <div  class="pricing-button is-featured btn_buy_tarif"size="5" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="500" tarif_money="2" type_f="points" mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_points</div>
+        {% elif  profile.points <= 500 %}
+            <div  class="pricing-button is-featured btn_buy_tarif"size="5" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="500" tarif_money="2" type_f="money">Buy_money</div>
+           <div  class="pricing-button is-featured btn_buy_tarif"size="5" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="500" tarif_money="2" type_f="points"   mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_points</div>
+        {% else %}
+           <div  class="pricing-button is-featured btn_buy_tarif"size="5" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="500" tarif_money="2" type_f="money">Buy_points</div>
+            <div  class="pricing-button is-featured btn_buy_tarif"size="5" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="500" tarif_money="2" type_f="points"   mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_points</div>
+         
+        {% endif %}
+        {% endif %}
+       
+      </div>
+      
+      <div class="pricing-plan">
+        <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Premium</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">20gb</li>
+          <li class="pricing-features-item">Simple horizontal scalability</li>
+        </ul>
+        <span class="pricing-price">$4 or 1000point</span>
+          {% if profile.cloud_size_max_value_my_plan < 20  %}
+       
+        {% if profile.points >= 1000 and profile.mymoney >= 4   %}
+         <div  class="pricing-button btn_buy_tarif" size="20" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="1000" tarif_money="4" type_f="money"  mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_money</div>
+          <div  class="pricing-button btn_buy_tarif" size="20" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="1000" tarif_money="4" type_f="points"  mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_ponts</div>
+        {% elif  profile.points <= 1000 %}
+        <div  class="pricing-button btn_buy_tarif" size="20" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="1000" tarif_money="4" type_f="money"  mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_money</div>
+          <div  class="pricing-button btn_buy_tarif" size="20" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="1000" tarif_money="4" type_f="points"  mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_ponts</div>
+        {% else %}
+         <div  class="pricing-button btn_buy_tarif" size="20" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="1000" tarif_money="4" type_f="money"  mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_money</div>
+          <div  class="pricing-button btn_buy_tarif" size="20" my_points = "{{ profile.points }}" mymoney = "{{ profile.mymoney }}" tarif_ponts="1000" tarif_money="4" type_f="points"  mysize = "{{ profile.cloud_size_max_value_my_plan }}">Buy_ponts</div>
+         
+        {% endif %}
+        {% endif %}
+
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
+<script type="text/javascript">
+
+  $(".btn_buy_tarif").on("click", function(){
+    var size = $(this).attr("size")
+    var my_points = parseFloat($(this).attr("my_points"))
+    var tarif_ponts=parseFloat($(this).attr("tarif_ponts"))
+    var mymoney=parseFloat($(this).attr("mymoney"))
+    var tarif_money = parseFloat($(this).attr("tarif_money"))
+    var type = $(this).attr("type_f")
+    var error_tab = $(".error_box_title")
+    var mysize = $(this).attr("mysize")
+    
+    console.log("error_tab", error_tab.eq(0))
+    if (mysize!="20"){
+
+
+    
+
+    if (type=="money" && mymoney>=tarif_money){
+      console.log("success1")
+      call_buy_tarif(tarif_money)
+
+    }
+    else if (type=="money" && mymoney<tarif_money){
+      console.log("error1")
+      error_tab.text("Error insufficient funds")
+       $(".error_box").css({"visibility":"visible", "opacity":1})
+       let timerId = setInterval(() => {$(".error_box").css({"visibility":"hidden", "opacity":0});clearInterval(timerId)}, 3000);
+
+
+    }
+    else if(type=="points" && my_points>=tarif_ponts) {
+      console.log("success2")
+      call_buy_tarif(tarif_ponts)
+
+    }
+    else if(type=="points" && my_points<tarif_ponts) {
+      console.log("error2")
+      error_tab.text("Error insufficient funds")
+       $(".error_box").css({"visibility":"visible", "opacity":1})
+       let timerId = setInterval(() => {$(".error_box").css({"visibility":"hidden", "opacity":0});clearInterval(timerId)}, 3000);
+
+
+    }}
+    else{
+      console.log("error_size_limiteу")
+      error_tab.text("20 GB limit reached")
+       $(".error_box").css({"visibility":"visible", "opacity":1})
+       let timerId = setInterval(() => {$(".error_box").css({"visibility":"hidden", "opacity":0});clearInterval(timerId)}, 3000);
+    }
+    
+    
+    
+
+    
+
+function call_buy_tarif(tarif_pay){
+
+
+    $.ajax({
+
+           url: "{% url 'accounts:cloud_my_limit_add' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'size': size,'tarif_pay': tarif_pay,'type_server_request':type, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+
+           success: function(data) {
+            console.log(data.res)
+            location.replace("/profile/")
+           
+
+           },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+  }
+
+  })
+   
+
+
+
+  
+
+</script>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,98 @@
+{% load static %}
+<aside id="sidebar" class="sidebar-primary">
+    <div class="sidebar-header d-flex align-items-center">
+        <a href="/" class="brand">
+            <img src="{% static 'images/logo.png' %}" alt="listen-app">
+        </a>
+        <button type="button" class="btn p-0 ml-auto" id="hideSidebar" style="margin-top: -20px;">
+            <i class="ion-md-arrow-back h3" style="color: white;margin-left: 100px;"></i>
+        </button>
+        <button type="button" class="btn toggle-menu" id="toggleSidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <nav class="navbar">
+        <ul class="navbar-nav" data-scrollable="true">
+            <li class="nav-item nav-header">Browse Music</li>
+            <li class="nav-item">
+                <a href="/" class="nav-link">
+                    <i class="la la-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'accounts:playlist_list' %}" class="nav-link">
+                  
+  <use href="#Capa_1fff" style="width: 20px;height: 20px;">
+    <svg version="1.1" id="Capa_1fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;fill: white;width: 25px;" xml:space="preserve">
+<g>
+  <g>
+    <rect y="96" width="256" height="42.667"></rect>
+  </g>
+</g>
+<g>
+  <g>
+    <rect y="10.667" width="256" height="42.667"></rect>
+  </g>
+</g>
+<g>
+  <g>
+    <rect y="181.333" width="170.667" height="42.667"></rect>
+  </g>
+</g>
+<g>
+  <g>
+    <polygon points="213.333,181.333 213.333,309.333 320,245.333    "></polygon>
+  </g>
+</g>
+
+</svg>
+</use>
+
+                    <span style="    position: absolute;
+    /* margin-left: -120px; */
+    /* width: 100%; */
+    margin-top: -20px;
+    margin-left: 20px;">Playlists</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'accounts:homegg' %}" class="nav-link">
+                    <i class="la la-music"></i>
+                    <span>Free Music</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'accounts:artists' %}" class="nav-link">
+                    <i class="la la-microphone"></i>
+                    <span>Artists</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="la la-bullseye"></i>
+                    <span>Popular</span>
+                </a>
+            </li>
+            {% if request.user.is_authenticated %}
+                <li class="nav-item nav-header">Your Music</li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="la la-heart-o"></i>
+                        <span>Favorites</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="la la-history"></i>
+                        <span>History</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</aside>
+
+

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% load  static %}
+{% block title %}Edit Profile | {{ user }} {{ super }}{% endblock %}
+
+{% block body %}
+    <div class="grid-100">
+        <h1>Profile</h1>
+        <form method="POST" actions="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Sport"  {% if category.0 in my_category.categories.all %}  class="true1 sd1" checked="checked" {% else %} class="false1 sd1" {% endif %}>
+            <label for="vehicle1">Sport</label><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Travel" {% if category.2 in my_category.categories.all %}  class="true1 sd1" checked="checked" {% else %} class="false1 sd1" {% endif %}>
+            <label for="vehicle1">Travel</label><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Games" {% if category.1 in my_category.categories.all %}  class="true1 sd1" checked="checked" {% else %} class="false1 sd1" {% endif %}>
+            <label for="vehicle1">Games</label><br>
+
+
+
+            <input type="submit" class="button" value="save" />
+        </form>
+    </div>
+    <script type="text/javascript">
+    $(".sd1").on('change', function() {
+  if ($(this).is(':checked')) {
+    
+    $(this).attr('class', 'true1');
+  } else {
+    $(this).attr('class', 'false1');
+  }
+
+
+  console.log(String($(".true1").eq(0).val()))
+  
+  
+  $('#checkbox-value').text($('#checkbox1').val());
+});
+
+    
+    $(document).ready(function(){
+
+
+    $('form').on('submit', function(e){
+        
+
+        e.preventDefault();
+        var data = new FormData($('form').get(0));
+        data.append('length', $(".true1").length)
+        data.append('length1', $(".false1").length)
+        for (var i = 0; i < $(".true1").length; i++) {
+      
+      data.append('Category' + i, $(".true1").eq(i).val())
+
+  }
+  for (var i = 0; i < $(".false1").length; i++) {
+      
+      data.append('noCategory' + i, $(".false1").eq(i).val())
+
+  }
+        
+        console.log(data)
+        $.ajax({
+            url: '{% url "accounts:saveprof" %}',
+            method: "POST",
+            data: data,
+            success: function(data){
+                location.replace("/profile/")
+
+            },
+            error: function(data){},
+            processData: false,
+            contentType: false,
+        });
+    });
+});
+    </script>
+{% endblock %}

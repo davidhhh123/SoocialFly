@@ -1,0 +1,3237 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - HTML5 Video Player</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+<link rel="stylesheet" type="text/css" href="style15.css">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+<link rel="stylesheet" href="bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="bootstrap1-grid.min.css">
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="nouislider.min.css">
+  <link rel="stylesheet" href="ionicons.min.css">
+  <link rel="stylesheet" href="plyr.css">
+  <link rel="stylesheet" href="photoswipe.css">
+  <link rel="stylesheet" href="default-skin.css">
+  <link rel="stylesheet" href="main3.css">
+  <link rel="stylesheet" href="flickity.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="flickity1.css">
+
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+  <title>HotFlix ‚Äì Online Movies, TV Shows & Cinema HTML Template</title>
+  <style>
+  	@media screen and  (min-width: 1700px){
+    .gallery-item {
+    
+    flex: 1 0 29rem;
+    margin: 1rem;
+   
+}
+    
+}
+	@media screen and  (min-width: 1900px){
+    .gallery-item {
+    
+    flex: 1 0 29rem;
+    margin: 1.1rem;
+   
+}
+    
+}
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+.actor{
+  position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+}
+.rewuve{
+   position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+
+}
+.name{
+  position: absolute;
+  color: white;
+  padding-top: 110px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  
+    word-wrap: break-word;
+
+}
+.prof{
+  position: absolute;
+  color: #D22A2A;
+  padding-top: 160px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  
+  font-size: 13px;
+  
+    word-wrap: break-word;
+
+
+}
+.carousel {
+  width: 93%;
+  left: 3%;
+
+
+}
+
+.carousel-cell {
+  width: 100px;
+  height: 250px;
+  margin-right: 30px;
+  background: transparent;
+  border-radius: 180px;
+  
+}
+
+
+.carousel-cell.is-selected {
+  background: transparent;
+}
+
+/* cell number */
+
+</style>
+  <style type="text/css">
+    body{
+      background: #FAFAFA;
+    }
+    .footer{
+      background: #0E0E0E;
+      border-top: 1px solid rgba(87, 83, 103, 0.1);
+
+
+    }
+    .home{
+      height: 300%;
+      width: 75%;
+      left: 12.5%;
+      top: 5%;
+      background: #0E0E0E;
+      box-shadow: 0 3px 1px 0 rgba(0,0,0,0.14),0 0px 3px -2px rgba(0,0,0,0.12),0 -1px 5px 0 rgba(0,0,0,0.2);
+
+
+
+
+
+    }
+    .header{
+      background: #F9F9F9;
+    }
+    .img{
+      position: absolute;
+      width: 200px;
+      height: 288px;
+      left: 0%;
+      top: 0%;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+          box-sizing: inherit;
+
+
+
+
+
+
+
+    }
+    .span{
+      
+      width: 100%;
+      height: 50px;
+      margin-left: 28%;
+      padding-top: -50px;
+
+      
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+      z-index: 1;
+      float: left;
+
+    }
+    .span1{
+      width: 100%;
+      
+      margin-left: 29%;
+      
+      left: 213px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    .span2{
+      width: 100%;
+      
+      margin-left: 35%;
+      margin-top: -24px;
+      left: 270px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    @media (max-width: 969px){
+      .span2{
+
+      margin-left: 37%;
+      
+    }
+    .span{
+      margin-top: -5px;
+    }
+
+    
+
+  }
+    @media (max-width: 709px){
+      .span2{
+
+      margin-left: 39%;
+      }
+      .span{
+      margin-top: -10px;
+      font-size: 28px;
+      height: 43px;
+    }
+
+
+  }
+    @media (max-width: 595px){
+      .span2{
+
+      margin-left: 41%;
+    }
+    .span{
+      margin-top: -15px;
+      font-size: 25px;
+      height: 38px;
+    }
+  }
+    @media (max-width: 500px){
+      .span2{
+
+      margin-left: 44%;
+    }
+    .span{
+      margin-top: -20px;
+    }
+
+  }
+    @media (max-width: 400px){
+      .span2{
+
+      margin-left: 48%;
+    }}
+    @media (max-width: 290px){
+      .span2{
+
+      margin-left: 51%;
+    }}
+
+
+
+
+    }
+    .images{
+      position: absolute;
+      
+      width: 100%;
+      
+      top: 450px;
+    }
+    .images img{
+      width: 100%;
+    }
+
+    .b22{
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      left: 500px;
+      top: 200px;
+      
+    }
+    .header__dow{
+      
+      
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow1{
+      
+      margin-left: 25px;
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow2{
+      margin-left: 25px; 
+      
+      
+
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .hidden{
+      margin-top: 12px;
+      margin-left: 13px;
+      color: #fd6060;
+
+      
+      
+      
+
+    }
+     .f46{
+   
+    display: none;
+  }
+
+
+
+    .hidden .fa{
+      font-size: 25px;
+    }
+    
+    #fa{
+      margin-left: 5px;
+
+    }
+    .bl{
+      position: relative;
+      margin-top: -8%;
+      
+      background: #212121;
+      width: 94%;
+      left: 3%;
+
+      height: 1.5px;
+
+    }
+    .bl1{
+      position: relative;
+      margin-top: 5%;
+      
+      background: #212121;
+      width: 99%;
+      left: 0%;
+
+      height: 1.5px;
+
+    }
+    #bl1{
+      width: 236%;
+      height: 1px;
+
+    }
+     .f45{
+  
+  position: fixed; /* –§–∏–∫—Å–∏—Ä–æ–≤–∞–Ω–Ω–æ–µ –ø–æ–ª–æ–∂–µ–Ω–∏–µ */
+    left: 0; bottom: 0; /* –õ–µ–≤—ã–π –Ω–∏–∂–Ω–∏–π —É–≥–æ–ª */
+     /* –ü–æ–ª—è –≤–æ–∫—Ä—É–≥ —Ç–µ–∫—Å—Ç–∞ */
+    background: #fff; /* –¶–≤–µ—Ç —Ñ–æ–Ω–∞ */
+    color: #fff; /* –¶–≤–µ—Ç —Ç–µ–∫—Å—Ç–∞ */
+    width: 9%; /* –®–∏—Ä–∏–Ω–∞ —Å–ª–æ—è */
+    z-index: 100;
+      
+}
+
+.s50fgh{
+	margin-left: 20px;
+}
+
+@media (max-width: 961px){
+  .article{
+    right: 8%;
+  }
+  .f45{
+    width: 10%;
+  }
+}
+.Ypffh {
+    
+    border: 0;
+    color: #262626;
+    color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: inherit;
+    height: 38px;
+    width: 79%;
+    background: black;
+    max-height: 80px;
+    outline: 0;
+    padding: 0;
+    resize: none;
+    margin-left: 5px;
+    
+    overflow: hidden; /* –∏–ª–∏ auto */
+
+}
+
+@media (max-width: 900px){
+  .article{
+   
+    width: 590px;
+  }
+  
+  .sqdOP{
+    margin-left: 461px
+
+  }
+  .w1{
+    width: 100%;
+
+  }
+}
+@media (max-width: 865px){
+  .article{
+    right: 4%;
+    width: 590px;
+  }
+  .f45{
+    width: 11%;
+  }
+  
+}
+@media (max-width: 820px){
+  .article{
+    right: 4%;
+    width: 560px;
+  }
+  .f45{
+    width: 11%;
+  }
+  .sqdOP{
+    margin-left: 431px
+
+  }
+  .w1{
+    width: 100%;
+    height: 520px
+
+  }
+  .Ypffh{
+    width: 77.5%;
+  }
+}
+@media (max-width: 785px){
+  .article{
+    right: 4%;
+    width: 540px;
+  }
+  .f45{
+    width: 12%;
+  }
+  .sqdOP{
+    margin-left: 411px
+
+  }
+  .w1{
+    width: 100%;
+    height: 500px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -25px; 
+  }
+  .Ypffh{
+    width: 76.5%;
+  }
+  .spoiler_links{
+    margin-top: 632px;
+  }
+}
+@media (max-width: 760px){
+  .article{
+    right: 4%;
+    width: 510px;
+  }
+  .f45{
+    width: 12%;
+  }
+  .sqdOP{
+    margin-left: 381px
+
+  }
+  .w1{
+    width: 100%;
+    height: 470px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -55px; 
+  }
+  .Ypffh{
+    width: 75%;
+  }
+  .spoiler_links{
+    margin-top: 601px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 713px){
+  .article{
+    right: 10%;
+    width: 550px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+   .f46{
+   
+    display: block;
+  }
+  .sqdOP{
+    margin-left: 421px
+
+  }
+  .w1{
+    width: 100%;
+    height: 510px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -15px; 
+  }
+   .Ypffh{
+    width: 77%;
+  }
+  .spoiler_links{
+    margin-top: 642px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 9%;
+    width: 550px;
+  }}
+
+
+@media (max-width: 658px){
+ .article{
+    right: 9%;
+    width: 520px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+ 
+  .sqdOP{
+    margin-left: 391px
+
+  }
+  .w1{
+    width: 100%;
+    height: 480px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -45px; 
+  }
+  .Ypffh{
+    width: 76%;
+  }
+  .spoiler_links{
+    margin-top: 612px;
+     margin-left: 255px;
+  }
+}
+@media (max-width: 628px){
+ .article{
+    right: 8%;
+    width: 490px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 361px
+
+  }
+  .w1{
+    width: 100%;
+    height: 450px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -75px; 
+  }
+  .Ypffh{
+    width: 74%;
+  }
+  .spoiler_links{
+    margin-top: 584px;
+     margin-left: 255px;
+  }
+}
+
+@media (max-width: 588px){
+ .article{
+    right: 9%;
+    width: 460px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 331px
+
+  }
+  .w1{
+    width: 100%;
+    height: 420px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -105px; 
+  }
+  .Ypffh{
+    width: 72.5%;
+  }
+   .spoiler_links{
+    margin-top: 554px;
+     margin-left: 243px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 8%;
+    
+  }}
+
+@media (max-width: 544px){
+ .article{
+    right: 8%;
+    width: 440px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 311px
+
+  }
+  .w1{
+    width: 100%;
+    height: 400px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -125px; 
+  }
+  .Ypffh{
+    width: 71%;
+  }
+  .spoiler_links{
+    margin-top: 534px;
+     margin-left: 243px;
+  }
+}
+@media (max-width: 524px){
+ .article{
+    right: 8%;
+    width: 420px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 291px
+
+  }
+  .w1{
+    width: 100%;
+    height: 380px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -145px; 
+  }
+  .Ypffh{
+    width: 70%;
+  }
+  .spoiler_links{
+    margin-top: 514px;
+     margin-left: 233px;
+  }
+}
+@media (max-width: 500px){
+ .article{
+    right: 43px;
+    width: 400px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 271px
+
+  }
+  .w1{
+    width: 100%;
+    height: 360px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -165px; 
+  }
+   .Ypffh{
+    width: 68%;
+  }
+  .spoiler_links{
+    margin-top: 494px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 484px){
+ .article{
+    right: 45px;
+    width: 380px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 251px
+
+  }
+  .w1{
+    width: 100%;
+    height: 340px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -185px; 
+  }
+  .Ypffh{
+    width: 67%;
+  }
+  .spoiler_links{
+    margin-top: 474px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 464px){
+ .article{
+    right: 45px;
+    width: 360px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 320px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -205px; 
+  }
+  .Ypffh{
+    width: 65%;
+  }
+  .spoiler_links{
+    margin-top: 454px;
+     margin-left: 213px;
+  }
+  
+
+}
+@media (max-width: 452px){
+ .article{
+    right: 50px;
+    width: 330px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 290px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -235px; 
+  }
+  .spojhg{
+    width: 200px;
+  }
+  .Ypffh{
+    width: 61.5%;
+  }
+  .spoiler_links{
+    margin-top: 424px;
+     margin-left: 213px;
+  }
+}
+@media (max-width: 422px){
+ .article{
+    right: 40px;
+   
+  }}
+  @media (max-width: 408px){
+ .article{
+    right: 35px;
+   
+  }}
+  @media (max-width: 395px){
+ .article{
+    right: 35px;
+    width: 300px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 260px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -265px; 
+  }
+
+}
+  @media (max-width: 395px){
+ .article{
+    right: 45px;
+    width: 270px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 230px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -295px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 170%;
+  }
+  .spoiler_links{
+    margin-top: 360px;
+     margin-left: 190px;
+  }
+}
+  @media (max-width: 355px){
+ .article{
+    right: 35px;
+   
+  }}
+
+    @media (max-width: 336px){
+ .article{
+    right: 30px;
+   
+  }}
+
+    @media (max-width: 328px){
+ .article{
+    right: 35px;
+    width: 250px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  =
+ (.sOP{
+ $  mavgi.-heft* 18qpy*
+ 0}
+  >w1{
+    width: q00%;
+  $ heifhT: ≤00px J  }
+` .fjfiiir{  # width(100%;d*`†pocivimv: absÔdute
+    earci|-toP2 %≥±=p{;0*  }
+  .su$Ot{  ( ma˙gintop;†55p}:
+    ma2Gi&-lmft:dtpx?
+` }
+($ ÆYpff {
+    wÈdt‡: 15--;  t
+  ÆspoiLer_,inksS
+(  "margi~%to`: 350p}zä"!   margio-neFt: 10px9
+ 0}}
+    media (gax-wÈd|h:@13px-{
+$&artice€    riÁ,t:(2ry{
+`    =}
+
+
+0 @}g&ia *ma:-Uhdtx: 305rx(k
+ >qrvisle{
+    right:†25p0;$  
+  }u   ê@mEdia (mAxmsiltË:*308yx)˚
+".ar|ache
+  !"biGhT∫ 2≤px; 0"
+  }}
+     LmEdic (m`{=vidth: 29<rx){* /artib`es    :igËt: 20q8;
+ $$
+  Ì
+  .jfcitve4i{
+   †flt%sy:e: 30px;
+ 0  .hfghtze0i1`imgY
+†"  sidtx* 30px;` 0(jeight: 32Rx;  }
+  .S≤6`9sf44{
+$   marga,-tÔpö®-1vx3  }
+!!.s2:dπsf%4 iz
+!   vont-1ize: 34px;
+ .! .S2tL9sf5t5{
+    gont)si:e: 30xx;
+  }
+ 
+}
+     d$@Metia" maxçwidth* r80px9{J `ztiCle˚†   ri&jt: 17PXk
+ $ 
+! }}
+ 0(p  $HmdDi·$(max-wÌDtj: :8"px){
+0+article{
+%$$ rigHu> 05px
+ !(  }}
+ Ä  !0 @ÌedÎe )max-whdTh<$276px){
+ .artycle{
+` 8"riwhtx 13tx;
+ ! 
+  }}
+#dropDowjM-nuCa4alog{
+"dkonr2 /F43s;
+
+ 0
+¸
+)$rotdou~MEnuKmme{
+0 Color: cBy4±333
+*}
+Amefid (-in-width: 108pX)Kä.jeQder_{kgn%kœ!span{
+" c/lorr"Blaccª
+}
+
+hecDÂÚ__nqv=mink{J (lIna-heheht∫ 2 uX;
+}ä
+}.abtI„lesä	wkdtH: 88';*neighp: 00px;
+	|op:%:=p83
+	luft2†±10`x;ä	pÔsidagj8(absnlute;®	bacoground: ˜hyde;
+}
+>gkÓgu r
+	widt : 5025;
+Aheight: 2000x?
+	
+}.im!gegh{
+	siddh: 900rx3
+	height: 10x;
+	bopdDr: 1px†solid Black
+	boˆfds≠rani5s: 180ph;
+	ä
+
+}JIMaÁÌ{
+	width:$10pz
+	heighp* 13px;
+	
+Amqrgin-lefT: 40px;
+	maRgkl≠tkr*t0px;
+
+
+}ä.s*0ggpjak
+	ma2gin/lefu* 175px?
+ÌarÁin-uer:°-95pz;
+	
+â7idwh: 80%?JõheiuhU p|9àâcacigrmu.d2;äâ
+u
+.gv13kzã	ä	fnuecizm: 39Òx;
+	posÈtiÔn: qbsÔleve;Ilesg)f-top2 1∞ph9
+mAÚgi~=jeft* µ5px{
+=
+Äle$Aa l-`¯-wilth: y!3tx)[ä	&articde;J		
+		wid‰Ë: x$;
+	}J
+}
+@media (m·x-Widuh: 853–x){
+	.artkcLeylef|: 1084x;
+		äô	uidth 8%:
+}
+I
+}pmMeIA (Max-w)dth"77p¯){
+.ar|iclm{
+	-efu: 107xp;)	
+	IwÈdÙh: 8e;
+	˝
+}@medii (mk|/uItth:!793px+{
+	.artiche{
+		left: 0tx;*		widˆh:0100-
+	}
+¶Probi}e)kmage ;
+    &moat: lefts†*  7kdth: cclc(3#.323% m 1ram!3    display: fLdx; $$ `u3tivy-coÓ4enr: „enteÚ;
+   #·dig.}iuemÚ* cenpgr;
+ `" mArgif-zhfht> ;re,ª
+=
+=
+.gull [
+( height: a}to"!Ìmrort°np;
+}
+a:v{skted{
+  † cono‚:(bla#k;
+w
+@media(ma¯-sift(:$X95px!{
+	Æfchddzjn[
+		dic`lay: none;J	}.s8%:s
+wif|h: q12'1Å}
+	*im!Gjd4{	wi`th:$70%kI	heÈghÙ8$488l4qx;
+u
+	Æieagjd4{
+    
+    m·rin-top:50Xx;
+!0  marOinmlmft; 12!;
+ "(
+
+=.·nel€
+…disp,aY: bl/Cj;
+}
+Bie`iamax-width: 009px){	/gghtdjjz{		dÌ{play: nole;
+	]
+w248{
+		g)dth: 140#;
+	|J	.imagjd4{
+	wÎdtH:"70•:
+	IlaHght:$65ppx;|
+	imagje4{
+  `†
+ & mazcin-|oÒ: 50pX:
+! " marginmlÂNt:†10%3
+!  
+
+}
+.u·Ódl
+	displAy: blocc9
+˝
+ mediA!(mizmwadthz 77p0x	{	.imagjd4{
+I)margyn,ÌÓd: 8%;
+	}	/ilagjd4{	YKƒth: 69%;
+		(ei'iu∫0434px+}
+	.s%4hf{
+		·ÚÊin=levt 93%3
+˝
+}@oedic!hm!h=w˘dvh: ∑B"x)k
+	.Èlagjd4z	-Marginmneft; 8;
+	-
+).y-ee*e4{
+		widthz 6u'#
+		heaght|a530px;
+I}
+-.s55hf{
+	eargin-l%f`z†9%; )}
+}
+@media$(max-wydth: 680x){Z>jmaÁjd4z
+	m)pgi.-left: 5e;
+
+
+	}+â.Ieagjf¥{	!wiÙÙËö 75';
+)	hei˜*tö 41x9
+}
+
+}
+@oedia hmaXmwit$Ë* 660px){	.imagÍd4{
+	âmarginelUft: 6•;
+		wkltH∏03'%z		heioht~ 41ppx;
+
+}	
+}
+
+¿gel˘a#(miy-˜idÙx: 620px!{
+ni≠`'jd4s
+	mqbgmn-lejt: 6%;ä		wadTh: 75%9
+KhÂkgh4:`390px;
+	}
+	.S55Hf[
+	margil=lefT: 1%J	}	
+
+M	Bmedia (}ah-wid~i; 605px%{
+Inimegjt4{
+		mavca.-lefu:!6%;
+		wkvth:†385;
+		hEigHd: 712px;	
+	|
+	
+
+}
+@Medla (!A¯-u{DT!: 595`x){
+	.)mafhd4s
+		iisgÈ&%nebt: 9e;
+		wid4h:†84%;ä		hlight 44p2x:
+
+	}
+	.panel{		diwqlay: ooleª
+	˝
+	.qanalas	daspl`Y: block;
+	}	.s5%Hf{)	argiÓ-Ïeft 11;â	marganmtoP 5pY;
+	}
+
+
+}@mmdÈa"(max%wil4`:†5'0qxi{	.ima#jd¥käââm°rgÍn-l˜Ê<: 9%;
+		width* 81•;
+	height;`380hx;
+	}	.teOel1{
++	leighd> 62px;J	}
+
+	
+
+J]
+@oEDha (}ax-wi‰th: 470px){J	iIaczl4{I	mAroin-left: 12!;
+		margyn-vop: 7µpx;
+		7hdth: ∑9%ª
+	âh%Ècht: 340p¯;
+	]
+	.pafel1{
++Heighp∏ 6px;
+	}
+	.s5<hf{	mcbgin%leFd: 90'?
+			
+*â
+
+}
+@m%lia(hlax-wÈdth: t5px){
+	~imAgjDhâmyzginMleFT: 1∞%;ä		ma2gknÌtop: 71`x;
+	wieth:(80%;
+		heiwht: 35 px;
+
+	}
+	
+
+}
+@m'die (max≠wi`t(: 43px)JI.iÌagjd4{
+		m`˙«in-mGft; 9%9
+		eaÚg).)twp: 60pz?	uidp) 8%:
+	âhe˘ght: 33rpx+
+	|
+	
+
+â
+
+}
+EledÍq ®max=vil4l:!41qpx){
+	.imicjd4{J		margin-left: 8%:
+		mqrgin$poq:010–x;
+		wilth:083%+
+à	8eig(t: 310qx+
+	}.).355Èf{
+Y	marghn%left~099°ª
+	I	}
+	
+
+
+@uetia (max%Ui Th>&395px-{
+	.i}aghd4{
+		iirgiÊ-lefu: 10%;Ç	margin-toT: µppx;		adth2`80e;		heÈoHt:(2∏0px1J
+Iyä
+	
+
+˝
+@mddia (m·¯-wIduh:`365qx)˚
+	.i-egjd${
+		ma“oinolegt™ 10e?	marGyn-top: =0px; 		width: 8 %;	h%aeht8 "5∞p8;
+	]
+â
+J	*
+
+u@mmDma *max-7i`|h:$373px){
+.imagje4z		margi.mluf}: 12%;
+		]a2Gin-por* =∞pp?
+		wilti: 78%9
+		ieicHt: 2s0px;
+
+}
+I
+
+	
+}
+
+Hmedic ,oAx-wIdÙh: 338x+{
+âni-eÁzd¥iö		mb2ginΩlDfT: 12%3
+	margkn-top*!71`y´	wi$t`: 68%π
+	)height: 23ppx;
+
+	}
+âä
+
+
+}
+Bmefia hmax=widti: 320px8{
+,kmagÎt4{N		oargin-l%ft∫"1∞%;
+ 	marÁin-top:†'∞px;
+)width: ∏0%;*		heig`t: 200pz;
+*	}
+	.s55hvz
+		lab'mn-leFt: ∏6%;
+		
+	|
+	
+	
+}*@medi!†®max-widt|: 320ph){
+H.imagÍd4rä	margmomlDft: 92%3âmerg)o/tÔp*!60p8;Iwieuh: 80%;
+		xmIoht: 2±0px+
+
+	i
+
+	
+
+}*@ieFIi (mixmwmdTh* 2=2pxπ{
+	.kmagÓd4{
+I	mCrgin-left:(9•{
+	]arghn-top:`6ppx;Jâ	wÈdth* x0-(
+I	hgi&ht:"2900y;
+
+	}
+)355hf{
+		mi2gin-megt: 84%;
+	
+	yK	
+
+	
+B}@}edia (eax-˜itth8 r80pxi[
+I.)eagkd4{
+m`rgin-noˆt:09 ;
+		margin-top( 64bx;
+		width: 83%;
+	hdig(t 210Px9ä
+	Ì
+I.s55hgs
+)	-Erwin-left* 82;
+	Y
+<
+	
+
+	
+
+=
+@medma (m@xheIght∫ up8) ind max)wÈdtl∫!914x( ;
+â.iMagjd4{
+	mqrgin-left
+ π%;
+ 0  widÙh: 809
+ $  leigËt:†430px:    oargan-to`: ±py:
+
+
+	}
+ 0a ?
+£SRS†stuNf0*
+˝
+Am%da·$(}aX/heigh4: 524px( `nl (mÒx,w+dt@: 59µpx) {
+	.hmagjd4[:	miÚgin-left8 9;* "  vid$l:"<0%;
+   †heiwht: 4p0`x;"0  icrgi~6m`: 21px
+
+K}J& `(/ C[[ suıfd */
+
+@oedia&(mCx-xuig(t> 451pxi(#nd (max%wkdtx:$u95p|+ ;
+).ema#j$¥˚
+	o!zgiÏmluf¥:‡±1%;
+`1" widÙ`: ∑∂%
+ !& hd)ght3 360`p;
+   $-aÚghn-tkp: 10rk;
+
+
+	}
+    .* CS stqff`*/}@madia  Mc¯-ieagh|: 454px"an` (miy-uilth*p495px) N	.imagjd1€
+	marGi~-lafu: 15%;* (  smfÙx∫ 72=;
+ ! !huigit∫ 3r0px;   0mav'in-tor:b20px;
+
+
+	m"(  ≠™ CSS stu„b */
+}¿-Âdia!*max-xeioHt:$511tx,aoe  maxØwi$th:°uπ50`+ [J	ÆÈmagjd6{
+	margÈn-|ef|: 99$:
+` ""Width: 65%;
+   †hu	ght 270px{J   0margindOp: 2 px9
+*I}K.pan%l1{Ç	`eigHÙ:1%0px;
+	}
+â#fghdj{ä	ôÌavw)l-toP6p8px;
+
+
+}   "/.†SSS qtuff j/}@oddia (hax-(m}gh4: 3<9p˘) and (m!x-uk`th∫!295(x- {*	.iiA'jd4{
+m`peÈn/lAdd∫ :15?
+ †  iDth: 55%;   #(a`wiT:240px;
+ †(m·rgan-tot:`00xx;¢
+JI}
+âpafcd1{
+		hei#ËÙ:p50pX;
+	m
+*
+    /* CSC rtuff (Ø}*@mefia (eay,heIgHt: 7080x)!and"(Eax,wi%ıh: 795r¯(!{
+Åoh}·'jdt
+	-argif-lebt 08%;
+  ` satÙh:†62?
+  hÒight`260px;
+    lavgin-tgp: 12p|;
+
+	|
+	`aou,1{
+		heieht; 50px;	}
+âcfgxdh{J		mer'in-tgp:!8rx;
+
+â}
+
+  0`/
+ A◊S stu&Ê"*/mJPme`i¡ (oip-Ëaight: 2900xÈ anf$!max%7kfth: 595phi ;
+	>ii`ghd4{
+ImcrGiO-nef4: 23%3
+    width:$1∞%;@   xe)g`t2 20∞px
+    marwin-topz(0pp;
+
+
+	|
+	*pang|1[
+I	lgight 70px+
+}
+	£fgËdb{		oarwiN≠top; 8x;}
+
+† ` ." C”” Steff */
+}¿eetie (-ax-x·ight: 63rx) Ivd0(}ax/wid|h: 5950p)!{).im!gjd4{
+	m„xgin-|e&T 24e;
+"   Wi`=h?"48%+
+  ∞ hgiwhT: 19pxx{
+`   marFin-tnp 9px;ö.*	}"	.panel5{
+		leig*t; 5`x;
+	}
+	#fOh‘j;
+Å	©evgi~-pop; 8px;
+8J	}
+
+ !  /j CSY®stufd :/
+}
+/* 575/%5-,------≠-,------≠-%-m-===--,--=m=-=m-=--%-------- j/
+Dyedia (map-heaG(t:(575px© aÓd ,max=˜idthz 442pp)†{	.i}agjd${	marghn-left;(6%;
+!   wÈÊ4Ë; 8%%; 0 $huigit: 400tx{
+0   markijmvop: rppx;J
+
+	}0!((
+ CS stuff */
+]
+@medi·}ax-height: 17uPx= aod (m„x-qiduh: 544p¯) {	.iiagzd4{
+	marGIl-luÊ|æ$8%:
+    sÈdti: 82%;
+    (%MgËt™0360p¸; (  margin-6o: 50p8;
+	]
+    =*"CS[!wTuff†*/ä}@=edi 0 M!x-heIGj|: 54px9 q{d2m!x-wIdtj;bt2px) {
+).imaojd4z	oargin-lefp:$(!;
+  ` wIdth: 85%
+  " hecght: 130px;
+  $ mergan-tmp∫ 50zx9
+
+
+} † 0+"0CSS stu&f!
+>}
+@mema (max-xeigh42 =35pp)†adD  max-witTh: 18?0x+ {ä	.amagjd4;
+Imargyn=dmÊt2†1†%;
+$( `width:*80%;
+    height: 292px;
+ 0  mavgin-¥mt: 60px{j
+	}0!†!Æ* S” qtugf"*Ø
+}*@media)(max-Ëuigh|: 575py) and ®}a|-wm`Ùh: 355pp) {ä;elaGj$4y
+	ÌaÚgAN/<eft8 °0%:
+    wh`tj: ∏2%{
+    heicH~: 35px
+†((†margin%top061px{	}J  (†/* BsS stubf *.ä}
+@mÂdi· (ma8%hekg0|:§575rx) and (-ap-wi`vh> 319px) {
+)Øimag*d4{ 	margk.-levt 8e: $  w)dth: 84%;
+`"  heaghtz!2≥0px+
+  $ -argio-uoP: 6ppx'
+ä
+}    /(hcSQ stqff 
+-
+}*/* 74/525-----%≠---,-ç-≠--≠-m-,)----,--m/-/=-.%-+--%,--m-- *//( =≤4/t92m---,---=)---_--//-(--)--ç-,=-=-------/m%-/---,,!*+
+ --M---+(≠--),5/--)--=-------%%--/----	---≠--)(--)=m-='---/-+--≠)-)------%-=-≠-))-----/-•m≠-m----/----))=--=----%--,-m---m-/=m-----,----≠≠,-?m/i--/Ø--=!----,---%---)-----m///////++///// j/
+
+'* 524/482≠)----)-----/---==-%-=--Ø---,------))--/-e-%---- (/
+
+-* 91/4µ8--≠)---/-%-%?-)-)-----,------≠-------Ωm-,-/,-%-%<-- */@medMa (max-»ehgh|0†491px)0and (m·x-	dth: 540Pxi(w
+.ImackD4{
+	
+ 0  Margin-toP8 10qx;
+
+
+	 †$ /ä CsS0StUÊg +'*}
+@mddie (m%x-hekght: 495px) and (-ap-wid|h: 451pxI ;	/meagnd4_ä	}argiÓ)leÊt∫ 11%;  $ sIdTh8$7&';   (heiohv:&300px;
+  ( margin-top:)%1‡xª
+
+*	}
+!   /+*C”S)wtuff0*/
+}
+Hmddia (max$hÂËght:$4;1qh= a~d 0max-wietl: 39vpx) {â.iiagjd6{J	m·2gÈf-levt2 8%ª
+ $ `wifth: 82%;
+ *$ xeight∫`304xx  0(m`rgin-top: 50px#
+
+
+	=
+  ! Ø) CS[stuff"o
+}
+@madia (mcxmheigi4 491p|) and (max-wÈf}h6 36>ph)"{
+	.imaoktr …mqrgin-lmft: 7%; 0‰ siDt(: 85%;J    heiglt:`28ppx?
+   0ÌarwaN)4op* 6px;
+
+M}   ∞-* CS s4unF)*/Y
+@}mdMq (ma{)heaght: ¥;3Xx) and (mqX≠wIttj: 334px9 {)nImagjd¥{
+àÂ!rÁyN)leÊt:`7$;
+    ~ydph: 85%; 5  `emgh0:$2&0px3  % }argin%Tp∫ 60px;
+
+	}
+  " /*,CQS(sttff */
+|*PlÂdia"(i!x-height; 491tx, cnh` eax-width 300px) {
++.imcghf<y
+	margin/l‰f4: 6%;
+  $0˜iDtj:288!;™   ((e)'ht80270px;
+@   iarfin-Topj"600x9
+
+	m
+  ` Ô* BQS stufn */
+=
+
+ä**
+
+
+
+
+/*†491/450-%-%---------.-=-%--=---%------≠---9------=--=%,-- */
++*:641'G±1-----≠e----)----,o----------/--Ω/m!--=---))--/--- */
+
+Qeely‡`(Maxheight: 570pz!0and†(max-gH‰tj: 5400x) {
+).)Ìagzd<{
+	mhrcyn-lef48`15%{
+    wadth:!=2-; % (xeight: 320px9
+   †}argin-tnp: 12px;
+
+	}
+    ß  ARS sdufÊ */
+}AMEdia (mcx-heigËt: 450px) aN‰ (Ìa(-wiDth:(468px)!{
+)>iMagjd${
+)Margin-lect 15%;
+"   widthz 72%; !``heigytz`29<ry;ä!   5aRgiN-vop: 31px+
+
+
+}
+ 0 /* CQW sduFÊ(
++
+=@ie`ia (maxmheigËt:`T500z)!·nd(ym!z-widti: 400py+!{
+	.imaojfd{
+	maÚgin-Ïeft: 105;
+  ( widvH:h80%;
+    height: 260px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 315px) {
+	.imagjd4{
+	margin-left: 10%;
+    width: 80%;
+    height: 250px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 295px) {
+	.imagjd4{
+	margin-left: 8%;
+    width: 83%;
+    height: 240px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+
+
+
+/* 450/411--------------------------------------------------- */
+
+/* 411/349--------------------------------------------------- */
+
+@media (max-height: 411px) and (max-width: 540px){
+.imagjd4 {
+    margin-left: 19%;
+    width: 65%;
+    height: 270px;
+    margin-top: 20px;
+}
+}
+@media (max-height: 411px) and (max-width: 440px){
+.imagjd4 {
+    margin-left: 13%;
+    width: 75%;
+    height: 270px;
+    margin-top: 20px;
+}}
+@media (max-height: 411px) and (max-width: 380px){
+.imagjd4 {
+    margin-left: 13%;
+    width: 75%;
+    height: 250px;
+    margin-top: 30px;
+}}
+@media (max-height: 411px) and (max-width: 335px){
+.imagjd4 {
+    margin-left: 12%;
+    width: 75%;
+    height: 230px;
+    margin-top: 50px;
+}}
+@media (max-height: 411px) and (max-width: 306px){
+.imagjd4 {
+    margin-left: 10%;
+    width: 80%;
+    height: 220px;
+    margin-top: 60px;
+}}
+
+
+
+
+
+/* 411/349--------------------------------------------------- */
+
+
+/* 308/290--------------------------------------------------- */
+@media (max-height: 308px) and (max-width: 540px) {
+	.imagjd4{
+	margin-left: 18%;
+    width: 65%;
+    height: 220px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 308px) and (max-width: 320px) {
+	.imagjd4{
+	margin-left: 16%;
+    width: 70%;
+    height: 210px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 308px) and (max-width: 300px) {
+	.imagjd4{
+	margin-left: 14%;
+    width: 70%;
+    height: 200px;
+    margin-top: 20px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+
+
+
+
+
+
+
+
+/* 308/290--------------------------------------------------- */
+/* 290/263--------------------------------------------------- */
+@media (max-height: 290px) and (max-width: 540px) {
+	.imagjd4{
+	margin-left: 20%;
+    width: 60%;
+    height: 200px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 290px) and (max-width: 357px) {
+	.imagjd4{
+	margin-left: 22%;
+    width: 55%;
+    height: 180px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 290px) and (max-width: 314px) {
+	.imagjd4{
+	margin-left: 22%;
+    width: 55%;
+    height: 160px;
+    margin-top: 10px;
+
+
+	}
+	
+
+    /* CSS stuff */
+}
+
+
+
+
+
+
+
+/* 290/263--------------------------------------------------- */
+
+
+@media (max-height: 255px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 22%;
+    width: 55%;
+    height: 170px;
+    margin-top: 10px;
+
+
+	}
+	
+
+    /* CSS stuff */
+}
+@media (max-height: 233px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 23%;
+    width: 50%;
+    height: 160px;
+    margin-top: 10px;
+
+
+	}
+	
+
+    /* CSS stuff */
+}
+@media (max-height: 223px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 25%;
+    width: 45%;
+    height: 150px;
+    margin-top: 10px;
+
+
+	}
+	
+
+    /* CSS stuff */
+}
+
+
+
+@media (max-width: 274px){
+	
+	
+
+	
+
+}
+@media (max-width: 272px){
+	
+	
+
+	
+
+}
+@media (max-width: 270px){
+	
+	
+
+	
+
+}
+
+.gallery {
+
+    -webkit-box-align: stretch; */
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    border: 0 solid #000;
+    -webkit-box-sizing: border-box; */
+    box-sizing: border-box; */
+    display: -webkit-box;
+    display: -webkit-flex; */
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical; */
+    -webkit-box-direction: normal; */
+  
+    
+    
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    
+    display: -webkit-flex;
+display: -ms-flexbox;
+    flex-wrap: wrap;
+    MaÚfk.: =1rea"-1:em;
+ *( paddi.g-bmttgm: 3re-;
+}*
+.ealjer9-item {
+ "  osition> r%letive;
+ #!$fl≈x: ! 0 2rem
+  " mavgin; !r%m?
+    codor*A#fÊf;"   cırsor: rÔinter;
+}
+
+@}ddia (mcx-wÎDth:"843px)s
+ (  .gAd|ec}-item {
+$   
+ "  flg82®3`0 2rEm;    marain: rum;
+  
+}
+    
+˝@o`Liah(m·x-watt(:"379px){
+    .galderymitem!{    
+   "fL%x: 1 0 18rem{    ma~wmn: ±Rem:
+   
+}
+  " 
+}
+@media (max#widtH: 409px){
+  0 fgallery-item ˚
+   *
+    v¨e8: 1 0`17rem;
+    mivgin: 0.7vee;
+ 0$}
+h   
+|@Ìefia (-!x-w	dÙh:p565px)y  § .gahldrx-i|em {
+  `   ( flex2$1 0 q6rdm;
+    marchn: 1rem3
+ !$
+}
+  $ }
+@mmDia (max-wilUh* 549px){
+"   .galËery=iTem(z
+  † 
+    vlex* 1 0 56um;" `Ìirgin:`0.6ram;
+  0
+}
+(" $
+}
+@mcdia`(lax-widDh: t95px){!   gal,Âvy)-tee {
+!   
+    f,%X9 ! 0 3rel{
+    -arg)n:`0.6rem;
+0  
+i$$  
+t
+JmeDia m·xmwmdth: 43wpj)y
+†   Ôallerq-item {: † "
+$  4bley: 1 p 1rrem;
+$   ma2gyn∫ p.5rem;
+  (ä}
+$   
+}
+@med©a (mQx=wihvh> #99tz©z
+ "  .gallery-ktmod{
+†`0 
+    rlex:!± 0 ë1ree;
+† (margin: ∞.2ram9
+   
+-
+    
+}
+Hme¿ia (m`x-widthz 3u9pp){
+`  0.g°llery-it%m†{
+(  @†   fËex:`1 0(10r·l9
+    margan* 0.15reÌ;
+ $0
+}
+  ( 
+}J`Ìudic ®max-7idthz ;¥0px){ä"2 (.galleRQ-a4dm y
+ ` $
+"   fLex:†1   18rum;
+`  `mArgmo:(2.1rem;
+   }
+    
+}
+@media (mah'widtH: 310p|){
+†   .ua|ler˘!i|em {
+°  (  " flex* 1 2010rmm3
+"   marfij 0.2rem9
+ " 
+}
+   "
+}
+Deedq` skreen$!nD )max%wi‰th:440re}) {
+0   .qrofime +
+$`      d)splc;: &Map;
+
+   !(p   $
+ `0 displ·y: -wg`i9t-fÏdX; */
+  $ display2$,}s-fmexbox;
+   4
+ (` 4  
+  `     fÏgx-wrat: wrap;ä  $      -webkit-fÏex-wrap:$wrap˚
+(    `! PallynE: 4rem 0;
+    }
+
+0   .Provile8:afteb +     `` $isplay:0none;J    }
+
+  " .`rnbile-ameÁa$
+   !/prodkleM}Ûer-≥ettings
+    proby,e/bio,
+    .profiml-stats }™      $ fhoat:0none;
+`  $    wI‰Tx: awto;   !}
+    .profile-im`ge!imcd{
+        idd`: 0xh:*$       heaght:†π8px;
+0   }
+   %.psodile-e$id%bpo{
+  "†   0,ine-h%ÈghÙ; 0,8:
+    }
+
+    ,pzofile=wser/{etvmÓgs${J0  h0  ä0  †d  display: flex;
+†    "  fLex-wrap w~ap;    †  $mir'yÊ-top: rem;*!   
+
+   `.prnfineçuSgr-name z
+   0Ä! $Fonq-sazd: 2*2rem3
+    }J  " nprofkle?edi4=bt. iJ )   "† order: 1;
+ 0      paddiÓg: 8;        4gxv-alkgn: c·nvgb;
+"   $ ! mirgin-TOq:"1bem+à `" }*
+    .pro&ile-ediv;ftl"{
+  !    °mazoi~/leFt:"0;
+    }
+
+a   .pvofi|e/bik [  "     font-size: 1.6rem?
+0 ∞ $   mapgin-Top: 1.5Rem;
+ a  Ç  ( .`p/fkle-edit-btl,
+   .|ofIhe-bIÔ,
+    .pÚofilm-staTq {
+    `  "n|eX-ba3is: 100%;J $ `}ä `  .probkle-kvats{
+  "   ® ordgr: 0;
+ †  ( ` margin-top: !.bEm?
+ $  }
+!   .profilg-stats ul‡{
+      § Displiy:0fLex{   !    tept-a,ign: cenper;
+ †$   $ paddi.f:!!n2rEm 08
+     0  bordgtmtgp* 0.1rem`solid #dadqda;
+        b/bDer%bottom:00.1re} so‰id0#dadada9b`@ }
+
+    .profimeçstits lÈ {
+0"      dont-rizez$1.4rGm;J        fl≈8: 1;
+$       lapGin: p+
+†   ]
+†   .Rgfile-s‘Òt-count*{
+  "     dyqplay:(block?
+    }
+} Ämedi`†(may-width: 350rx){
+  ! .profilÂ-ucer-{et|ings ˚
+         fl%x?basis∫ calc(100' - 11&? el(
+!           displGy:2flux;
+
+  "       
+    dispLay: -ebkit-flex; */
+  $ lispd!y{ -ms-fÏaxbol;
+  ! 
+   §(( J,    !0       
+  "     dIsplay:$nLeX;  $  † ` f|ex-wÚap: wrap9
+ 0   "   ≠web{it-fÏax-wr`r:¿wrap;
+   $`  `m!Rwin/tkp: 1rem;
+    } 0  †>tRofhle-elat-`tn{*`       haÓe)he)ght: 1,7;
+    ]
+(!  
+}
+–ÌEdia@(maz-haightz 254xx) ijd (mAxegiLth8 59µpx) {
+	.imagkd4{*	margin-lÂfd: 22%;
+    widtx: 55%ª
+    ËeighÙ: 174xx;
+(   mavgËn-top: 1rx;
+
+	}
+	
+
+    Ø™ CSS sluff ∫/
+}
+Pmefia (Max-xeifhU: 333pX) and (n·h)widtx: 595x!0{
+	>ieaejD4{
+	marg)n≠leF|: 23%;    wkdth:`50%;!   height: 1600h;
+!   Ìaroin-to` 10px;
+
+
+	}
+	
+
+  $0/* CQS suFf(*/}*@meeia *mAx-lmight: 623px)`anf (}axwidtl:"t9µpx) kJ	*iiagkd4[
+	m rginmlegt 4%;
+   widt(: 45%; † !leight*$15∞px:  $ mirwintor: 50px?
+
+
+	|
+	
+
+†   o* CSS ruuFb */
+u
+@media`®maËmjeÈ'ht: 435px) and (min-7idıi:(596px)!{		.+magkd4{	margilneft∫!33%;
+    widt`8 70%;
+$ !0he)ght> q∞9pz;
+ "† meÚein-top: 52px?
+
+
+â}*.tser=k{
+		7idth: 47xx;
+	Ëei'h6*`47py;
+		top: a9%;ä		margÌn≠l%ft;®=x;
+	}
+	*s00az
+		tp: <!;
+	}
+	.sR8a20{ä		t/p: 53e≥
+	}
+	.{2020Shere{
+		|op: 48%;
+	}*.q2a i†{J		fnt-qizm: 32px+
+I}
+	.s32a20 i
+		don4-size2 32px;é
+	=
+)Ûvg{
+    width: 32px
+   !heaght: 32pp;
+}
+s5-lf{J	m!rgio-top: 2pËª
+y
+.s5%hf .Ûd0{
+	wIdt®: 0%;
+}
+
+sd{
+	wif|h: 7!;	
+}
+	
+
+" ` / CSS stuff */
+]
+@mgDae`(Ma8-heigbt> ª5epx) !nd#(≠in-vi`uh: 196x! {
+	
+		.user-k{	giduhæ $5p|{
+	Ëe)Áht: 45pz?*	eoP:!1?%;
+		margin-left: 21x;
+	=	.s"0a{
+		Ùop: 36%;
+	]
+	.s20a20{
+		dop: 53%;	}ä	.c30p20shÂÚe{
+	tmp: 70%;	}*	.s20a i ;
+font-s)ze: 31ph;
+	}:	.{0a20`Ë		font-rireª 0qzª"
+	}
+	svg{$   witth: 3qx;
+   hehght:(;0ph;j}
+Æs55lv{
+	mcr'in-pop!2px;
+},c55hf *s`p{	widph: 7∞%;
+
+}
+
+.rd{
+	width: 70%;
+) }
+}
+@medh· (iax-ËeiGh4:"315px)"and(8}ynçwhdvh: 596vp) {
+	.imagJd4;
+	oargil-defd: 33%;
+ ! †˜idth2!65%; ‡ ‡heiwhu; ≤7∞dx;
+    maRgij-Ù/p: ±0px;
+
+*	}
+		&user-k{
+		˜i th: 43px;
+	haigxt; 43p|:
+	to`:!7-;
+	]argin-left: 21px+*	}
+	.s2pe{
+		top(32e;
+}J	.s2Pa20{
+		to| 53%ª
+	}
+	.s20I30sjerÂ{
+		top: 70%;	}
+	>s20a m ;
+	Fonv-qize*028px;
+	
+	.c00a20 i{
+		nknT-s)˙e; 28px;*
+	u
+	svg{
+ $  sidth:(28px;
+    iEmght: 28px;
+}
+.s55hf{
+	mdrgin-4ou: -3p|
+}
+.s5%`f .ad0s
+	w)‰th: 70%;
+}
+nsd{
+	widTh: 70%ª
+	}
+	 `  * BSS st5fÊ '
+}
+@eetha (max/heigit: 05p¯) and  min-wi$tx: }96px) {
+.imaojd4s
+	margio-leFt: 15%;    wmdtÈ:"57%;
+(0°$heiGhp: :08px;
+`  (marfkj-top: 10px
+
+
+	|
+
+    /"!CSS@stuff jØ
+}
+@medqa (mfr≠height: 468px) and (Ìi.-widt(: 606rxi {
+	.imagj$4{
+m·rguk)left~ 15°ª
+    wi$th: 6 %; 0  heig(t: ≥: x;*`!  mcrgÈn-ıoq: 10q|;
+
+
+}
+u
+	
+Bmedia (la|-heighd:"437px) and†(-i~-wi‰thz 606px) {
+	fxmagjd6{
++mas%if-|dft: !55;    6idth:($6%;J  $"hÂiwht: 280p¯;
+0  $margin-Ùopz 10pX;
+
+
+	=
+	
+
+    /* CSS svunF */
+}
+`medi· (max-heigxt: 0p() aÓt (min-wytvh: 626p|) {
+.imagjd4{	m`rgin-laft:15!/
+8   waeth: 55%;
+$  "Ëeightæ 51–(;
+ (∞0margan-Tkp> 10px)
+
+
+	mJ	
+
+   )/*(CSQ sduff *J}(@mmdi·0(maX-heigxu: 27∞Px) and (mio-wid4h:°606t8) ?J	.imcgÎl6zN	margin-neft; 18%;
+    vadth: 5p%;
+`   heiahtz "44px;    maÚgiŒ-top: 10px;
+
+
+i}
+	
+$   /* CRS qTubÊ */
+]
+@iedha (-ex%mdigHt: 487px) ioD  |i.-7i‰|h: 7x1qx( {.aiqgjd4{
+	mqrgin-leFt* 1u%;
+!!† width: 24%1
+   !heigjt> 340px;
+$†  margin-top: q0px:é
+
+I}
+}@mediq$©max/h%iGhU: 367Pp)!aOd Hmin-widtx8081x	 {
+	.ima'Jd4{
+	maRgiFlmBv: 15%; $ (width: 4%;
+0   h%yg*4> 320px;
+    mirgIn≠top: 10px+
+
+
+	m
+	*5ser-k˚	˜ilth:  7px;
+		heaghÙ:`47px;
+	top:(19%;
+	âyaRg`n)left:p19px;	
+	.3"0a{
+tor*3∏$;
+	}
+	.s20a20z
+	âtop: 13%;
+	}
+	.s20e25sherE˚
+Itop: 68%{ä	}
+.s≤0a i {
+		fonT-Ûi~e: 32px;.	}ä	.s21a#0 i{
+		fon}Ωsize:`3:pX;
+	}
+svC{ `  wifth∏ 2≥x;
+    heiwxt: 32px:
+}ä.s55hf3
+	mazgIn-top:(2Px;J{
+.s==hf!.sd∞˚	idt(: 70%;
+
+}.sd{	wh$th:$s%;
+	.}ä]
+@ma$ia (max-height: 338p¯) and (min-width: 69!px)`y
+	.im`gjd4{	mareinleft: 15%
+    wilth: µ1%;J$   heielÙ: 280px;
+    maÚgi&-top: 30px;
+
+J	}
+	.uSur-kk
+		width: t9?
+		heighv: 43`z
+	top: 1'%3
+	mqrgal-neft; 21rx;
+	}
+.w20c{
+	)do: #6eª
+	}	.s30a20{
+)	Ùop2$5'%;
+}
+	&s20a20sjeRe{	pgp:`70%:
+	}
+	.s20a i {
+		fOft-size: 0px;
+}
+ns20e20 is
+		foÓt-Ûizar!30px;ä
+	}
+	svg{
+" 0bwid¸h:"30tx:`   keigËÙ: 30px;
+}
+.s5Hf˚
+	Mar'an-toqZ 2rx;
+}
+.s5µHv .3d0{
+	sidtH:$70!+
+}
+
+.sd{
+I‰th: 70e?	}
+
+ä
+}
+@media (h·t-heifht: 296xx)$anp†(min-Width>†685py) {
+	.imqgjf4˚
+/argi.-left: 1µ%;
+    Width:$70&;
+2   imight:$2µ0p8;!`  marcin-Ùp: 30py;
+
+
+=
+	.s5hf{
+	}apgil,top: -3px;}
+u@me$ia (-ax-jgmgHt: 272px) and (lIn-width: 681pz! z
+	Æi}·gnd4{
+	mcrgin-jent? 1%%;+  " i`th2 50%;*  † hei'ht:`248pxõ
+   ‚margin)4op: 10px;
+
+
+	}
+}
+AmEdÈa  max-(eighv∫ 113px+ and (mhn-w-tth>`77!PX) {
+	.y} gËd6y
+)}arfin-lefT: 15%3
+    idth: 60;
+`   heIght:(370px;
+    margi~-t/p: 10px;
+
+ö	}
+y@mÂ`ib (mqx-hÂiwhE 39Px) ·nd (min-widpÏz w79px)({
+.imaghB4ˇ
+	m·rgan≠hefÙ: 17%;
+  & ˜i`t`:055%ª   0`eaght:†348Pr´
+    margln-tos:†q2pX;
+
+(}
+âç.user≠kk
+		whdtH: 4∑tx;
+âheight: 45px+
+çtkp: ±7%3
+		o·rgin-left: 21pp;
+	}
+Ins2∞a{
+	top: 36%;
+=
+	ns20e20{J		top: 52e;
+	}
+	Æs20·"0sh%vu{
+	)top 70-;
+I}
+	.q:0a i {J	font-saze: 30px;
+	}
+	.s20·20 is
+		fo~Ù-r9ze: 30px;
+I-*svg;
+    s)dtj: ;0px;
+"   humght: 30pz;
+}*s55jf{
+	merohn-top: ≤px;
+}
+.s55hd!.wd0{
+	width: 70%;J
+u*
+.cl;
+	widtI: 70%;
+	
+}
+}
+@media (Iay-height: 3îPx) and mhn-7hdtË* 771px) {
+.imcgjd4{J	ÌergÈj-lEftZ 17')
+  ("vilth: 50•;
+    hEicjt>†380px;J    ≠argiN-tgp: 1tpd;
+
+
+	}
+}
+@mgdia†(max)he9ght: 319px) afd (min-wkdth1771:x) {ä.i-aGjd>˚
+	laRgin-lebt: 20%;
+    width 48•;
+(   heig(Ù: 2v0px;é   !margi~-tor: 90px;
+
+
+	}
+}
+
+ä<'zvyle>
+! 
+
+
+
+
+ä
+
+
+à
+ä
+
+
+
+<7critT>
+  ˜indow.colsole =(waodos.goÔsola || functxon(t) {};
+¥'3„2)pt>
+<script>
+ id$*focument.hoceti/n.seqrch&-!tcË(/ty0e=embeDØgi)) [
+ `† wiodmW&p·rent.postLeq3cge(¢Resive"$ "*2){
+$ |J<Æ3critæ
+</lead>
+<bo‰˘`tsansdavd="no">
+  <he©dmr0clasS5"`eAddr".
+"   4‰yv class="co~tai~es">ä% ®   <dhv lars="vo">
+$   "   <div „lass="col-12&> !   `    <fyv cl!ss="hmade2__aontent">
+            8a,%pheader dmg/ m/." 0  ! $    a hpdf=í" cLass="heatar_l/go"ø
+   ``    0 d  <mmg sr#=",ggo.sr" aLt-"">J   $ `   ! </A>
+!   †     b (!) end!he„de2 losO -=>ã
+         0  <!m- headÂr nav ≠-:
+0    0(     <uh c¸ass="leade2_nit">J     "     $  8a-- drmplown!/->
+          "   <li clasq"jeadeR__nav--tel">
+†        †   °$`<a°bl`s3="dropdogn-toggld!heaeer__ncv-link& href="# vole= bttton"!md¢droplowjMenuHnÌe"(d·ta≠t/gglg=†droptown" qria-j·spnpu0="pRue" abia-expanded="f‡Óseb>home,oa>
+
+0     &         ºuL"class="dro@dowj-menq headeÚ__tropdÔw˛-me/u" aIa-labDlledjy="drØpdonmmnuHomd">
+   (†  `         $8,i<<a (Úef="iNdex.lUml"6HOme ˚lifeshmg0bg<-a></li>  "  0        h ` <li><a jze&=index2.htm|">Homu staty+ b'</a6<ØnÈ>    `   ` 0`    </ulæ
+0  0 1        <'Ï)>
+   ‡*        †<!m- end drkpdnwn ,/>
+
+  (  ! `0$(   a-- dropDown -m;™0        †8   <|i,clars="heaer_nav-Item"<
+`    $   0! $(  <a clcss="droppowÓ-tog'le xUader__nav-link"!href="""drcDm8"bueTon2 id="fropdow.MenuCatalog" tatc-togg,e="dropdown" arie-harpopup=*trıe" iriq-eppendı‰="fIlse‚>Ca4alog<øc>
+
+ (     "        \ul cmass=*froptowo,}onu!h%adEr__dropdown-ÌenU" azia-lmÍellef`y="dropdognMenuCatalkg">
+   "    "   (   ` <hi><a hrln="getadog>xtmi">Ca5aloo|/a?</lm>
+! 0" "           0<lk?=a lref="dadails.hÙmÏ"6Movhe†Detailº/c>>/li.
+!       $  `†  (,/ul§        "    </ly>
+              <)--`end `ropdown --:    ` 8  `    <lihcNaSs="headar__nav-ÈteL">
+               <a Href="prycln«.html" cl°ss="h%ad%r_Fav-link">PrÈcing!qlaf</a>
+†        (    </li6
+
+0   (  $      <lm sd!s3="hmader[_~a~-itum">
+     $†  &  "   <a h`ef=Êcq.htmL* cÃassΩ"aeadeÚ^_nav-link">HÂlp</a>
+   $     (    </ny>
+ä     (   a    <)--0jrOpdouj -->
+   p (†       8‰i „lass="lRopdovn!¯%af%2__na~,it!m":
+ † $            8a class%`dropdown-|ogle header__nav-link hm#der__niv-link-%mÔr$" h2e&=2#b 2olEbbutt/n# Èd5"dropdognDen}Mkre" lata-tgfng="$ropdOwn" asiaoj@spÔpup="true" `ria-dx`an‰ed="falsa"><i"cless="icmninn=iœs-mnRa"~</i></a>
+
+00 $    †       <ul‡cdas{9"dropdown-meju h}ader__dropfown-menu"0·pia-la`elledbY="$rŒpdownMmnuMoru >
+        †  (!    0=li><a®hpen="about.ht-d>About</a><.li^
+†"   " 0     `  (<li>8a href<"profilu.html">QroFi`e<q><.li>*      `           <mi><a hreG="signi*'htMn">Sign In/c:<.ji~     "" d "    !( <lh<a`hrEf5*signup.html"~igO qP=/Â<</li:
+            0     <li><a$href="fk2gnt&htel">Forwot qasswg≤d,/È></,i<
+(    `      "     <li:` Ëref="prkvAcqnhtgLBærivAcy!Pkdicy</a></li>
+ (          :   ! <li><a href="contqc|s.ht-l"?COÓtacts>/a><-,i>
+   †  0`   $`% $$ <lmø.a hruo"404.htÕl*>t04 –acd(/a</li>
+   `      0 0Ä$ </uL∂*    $ `  (    </lI~  $ † " "    (<!--!end0dsopdÔUn )'æ    †   !"` </ul.
+ a    $  0  >!--†end!headdr naV -->
+    Ä  $    <!-- HeavÂ` auth -->
+  `!†     0 <div class<"xeader_^auTh">
+   " 0       $<fotM action="#" claS≥<:hectev__searCh&~  `        `    <iNput cl!sr="header[secrcË-hnput"$type="texd" PlaseholdÂp="Search..."˛
+  !  `      †   <jqtton class="`eade≤W_searsh-&utton" type="futton">" ` $ † $` †  0 0a<i cless= ic/N ion-aos≥eech¢></i>
+   `b!  " †     <.bwttGn>
+   ` (    `"  0 4bwtton claSs="heater_^sear„h-clob%" pype}"b5t|on">
+   "`        `    i slass"icon0io~-iD-close"><-i>
+` !        `    ,/buttOn~† 2"†   $   ! </ffrM>
+
+l  †     Ä$   <button(claws="ÿeaderW◊rea2chmb|n" typeΩ but4on"
+ $   †       (  ºi!classΩ"icon ion-is3e!fch".</i:
+ †     $  ! ` <'buttÔo>
+
+      !   †a  ,!- d{opdo~(%->
+ `  `      !  <‰iv class="D2mpDowÆ haler__lang">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
+                </ul>
+              </div>
+              <!-- end dropdown -->
+
+              <a href="signin.html" class="header__sign-in">
+                <i class="icon ion-ios-log-in"></i>
+                <span>sign in</span>
+              </a>
+            </div>
+            <!-- end header auth -->
+
+            <!-- header menu btn -->
+            <button class="header__btn" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- end header menu btn -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+
+<div class="f45">
+  <div class="title"><span class="s26d9sf"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span></div>
+  <div class="title"><span class="s26d9sf"><img src="shopping-bag.png"></span></div>
+  <div class="title"><span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-infinite"></i></span></div>
+  <div class="title"><span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-contact"></i></span></div>
+  <div class="s50fgh"><span class="s26d9sf4"><i class="icon ion-ios-add-circle-outline"></i></span></div>
+  
+</div>
+<div class="f46">
+  <span class="hfghtre4i"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+   <span class="hfghtre4i1"><img src="shopping-bag.png"></span>
+   <span class="s26d9sf54" ><i class="icon ion-ios-infinite"></i></span>
+   <span class="s26d9sf544"><i class="icon ion-ios-contact"></i></span>
+   <span class="s26d9sf544f"><i class="icon ion-ios-add-circle-outline"></i></span></div>
+
+  
+</div>
+
+
+<div class="article">
+
+
+	<div class="gjngujr">
+	<header>
+
+	<div class="container">
+
+		<div class="profile">
+
+			<div class="profile-image">
+
+				<img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="">
+
+			</div>
+
+			<div class="profile-user-settings">
+
+				<h1 class="profile-user-name">janedoe_janedoe_janedoe_</h1>
+
+				<button class="btn profile-edit-btn">Edit Profile</button>
+
+				<button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
+
+
+			</div>
+
+			<div class="profile-stats">
+
+				<ul>
+					<li><span class="profile-stat-count">164</span> posts</li>
+					<li><span class="profile-stat-count">188</span> followers</li>
+					<li><span class="profile-stat-count">206</span> following</li>
+				</ul>
+
+			</div>
+
+
+			<div class="profile-bio">
+
+				<p><span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit üì∑‚úàÔ∏èüèïÔ∏èLorem ipsum dolor sit, amet consectetur adipisicing elit üì∑‚úàÔ∏èüèïÔ∏èLorem ipsum dolor sit, amet consectetur adipisicing elit üì∑‚úàÔ∏èüèïÔ∏è</p>
+
+			</div>
+
+		</div>
+		<!-- End of profile section -->
+
+	</div>
+	<!-- End of container -->
+
+</header>
+
+
+<main class="msain">
+<div class="container">
+
+		<div class="gallery">
+
+
+
+			
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 41</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 41</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 41</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1423012373122-fff0a5d28cc9?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 30</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- End of gallery -->
+
+		<div class="loader"></div>
+
+	</div>
+
+	<!-- End of container -->
+
+</main>
+
+
+		
+		
+		
+
+	</div>
+
+  
+   
+
+   
+
+</div>
+
+<div class="s258">
+	<div class="panel">
+		<span class="user-k"><div class="user-p"><img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" class="img144d"></div></span>
+
+
+		<span class="s20a"><i class="fa fa-comment-o" aria-hidden="true"></i></span>
+		<span class="s20a20"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+		<span class="s20a20shere"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#212529;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#212529;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></span>
+		
+	</div>
+	<div class="panel1">
+		<span class="user-k1"><div class="user-p"><img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" class="img144d"></div></span>
+
+
+		<span class="s20a1" id="fghdj"><i class="fa fa-comment-o" aria-hidden="true"></i></span>
+		<span class="s20a201" id="fghdj"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+		<span class="s20a20shere1" id="fghdj"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#212529;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#212529;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></span>
+		
+	</div>
+	<div class="imagjd4">
+		<img src="s2.jpg" id="imghhh">
+	</div>
+	<div class="s55hf">
+		<span class="sd0"></span>
+		<span class="sd"></span>
+
+		
+	</div>
+	<div class="fghtdjjj">
+		<div class="alcol">
+		<div class="s01fkl">
+			<img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" class="img144d">
+			
+		</div><div class="titlesdgfj">janedoe_janedoe_janedoe56345364563455445645 </div>
+		<div class="hpljfjs">
+			
+
+
+				<div class="sdfgj4">
+				<span  class="spo" id="dd">–µ—â—ë</span>
+				
+				<div class="jghyfg">
+				
+				
+			
+			 
+			<div class="s2456">
+
+				<div class="imagefgh"><img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" class="img144dfs"></div>
+				<div class="wrap">
+				<div class="cont" tabindex="0">fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888
+				fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888
+				fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888
+				fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888
+				fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888dsfgfddddddddddddddddddddddd</div></div><span class="likes"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+			</div>
+
+
+		</div>
+				
+
+
+
+			</div>
+			<div class="sdfgj4">
+				<span  class="spo" id="dd">–µ—â—ë</span>
+				
+				<div class="jghyfg">
+				
+				
+			
+			 
+			<div class="s2456">
+
+				<div class="imagefgh"><img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" class="img144dfs"></div>
+				<div class="wrap">
+				<div class="cont" tabindex="0">fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888
+				fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888
+				fsdgdfghfdhfghhhhhhhhhhhhhhhhhjjjjjjjjhfgjh88888888888888888888888888888888888888888888888888888888888888888888888888888888888</div></div><span class="likes"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+
+			</div>
+
+
+		</div>
+				
+
+
+
+			</div>
+
+
+			
+
+
+			
+
+
+		</div>
+	</div>
+
+</div>
+</div>
+
+
+
+<!--<div class="article">
+<div>
+ –°–ø–æ–π–ª–µ—Ä ‚Ññ1 <a href="" class="spoiler_links">–ø–æ–∫–∞–∑–∞—Ç—å / —Å–∫—Ä—ã—Ç—å</a>
+  <div class="f4h5aa">
+
+ <div class="spoiler_body">
+  –¢–µ–∫—Å—Ç –≤ –ø–µ—Ä–≤–æ–º —Å–ø–æ–π–ª–µ—Ä–µ
+  –¢–µ–∫—Å—Ç –≤ –ø–µ—Ä–≤–æ–º —Å–ø–æ–π–ª–µ—Ä–µ
+ </div>
+</div>
+</div>
+
+<div>
+ –°–ø–æ–π–ª–µ—Ä ‚Ññ2 <a href="" class="spoiler_links">–ø–æ–∫–∞–∑–∞—Ç—å / —Å–∫—Ä—ã—Ç—å</a>
+  <div class="f4h5aa">
+ <div class="spoiler_body">
+  –¢–µ–∫—Å—Ç –≤–æ –≤—Ç–æ—Ä–æ–º —Å–ø–æ–π–ª–µ—Ä–µ
+  –¢–µ–∫—Å—Ç –≤–æ –≤—Ç–æ—Ä–æ–º —Å–ø–æ–π–ª–µ—Ä–µ
+ </div>
+</div>
+
+</div>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+<script src="jquery.mobile-1.5.0-rc1.min.js"></script>
+<script type="text/javascript">
+	lsd();
+
+function lsd(){
+
+	let are = [4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+	let i = [];
+	let arrr = [];
+	
+	
+	var n = $("div.gallery-item").length;
+    var A = $('div.gallery-item'), max = 0, elem;
+
+   
+    
+    
+    for (i.length; i.length < n;  i.splice(1, 0, A[i.length])) {
+    	arrr.splice(0, 0, A[i.length].offsetWidth)
+
+    	
+
+
+    }
+    console.log(i);
+    
+
+if (arrr.length > 2){
+    delete arrr[0];
+    delete arrr[1];
+   
+    k = Math.min.apply(null, arrr);
+    var gh  = arrr[2];
+    var f = arrr.length;
+    var fds = are.indexOf( i.length ) != -1;
+    var fdss = are.indexOf( i.length - 1 ) != -1;
+    console.log(are.includes(i.length));
+    alert(i.length);
+    if(are.includes(i.length)) {
+    	console.log(arrr);
+
+    	$('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh,
+	    	'height': gh,
+  
+  
+
+
+  
+  
+	});
+
+    }
+    if(are.includes(i.length - 1)) {
+    	console.log('ggh1');
+    	$('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh ,
+	    	'height': gh,
+  
+  
+
+
+  
+  
+	});
+    var gb = f - 1;
+
+
+	$('.gallery-item:nth-child(' + gb + ')').css({
+    	'max-width': gh,
+    	'height': gh,
+  
+  
+
+
+  
+  
+	});
+    	
+    	}
+
+
+
+   
+}
+else{
+
+
+	var serv = window.innerWidth;
+	console.log(arrr.length);
+	if( arrr.length = 1){
+		console.log(serv);
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+	}
+	if(arrr.length = 2) {
+		$(".gallery-item:nth-child(2)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+
+	}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+$(window).resize(function(){
+	
+
+	
+	
+	
+	
+	let i = [];
+	let arrr = [];
+	
+	
+	var n = $("div.gallery-item").length;
+    var A = $('div.gallery-item'), max = 0, elem;
+
+   
+    
+    
+    for (i.length; i.length < n;  i.splice(1, 0, A[i.length])) {
+    	arrr.splice(0, 0, A[i.length].offsetWidth)
+
+    	
+
+
+    }
+    console.log(i);
+    
+
+if (arrr.length > 2){
+    delete arrr[0];
+    delete arrr[1];
+   
+    k = Math.min.apply(null, arrr);
+    var gh  = arrr[2];
+    var f = arrr.length;
+    var fds = are.indexOf( i.length ) != -1;
+    var fdss = are.indexOf( i.length - 1 ) != -1;
+    console.log(are.includes(i.length));
+    console.log(arrr);
+    if(are.includes(i.length)) {
+    	console.log(arrr);
+
+    	$('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh,
+	    	'height': gh,
+  
+  
+
+
+  
+  
+	});
+    	if (window.innerWidth <= 340 ) {
+    		$('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh,
+	    	'height': gh ,
+  
+  
+
+
+  
+  
+	});
+	
+
+}
+
+    }
+    if(are.includes(i.length - 1)) {
+    	console.log('ggh1');
+    	$('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh ,
+	    	'height': gh,
+  
+  
+
+
+  
+  
+	});
+    var gb = f - 1;
+
+
+	$('.gallery-item:nth-child(' + gb + ')').css({
+    	'max-width': gh,
+    	'height': gh,
+  
+  
+
+
+  
+  
+	});
+	if (window.innerWidth <= 340 ) {
+    		console.log('ggh1');
+    	$('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh - 50,
+	    	'height': gh - 50,
+  
+  
+
+
+  
+  
+	});
+    var gb = f - 1;
+
+
+	$('.gallery-item:nth-child(' + gb + ')').css({
+    	'max-width': gh - 50,
+    	'height': gh - 50,
+  
+  
+
+
+  
+  
+	});
+	
+
+}
+
+
+
+    	
+    	}
+
+
+
+   
+}
+else{
+
+
+	var serv = window.innerWidth;
+	console.log(arrr.length);
+	if( arrr.length = 1){
+		console.log(serv);
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+	}
+	if(arrr.length = 2) {
+		$(".gallery-item:nth-child(2)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+
+	}
+
+
+
+
+
+
+}
+});
+}
+
+	
+</script>
+
+
+
+
+<script src='KrYJow.js'></script>
+ 
+  <script src='flickity1.pkgd.js'></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="owl.carousel.min.js"></script>
+  <script src="jquery.mousewheel.min.js"></script>
+  <script src="jquery.mCustomScrollbar.min.js"></script>
+  <script src="wNumb.js"></script>
+  <script src="nouislider.min.js"></script>
+  <script src="jquery.morelines.min.js"></script>
+  <script src="plyr.min.js"></script>
+  <script src="photoswipe.min.js"></script>
+  <script src="photoswipe-ui-default.min.js"></script>
+  <script src="main.js"></script>
+
+
+
+
+
+  <script type="text/javascript">
+  
+  	let arr = [];
+  
+  	
+
+
+  
+	$(document).ready(function(){
+
+		    if($('.cont').height() > 75){
+        $('.cont').height(75);
+        $('.open').addClass('visible');
+    }
+   
+  
+   $(document).on('vclick', '.spo', function(){ 
+    console.log("click");
+
+    	  
+    	 
+        $(this).parent().find('.cont').addClass('full');
+        var p=$(this).parent().find('.cont');
+         var s=p.outerHeight();
+         var k=$(this).parent().find('.spo');
+         
+         arr.splice(1, 0, s);
+          $(this).parent().find('.jghyfg').css({
+  'height': s+5,
+  
+  
+});
+          $(this).parent().find('.spo').css({
+  'display': 'none',
+
+  
+  
+});
+$(this).parent().find('.likes').css({
+  
+  
+
+
+  
+  
+});
+
+        $('.open').removeClass('visible');
+        $('.close').removeClass('hide');
+       
+        
+        
+        console.log(arr);
+
+    });
+ $(document).on('vclick', '.close', function(){ 
+        $('.cont').removeClass('full');
+        $('.open').addClass('visible');
+        $('.close').addClass('hide');
+    });
+
+	
+
+
+
+});
+
+
+
+
+
+
+
+
+</script>
+	
+
+
+
+
+<!--<script id="rendered-js">
+ 
+
+  function s20(){
+     var v = document.getElementById("da5").offsetHeight;
+     var s = document.getElementById("ffff44").offsetHeight;
+     console.log(s,v)
+   
+    document.getElementById("ffff44").style.height = s + (v-50) + "px";
+    document.getElementById("dd").style.opacity = "0";
+    
+    
+
+
+
+
+  }
+  $( "#dd" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
+
+</script>-->
+<!--<script type="text/javascript">
+  
+  $( ".f22" ).click(function(event) {
+
+        $('.f4h5aa .da4').css({
+  'height': 'auto',
+  
+});
+  var p=$("#da5");
+  var k=$("#ffff44");
+
+
+  var s=p.outerHeight();
+  var e=k.outerHeight();
+
+  $('#ffff44').css({
+  'height': e+s-50,
+  
+});
+  $('#dd').css({
+  
+  
+});
+  
+
+  console.log(s);
+});
+  
+</script>-->
+
+
+</body>
+</html>

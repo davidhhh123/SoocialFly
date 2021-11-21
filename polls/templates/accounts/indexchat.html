@@ -1,0 +1,319 @@
+{% load  static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - HTML5 Video Player</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style15.css' %}">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap1-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plyr.css' %}">
+  <link rel="stylesheet" href="{% static 'css/photoswipe.css' %}">
+  <link rel="stylesheet" href="{% static 'css/default-skin.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main3.css' %}">
+  <link rel="stylesheet" href="{% static 'css/flickity.css' %}">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/flickity1.css' %}">
+
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+  <title>HotFlix – Online Movies, TV Shows & Cinema HTML Template</title>
+  {% block style %}
+  {% endblock %}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__content">
+            <!-- header logo -->
+            <a href="" class="header__logo">
+              
+            </a>
+            <!-- end header logo -->
+
+            <!-- header nav -->
+            <ul class="header__nav">
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+                  <li><a href="index.html">Home slideshow bg</a></li>
+                  <li><a href="index2.html">Home static bg</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                  <li><a href="catalog.html">Catalog</a></li>
+                  <li><a href="details.html">Movie Detail</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <li class="header__nav-item">
+                <a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="faq.html" class="header__nav-link">Help</a>
+              </li>
+
+              <!-- dropdown -->
+              <li class="dropdown header__nav-item">
+                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="signin.html">Sign In</a></li>
+                  <li><a href="signup.html">Sign Up</a></li>
+                  <li><a href="forgot.html">Forgot password</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="404.html">404 Page</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+            </ul>
+            <!-- end header nav -->
+
+            <!-- header auth -->
+            <div class="header__auth">
+              <form action="#" class="header__search">
+                <input class="header__search-input" type="text" placeholder="Search...">
+                <button class="header__search-button" type="button">
+                  <i class="icon ion-ios-search"></i>
+                </button>
+                <button class="header__search-close" type="button">
+                  <i class="icon ion-md-close"></i>
+                </button>
+              </form>
+
+              <button class="header__search-btn" type="button">
+                <i class="icon ion-ios-search"></i>
+              </button>
+
+              <!-- dropdown -->
+              <div class="dropdown header__lang">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
+                </ul>
+              </div>
+              <!-- end dropdown -->
+
+              <a href="signin.html" class="header__sign-in">
+                <i class="icon ion-ios-log-in"></i>
+                <span>sign in</span>
+              </a>
+            </div>
+            <!-- end header auth -->
+
+            <!-- header menu btn -->
+            <button class="header__btn" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- end header menu btn -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+{% block body %}
+
+
+
+{% endblock %}
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+ <script src="{% static 'js/KrYJow.js' %}"></script>
+ 
+  <script src="{% static 'js/flickity1.pkgd.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.mCustomScrollbar.min.js' %}"></script>
+  <script src="{% static 'js/wNumb.js' %}"></script>
+  <script src="{% static 'js/nouislider.min.js' %}"></script>
+  <script src="{% static 'js/jquery.morelines.min.js' %}"></script>
+  <script src="{% static 'js/plyr.min.js' %}"></script>
+  <script src="{% static 'js/photoswipe.min.js' %}"></script>
+  <script src="{% static 'js/photoswipe-ui-default.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/device.js' %}"></script>
+
+
+
+
+
+<!--<div class="article">
+<div>
+ Спойлер №1 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+
+ <div class="spoiler_body">
+  Текст в первом спойлере
+  Текст в первом спойлере
+ </div>
+</div>
+</div>
+
+<div>
+ Спойлер №2 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+ <div class="spoiler_body">
+  Текст во втором спойлере
+  Текст во втором спойлере
+ </div>
+</div>
+
+</div>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<!--<script id="rendered-js">
+ 
+
+  function s20(){
+     var v = document.getElementById("da5").offsetHeight;
+     var s = document.getElementById("ffff44").offsetHeight;
+     console.log(s,v)
+   
+    document.getElementById("ffff44").style.height = s + (v-50) + "px";
+    document.getElementById("dd").style.opacity = "0";
+    
+    
+
+
+
+
+  }
+  $( "#dd" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
+
+</script>-->
+<!--<script type="text/javascript">
+  
+  $( ".f22" ).click(function(event) {
+
+        $('.f4h5aa .da4').css({
+  'height': 'auto',
+  
+});
+  var p=$("#da5");
+  var k=$("#ffff44");
+
+
+  var s=p.outerHeight();
+  var e=k.outerHeight();
+
+  $('#ffff44').css({
+  'height': e+s-50,
+  
+});
+  $('#dd').css({
+  
+  
+});
+  
+
+  console.log(s);
+});
+  
+</script>-->
+
+{% block script %}
+
+  
+
+
+{% endblock %}
+
+
+
+</body>
+</html>

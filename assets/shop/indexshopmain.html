@@ -1,0 +1,5218 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - HTML5 Video Player</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+<link rel="stylesheet" type="text/css" href="style110.css">
+<link rel="stylesheet" type="text/css" href="style15.css">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+<link rel="stylesheet" href="bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="bootstrap1-grid.min.css">
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="nouislider.min.css">
+  <link rel="stylesheet" href="ionicons.min.css">
+  <link rel="stylesheet" href="plyr.css">
+  <link rel="stylesheet" href="photoswipe.css">
+  <link rel="stylesheet" href="default-skin.css">
+  <link rel="stylesheet" href="main3.css">
+  <link rel="stylesheet" href="flickity.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="flickity1.css">
+
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+  <title>HotFlix ‚Äì Online Movies, TV Shows & Cinema HTML Template</title>
+  <style>
+
+
+  
+  
+  
+  	@media screen and  (min-width: 1700px){
+    .gallery-item {
+    
+    flex: 1 0 29rem;
+    margin: 1rem;
+   
+}
+    
+}
+	@media screen and  (min-width: 1900px){
+    .gallery-item {
+    
+    flex: 1 0 29rem;
+    margin: 1.1rem;
+   
+}
+    
+}
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+.actor{
+  position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+}
+.rewuve{
+   position: relative;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+
+}
+.name{
+  position: absolute;
+  color: white;
+  padding-top: 110px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  
+    word-wrap: break-word;
+
+}
+.prof{
+  position: absolute;
+  color: #D22A2A;
+  padding-top: 160px;
+  margin-left: -90px;
+  width: 70px;
+  height: 50px;
+  
+  font-size: 13px;
+  
+    word-wrap: break-word;
+
+
+}
+.carousel {
+  width: 93%;
+  left: 3%;
+
+
+}
+
+.carousel-cell {
+  width: 100px;
+  height: 300px;
+  margin-right: 30px;
+
+ 
+  
+}
+
+
+.carousel-cell.is-selected {
+ 
+}
+.flickity-enabled.is-draggable{
+  margin-top: -180px;
+}
+
+/* cell number */
+
+</style>
+  <style type="text/css">
+    body{
+      background: #FAFAFA;
+    }
+    .footer{
+      background: #0E0E0E;
+      border-top: 1px solid rgba(87, 83, 103, 0.1);
+
+
+    }
+    .home{
+      height: 300%;
+      width: 75%;
+      left: 12.5%;
+      top: 5%;
+      background: #0E0E0E;
+      box-shadow: 0 3px 1px 0 rgba(0,0,0,0.14),0 0px 3px -2px rgba(0,0,0,0.12),0 -1px 5px 0 rgba(0,0,0,0.2);
+
+
+
+
+
+    }
+    .header{
+      background: #F9F9F9;
+    }
+    .img{
+      position: absolute;
+      width: 200px;
+      height: 288px;
+      left: 0%;
+      top: 0%;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+          box-sizing: inherit;
+
+
+
+
+
+
+
+    }
+    .span{
+      
+      width: 100%;
+      height: 50px;
+      margin-left: 28%;
+      padding-top: -50px;
+
+      
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+      z-index: 1;
+      float: left;
+
+    }
+  
+    .span1{
+      width: 100%;
+      
+      margin-left: 29%;
+      
+      left: 213px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+    .span2{
+      width: 100%;
+      
+      margin-left: 35%;
+      margin-top: -24px;
+      left: 270px;
+      top: 92px;
+      color: white;
+      
+      font-weight: normal;
+      float: left;
+
+    }
+     .msain{
+    margin-top: 0px;
+    background: white;
+}
+
+
+
+
+    @media (max-width: 969px){
+      .span2{
+
+      margin-left: 37%;
+      
+    }
+    .span{
+      margin-top: -5px;
+    }
+
+    
+
+  }
+ 
+    @media (max-width: 709px){
+      .span2{
+
+      margin-left: 39%;
+      }
+      .span{
+      margin-top: -10px;
+      font-size: 28px;
+      height: 43px;
+    }
+
+
+  }
+  @media(max-width: 605px){
+      .msain{
+          margin-top: 60px;
+      }
+  }
+    @media (max-width: 595px){
+      .span2{
+
+      margin-left: 41%;
+    }
+    .span{
+      margin-top: -15px;
+      font-size: 25px;
+      height: 38px;
+    }
+  }
+   @media(max-width: 550px){
+      .msain{
+          margin-top: 50px;
+      }
+  }
+    @media (max-width: 500px){
+      .span2{
+
+      margin-left: 44%;
+    }
+    .span{
+      margin-top: -20px;
+    }
+
+  }
+   @media(max-width: 412px){
+      .msain{
+          margin-top: 30px;
+      }
+  }
+    @media (max-width: 400px){
+      .span2{
+
+      margin-left: 48%;
+    }}
+    
+    @media (max-width: 290px){
+      .span2{
+
+      margin-left: 51%;
+    }}
+
+
+
+
+   
+
+.gallery-item-info .gallery-item-likes {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.gallery-item-info{
+   display: -webkit-box;
+    display: -webkit-flex; */
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.gallery-item{
+   flex: 1 0 15em;
+
+   
+ 
+
+
+
+
+
+
+	
+	background-color: rgba(246, 246, 246, 0.85);
+
+	
+}
+
+.gallery-item-info .gallery-item-likes{
+	margin-top: 86%;
+}
+.gallery-item-info .buy {
+    display: none;
+    font-size: 19px;
+    font-weight: 600;
+    
+    width: 100%;
+    height: 40px;
+    margin-top: -60%;
+   
+}
+.gallery-item-info{
+     background-color: transparent;
+     
+ }
+.gallery-item-info .buy{
+    display: none;
+     
+ }
+.gallery-item:hover .gallery-item-info
+ {
+    display: -webkit-box;
+    display: -webkit-flex; */
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+.gallery-item:hover .gallery-item-info .buy
+ {
+  
+    display: block;
+}
+.t20t{
+   position: absolute;
+    width: 100%;
+    height: 40px;
+    margin-top: 5%;
+    
+}
+.t20{
+   
+   margin-left: 35%;
+}
+.svg{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 60%;
+    margin-top: -10px;
+    
+}
+.b14{
+    margin-top: -65%;
+    margin-left: -65%;
+}
+    
+    
+    
+    .images{
+      position: absolute;
+      
+      width: 100%;
+      
+      top: 450px;
+    }
+    .images img{
+      width: 100%;
+    }
+
+    .b22{
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      left: 500px;
+      top: 200px;
+      
+    }
+    .header__dow{
+      
+      
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow1{
+      
+      margin-left: 25px;
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .header__dow2{
+      margin-left: 25px; 
+      
+      
+
+      top: 240px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid ;
+      border-radius: 180px;
+      float: left;
+    }
+    .hidden{
+      margin-top: 12px;
+      margin-left: 13px;
+      color: #fd6060;
+
+      
+      
+      
+
+    }
+     .f46{
+   
+    display: none;
+  }
+
+
+
+    .hidden .fa{
+      font-size: 25px;
+    }
+    
+    #fa{
+      margin-left: 5px;
+
+    }
+    .bl{
+      position: relative;
+      margin-top: -8%;
+      
+      background: #212121;
+      width: 94%;
+      left: 3%;
+
+      height: 1.5px;
+
+    }
+    .bl1{
+      position: relative;
+      margin-top: 5%;
+      
+      background: #212121;
+      width: 99%;
+      left: 0%;
+
+      height: 1.5px;
+
+    }
+    #bl1{
+      width: 236%;
+      height: 1px;
+
+    }
+     .f45{
+  
+  position: fixed; /* –§–∏–∫—Å–∏—Ä–æ–≤–∞–Ω–Ω–æ–µ –ø–æ–ª–æ–∂–µ–Ω–∏–µ */
+    left: 0; bottom: 0; /* –õ–µ–≤—ã–π –Ω–∏–∂–Ω–∏–π —É–≥–æ–ª */
+     /* –ü–æ–ª—è –≤–æ–∫—Ä—É–≥ —Ç–µ–∫—Å—Ç–∞ */
+    background: #fff; /* –¶–≤–µ—Ç —Ñ–æ–Ω–∞ */
+    color: #fff; /* –¶–≤–µ—Ç —Ç–µ–∫—Å—Ç–∞ */
+    width: 9%; /* –®–∏—Ä–∏–Ω–∞ —Å–ª–æ—è */
+    z-index: 100;
+      
+}
+
+.s50fgh{
+	margin-left: 20px;
+}
+
+@media (max-width: 961px){
+  .article{
+    right: 8%;
+  }
+  .f45{
+    width: 10%;
+  }
+}
+.Ypffh {
+    
+    border: 0;
+    color: #262626;
+    color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: inherit;
+    height: 38px;
+    width: 79%;
+    background: black;
+    max-height: 80px;
+    outline: 0;
+    padding: 0;
+    resize: none;
+    margin-left: 5px;
+    
+    overflow: hidden; /* –∏–ª–∏ auto */
+
+}
+
+@media (max-width: 900px){
+  .article{
+   
+    width: 590px;
+  }
+  
+  .sqdOP{
+    margin-left: 461px
+
+  }
+  .w1{
+    width: 100%;
+
+  }
+}
+@media (max-width: 865px){
+  .article{
+    right: 4%;
+    width: 590px;
+  }
+  .f45{
+    width: 11%;
+  }
+  
+}
+@media (max-width: 820px){
+  .article{
+    right: 4%;
+    width: 560px;
+  }
+  .f45{
+    width: 11%;
+  }
+  .sqdOP{
+    margin-left: 431px
+
+  }
+  .w1{
+    width: 100%;
+    height: 520px
+
+  }
+  .Ypffh{
+    width: 77.5%;
+  }
+}
+@media (max-width: 785px){
+  .article{
+    right: 4%;
+    width: 540px;
+  }
+  .f45{
+    width: 12%;
+  }
+  .sqdOP{
+    margin-left: 411px
+
+  }
+  .w1{
+    width: 100%;
+    height: 500px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -25px; 
+  }
+  .Ypffh{
+    width: 76.5%;
+  }
+  .spoiler_links{
+    margin-top: 632px;
+  }
+}
+@media (max-width: 760px){
+  .article{
+    right: 4%;
+    width: 510px;
+  }
+  .f45{
+    width: 12%;
+  }
+  .sqdOP{
+    margin-left: 381px
+
+  }
+  .w1{
+    width: 100%;
+    height: 470px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -55px; 
+  }
+  .Ypffh{
+    width: 75%;
+  }
+  .spoiler_links{
+    margin-top: 601px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 713px){
+  .article{
+    right: 10%;
+    width: 550px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+   .f46{
+   
+    display: block;
+  }
+  .sqdOP{
+    margin-left: 421px
+
+  }
+  .w1{
+    width: 100%;
+    height: 510px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -15px; 
+  }
+   .Ypffh{
+    width: 77%;
+  }
+  .spoiler_links{
+    margin-top: 642px;
+     margin-left: 265px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 9%;
+    width: 550px;
+  }}
+
+
+@media (max-width: 658px){
+ .article{
+    right: 9%;
+    width: 520px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+ 
+  .sqdOP{
+    margin-left: 391px
+
+  }
+  .w1{
+    width: 100%;
+    height: 480px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -45px; 
+  }
+  .Ypffh{
+    width: 76%;
+  }
+  .spoiler_links{
+    margin-top: 612px;
+     margin-left: 255px;
+  }
+}
+@media (max-width: 628px){
+ .article{
+    right: 8%;
+    width: 490px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 361px
+
+  }
+  .w1{
+    width: 100%;
+    height: 450px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -75px; 
+  }
+  .Ypffh{
+    width: 74%;
+  }
+  .spoiler_links{
+    margin-top: 584px;
+     margin-left: 255px;
+  }
+}
+
+@media (max-width: 588px){
+ .article{
+    right: 9%;
+    width: 460px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 331px
+
+  }
+  .w1{
+    width: 100%;
+    height: 420px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -105px; 
+  }
+  .Ypffh{
+    width: 72.5%;
+  }
+   .spoiler_links{
+    margin-top: 554px;
+     margin-left: 243px;
+  }
+}
+@media (max-width: 693px){
+  .article{
+    right: 8%;
+    
+  }}
+
+@media (max-width: 544px){
+ .article{
+    right: 8%;
+    width: 440px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 311px
+
+  }
+  .w1{
+    width: 100%;
+    height: 400px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -125px; 
+  }
+  .Ypffh{
+    width: 71%;
+  }
+  .spoiler_links{
+    margin-top: 534px;
+     margin-left: 243px;
+  }
+}
+@media (max-width: 524px){
+ .article{
+    right: 8%;
+    width: 420px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 291px
+
+  }
+  .w1{
+    width: 100%;
+    height: 380px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -145px; 
+  }
+  .Ypffh{
+    width: 70%;
+  }
+  .spoiler_links{
+    margin-top: 514px;
+     margin-left: 233px;
+  }
+}
+@media (max-width: 500px){
+ .article{
+    right: 43px;
+    width: 400px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 271px
+
+  }
+  .w1{
+    width: 100%;
+    height: 360px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -165px; 
+  }
+   .Ypffh{
+    width: 68%;
+  }
+  .spoiler_links{
+    margin-top: 494px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 484px){
+ .article{
+    right: 45px;
+    width: 380px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 251px
+
+  }
+  .w1{
+    width: 100%;
+    height: 340px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -185px; 
+  }
+  .Ypffh{
+    width: 67%;
+  }
+  .spoiler_links{
+    margin-top: 474px;
+     margin-left: 223px;
+  }
+}
+@media (max-width: 464px){
+ .article{
+    right: 45px;
+    width: 360px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 320px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -205px; 
+  }
+  .Ypffh{
+    width: 65%;
+  }
+  .spoiler_links{
+    margin-top: 454px;
+     margin-left: 213px;
+  }
+  
+
+}
+@media (max-width: 452px){
+ .article{
+    right: 50px;
+    width: 330px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 290px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -235px; 
+  }
+  .spojhg{
+    width: 200px;
+  }
+  .Ypffh{
+    width: 61.5%;
+  }
+  .spoiler_links{
+    margin-top: 424px;
+     margin-left: 213px;
+  }
+}
+@media (max-width: 422px){
+ .article{
+    right: 40px;
+   
+  }}
+  @media (max-width: 408px){
+ .article{
+    right: 35px;
+   
+  }}
+  @media (max-width: 395px){
+ .article{
+    right: 35px;
+    width: 300px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 231px
+
+  }
+  .w1{
+    width: 100%;
+    height: 260px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -265px; 
+  }
+
+}
+  @media (max-width: 395px){
+ .article{
+    right: 45px;
+    width: 270px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 201px
+
+  }
+  .w1{
+    width: 100%;
+    height: 230px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -295px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 170%;
+  }
+  .spoiler_links{
+    margin-top: 360px;
+     margin-left: 190px;
+  }
+}
+  @media (max-width: 355px){
+ .article{
+    right: 35px;
+   
+  }}
+
+    @media (max-width: 336px){
+ .article{
+    right: 30px;
+   
+  }}
+
+    @media (max-width: 328px){
+ .article{
+    right: 35px;
+    width: 250px;
+  }
+  .f45{
+    width: 22%;
+    display: none;
+  }
+  .sqdOP{
+    margin-left: 181px
+
+  }
+  .w1{
+    width: 100%;
+    height: 220px
+
+  }
+  .fjgiiir{
+    width: 100%;
+    position: absolute;
+    margin-top: -315px; 
+  }
+  .sqdOP{
+    margin-top: 45px;
+    margin-left: 5px;
+  }
+   .Ypffh{
+    width: 155%;
+  }
+  .spoiler_links{
+    margin-top: 340px;
+     margin-left: 190px;
+  }
+}
+   @media (max-width: 315px){
+ .article{
+    right: 30px;
+   
+  }}
+
+
+  @media (max-width: 305px){
+ .article{
+    right: 25px;
+   
+  }}
+    @media (max-width: 300px){
+ .article{
+    right: 22px;
+   
+  }}
+     @media (max-width: 294px){
+ .article{
+    right: 20px;
+   
+  }
+  .hfghtre4i{
+    font-size: 30px;
+  }
+  .hfghtre4i1 img{
+    width: 30px;
+    height: 30px;
+  }
+  .s26d9sf54{
+    margin-top: -16px;
+  }
+  .s26d9sf54 i{
+    font-size: 34px;
+  }
+  .s26d9sf544{
+    font-size: 30px;
+  }
+ 
+}
+       @media (max-width: 288px){
+ .article{
+    right: 17px;
+   
+  }}
+       @media (max-width: 282px){
+ .article{
+    right: 15px;
+   
+  }}
+       @media (max-width: 276px){
+ .article{
+    right: 13px;
+   
+  }}
+#dropdownMenuCatalog{
+  color: #F94133;
+
+  
+}
+#dropdownMenuHome{
+  color: #F94133;
+
+}
+@media (min-width: 1200px){
+.header__sign-in span{
+  color: black;
+}
+.header__nav-link{
+  line-height: 20px;
+}
+
+}
+.article{
+	width: 88%;
+	height: 600px;
+	top: 85px;
+	left: 110px;
+	position: absolute;
+	background: white;
+}
+.gjngujr{
+	width: 100%;
+	height: 200px;
+	
+}
+.image_gh{
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	border-radius: 180px;
+	
+
+
+}
+.image{
+	width: 100px;
+	height: 100px;
+	
+	margin-left: 40px;
+	margin-top: 40px;
+
+
+}
+.s20fghja{
+	margin-left: 175px;
+	margin-top: -95px;
+	
+	width: 80%;
+	height: 200px;
+	background:;
+	
+
+}
+.gg13k{
+	
+	font-size: 19px;
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 150px;
+}
+.gallery-item {
+    margin-top: 6rem;
+}
+.gallery-item-likes1 {
+    position: absolute;
+    font-size: 12px;
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 29px;
+    overflow: hidden;
+    line-height: 14px;
+    word-wrap: break-word;
+}
+@media (max-width: 913px){
+	.article{
+		
+		width: 87%;
+	}
+	
+}
+@media (max-width: 843px){
+	.article{
+		left: 108px;
+		
+		width: 86%;
+	}
+	
+}
+@media (max-width: 767px){
+	.article{
+		left: 107px;
+		
+		width: 85%;
+	}
+	
+}
+@media (max-width: 713px){
+	.article{
+		left: 0px;
+		width: 100%;
+	}
+	.profile-image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+}
+.full {
+  height: auto !important;
+}
+a:visited{
+    color: black;
+}
+@media(max-width: 895px){
+	.fghtdjjj{
+		display: none;
+	}
+	.s258{
+		width: 100%;
+	}
+	.imagjd4{
+		width: 70%;
+		height: 488.4px;
+	}
+	.imagjd4{
+    
+    margin-top: 50px;
+    margin-left: 10%;
+   
+
+}
+.panel{
+	display: block;
+}
+@media(max-width: 809px){
+	.fghtdjjj{
+		display: none;
+	}
+	.s258{
+		width: 100%;
+	}
+	.imagjd4{
+		width: 70%;
+		height: 450px;
+	}
+	.imagjd4{
+    
+    margin-top: 50px;
+    margin-left: 10%;
+   
+
+}
+.panel{
+	display: block;
+}
+
+@media (max-width: 770px){
+	.imagjd4{
+		margin-left: 8%;
+	}
+	.imagjd4{
+		width: 69%;
+		height: 430px;
+	}
+	.s55hf{
+		margin-left: 93%;
+	}
+}
+@media (max-width: 722px){
+	.imagjd4{
+		margin-left: 8%;
+	}
+	.imagjd4{
+		width: 75%;
+		height: 430px;
+	}
+	.s55hf{
+		margin-left: 93%;
+	}
+}
+@media (max-width: 680px){
+	.imagjd4{
+		margin-left: 5%;
+
+
+	}
+	.imagjd4{
+		width: 75%;
+		height: 410px;
+	}
+
+}
+@media (max-width: 660px){
+	.imagjd4{
+		margin-left: 6%;
+		width: 77%;
+		height: 410px;
+
+	}
+	
+
+}
+
+@media (max-width: 620px){
+	.imagjd4{
+		margin-left: 6%;
+		width: 75%;
+		height: 390px;
+
+	}
+	.s55hf{
+		margin-left: 91%;
+	}
+	
+
+
+}
+@media (max-width: 605px){
+	.imagjd4{
+		margin-left: 6%;
+		width: 74%;
+		height: 370px;
+
+	}
+	
+
+}
+@media (max-width: 595px){
+	.imagjd4{
+		margin-left: 9%;
+		width: 84%;
+		height: 450px;
+
+	}
+	.panel{
+		display: none;
+	}
+	.panel1{
+		display: block;
+	}
+	.s55hf{
+		margin-left: 91%;
+		margin-top: 5px;
+	}
+	
+
+}
+@media (max-width: 530px){
+	.imagjd4{
+		margin-left: 9%;
+		width: 80%;
+		height: 380px;
+
+	}
+	.panel1{
+		height: 60px;
+	}
+
+	
+
+
+}
+@media (max-width: 470px){
+	.imagjd4{
+		margin-left: 12%;
+		margin-top: 75px;
+		width: 79%;
+		height: 340px;
+
+	}
+	.panel1{
+		height: 60px;
+	}
+	.s55hf{
+		margin-left: 90%;
+		
+	}
+
+	
+
+}
+@media (max-width: 455px){
+	.imagjd4{
+		margin-left: 10%;
+		margin-top: 75px;
+		width: 80%;
+		height: 340px;
+
+	}
+	
+
+	
+
+
+}
+@media (max-width: 430px){
+	.imagjd4{
+		margin-left: 9%;
+		margin-top: 60px;
+		width: 83%;
+		height: 330px;
+
+	}
+	
+
+	
+
+}
+@media (max-width: 410px){
+	.imagjd4{
+		margin-left: 9%;
+		margin-top: 50px;
+		width: 83%;
+		height: 310px;
+
+	}
+	.s55hf{
+		margin-left: 88%;
+		
+	}
+	
+
+	
+
+}
+@media (max-width: 395px){
+	.imagjd4{
+		margin-left: 10%;
+		margin-top: 50px;
+		width: 80%;
+		height: 280px;
+
+	}
+	
+
+	
+
+}
+@media (max-width: 365px){
+	.imagjd4{
+		margin-left: 10%;
+		margin-top: 50px;
+		width: 80%;
+		height: 250px;
+
+	}
+	
+
+	
+
+
+}
+@media (max-width: 350px){
+	.imagjd4{
+		margin-left: 12%;
+		margin-top: 50px;
+		width: 78%;
+		height: 230px;
+
+	}
+	
+
+	
+
+}
+
+@media (max-width: 338px){
+	.imagjd4{
+		margin-left: 12%;
+		margin-top: 70px;
+		width: 78%;
+		height: 230px;
+
+	}
+
+	
+
+	
+
+}
+@media (max-width: 330px){
+	.imagjd4{
+		margin-left: 10%;
+		margin-top: 70px;
+		width: 80%;
+		height: 210px;
+
+	}
+	.s55hf{
+		margin-left: 86%;
+		
+	}
+	
+
+	
+
+}
+@media (max-width: 320px){
+	.imagjd4{
+		margin-left: 12%;
+		margin-top: 60px;
+		width: 80%;
+		height: 210px;
+
+	}
+	
+
+	
+
+}
+@media (max-width: 290px){
+	.imagjd4{
+		margin-left: 9%;
+		margin-top: 60px;
+		width: 83%;
+		height: 210px;
+
+	}
+	.s55hf{
+		margin-left: 84%;
+		
+	}
+	
+
+	
+
+}
+@media (max-width: 280px){
+	.imagjd4{
+		margin-left: 9%;
+		margin-top: 60px;
+		width: 83%;
+		height: 210px;
+
+	}
+	.s55hf{
+		margin-left: 82%;
+		
+	}
+	
+
+	
+
+}
+@media (max-height: 575px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 9%;
+    width: 80%;
+    height: 430px;
+    margin-top: 20px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 524px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 9%;
+    width: 80%;
+    height: 400px;
+    margin-top: 20px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 11%;
+    width: 76%;
+    height: 360px;
+    margin-top: 10px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 15%;
+    width: 72%;
+    height: 320px;
+    margin-top: 20px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 411px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 19%;
+    width: 65%;
+    height: 270px;
+    margin-top: 20px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 349px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 21%;
+    width: 55%;
+    height: 240px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+
+
+    /* CSS stuff */
+}
+@media (max-height: 308px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 18%;
+    width: 60%;
+    height: 220px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 290px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 23%;
+    width: 50%;
+    height: 200px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 263px) and (max-width: 595px) {
+	.imagjd4{
+	margin-left: 24%;
+    width: 48%;
+    height: 190px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+/* 575/525--------------------------------------------------- */
+@media (max-height: 575px) and (max-width: 540px) {
+	.imagjd4{
+	margin-left: 6%;
+    width: 85%;
+    height: 400px;
+    margin-top: 20px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 540px) {
+	.imagjd4{
+	margin-left: 8%;
+    width: 82%;
+    height: 360px;
+    margin-top: 50px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 450px) {
+	.imagjd4{
+	margin-left: 8%;
+    width: 85%;
+    height: 330px;
+    margin-top: 50px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 387px) {
+	.imagjd4{
+	margin-left: 10%;
+    width: 80%;
+    height: 280px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 355px) {
+	.imagjd4{
+	margin-left: 10%;
+    width: 82%;
+    height: 250px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 575px) and (max-width: 309px) {
+	.imagjd4{
+	margin-left: 8%;
+    width: 84%;
+    height: 230px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+/* 575/525--------------------------------------------------- */
+
+
+/* 524/492--------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------////////////// */
+
+
+/* 524/492--------------------------------------------------- */
+
+
+/* 491/450--------------------------------------------------- */
+@media (max-height: 491px) and (max-width: 540px) {
+	.imagjd4{
+	
+    margin-top: 10px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 450px) {
+	.imagjd4{
+	margin-left: 11%;
+    width: 76%;
+    height: 300px;
+    margin-top: 50px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 396px) {
+	.imagjd4{
+	margin-left: 8%;
+    width: 82%;
+    height: 300px;
+    margin-top: 50px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 366px) {
+	.imagjd4{
+	margin-left: 7%;
+    width: 85%;
+    height: 280px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 324px) {
+	.imagjd4{
+	margin-left: 7%;
+    width: 85%;
+    height: 260px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 491px) and (max-width: 300px) {
+	.imagjd4{
+	margin-left: 6%;
+    width: 88%;
+    height: 250px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+
+
+
+
+
+
+
+
+
+/* 491/450--------------------------------------------------- */
+
+/* 450/411--------------------------------------------------- */
+
+
+@media (max-height: 450px) and (max-width: 540px) {
+	.imagjd4{
+	margin-left: 15%;
+    width: 72%;
+    height: 320px;
+    margin-top: 10px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 440px) {
+	.imagjd4{
+	margin-left: 15%;
+    width: 72%;
+    height: 290px;
+    margin-top: 10px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 400px) {
+	.imagjd4{
+	margin-left: 10%;
+    width: 80%;
+    height: 260px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 315px) {
+	.imagjd4{
+	margin-left: 10%;
+    width: 80%;
+    height: 250px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+@media (max-height: 450px) and (max-width: 295px) {
+	.imagjd4{
+	margin-left: 8%;
+    width: 83%;
+    height: 240px;
+    margin-top: 60px;
+
+
+	}
+    /* CSS stuff */
+}
+
+
+
+/* 450/411--------------------------------------------------- */
+
+/* 411/349--------------------------------------------------- */
+
+@media (max-height: 411px) and (max-width: 540px){
+.imagjd4 {
+    margin-left: 19%;
+    width: 65%;
+    height: 270px;
+    margin-top: 20px;
+}
+}
+@media (max-height: 411px) and (max-width: 440px){
+.imagjd4 {
+    margin-left: 13%;
+    width: 75%;
+    height: 270px;
+    margin-top: 20px;
+}}
+@media (max-height: 411px) and (max-width: 380px){
+.imagjd4 {
+    margin-left: 13%;
+    width: 75%;
+    height: 250px;
+    margin-top: 30px;
+}}
+@media (max-height: 411px) and (max-width: 335px){
+.imagjd4 {
+    margin-left: 12%;
+    width: 75%;
+    height: 230px;
+    margin-top: 50px;
+}}
+@media (max-height: 411px) and (max-width: 306px){
+.imagjd4 {
+    margin-left: 10%;
+    width: 80%;
+    height: 220px;
+    margin-top: 60px;
+}}
+
+
+
+
+
+/* 411/349--------------------------------------------------- */
+
+
+/* 308/290--------------------------------------------------- */
+@media (max-height: 308px) and (max-width: 540px) {
+	.imagjd4{
+	margin-left: 18%;
+    width: 65%;
+    height: 220px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 308px) and (max-width: 320px) {
+	.imagjd4{
+	margin-left: 16%;
+    width: 70%;
+    height: 210px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 308px) and (max-width: 300px) {
+	.imagjd4{
+	margin-left: 14%;
+    width: 70%;
+    height: 200px;
+    margin-top: 20px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+
+
+
+
+
+
+
+
+/* 308/290--------------------------------------------------- */
+/* 290/263--------------------------------------------------- */
+@media (max-height: 290px) and (max-width: 540px) {
+	.imagjd4{
+	margin-left: 20%;
+    width: 60%;
+    height: 200px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 290px) and (max-width: 357px) {
+	.imagjd4{
+	margin-left: 22%;
+    width: 55%;
+    height: 180px;
+    margin-top: 10px;
+
+
+	}
+	.panel1{
+		height: 50px;
+	}
+	#fghdj{
+		margin-top: 8px;
+
+
+	}
+
+    /* CSS stuff */
+}
+@media (max-height: 290px) and (max-width: 314px) {
+	.imagjd4{
+	margin-left: 22%;
+    wifth>(55%;
+   heYcht: 560px;
+0$  mArgyn-tÔr:†1:rx:ää
+	uù*	
+Ö
+ "  g*†bsS wv4f$0j/
+öM*]
+
+
+
+ç
+/* 2π2o663-/-,---≠-,----)--/--,≠---%--≠--------<m--=-)--/- .
+ç
+
+mediq (max/»dofHtz 25¥∞x)`and 8max,&i4vh6 5;1Px)0w	.Ioagbd4k	ea2ghÔ-,Âft:†02!yä   &%i%pjz"55';
+$   hemgËtz"70px;	
+   b-¿rgin-top: 1∞px;	
+äè
+	]
+	
+    Ø*0Cì stuff */
+}–nedia hic8-Height: 2#!px9 hLd! max)whdtk8 5y5p|) {
+	>ieËgj`4{-
+Mmar&in-lef4: 23%;0   widvh:50=;-
+!   h5Ight: 360pp;E
+ "  margin-Ùnp:!1∞x+
+
+	}
+
+* $  : CSS&stvnf .?
+˝M
+Pmedi· (ÌAx-heyght0 2r3px) af (}ax/widÙh: u0<px)`äâ&i-`gjd4;	
+	ma2gin≠left∫ 25';
+   !idth?†05%?
+``  xeight˙ π50p(;*    ÌargiÓ=|o0:`±4qx;
+
+
+}
+	ç
+-    /
+ CSdstıff (/J}*
+
+
+@mgdia (max-width:0:'5tx)s*	J	
+	
+M*}
+@medÈa (}az%sidth: 270pp){
+	
+
+	N|
+pmE`i·(ini¯-Idth 2'0px)k	
+	
+-	
+m
+
+.gallory {
+J    =wÂ`k)t-bo>-aDiwf:(sTretg8; h/
+ (& •werkit-!lIg~mi4eos: ÛtrmtcH;J    -Âs-fnaxmanignz ctpepcH{
+ ` 1a|ygn=ctums: strft"h∫
+ "$†voÚder: 00so,id c0∞0;ä †  -wEhkiu-fkx-{izifg2 `ordEr)Box; *.* †  jOx-syzing∞bovler-boX; "/  b dhsplay:!≠webkit-‚o¯;
+    tispl·y:!=vebkit-&lex; */
+    dicbÌay: ≠}s/foexbiy;
+    dysplay:!flex;ç"` "-webkit-box-osidnÙ: VirtyCal;*/
+  ` -wecÎit=fox-dire‚tKoz: norl!l;§*/
+  
+    
+ ` 0
+ $( -webki-&xezms(p+nk:003
+†  †-ms-flex-nqeatxvu: 0;
+    *(   diwpley:$=ve"kit-flex+
+displey;†-ew-f|ex`x3I
+ & (&|ex-wrap2 wr`r;J    marfin( ,1rg- 1zem;
+( † padeio'-rovunm 3sEm;
+   !m·rfin-bottom8 120p(+
+}.gadlezy=mtem$s
+    pnsytkon> rclathvÂ;ä  0!fle|: 1$0`20rem;ç
+†(`1largio: 1rmm;
+ !  colorz #fff;
+(0 bcurcorz$p-inÙez;
+]-
+
+ @dedia <m!x)widÙh: 879px{
+   0.falmerq)i¥ei"{   $
+ `  flgx; 1`0 29rem;
+    Maroio: !veÌ;=ä ! 
+}J`   }
+
+@ee‚ie 8ma|-wil|h:ò43px9{ ·0 ngalÃery)i4em)
+†   ,
+ †  flex2 1 0$20rdm;*   "mazfin: 1Rem;
+" 0
+}	
+0 0(
+}
+ medya((max-7idti:"759px){MJ    .c`m,ezy-Item {
+ † $    fle8:"3$0`0∏rem;
+ b  -eroin; 1rae;
+ !  }
+/t20TÛ
+   marg)n-tp:∞0%?
+}
+.svvk
+ h "m#r'in-top:,%≤%;
+    J}  † *=
+@-eai`(,maz-widt`z 717tx)y
+    .'Elnes{-Itam Ô
+ `  
+  0 flgx:"1 0 17.µruÕ;
+  `Mazgk:"0.)rEm?	J ("
+}
+(†0`
+}-
+@meDi· (max'wmDth2 6p9xx){
+"  p.glmery%iteg†yç   (
+    f,ux: 1 8 ±7re%;
+    mqrgKn00fµrmi;   
+}M
+† !)
+}-ä@ledia (eqx,wifth: !65px!{
+   .gAller{-htem!{
+Ä   
+0 $ flax: 9"  !6rem; % m)R5An: ±zcm $
+]ç
+!   }
+Pee‰ia (mAx-widÙi:$549py-{™$   &gqll-Ry,9teo"{  ( `  `f¸ex: 102 15vel;    marg}n: 0.vrem;ä  ¢
+}
+&t20{
+$   uasei.-lefu830%;
+}
+.trtÙ{	
+( 0$}crgan-dox:!-35;MJ}
+.svw{*    }abg)~-top-15;     ÌargiB≠left:u6%;
+    *}
+    
+}
+hmed)! ®m·x-wkuth:$495t¯){ç `  .gaLleRy-ite} {	
+    
+ `  flex: 1 0 13RMm;
+ †  marwij>"0Æ∂rimª
+0 !}
+,t28k
+2†  mgrg)o,leg|:34$;	y
+t20t' !†maRwkn-tÓp /%;J}	J/s~g{ (∞$maroin-toP:-!'ay
+h!   ma{gcn-lelt:541;J    
+}ä.sˆg sˆes
+    Itth: =0tx:M
+  ¶ hÂkg*t:(56pt?mJ   $
+}@medya (mq¯=7id4h0475px){ç
+   .u20{
+   (margh‰%Ïefp:21%;
+}
+.t2 t{
+    marÁm~-top!-8;}ä.ÛRg{ (  }abgin-to`:-20%;	
+$   $margin-neft:5≥%;*    
+}ç
+*svC svEJ    witth:(4<px;
+`  "hekwjt: 48px;
+},
+  !`
+}Hmedia )ma¯-wilTx: 4≥5p˘+_M
+ † ".gaulezy-iÙem`{ç    M»  ( flez; 1 0 1rvemª
+  $ iazgmN2 0.5"eiç
+   
+
+.Ù20{M
+  §`m`sgin-left:25%;ä    bont,k:q: 58px;
+}
+.t284{
+†  !marfmn)top:†-10%;}çÆsvG{
+"(( mc2gin)t;-22%;
+ " ( oarÁhn'left:53;ç
+   $
+}
+.svg"svg{
+" 4 wip4h: 45px;:   `HehÔht: 45`x?
+}L
+ 8!†
+Ωç.pt/ravinw {	
+   0font-sIze:§±6px;
+ pÄ m°Úgin-top:`13px:
+!$  leuter-sPccinß: 3`x;
+  ∞heiÂht:15xx;
+]
+Pmedma †lah-wilth: q93@x){ç
+    .Áamldry-item {` `!
+  $ flex;"1 ∞ 11rem;
+   (
+   
+}
+>t20{
+ †† maRin-nÂgt:v5%+
+0   font/si{e 13y;J    fOntwehfxt: kold;
+}
+.t20t{ä!   =arin-up -10!;
+}
+.swg{ %† ma3oIn=top;/24$9
+     marwinklefp*%35+
+0! !
+}
+.svg sVe{	 "  wid|h:`<0px;* (  I%ighT: pX;}å
+ 00 
+} leaii  max-yfty:!61Pyi{
+)   éeAdlepy,itÂi {
+ 00 -
+    fLÂx: !$0 00$5rel;j†   %"
+]u@mÁdiÂ ®ma¯-widuhj ;5yz({
+  ∞.gallepy-itEm {
+  " 
+ ` &flex: 1 0 10rem
+  
+   
+{
+.galoer{-iteo)iffo .ÁalÏE:y-itgm,liker[
+ †  mirgin=top8¢2-
+}
+.t20s
+" * Ìarwin-left:25 3
+    fon4'si:g∫ 17px;ä"   v/~vmwaigxt: boÏd[ã}
+.t28ts  ""margan-¥o`:$-94%ªç
+}
+.wÙg{ †  !marGin-tkx-2'+
+     mar&ân≠left*5#%;    -
+ΩÆSfg`svÁ{
+    {mfth: 40qp;"$( ËeyohT∫i4 x;-N}
+   †
+    
+}J¿iedic (mAh-iedh: 340px){
+    /fallmry-item {
+    	
+ †  Flex:†1†0d9n5bem3
+  †dmaRgin: 0n<µrem
+ †(}.gaLdep˘,htmM9HN&o .gaxÏer}-htei-Ï˘kAs{
+( † earGin-tp:t81$;J}.T23{-
+ ( !}arcIl)neft822-;-
+   †gont-si˙e> 16px+ `0†voft=weig`t: foLd8ç}/t20|{    Margin-v/p: -1∂e;
+}.sWg{
+  ‡ m·qgiN/4op:,2∏'; !$¢†oirgi.-left:55%;
+ ` $
+}M
+.sf' swg{`   wid4h:0#5h;ä    huigxt: 37px;˝(.px)s%s{
+  ¢ foot-syzm:140ÿ3}m
+    
+}@mEdia0(map-)dÙh: 12∑px){!$  Øg`llerY-i|ee {M
+  $ 
+(($ fÏex: ±p109&5bgm;à 0 (mavÁin:0.38reo;
+   *]
+   $
+}ç
+PÌetia (mÒx-width: 32qpy#≥å    ,gallerq-item`{
+    
+  ∞$Vlex: 1 0 9rem;
+    o`rgin: 4.15ree;
+   
+}
+
+$   -äy AmeDia!(max-ocdtj: 12:	{
+    .galler9-htm,!{- † $
+ ! `dlex: 1 0 :.hrdm+
+    m!bwin8 0.1rao;$  
+=
+&Ù4raTiNg{∞ font≠Ûize: 53px;çJ}
+ d$
+.fQllery-iumm-inno Gallery-itui%lykes{
+    mapgmn-tmt: 81%;J}
+.t20{
+    mqBgio-Ïgf4;; %;
+$ `†fmnt-sÈze: 1&p¯1
+  ! fOlt-weygËt: boddª
+u-
+.t"pt?
+  d iyrci.¨6oq: %18$;
+}ä.svgL  ! ma{gIn-pop;/92%;    $ma2gin-heft:53•ª   (}.svg!3vg{
+  Ç YdtH 3z;
+`(  jgiGht: 37pX
+}
+.prÌ3ES{
+    vonp-shze: 13px:	}<
+ @med)s <max-um‰th2$:1#px){*     qVg{
+      H`$ width: 00px)"   `(}
+ `  ! !.gallery)itee [
+00!$
+(   fl%x: 1 0 8>42Em;  " m)rgi~: 2.23rAm;
+ ( çJ}
+  p }
+Dmedka!(max≠wid4h; 280px){ä    .galtery-item y‡   
+!   fler: #0hxbem:
+  ag)n:00.33vem9
+   =       
+&gallery=itei/info .Áahlery))tem-lkog3{
+    oarwYÓ-tgp: 78%z}
+ot2{$   oargin-ledt>20%;
+  " Êont-sizm: 15qh;	    fojt-weigjt* co,d+}
+/t"0d3
+   (Largin-top8 -rp%;
+|
+.ÚVgs
+    oarGÈf,top:-s2q;
+   1 margin-leftr53%;
+    
+}-
+.svg"svg{
+`   wI`th0 32xx;M
+(   he+Wht: 32px;
+y
+.`ris%c{
+   !fgnt-{hzg∫(130x;
+]
+    E*mJ
+–m%$id hlax-width{ 260px){
+!   †..anjery-item0{M
+    ç
+ 0  fnex8 1 0 8rem;è
+   #MarcYn: 0.25ram;ç
+  !*}
+    " 0
+.gamlÂpq/iTdÌ.info .gÈllery/item-liker˚
+†   iqroin-t/p: 78•[
+}	*t2{
+4  mawinldFt817%;
+    fonP-rize:!35px;
+    font-wnighv: bold;˘
+.20t
+    mareijto: %22%;
+}J&svg{    margin,pop:-34%;
+   ! ear&if-ledT>52%;
+   (ä}.svg svw{
+ " `widvhz ≥±p|    !heigh|: 33rxªM
+}
+.ÚrqsEs;	 !`0vont,wize∫†12`8{
+}
+  " 
+}
+`media ,/cz-WiDÙh!265p8-{
+ ("† ,Wallery-i4em {
+  $ 
+a  (&lex: 1 0 ∑.8re›
+†D  ÌapÁin: p.35rgl;
+`  	
+}}ç ¿mÂ‰Èc§®mcx-itth: 358pxi{  0 nga¸leÚ}-item({
+    
+ (  flex8 8 x!7.6REm;
+  `$Margin8 0n2srem{
+$ 0
+=}
+@medhq )-qx-7hfth 253px){*     ccllery-htem"{
+!   
+    fle∏: 1$0 w.4rem;
+    }apgil: 423pam;
+0  Jyu
+
+@MedYe0scpegn a~, *map≠Width: 40reÌi [
+ç†   .prodil% {*   ``0  lizplay: flÂp;
+
+†    `  " 0 $ ‰Èspl¡p: -WebK)t-flex; */
+ $ "Âispla}:`•ms-fne¯b/h;
+$   ç
+  `  ` 
+ `!  (! flex-grap: ura0;
+     !  -se"kit-flex-wrap; wz!p;
+ $    " paddijg: 4veg 0
+    }J
+0 0 .rOfinMz:aFtap {-        displax: nglu;
+$  "}Z    .`rogm|e)i/age,  2h.profill%us%r-bettings,
+  " /pÚovile≠ba/,
+2  $.profile%stcds†y
+(       &noap:$Óoje;-à    "  (widtl: auto  "(}
+
+   (.prfile-ima%e )me ;ä       2uidva∫ 9px?
+  (    !hEight:!90px;(   
+2 "!nprofiLee‰Èt-bpÓ
+  †     lÈneoheigËt: 4*9;*   !}
+  ( .pron(lÂ-ucer%ÛGtvings {
+    0 
+   &`   eisp|ay: ~lex>
+   "    dlençwrap: wrap;ä  † ! ` margid©v/pj!5rem3
+    }
+
+    /proFilg-1ser(jage z
+   $    font/sizE: 2.2rems
+" !u
+
+!†! .pjofile-e‰it/bt. {
+!   $* $orter: !;
+  0   ‡!p!Ldi.'∫!0;
+   ! 0  4‰xt≠afign: cÂ.tar9
+(0 ` !!!marcin-tkt: 1rem
+    }
+¢`  .ppofile-ed)p-bdÓ z "8     margin)vovÙ: ∞; !!%}	
+`  !.profHlmbi {
+  † ·†  Font,skze: 1.42eo;! !   0 -are)n-top: 1Æ5vei;
+    ŸB
+   $.p2ofi|e-gdip-btn,
+0"!†¨profi(ejio,
+    .Ppo$il%,st·4c {-
+   0 !Å flgx-baSis:*100%;™   ®}ö
+   (
+pronile-stats _
+ "   (  /rner: 1  0 $   margin-Pop2 1Æ5pumŒ0 †`˝
+"   .profkle-sv!tc(ul!{((      di3phay: ‚,e8+
+        |ex4-align: ggjpe2;
+   0†   paddingz 9.2ree(0;
+    8  !`order,to`: ∞.±rgm so|ad „dc‡ada;J!    "0 bordup-ko|tOmz 0.1rem%solid #d·DAdE;
+(   }
+	*   $/0rofidE-stAts%lh {
+0    (  &/nt-size
+ 1.4Úel:	
+`  (0   fme8>!q:
+1    ) m°rgin: 0;
+  ( }*
+  0 .xrkfile-stat=bmunt {  $  `0∞lirÚla{; "lo#k9
+   "˝-|
+@Medi` (l!x-gidth8 350px({    .prgdiLe-us%r-set4in%s {
+ †    0 f,Áx/"Ò3is: caÃb(0 - q0rdÌ);-
+4"``    !   dksplay: flex3-
+
+$0§!  ,`" 
+    displa}: -ebkit/f,ex3 */
+" † distday; -msfhexbor;!    $ "   
+ ( `   	
+d   0  
+        `mspliy> &lex3
+`    ` " gl%h-wra0: wrap;
+   (  !(d/wmbkit-bLex≠wrap: wrap;`!  $ "¢margi.-tox: qrem;  2 }
+     .xrofile-%dit-c`n{
+ 00 †  0lhNe)heiÁht: 1.7{    
+   †M
+}M
+@e%dii (e!x-huight2 255ph) ·nl$(eax-width: 5=5p¯) ˚	"am!ojd5kM	mpfgin-lefw:†27%;
+1   width: 5u%;M
+ !  heiojt:†13∞xx:
+    m·rgio-ump†10‡x;.
+
+	}
+	
+M
+!@! /. CSS0s4uff *g
+}@mgdi· (oi|-xaivxt: 2±3ph)  nd (m·9≠wh‰th: 195px) ˇ
+	,imaozd0{ ma3Áih,egt> b3'9
+    VidTh: 51%:    ig(wht8 10px;( $ margin-to: ±0px;	
+
+ç
+©}ä		
+* !( *`CQS stufc *-
+Ω@media (max-(eight 22≥pX)!qnd (max,˜iduh8 5y5`|)&{	.imignt${	Ecr'in-(dft: 2u5;-
+(p  wÈfvh: <5%;
+!   hEight: 0540x{à   °-eRgin≠t/p:$10x;
+ù
+	]
+	âM
+    /8!CWS%s|ufn"*?	
+}
+@mdtI@ ,max-leight2 42!px) And 	minıidTh:!5	6pp) {
+	.imaght${mar'io-lÂfp*a03e; `! width: 7 !9â
+    Ëeight: 300px
+    -°reIoeoX: 0xx;
+è
+}-	,user≠k[
+	wiTtH: 47py;J		heighx3 46p|;-
+	âpÔ∞: 19%;laro¯n-lef|: 19pÿ;
+	}
+	s00a{
+)t/p:†385;
+	}≠
+	.w20`24{	Åwox; 53%;ä	}
+.3r0a28shargs
+	uop: 68%;
+m
+K.s20a i {EJ		foÓp-Ûird:h≥0pX;I}
+I*324a20 i{M
+	no.¥=si{e: 30px;
+	}	sˆw{
+    widqh(12px;  ( heicht: 32px;
+ä~w55Ëf{mcrgIn-toP8 `¯ª
+}
+s56JF .sl0yM	}idt`: 60;}M
+
+:s`{
+waeth!0%;J	
+}.		
+m
+    /´†“sS {tunf */
+}
+@media (max-h!iÊhÙ* 355px) 'nd (min-7iFth: 596px+ ˚
+	
+	.user-k˚	
+		width8 45Px;
+		height:<Ph/
+	dgp: 17%;
+	m`{gin=,e&t: :1px;j	˝
+!?w60ay
+		top2 3	}
+	Æs0a≤2{-		uop8 53;}
+	.s24a28s`ereK		po02"70%;ä	}
+	>s≤c i†˚Jfont,sÈze> 30px;
+	˝,
+	.s20a20"iy
+		bmn|-siza: 20qx:ô
+J)u	svg{
+    ui$th:030p|;`(  heaght2 30p:;
+}*>S5uhfy
+	largkn-tkpz 2x;J}ns55hf".sd0k
+âkdth: w0%;
+äw
+
+.Sd{
+âWidTh:§7`•;
+	
+}
+=MäPlÌdy· (Mip-h%aghpp315px) and (mij-w…dÙh:$55ætx) K	.hmaßbd4{mirghn-le&t2 13%;
+    Wi‰ph: 65%;
+   "(Giehp 270q∏;
+ !  maRg)n-top" 10qx;
+
+
+	}
+		nusgr-[{M
+		wydth: =3Px;
+		Hmkght:d4≥p8		t/xz 17g;
+mqrgiF-left: 2±Rx;I}I.s00a{
+	â6op:0s6%ªI
+yçN	.s28·20{
+		vnr: 43';	}
+â¨w20a22Sherey
+J	topz2w8%;	}M*	/s20a`i`y
+ font-3ize: 28pxª
+	
+s20ar0 y{Ifond-size: 28px+
+
+	=	Ûfgz
+"4 (wi‰pH: 3p(;*    haic(t:$28r|ª
+}*.s55hnY
+	m!rgin-top:§m3pp;
+}*.s7?hfpSdˇ
+	Wittk: 60%?ä}ç
+
+.{d{
+	width: 3∞$;
+ }
+	
+    / SS!3tufn */}
+Amediq ®max-|eight: 295x) aÓd†(}Mf-˜kdth: 596p¯©";.ÈÌagjd4{
+	marginlhe&uz 15§;
+   †wIdth; 53%;)0  "hÂichÙ:†340px+
+   !largin-top: 10px9*
+M
+	}
+ä/
+(   -*†CCS sttf$*/
+}Ame$i!((mAx-jeaGht:$429‡x) ·nd (‰i≠wi‰ei* 606pp9 {j>imcgjl5[	margi~-|eft: °5%;M
+    uidt(:!6%?
+ `  hehghtª 720px;
+` †∞iaÚgin.tmp q0pÍ;:
+	}ä}
+I
+-
+@mefia"(max-Heigi4: <37px) aÓd (mi.=wi‰j:0606px) {ç
+9>i}·gjd4{
+m riN-lef`: Q5%;
+ ((®width: 7∑%;
+ !! huighu: 2<0`x{ !  margin-Ùo: 00pz;
+
+	}
+	
+    /*†CSS stuff *+
+}@media ®m·x-Ëeight: 300px)0a~d"(mif-idth v>pz! {
+).imaghd4{	Oarein≠lene: 1µ%;
+    widt`; 15%ª
+§  †hmighp: 25 px;
+ ä% mesg{nMdÔp:†10px;M
+MM	}*	
+    /* CSS {tufn :/
+|-
+@media`(max≠XeiGh|: rw8px)`and )min-widtl+ 0v`xi {.alaeJ‰4	
+πi·6gml-|aftz 1(%;`   width: 1 %;
+    he`O(t: 260px;
+(   mcrga.≠Ùop:!±0px;
+çM}
+	
+   (-" CWS0sÙuff!*/L
+|
+PieDia (hax-jeiÁht:4X7px)†and (mi.-ga$th:a693px) k-	.im·Mjd5[
+	m·rÊinlef4: 17( $  widtx: 65%õ	
+ $  heieht:`40txª
+ !  maaGIn-tnp:°10p|+
+J
+	uM
+}Hle$Ia (mah-heighd: 147`x) qNd (Ìmn-w)dph∫ 681px) {	Hmavjd4{
+	marginnebt; 15%;ç
+  † wifuh:06%9
+ !  height: 32∞p¯;ç(   margan?to2{ 10px;
+
+I}
+	/u3er-+{
+I	wy$uh:4$wP:;
+	he)git ¥7tx;		tnp:†!=%;-J	m`RgAn-lefT2&19pË{M
+}
+.c22az	
+Itop: 8 3çäI˝
+.s:9a20{Jâtk0:!53;
+]		.s30a:0sherE{	)4ox>`78%;
+}M
+,.s20a!i0yO*		fgnd-s)jU:b≥r0x9
+}
+I.c08h2∞ iz
+		fontsiZ': 32p|;
+-
+	Yç
+	sv« $  _kfÙh> 32phª-
+  ! heaght: 32r{;}
+ls55hfk-
+	margih-top2 0px;
+y
+.Û55hf .sd0{	Iwiduh:$?1%;
+}-*
+/sd{J	widtÏ:a∑0%+	
+}
+Í}@mddic (mc8)heiÁht( ª3xpx) Afd (ÌhÏ-widtË: 6<1pz) {I.ImcgkÏ4{maÚgin,left: 15%;
+  " widtj 55%9	
+   $heÈc¯t:†280rx+M
+(¢  gCzgkn-tkp: 14pz3
+	à}
+	>tSr-i{
+		width> 03Ùx;ç*		hgmfht:`43px;	
+I	4op: ˘7%;M
+		oArgÈn-medv:`21x;
+	}
+	.120a{-
+	4op: 3v%3
+	}
+	.s:0a≤4k
+	çtÈp:"1;%;
+	?		.q24at03h%ÚE{
+		top:(!;M	}
+	.s"4c k!;M
+Ifond-si~e∫ 340x;
+	}
+	.s20i20(h{		fon4,sizez$30px9
+	}
+	svw{
+`  $sidth:!0px;
+`  !hekg`t: 3∏px)
+}
+ns55xf{	-argiÓ=Top: 2Px;K}-
+.5hG0.sd0{M
+(˜id|`:$7%?
+
+}**wd{-
+	wieph: 705;	}
+
+
+}J@eedia (max%height: 396px)0a~d ®Min-wi$th2 ∂83px+ {ö	.mmaord4k
+	margin-left: 15%;
+    width: 50%;
+    height: 250px;
+    margin-top: 10px;
+
+
+	}
+	.s55hf{
+	margin-top: -3px;
+}
+}
+@media (max-height: 266px) and (min-width: 681px) {
+	.imagjd4{
+	margin-left: 15%;
+    width: 50%;
+    height: 240px;
+    margin-top: 10px;
+
+
+	}
+}
+@media (max-height: 513px) and (min-width: 771px) {
+	.imagjd4{
+	margin-left: 15%;
+    width: 60%;
+    height: 370px;
+    margin-top: 10px;
+
+
+	}
+}
+@media (max-height: 392px) and (min-width: 771px) {
+	.imagjd4{
+	margin-left: 17%;
+    width: 55%;
+    height: 340px;
+    margin-top: 10px;
+
+
+	}
+		.user-k{
+		width: 45px;
+		height: 45px;
+		top: 17%;
+		margin-left: 21px;
+	}
+	.s20a{
+		top: 36%;
+	}
+	.s20a20{
+		top: 53%;
+	}
+	.s20a20shere{
+		top: 70%;
+	}
+	.s20a i {
+		font-size: 30px;
+	}
+	.s20a20 i{
+		font-size: 30px;
+
+	}
+	svg{
+    width: 30px;
+    height: 30px;
+}
+.s55hf{
+	margin-top: 2px;
+}
+.s55hf .sd0{
+	width: 70%;
+
+}
+
+.sd{
+	width: 70%;
+	
+}
+}
+@media (max-height: 363px) and (min-width: 771px) {
+	.imagjd4{
+	margin-left: 17%;
+    width: 50%;
+    height: 300px;
+    margin-top: 10px;
+
+
+	}
+}
+@media (max-height: 319px) and (min-width: 771px) {
+	.imagjd4{
+	margin-left: 20%;
+    width: 48%;
+    height: 260px;
+    margin-top: 10px;
+
+
+	}
+}
+@media (max-width: 809px){
+.gallery-item {
+    margin-top: 7rem;
+}}
+@media (max-width: 450px){
+.gallery-item-likes1 {
+    font-size: 10px;
+}}
+@media (max-width: 376px){
+.gallery-item-likes1 {
+    font-size: 10px;
+    
+}
+}
+@media (max-width: 345px){
+.gallery-item-likes1 {
+    font-size: 9px;
+    line-height: 13px;
+    height: 27px;
+}
+.gallery-item {
+    margin-top: 6.5rem;
+}
+
+    
+    
+}
+@media (max-width: 313px){
+    .header__nav{
+        width: 290px;
+    }
+
+
+    
+    
+}
+@media (max-width: 300px){
+    .header__nav{
+        width: 280px;
+    }
+
+
+    
+    
+}
+@media (max-width: 287px){
+.gallery-item {
+    margin-top: 6rem;
+}
+.header__nav{
+        width: 260px;
+    }
+    
+}
+
+.spprof{
+  background-image: url(s2.jpg)
+}
+
+ 
+
+</style>
+
+<style type="text/css">
+  .tt-title {
+    font-family: 'Hind', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  
+    overflow: hidden; /* –û–±—Ä–µ–∑–∞–µ–º –≤—Å–µ, —á—Ç–æ –Ω–µ –ø–æ–º–µ—â–∞–µ—Ç—Å—è –≤ –æ–±–ª–∞—Å—Ç—å */
+    /* –ü–æ–ª—è –≤–æ–∫—Ä—É–≥ —Ç–µ–∫—Å—Ç–∞ */
+    text-overflow: ellipsis;
+   
+}
+ .tt-row {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+.tt-row {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+ .tt-row .tt-add-info {
+    margin-top: 4px;
+}
+.tt-row > *:nth-child(1), .tt-row > *:nth-child(1) {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+ .tt-add-info li a {
+    color: #E91E63;
+    -moz-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+}
+
+ .tt-add-info li a {
+    font-weight: 400;
+}
+.tt-add-info li{
+    line-height: 19px;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+.tt-price{
+ 
+      display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bolder;
+    color: #777777;
+    margin-top: 7px;
+}
+
+.tt-price span {
+    display: inline-block;
+}
+ .tt-product-inside-hover {
+    margin-top: 15px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    
+}
+.thumbprod-button-bg {
+    font-size: 14px;
+    padding: 2px 18px 10px;
+    transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+ .tt-btn-addtocart {
+    line-height: 1;
+    font-weight: 400;
+    font-family: 'Hind', sans-serif;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 2px 18px 10px;
+    background: #2879fe;
+    border: none;
+    -moz-transition: background 0.2s linear;
+    -o-transition: background 0.2s linear;
+    -webkit-transition: background 0.2s linear;
+    transition: background 0.2s linear;
+}
+
+.tt-btn-addtocart, .tt-product-design02 .tt-description .tt-btn-addtocart {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+ .tt-btn-addtocart span:first-child:not(.icon-shopping_basket), .tt-product-design02 .tt-description .tt-btn-addtocart span:first-child:not(.icon-shopping_basket) {
+    display: inline-block;
+    padding-top: 9px;
+}
+
+.spr-starrating .fa{
+  color: black
+
+}
+.tt-row .tt-rating, .tt-product-design02.tt-small .tt-row .tt-rating {
+    margin-left: -1px;
+}
+
+.spr-badge {
+    min-height: auto;
+    min-width: auto;
+    display: block;
+}
+ .tt-rating .spr-badge-caption{
+  display: none;
+}
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 420px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+.flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+}
+
+.flickity-page-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    opacity: 0.25;
+    cursor: pointer;
+    margin: 40px 8px;
+    background: rgba(51, 51, 51, 0.78);
+    border-radius: 50%;
+}
+#msain21{
+  margin-top: 120px;
+}
+#cas4d{
+  margin-top: 100px;
+}
+
+@media (max-width: 800px){
+  .carousel-cell {
+  width: 100%;
+  height: 380px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 80px;
+}
+#cas4d{
+  margin-top: -50px;
+}
+
+
+
+}
+@media (max-width: 675px){
+  .carousel-cell {
+  width: 100%;
+  height: 380px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 80px;
+}
+#cas4d{
+  margin-top: -50px;
+}
+.carousel{
+  width: 94%;
+}
+
+
+
+}
+@media (max-width: 615px){
+  .carousel-cell {
+  width: 100%;
+  height: 360px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 70px;
+}
+#msain21one{
+  margin-top: 20px;
+}
+#cas4d{
+  margin-top: -60px;
+}
+.carousel{
+  width: 94%;
+}
+
+
+
+}
+@media (max-width: 585px){
+  .carousel-cell {
+  width: 100%;
+  height: 340px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 60px;
+}
+#msain21one{
+  margin-top: 0px;
+}
+#cas4d{
+  margin-top: -70px;
+}
+.carousel{
+  width: 96%;
+  left: 2%;
+}
+
+
+
+
+}
+@media (max-width: 510px){
+  .carousel-cell {
+  width: 100%;
+  height: 320px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 60px;
+}
+#msain21one{
+  margin-top: -33px;
+}
+#cas4d{
+  margin-top: -70px;
+}
+.carousel{
+  width: 96%;
+  left: 2%;
+}
+
+}
+@media (max-width: 460px){
+  .carousel-cell {
+  width: 100%;
+  height: 280px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 60px;
+}
+#cas4d{
+  margin-top: -70px;
+}
+.carousel{
+  width: 96%;
+  left: 2%;
+}
+
+}
+@media (max-width: 380px){
+  .carousel-cell {
+  width: 100%;
+  height: 260px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 60px;
+}
+#cas4d{
+  margin-top: -70px;
+}
+.carousel{
+  width: 97%;
+  left: 1.5%;
+}
+
+}
+@media (max-width: 350px){
+  .carousel-cell {
+  width: 100%;
+  height: 220px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 60px;
+}
+#cas4d{
+  margin-top: -70px;
+}
+.carousel{
+  width: 97%;
+  left: 1.5%;
+}
+
+}
+@media (max-width: 310px){
+  .carousel-cell {
+  width: 100%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+#msain21{
+  margin-top: 60px;
+}
+#cas4d{
+  margin-top: -70px;
+}
+.carousel{
+  width: 97%;
+  left: 1.5%;
+}
+
+}
+
+
+
+
+@media (min-width: 768px){
+
+
+.header__content {
+    height: 59px;
+}
+.header__search input {
+    
+    height: 36px;
+  }
+
+  .header__sign-in {
+    height: 36px;
+    width: 120px;
+    margin-left: 30px;
+}  }
+</style>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__content">
+            <!-- header logo -->
+            <a href="" class="header__logo">
+              <img src="logo.svg" alt="">
+            </a>
+            <!-- end header logo -->
+
+            <!-- header nav -->
+            <ul class="header__nav">
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+                  <li><a href="index.html">Home slideshow bg</a></li>
+                  <li><a href="index2.html">Home static bg</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                  <li><a href="catalog.html">Catalog</a></li>
+                  <li><a href="details.html">Movie Detail</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <li class="header__nav-item">
+                <a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="faq.html" class="header__nav-link">Help</a>
+              </li>
+
+              <!-- dropdown -->
+              <li class="dropdown header__nav-item">
+                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="signin.html">Sign In</a></li>
+                  <li><a href="signup.html">Sign Up</a></li>
+                  <li><a href="forgot.html">Forgot password</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="404.html">404 Page</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+            </ul>
+            <!-- end header nav -->
+
+            <!-- header auth -->
+            <div class="header__auth">
+              <form action="#" class="header__search">
+                <input class="header__search-input" type="text" placeholder="Search...">
+                <button class="header__search-button" type="button">
+                  <i class="icon ion-ios-search"></i>
+                </button>
+                <button class="header__search-close" type="button">
+                  <i class="icon ion-md-close"></i>
+                </button>
+              </form>
+
+              <button class="header__search-btn" type="button">
+                <i class="icon ion-ios-search"></i>
+              </button>
+
+              <!-- dropdown -->
+              <div class="dropdown header__lang">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
+                </ul>
+              </div>
+              <!-- end dropdown -->
+
+              <a href="signin.html" class="header__sign-in">
+                <i class="icon ion-ios-log-in"></i>
+                <span>sign in</span>
+              </a>
+            </div>
+            <!-- end header auth -->
+
+            <!-- header menu btn -->
+            <button class="header__btn" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- end header menu btn -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+
+<div class="f45">
+  <div class="title"><span class="s26d9sf"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span></div>
+  <div class="title"><span class="s26d9sf"><img src="shopping-bag.png"></span></div>
+  <div class="title"><span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-infinite"></i></span></div>
+  <div class="title"><span class="s26d9sf" id="ssd4g"><i class="icon ion-ios-contact"></i></span></div>
+  <div class="s50fgh"><span class="s26d9sf4"><i class="icon ion-ios-add-circle-outline"></i></span></div>
+  
+</div>
+<div class="f46">
+  <span class="hfghtre4i"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+   <span class="hfghtre4i1"><img src="shopping-bag.png"></span>
+   <span class="s26d9sf54" ><i class="icon ion-ios-infinite"></i></span>
+   <span class="s26d9sf544"><i class="icon ion-ios-contact"></i></span>
+   <span class="s26d9sf544f"><i class="icon ion-ios-add-circle-outline"></i></span></div>
+
+  
+</div>
+
+
+<div class="article">
+
+
+	<div class="gjngujr">
+	<header>
+
+	<div class="container">
+
+		<!--<div class="profile">
+
+			<div class="profile-image">
+
+				<img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="">
+
+			</div>
+
+			<div class="profile-user-settings">
+
+				<h1 class="profile-user-name">janedoe_janedoe_janedoe_</h1>
+
+				<button class="btn profile-edit-btn">Edit Profile</button>
+
+				<button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
+
+
+			</div>
+
+			<div class="profile-stats">
+
+				<ul>
+					<li><span class="profile-stat-count">164</span> posts</li>
+					<li><span class="profile-stat-count">188</span> followers</li>
+					<li><span class="profile-stat-count">206</span> following</li>
+				</ul>
+
+			</div>
+
+
+			<div class="profile-bio">
+
+				<p><span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit üì∑‚úàÔ∏èüèïÔ∏èLorem ipsum dolor sit, amet consectetur adipisicing elit üì∑‚úàÔ∏èüèïÔ∏èLorem ipsum dolor sit, amet consectetur adipisicing elit üì∑‚úàÔ∏èüèïÔ∏è</p>
+
+			</div>
+
+		</div>-->
+		<!-- End of profile section -->
+		
+
+ 
+        <!-- End of profile section -->
+
+    </div>
+		<!-- End of profile section -->
+
+	</div>
+	<!-- End of container -->
+
+</header>
+
+<div class="carousel" data-flickity='{ "autoPlay": 5500 }'>
+<div class="carousel-cell"></div>
+<div class="carousel-cell"></div>
+<div class="carousel-cell"></div>
+<div class="carousel-cell"></div>
+<div class="carousel-cell"></div>
+</div>
+
+<main class="msain" id="msain21one">
+<div class="container">
+
+		<div class="gallery">
+		
+			
+			 <div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+				
+
+			
+				<h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny Fit Stretch Mesh Polo–ø–∞–∞—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä–∞–æ–æ–æ–æ–æ–∞–ø—Ä–ø–∞–ø–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–ø</a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+			</div>
+						 
+                   <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny Fit Stretch Mesh Polo–ø–∞–∞—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä–∞–æ–æ–æ–æ–æ–∞–ø—Ä–ø–∞–ø–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–ø</a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+                   <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+
+             <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+
+<div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+      <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+      <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+
+
+      </div>
+
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+
+
+
+         
+			
+			
+			
+			
+
+				
+		    
+		    
+		    
+		    
+		    
+		    
+
+
+
+		
+			
+
+		</div>
+		<!-- End of gallery -->
+
+		
+
+	</div>
+
+	<!-- End of container -->
+
+</main>
+<div class="carousel" data-flickity='{ "autoPlay": 5500 }' id="cas4d" >
+<div class="carousel-cell"></div>
+<div class="carousel-cell"></div>
+<div class="carousel-cell"></div>
+<div class="carousel-cell"></div>
+<div class="carousel-cell"></div>
+</div>
+
+<main class="msain"  id ="msain21" >
+<div class="container">
+
+    <div class="gallery">
+    
+      
+       <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny Fit Stretch Mesh Polo–ø–∞–∞—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä–∞–æ–æ–æ–æ–æ–∞–ø—Ä–ø–∞–ø–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–ø</a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+             
+                   <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny Fit Stretch Mesh Polo–ø–∞–∞—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä–∞–æ–æ–æ–æ–æ–∞–ø—Ä–ø–∞–ø–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–ø</a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+                   <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+
+             <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+
+<div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+      <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+      <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+
+
+      </div>
+
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+            <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+
+
+
+         
+      
+      
+      
+      
+
+        
+        
+        
+        
+        
+        
+        
+
+
+
+    
+      
+
+    </div>
+    <!-- End of gallery -->
+
+    
+
+  </div>
+
+  <!-- End of container -->
+
+</main>
+
+
+
+<main class="msain" id ="msain21">
+<div class="container">
+
+    <div class="gallery">
+    
+      
+       <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny Fit Stretch Mesh Polo–ø–∞–∞—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä–∞–æ–æ–æ–æ–æ–∞–ø—Ä–ø–∞–ø–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–ø</a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+             
+                   <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny Fit Stretch Mesh Polo–ø–∞–∞—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä—Ä–∞–æ–æ–æ–æ–æ–∞–ø—Ä–ø–∞–ø–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–∞–ø</a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+                   <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+
+             <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+
+
+<div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+      <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">Skinny </a></h2>
+
+        <div class="tt-price">$20.00</div>
+
+
+
+
+
+      </div>
+
+      </div>
+      <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+       
+      <div class="tt-description">
+         <div class="tt-rating" data-url="/collections/not-sidebar-wide/products/copy-of-rae-suede-sandal-6">
+        <span class="spr-badge" id="spr_badge_1564964454458" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="spr-icon fa fa-star-o"></i><i class="fa fa-star-o"></i></span><span class="spr-badge-caption">No reviews</span>
+</span>
+
+      </div>
+
+       <div class="tt-row"><ul class="tt-add-info"><li><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/levis" class="text-uppercase">Levi's</a></li></ul></div>
+        
+
+      
+        <h2 class="tt-title prod-thumb-title-color"><a href="https://wokiee-demos.myshopify.com/collections/not-sidebar-wide/products/copy-of-rae-suedM-safdaL-4".CÍyfy =/A~</h2>
+
+,   `†(‡ºtcV qlaÛs="uu.qr)"e">$20.p0</div.
+
+
+
+
+ ! ` "<ƒiv.ç*
+
+
+    &A$/div>*	
+   † (  2   <dmv0claqs="ehllmr˘-hdem#%tabÈnde9="0">ä ¢     " |img`src=*htu`s://k|mgƒs.qnaplawh.cÔm?ph/po-10505877)65/(9a446;ax7g4?w}52,h=500&dit=Crop"$c^asr="gillepy)iÌage" al|="<
+ †("   
+    *`4‰iv0chass="tt/ddSvipTion">)      !` <diˆ #\aqw=&pt-r·ping¢ Dataur‹=2%ÈohhegtkkÓs/.oT≠SIeÂbaz-idE-pboducTÛ/k0y-d-rae-Suade-saola,-6">
+       ,sxan blass="spr,b!dc5" Èd=*spj_‡adge1=649∂4454¥5:" dcta,ratIn'="1.02>8s`cn classΩ"sx¯-sÙabr„ti>e"SqZbÈdguØstarrating"i clesSΩ"na fa/svaz-o"><*i><y cÏa{Û="Êa fa-w‘`R=c"></i><i clasÛ=2fa fa-Sxcr-o&>æmÈ><i!cÙasq=*spr≠i#on fa Fa-sTar-n"></i>=I¨cl`sw="f· fi-3Tar≠m#><yû</spaÓ>8span claÛs-"SpRMbadgM-caxteoj">No bevhuws<Øsin>O
+</span/ää    "#<.div6-
+
+ "     8Div clqss}"|t-rgw"6<el clÒssΩ"tt-addminÓ/£æli><a lsev="Ëttp:/wÔiiae-duMo3*mysiopidy.ckm/sglngctkNnsnot,„ieebp)widm/leri# „lass=
+teht-urpeÚ„ise">Lgwi'Û</ >/li></ul></div∫
+ "    b B-  !   
+!`    ( <h2 c|ass<"tt%phpld prgd/thqm%tit¨e-color#:<a h2gfΩ"htdps://wok˘eÂ%femos.mybHgpif.com/codlecDiOls/n/‘-smt·B!p-vkdd/pÚ+duc<sØ#opy-?f=vae-sue$e-sandal-6"2S;©nny(</·>8j26      " |diw clacs= tt-pÚmae"<$≤0.024/div>éä
+
+
+ $   $<ntiv>-
+ `  " </do66	
+   $  $ !   ∏dmv clics=bgalhery-i6em" tabml‰ex="0">-
+ç
+   " (  <ig src"ittP3>/ãimaÁes.ensrlash.cOmPhopo-150µ05ºó47965-0)i<469a8e;w=00&j=510"nM0=Cvor" c,ics3beallery=image"(aÏT=""æ $ $`  M
+   b`#tdiv 'nasq5"tt-dec"riptmn">
+0    0   >div slasS="t4-ratinÁ"!B`ta-}vl="/coLlÂc4iœn{'nnÙ-siderar=wi$e?productq?copy≠OÊ=rau-suede5wandem-6">-
+ 0 !  !`<wp!n!cl`sq="SprmbaDGe"dil9"s0r_badge_±564964454µx# da|a-ra‘…Óg=b0&><qqaj"clasq-rpr-Ûtarrat)ng str-radge-starrATmn/*:<i cmqws<"fa fa-sÙar≠o2>.m>,i 3laÛs}"&a &q,star-Od>/i><i†class?"fa fi-sTav-{*>>-i><i(bl!ss=#wpr-icon fa fa-rtar-o"><,i>=i C|ass="f` Êa,st·b-o":</i></span.<3p%n clawq="spv-Íadge-„hptÈoo">No revyews<.Span></qp`j:*
+     <'div>
+
+   "$  ,divclCsÚ˝"tt-row#><wl #l·ssΩ*7tadD-info"><li>,a xrefº&https*/'wokhe%-dumks.mŸ{Hop)dy.com/cOlLegtinn/bop,s	debar-wide/lewis& Clazc="Tgxt-uxxercase*.Levi'q</a:</li><.ul>>/dif?
+`      "
+
+  +  &
+†       <x#0chisr="td-tithg prod-phUlbçtitlm-col/p"ahref<"htt`s>//wnkioe-deios.Myshnify.comocolltctinnw/fot-skdecar=gide/r2oducÙsogg`ym/∆)rAE)suele-sandal-6">Wii~~y!</c~>%x2>*
+     h!(<Dmv chasw="tttrice">$20.00|-liv>
+çç
+Æ
+M  `  X-dHvæ-
+ "   †</dmv>
+
+  $dr  2  4 dÈw cm!ss="galmaÚyoitee2(tarantez=pÇ>
+
+       §<xog0src= ¿tt3://ImaOes&uvcp|asm>CoÈ/phgtŒ-5050587079ñ5m∞)a5469!(7e4/w==20fh=µ∞¥&Êit=crÕp2 +naw{="gallery-imigE"`klt˝"b> ` (!  
+ ( (  =div cLa{s/"tt,deÛciPtmOn">
+ ` $     <Dit cnsss="t-ratIno" eat`-ırl=&/gol|ertÈkLr/nNv=sIdeb!R-wide/psoducts/coty-Ôf-rqe%sue‰a#qandal-6&>
+`      `4spaj cLass9#spr9ba`ce  id-"vpr_f„dme_1164960454458" LaÙ·/ratynG="0&3"<<spad ala{k="{pp≠styrraTiNÁ spr-badgm-c|arratiÔg¢>i(class"Êa Êamstap-o">\+i><i0alars?"ba f·.V6iÚ-o¢2<'y><i clqs3="fg fa-spir-o"><i>i clasSΩ”pr=icOn0f¡ ÊE-star-#>/y><i clars="fc`va-sdar-o#>>/i><-rpan><vpÒ~"clqÚs7"2pv%ba‰ge-ca0eionæNo Ûowie{</Ûtan>y
+</span
+
+    "†<g§yˆ6
+-
+    `(<diz cmas#2vT-rÔw">=uh klksw="td-a`dÌinfo"><hi><a hre&;"lTs8/?˜ocifeDemosnmyshopÈfqÆcgm/collect!ols/.ot-siddbar-wide/ldvis" class=tmxÙ-ypperc·se"?Levk'8/a>:/li><%un></dav>
+  0     M 
+† !   
+  00    |x2 clcss5"tt)mtle pÚol-thumb-Ùiple-color"><a hsefø"¯t|pwz++˜oÎÈee-demos,myshop)gy.com/coldeauioq?nod-s)de‚yr-'(D%Øp0oducTsØcopy-O@rAe)cuedÂ-{andal-6æWkinny </q><'h".J
+ p`   a <'iv klqc{="|t-price"~$24,10<?div.J
+	ùJ
+   ` $<divæ
+
+      </div>J (   #)    †,div clbss="gcltery-iÙ'}" ta‚indux="0">ä
+    $0  <Èg src="zttps:/'i-Aggs.unsplasl.com/photo-1505<193079∂5-09!4469È0?E47'=510&L<500#fit=crop"0class= galleryoiÌyoe" q,t="">
+"   $  
+ ` $  <di|$chasSª"tt-ee˚cripvyo.">ç
+)‡`  ( †8<di6 clawsΩ"Td/rating dAta%u~l="-colnegÙjon{m.n|-cidecaz≠sxde/prOducts/cO0yoF-raeçs5edu/s·Ndal-6*?
+`†(0%! <sp!n ilqss="spb-Balwm"0id-#spr_"ad'e[1=&t96454458" lat·-ratinf=¢1.∞ ><srÈÓ$claqSΩ"sPp%s4ar2ating†sXr-bedgi-starpataf"><i(clas„ubfa fa/spar-o"><+i.<i gla{s="fa fa-StAs-/"></i>8i0co ss=*fa ba/stir-g">>/i>¨i"qhaÛs9"sprmicÔf$fa fimstarmo">,Øi>0i clas{=2fq`fa-stAr-o"|</i></suan><spaj Cl!ss="s†r-badge-caq\iod >*o†Úevigwr</span>
+/Span6
+
+ !  "(,/d)w:ç
+  1!  `<diV†#l·s3="tp-rgu"><ul class9"tt-ad‰-mjfo">ºÏi><a`lrenm"https://7ooael-demoq.myshgpif{.com/godha„tion3Ôn/t-si`ebcr-wid`/letis" "l!r3="dexp-upperoasa">Lev)'s<?·>ºØ,i?>/ul<odiv>M $$     
+ä      J !  $   <x"Ä3,ecc<"tt%titne xbod-T(qMb%ditld-colÔr"><i ir%f5httpÛ9-/wokiee%lÂeoq>m˘shopIfy.kom/colhegtions+nOt)ri$abar-wite/prodect3Øcoy-mf-2be=suele%s`od·l-72Wcinny!=/e></Ï2>
+
+! †     <‰Ìv`aÏasr="pÙ-pzice >$2pÆ0†</diw>
+
+
+
+ $   "</di>JIä0     </dir~
+
+`0 †0     ( <fir claÛs5(galmer/Mte-2 |`bin$ex=*0 :*
+     0 !<img srcΩ"https*=/iM!gms.UN3pl!sicom/phopo-95050=86079w5m2=at469e87-4?w?500.l=5:0&fit=csop"glcqs=*ealLÂry-ii·ge" aÏt=""<ä  $          <div cdasq"tt-dessvirtion">       `0<Ïiˆ klas3="tt/rAthng" dyÙa,mrl//colÃections/not-side`ar-gifu/0r.ducv3.ce0[-+fmrae-sugde-sa|dal,v">
+$    †( =span$sLass="sr=‚aÂet" )‰="sp2_‚adÂmﬂ1564926474¨µ8&†data-2atijg1"0*0".<s0qn „l`ws="qpp•s|arratÈno str-jcdÊust`brating">i clasr="fa fa,suar-o">¸oi><k glaks=ga fa-staz5o<-i><i alass<bf` da=star,g(:</ik clA{s="sp2-icoj ba f·-q|ar-o"><i|) claqs90w! fa-{tev-Á*></i|+waN^<Spaf chass="Ûpr-Badce-c·rtÈon*>No reˆiesc<+spaj>
+='span>
+      <.Div>
+   $`  ,$iV4cdaSs"ttmrow*?<u| slarq<"tt-·`F-info"vla><a!href-"httpc/*wokie%)dÂÌos.myshgpkfy.cmmßcÔhh‰ctÈins/lgt-sideb!rwlde'lmv)s" cÏapr="text5}vxgbc!re">DevÈ's</!ø>o,k>>/}|6</div.
+     ` &,
+ !    J        <h2!clarq=Útu)tidle"psod=$humhtI4le-col/r"><a hr%$-"httPcz/.wohjee-demœÛ.oyshopiÊy.cgm/bol,EctiknsØnoTmsidebAr=gmdu/rÔdmgVs/„opY≠gf-rae-suefe-San$aL-∑&>Soinny </aæ<'h:
+%*(       8diT al!ss"tt-pri„%">$20.00</diÊ?ç
+ç
+
+ä
+	      </divø
+      </d-v
+*
+I
+	
+ ††      
+  ` "!
+   ! `	J$" "  ≠( " $ M!* "  (!L
+   $0 ( ç
+!     d   0 (   ä  %"®     ($    	J†   0 @ 
+	J	
+ "  
+  $ ( E
+
+"†  <+dlv>
+    <!- Enf /vgÒmlery -%>
+
+  (J
+  </`iv>ç
+  <°≠- DËd†oˆ cÔntqÈnur -->-
+=mamn>
+	
+â
+	
+	M
+
+,/dk6æM*%
+  	‡  
+   
+<?tÈv>M
+M*
+M
+ <Ûcript(crc='https2+qdzkrclod‰flare.somajaxoli
+s'jqwa2}*7.3.1gjyuiry.}i|/ks'æ</sSr…p¥~
+8sCrIPt"sPc='KrYJow&jrßæ<-scpi`tä 
+  <2qrapv!ÒRq=7fli!Îi\Y.pÀg`.hs'?</script<  <scritt szc="footstrex.BuÓdlÂnein*js"6</scry`t>
+ 0<Skript Srs=oul.karousel.-Èn>n["></script
+  <scripd sz#<h1uery*mnUsuwheem,mkn&js"><'scrapt>ç †<sc"iptbSrcΩ"kquoÚm.mCıstomSkbollfar.Èin.hr">=/sctit>
+"(<sbz{pd`1zc?ruB5-B.jÛ"></ssrirt>
+ $<scripp0Sz#="nouislider,mÈn.Ís"></scrhxÙ> (<scrird src="juu%2q.morehanes*mxo.jÛ"<</rcsIPv<
+  <sb2Èxt src=7p,ys/iin.js"></sApiÒt6
+ !<script srb="photos6ipe.mkn/js"></3cr)pt>	
+ †|Ûcrqpt%src=bphotos˜kpe-=i-defaudtnmin.js"><oscvixT>
+( <3c2ipt!crc="ma{n>ns"><.{cri`tæ
+*
+
+<-+<diV clas{5"arpi#lm >≠
+<‰iv>
+ —°ø“ø—π–ª–µ–Ä ‡ÜñQ <a hbefΩ¢¢(bÏaÛq"cxoilev_l)nkÛ">–ø–æ–∫–∞î∑–∞ŸÇ—å  —ÅP∫—Ä–ã—Ü—®</a>E
+$ <div clasÛ=*f4j5aa¢>	
+
+ ,Div"clAzk="3uÔimer_f'dy">
+  ‘¢—µ–>¡Å—Ç"–Ú§“ø–µ—Ä—≥–º–< —ÅPø–æ–ô–ª¿¥—Ö–±
+""–¢–µ¿∫—É—Ç –≤ –øÿµ—Ä‘≤¿Æ–¸ —Å–ø—æ–π–ªRµ—ÄÚµ
+ -dh^>
+4/div∫
+</dkv8
+<div
+ P°–ø–æ–π–ª–µŸ† ‚Ñó2"<q hrd¶}"" blacr=bspilÂr_hioks">—ø–ˇ–*–∞–∂¿∞—Ä—ú / —Åÿ™ÉÄ—ã—Ç—é</a.† <di| blasr=*f4h=ac">ç <diw cnasÛ="Spoiler_jod}>
+ (X¢Pµ–æ”Å—Ç –≤–æ –í—Ç–˙—ÄPæ–º —ë–ø–æ–˘ÿªQµ√É–5c  ê¢–µ–∫—Å—Ç –≥–æ!ÿ≤–äPæ√Ñ–æ–º —Å–ª–ø–π–˘—µ—Äêî	@=liV></div>
+J</Eiv>ù
+Ød)7:-->≠
+
+-J
+	
+
+
+*
+
+
+
+âM
+
+ää<-ccript a‰="rmnLered-bs">-
+ M
+  fun#tinn±s20()y
+! ! (vAv v <$docuÕent.getElemenuById®"ea5b)./ÊfseÙIeoÁht;M
+    `vaÚ r = dœcumdnt&cetEle-entById("fffb0Ù i>offs%tHeiGht;MJ 0   conqolennÔc(s,6!!  ç:    ‰oBqmEnt.getEÏementFyId("fffd$42).3t9lg.jdÈgxt$=†s + (v-12)$+2"Px";†   dgcuientnwetElumentJ9Md(">d"+.stxle*gpibi\{  "0";   0
+    ä*	
+† ˝	" %( "#tf#$).cmiCk fu~Atm/.() ;*  alaRt8 &afdler`for".clÈCi®) called." !+});
+J
+,.skript>¨>=1-/sÒRipt Typ%=2vext/jA¥accRkpv"~-  ç
+  §) ".f222`).clici fqnctyo/(%6ent) 
+
+      †$('.f4j5a· ‰a~/!.ssc({" 'hGig(t': aqtm&lJ  
+});  vav P9$("#Da5")?
+" dar {=$*"#vfff4<");O
+
+!$vQb$s:p.outÂrmighv(!;*(†6ar e=€.oqTe˛HeÈgxt();	
+
+  $8'#fnfv4t').cv„({  'huigjt%: %+s)µ2,
+)`
+});  $(!Dd#),css8{  M
+" }(;*$0
+
+  cncoLe.lng)s,;
+});I "çJ<oskrItd?-->
+
+80 
+	|scri0p tipe}"t%ht/javaqCrhbt">Ç !  	
+	
+	vas$È < []?
+	fqf apm = [2,5,7,1,%q.1),04$˙,26,29,3Ú,35,≥8,41,4,4wU;
+	vaR arrr -![1+ç
+	vaÚ"f = $2d)wgall%ri-itdm +.lenftË;    va2 A 5 ¥('t)v.gal|ey-ktum'), -a8"=#8, e|em;
+J  $
+ h  
+*"00
+ 0  for (m.lEngvh;(i.lengtH ú n90 i*push ¡[k.ld.g4h])) s 0  	avvr.wsh(I[anÏelg|h}.ofnsetWiduh)+
+
+"   	
+
+
+` ( }	J!( `consolenlo'(n,&≈- ap2bi=
+(0†8   §
+ "  if (aRrr.neNgtH >)2){*    dele4e arvr[0\:
+   ∞delete(·rrrõ1]; 0 `~ab gl 0= asrr[r]{
+ `  Var f 9 aVbr*helgth;-
+  `$consohE.lgo(b)3
+*   6ir aree =b[3, ,9,1.9h210≥,2~-"9Ï3∫®35,38,t1,44,45,4,7,10<13|16,19-21,23,0>,0ª,32,9',18,41h4¥,474,1(14,13,16,19,r1,23,6,2π,36,35,;:l01¨44,4w];  ( ä† † 
+    var judoIndex = are.lastIndexOf(i.length);
+    var judoIndexg = are.lastIndexOf(i.length - 1);
+    console.log(judoIndex, judoIndexg);
+
+   
+    
+    
+    if (judoIndex > -1 ){
+         $('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh,
+	    	'height': 'auto',
+  
+  
+
+
+  
+  
+	});
+        
+        
+    
+     var gb3 = f - 1;
+     $('.gallery-item:nth-child(' + gb3 + ')').css({
+        'max-width': gh,
+        'height': 'auto',
+  
+  
+
+
+  
+  
+  });
+      var gb4 = f - 2;
+     $('.gallery-item:nth-child(' + gb4 + ')').css({
+        'max-width': gh,
+        'height': 'auto',
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    if (judoIndexg > -1){
+       
+    	$('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh ,
+	    	'height': 'auto',
+  
+  
+
+
+  
+  
+	});
+    var gb = f - 1;
+
+
+	$('.gallery-item:nth-child(' + gb + ')').css({
+    	'max-width': gh,
+    	'height': 'auto',
+  
+  
+
+
+  
+  
+	});
+        
+        
+    }
+    
+   
+   
+    
+    
+      
+
+    }
+    else{
+
+
+	var serv = window.innerWidth;
+	console.log(serv);
+	if( arrr.length == 1){
+		
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+		if(serv <= 713){
+	    
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/3.4,
+	    	'height': (serv)/3.4,
+	  
+	  
+
+
+	  
+	  
+	});
+	
+	    
+	}
+
+	}
+	if(arrr.length == 2) {
+		$(".gallery-item:nth-child(2)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+	if(serv <= 713){
+	    	$(".gallery-item:nth-child(2)").css({
+	    	'max-width': (serv)/3.4,
+	    	'height': (serv)/3.4,
+	  
+	  
+
+
+	  
+	  
+	});
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/3.4,
+	    	'height': (serv)/3.4,
+	  
+	  
+
+
+	  
+	  
+	});
+	
+	    
+	}
+
+	}
+
+
+
+
+
+
+}
+   
+        
+	$(window).resize(function(){
+		var i = [];
+	var are = [3,5,7,9,11,19,21,23,26,29,32,35,38,41,44,47];
+	var arrr = [];
+	var n = $("div.gallery-item").length;
+    var A = $('div.gallery-item'), max = 0, elem;
+
+   
+    
+    
+    for (i.length; i.length < n;  i.push(A[i.length])) {
+    	arrr.push(A[i.length].offsetWidth);
+
+    	
+
+
+    }
+    if (arrr.length > 2){
+    delete arrr[0];
+    delete arrr[1];
+    var gh  = arrr[2];
+    var f = arrr.length;
+    var aree = [3,5,7,9,11,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47,4,7,10,13,16,19,21,23,26,29,32,35,38,41,44,47];
+    
+    
+    var judoIndex = are.lastIndexOf(i.length);
+    var judoIndexg = are.lastIndexOf(i.length - 1);
+    
+    
+    if (judoIndex > -1 ){
+         $('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh,
+	    	'height': 'auto',
+  
+  
+
+
+  
+  
+	});
+          var gb3 = f - 1;
+     $('.gallery-item:nth-child(' + gb3 + ')').css({
+        'max-width': gh,
+        'height': 'auto',
+  
+  
+
+
+  
+  
+  });
+      var gb4 = f - 2;
+     $('.gallery-item:nth-child(' + gb4 + ')').css({
+        'max-width': gh,
+        'height': 'auto',
+  
+  
+
+
+  
+  
+  });
+        
+        
+    }
+    if (judoIndexg > -1 ){
+        
+    	$('.gallery-item:nth-child(' + f + ')').css({
+	    	'max-width': gh ,
+	    	'height': 'auto',
+  
+  
+
+
+  
+  
+	});
+    var gb = f - 1;
+
+
+	$('.gallery-item:nth-child(' + gb + ')').css({
+    	'max-width': gh,
+    	'height': 'auto',
+  
+  
+
+
+  
+  
+	});
+        
+        
+    }
+    
+   
+   
+    
+    
+      
+
+    }
+        else{
+
+
+	var serv = window.innerWidth;
+	
+	if( arrr.length == 1){
+		console.log(serv);
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+		if(serv <= 713){
+	    
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/3.4,
+	    	'height': (serv)/3.4,
+	  
+	  
+
+
+	  
+	  
+	});
+	
+	    
+	}
+	
+	
+	}
+	if(arrr.length == 2) {
+		$(".gallery-item:nth-child(2)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/4,
+	    	'height': (serv)/4,
+	  
+	  
+
+
+	  
+	  
+	});
+		if(serv <= 713){
+	    	$(".gallery-item:nth-child(2)").css({
+	    	'max-width': (serv)/3.4,
+	    	'height': (serv)/3.4,
+	  
+	  
+
+
+	  
+	  
+	});
+		$(".gallery-item:nth-child(1)").css({
+	    	'max-width': (serv)/3.4,
+	    	'height': (serv)/3.4,
+	  
+	  
+
+
+	  
+	  
+	});
+	
+	    
+	}
+
+	}
+
+
+
+
+
+
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+		});
+		
+		
+		
+	</script>
+	<script type="text/javascript">
+		let arr = [];
+
+		$(document).ready(function(){
+
+		    if($('.cont').height() > 75){
+        $('.cont').height(75);
+        $('.open').addClass('visible');
+    }
+  
+    $('.spo').click(function () {
+    	  
+    	 
+        $(this).parent().find('.cont').addClass('full');
+        var p=$(this).parent().find('.cont');
+         var s=p.outerHeight();
+         var k=$(this).parent().find('.spo');
+         
+         arr.splice(1, 0, s);
+          $(this).parent().find('.jghyfg').css({
+  'height': s+5,
+  
+  
+});
+          $(this).parent().find('.spo').css({
+  'display': 'none',
+
+  
+  
+});
+$(this).parent().find('.likes').css({
+  
+  
+
+
+  
+  
+});
+
+        $('.open').removeClass('visible');
+        $('.close').removeClass('hide');
+       
+        
+        
+        console.log(arr);
+
+    });
+  $('.close').click(function () {
+        $('.cont').removeClass('full');
+        $('.open').addClass('visible');
+        $('.close').addClass('hide');
+    });
+
+	
+
+
+
+});
+</script>
+
+
+
+</body>
+</html>

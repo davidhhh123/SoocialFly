@@ -1,0 +1,418 @@
+
+{% extends 'profile.html' %}
+{% load static %}
+{% load thumbnail %}
+      <!-- insta freatures -->
+     {% block body %}
+     
+      <div class="flex flex-wrap -mx-px md:-mx-3 tabcontent" id="London" style="display: flex;">
+        {% if result_list %}
+         {% for song in result_list %}
+         {% if song.ads_tasks %}
+          {% if profile in song.ads_tasks.ads_manager.likes.all %}
+          {% if profile_status == "no_profile" %}
+           <div class="w-1/3 p-px md:px-3 ads-item" tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.ads_tasks.ads_manager.pk }}" data_post_id = "{{ album.id }}" heart_c="1" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %} {% if song.postimage.all %} postimg = "yes" {% else %} {% endif %} profilename = "{{ album.first_name }}"  {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %}  {{song.ads_tasks.ads_manager.file_name}}  profile_status = "no_profile">
+          {% else %}
+
+
+
+        <div class="w-1/3 p-px md:px-3 ads-item" tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.ads_tasks.ads_manager.pk }}" data_post_id = "{{ album.id }}" heart_c="1" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %} {% if song.postimage.all %} postimg = "yes" {% else %} {% endif %} profilename = "{{ album.first_name }}"  {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %}  {{song.ads_tasks.ads_manager.file_name}} >
+          {% endif %}
+      {% else %}
+      {% if profile_status == "no_profile" %}
+       <div class="w-1/3 p-px md:px-3 ads-item" tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.ads_tasks.ads_manager.pk }}" data_post_id = "{{ album.id }}" heart_c="0" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %}  {% if song.postimage.all %} postimg = "yes" {% else %} {% endif %} profilename = "{{ album.first_name }}" {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %}  {{song.ads_tasks.ads_manager.file_name}} profile_status = "no_profile">
+      {% else %}
+     
+        <div class="w-1/3 p-px md:px-3 ads-item" tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.ads_tasks.ads_manager.pk }}" data_post_id = "{{ album.id }}" heart_c="0" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %}  {% if song.postimage.all %} postimg = "yes" {% else %} {% endif %} profilename = "{{ album.first_name }}" {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %}  {{song.ads_tasks.ads_manager.file_name}}>
+           {% endif %}
+     
+      {% endif %}
+    
+
+   
+          
+            <article class="post bg-gray-100 text-white relative pb-full md:mb-6">
+              <div  class="ads_status"><p >Ad</p></div>
+              {% if song.ads_tasks.ads_manager.file_name != "" %}
+              
+
+              
+              <img class="w-full h-full absolute left-0 top-0 object-unset"  src="{{ song.ads_tasks.ads_manager.file_name }}" alt="image" width="{{ 200 }}" height ="{{ 200 }}"> 
+
+              {% else %}
+
+               {% thumbnail song.ads_tasks.ads_manager.file "200x200" crop="center" as im %}
+              
+              <img class="w-full h-full absolute left-0 top-0 object-unset" src="{{ im.url }}" alt="image" width="{{ im.x }}" height ="{{ im.y }}"> {% endthumbnail %}
+
+
+              {% endif %}
+             
+             
+             
+              {% if song.postimage.all  %}
+             <span style="" id="multyphoto"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"  width="50" height="50" style="enable-background:new 0 0 100 100;fill: white;" xml:space="preserve"><g><path d="M67.6,59.6V28c0-4.4-3.6-8-8-8H28c-4.4,0-8,3.6-8,8v31.6c0,4.4,3.6,8,8,8h31.6C64,67.6,67.6,64,67.6,59.6z"/><path d="M75.1,34.1c-0.3-0.2-0.7-0.2-1,0c-0.3,0.2-0.5,0.5-0.5,0.9v30.3c0,4.3-3.5,7.7-7.7,7.7H34.6c-0.4,0-0.7,0.2-0.9,0.5   c-0.2,0.3-0.2,0.7,0,1c1.9,3.4,5.4,5.5,9.3,5.5h26.3C75.2,80,80,75.2,80,69.4V43.1C80,39.4,78.2,36.1,75.1,34.1z"/></g></svg></span>
+             {% else %}
+             {% endif %}
+              
+             
+              <!-- overlay-->
+              <div class="overlay bg-gray-800 bg-opacity-25 w-full h-full absolute 
+                                left-0 top-0 hidden">
+                <div class="flex justify-center items-center 
+                                    space-x-4 h-full">
+                  <span class="p-2">
+                    <i class="fas fa-heart"></i>
+                    120K
+                  </span>
+
+                  <span class="p-2">
+                    <i class="fas fa-comment"></i>
+                    3,909
+                  </span>
+                </div>
+              </div>
+
+            </article>
+         
+        </div>
+         {% else %}
+          {% if profile.user in song.likes.all %}
+           {% if profile_status == "no_profile" %}
+            <div class="w-1/3 p-px md:px-3 gllery-item ldgllery-item" {% if song.monetization_boole != False   %}indiator_ch = "1"{% else %} indiator_ch = "0"{% endif %} tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.id }}" data_post_id = "{{ album.id }}" heart_c="1" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %} {% if song.postimage.all %} postimg = "yes" {% else %} {% endif %} profilename = "{{ album.first_name }}"  {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %} profile_status = "no_profile">
+           {% else %}
+           
+
+
+        <div class="w-1/3 p-px md:px-3 gllery-item ldgllery-item" {% if song.monetization_boole != False   %}indiator_ch = "1"{% else %} indiator_ch = "0"{% endif %} tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.id }}" data_post_id = "{{ album.id }}" heart_c="1" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %} {% if song.postimage.all %} postimg = "yes" {% else %} {% endif %} profilename = "{{ album.first_name }}"  {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %}>
+          {% endif %}
+      {% else %}
+       {% if profile_status == "no_profile" %}
+            <div class="w-1/3 p-px md:px-3 gllery-item ldgllery-item" {% if song.monetization_boole != False   %}indiator_ch = "1"{% else %} indiator_ch = "0"{% endif %}  tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.id }}" data_post_id = "{{ album.id }}" heart_c="0" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %}  {% if song.postimage.all %} postimg = "yes" {% else %} {% endif %} profilename = "{{ album.first_name }}" {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %} profile_status = "no_profile">
+           {% else %}
+        
+        <div class="w-1/3 p-px md:px-3 gllery-item ldgllery-item" {% if song.monetization_boole != False   %}indiator_ch = "1"{% else %} indiator_ch = "0"{% endif %}  tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.id }}" data_post_id = "{{ album.id }}" heart_c="0" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %}  {% if song.postimage.all %} postimg = "yes" {% else %} {% endif %} profilename = "{{ album.first_name }}" {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %}>
+             {% endif %}
+      {% endif %}
+    
+
+   
+          
+            <article class="post bg-gray-100 text-white relative pb-full md:mb-6">
+              {% if song.file_type == "mp4" %}
+
+              
+              
+              
+              <video width="{{ im.x }}" height ="{{ im.y }}" class="w-full h-full absolute left-0 top-0 object-unset" >
+
+                <source src="{{ song.avatar_p.url }}" type="video/mp4">
+              </video>
+              
+
+
+
+              {% else %}
+               {% thumbnail song.avatar_p "200x200" crop="center" as im %}
+              <img class="w-full h-full absolute left-0 top-0 object-unset" src="{{ im.url }}" alt="image" width="{{ im.x }}" height ="{{ im.y }}"> {% endthumbnail %}
+              {% endif %}
+              {% if song.postimage.all  %}
+             <span style="" id="multyphoto"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"  width="50" height="50" style="enable-background:new 0 0 100 100;fill: white;" xml:space="preserve"><g><path d="M67.6,59.6V28c0-4.4-3.6-8-8-8H28c-4.4,0-8,3.6-8,8v31.6c0,4.4,3.6,8,8,8h31.6C64,67.6,67.6,64,67.6,59.6z"/><path d="M75.1,34.1c-0.3-0.2-0.7-0.2-1,0c-0.3,0.2-0.5,0.5-0.5,0.9v30.3c0,4.3-3.5,7.7-7.7,7.7H34.6c-0.4,0-0.7,0.2-0.9,0.5   c-0.2,0.3-0.2,0.7,0,1c1.9,3.4,5.4,5.5,9.3,5.5h26.3C75.2,80,80,75.2,80,69.4V43.1C80,39.4,78.2,36.1,75.1,34.1z"/></g></svg></span>
+             {% else %}
+             {% endif %}
+              
+             
+              <!-- overlay-->
+              <div class="overlay bg-gray-800 bg-opacity-25 w-full h-full absolute 
+                                left-0 top-0 hidden">
+                <div class="flex justify-center items-center 
+                                    space-x-4 h-full">
+                  <span class="p-2">
+                    <i class="fas fa-heart"></i>
+                    120K
+                  </span>
+
+                  <span class="p-2">
+                    <i class="fas fa-comment"></i>
+                    3,909
+                  </span>
+                </div>
+              </div>
+
+            </article>
+         
+        </div>
+         {% endif %}
+         
+
+
+  {% endfor %}
+       
+
+
+
+
+        {% else %}{% endif %}
+  
+
+  
+
+ {% if albums.has_next %}
+    <a class="infinite-more-link" href="?page={{ albums.next_page_number }}"></a>
+  {% endif %}
+
+        <!-- column -->
+        
+      
+
+      </div>
+
+       <div class="flex flex-wrap -mx-px md:-mx-3  tabcontent"  id="Paris">
+        {% if albums1 %}
+   {% for song in albums1 %}
+
+    {% if profile.user in song.likes.all %}
+    {% if profile_status == "no_profile" %}
+     <div class="w-1/3 p-px md:px-3 gllery-item prgllery-item" tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.id }}" data_post_id = "{{ album.id }}" heart_c="1" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %} {% if song.arts_po.all %} postimg = "yes" {% else %} {% endif %} arts="arts" prise = "{{ song.prise }}" data_arts_des = "{{ song.description }}"  profilename = "{{ album.first_name }}" {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %} profile_status = "no_profile">
+    {% else %}
+   
+
+
+        <div class="w-1/3 p-px md:px-3 gllery-item prgllery-item" tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.id }}" data_post_id = "{{ album.id }}" heart_c="1" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %} {% if song.arts_po.all %} postimg = "yes" {% else %} {% endif %} arts="arts" prise = "{{ song.prise }}" data_arts_des = "{{ song.description }}"  profilename = "{{ album.first_name }}" {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %}>
+           {% endif %}
+      {% else %}
+      {% if profile_status == "no_profile" %}
+       <div class="w-1/3 p-px md:px-3 gllery-item prgllery-item" tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.id }}" data_post_id = "{{ album.id }}" heart_c="0" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %}  {% if song.arts_po.all %} postimg = "yes" {% else %} {% endif %} arts="arts" prise = "{{ song.prise }}" data_arts_des = "{{ song.description }}"  profilename = "{{ album.first_name }}" {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %} profile_status = "no_profile">
+    {% else %}
+     <div class="w-1/3 p-px md:px-3 gllery-item prgllery-item" tabindex="0" data-full = "{{ song.avatar_p.url }}"  data_id = "{{ song.id }}" data_post_id = "{{ album.id }}" heart_c="0" name="{{ song.id }}aw" id="{{ song.id }}aw" {% if song.file_type == "mp4" %} video = "video"{% else %}{% endif %}  {% if song.arts_po.all %} postimg = "yes" {% else %} {% endif %} arts="arts" prise = "{{ song.prise }}" data_arts_des = "{{ song.description }}"  profilename = "{{ album.first_name }}" {% if album.avatar.url != None %} photo_profile = "{{ album.avatar.url }}" {% else %} photo_profile = "{% static 'images/user_no_photo_300x300.png' %}" {% endif %}>
+    {% endif %}
+
+       
+      {% endif %}
+    
+
+   
+          
+            <article class="post bg-gray-100 text-white relative pb-full md:mb-6">
+              {% if song.file_type == "mp4" %}
+
+              
+
+              
+              
+              <video width="{{ im.x }}" height ="{{ im.y }}" class="w-full h-full absolute left-0 top-0 object-unset" >
+
+                <source src="{{ song.avatar_p.url }}" type="video/mp4">
+              </video>
+              
+
+
+
+              {% else %}
+               {% thumbnail song.avatar_p "200x200" crop="center" as im %}
+              <img class="w-full h-full absolute left-0 top-0 object-unset" src="{{ im.url }}" alt="image" width="{{ im.x }}" height ="{{ im.y }}"> {% endthumbnail %}
+              {% endif %}
+               {% if song.arts_po.all  %}
+             <span style="" id="multyphoto"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"  width="50" height="50" style="enable-background:new 0 0 100 100;fill: white;" xml:space="preserve"><g><path d="M67.6,59.6V28c0-4.4-3.6-8-8-8H28c-4.4,0-8,3.6-8,8v31.6c0,4.4,3.6,8,8,8h31.6C64,67.6,67.6,64,67.6,59.6z"/><path d="M75.1,34.1c-0.3-0.2-0.7-0.2-1,0c-0.3,0.2-0.5,0.5-0.5,0.9v30.3c0,4.3-3.5,7.7-7.7,7.7H34.6c-0.4,0-0.7,0.2-0.9,0.5   c-0.2,0.3-0.2,0.7,0,1c1.9,3.4,5.4,5.5,9.3,5.5h26.3C75.2,80,80,75.2,80,69.4V43.1C80,39.4,78.2,36.1,75.1,34.1z"/></g></svg></span>
+             {% else %}
+             {% endif %}
+             
+              <!-- overlay-->
+              <div class="overlay bg-gray-800 bg-opacity-25 w-full h-full absolute 
+                                left-0 top-0 hidden">
+                <div class="flex justify-center items-center 
+                                    space-x-4 h-full">
+                  <span class="p-2">
+                    <i class="fas fa-heart"></i>
+                    12
+                  </span>
+
+                  <span class="p-2">
+                    <i class="fas fa-comment"></i>
+                    3,909
+                  </span>
+                </div>
+              </div>
+
+            </article>
+         
+        </div>
+
+
+  {% endfor %}
+  {% endif %}
+
+        <!-- column -->
+        
+      
+
+      </div>
+       <div class="flex flex-wrap -mx-px md:-mx-3  tabcontent"  id="cloud" style="display: none;">
+          <div class="w-1/3 p-px md:px-3 " tabindex="0"  id="aw" href="">
+
+            <label for="myFile">
+              <input name="myFile" type="file" multiple id="myFile" style="display: none;">
+
+            <article class="post bg-gray-100 text-white relative pb-full md:mb-6" style="background: #25b6d2;border-radius: 16px;">
+             
+
+              
+
+              
+              
+          
+              
+
+
+
+             
+             
+<svg version="1.1" id="Layer_1"  class="w-full h-full absolute left-0 top-0 object-unset" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<ellipse style="fill:#25B6D2;" cx="256" cy="256" rx="256" ry="255.832"/>
+<g>
+  <rect x="113.2" y="228" style="fill:#FFFFFF;" width="285.672" height="56"/>
+  <rect x="228" y="113.2" style="fill:#FFFFFF;" width="56" height="285.672"/>
+</g>
+
+</svg>
+
+
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+              
+            
+            
+             
+              <!-- overlay-->
+              <div class="overlay bg-gray-800 bg-opacity-25 w-full h-full absolute 
+                                left-0 top-0 hidden">
+                <div class="flex justify-center items-center 
+                                    space-x-4 h-full">
+                  <span class="p-2">
+                    <i class="fas fa-heart"></i>
+                    12
+                  </span>
+
+                  <span class="p-2">
+                    <i class="fas fa-comment"></i>
+                    3,909
+                  </span>
+                </div>
+              </div>
+
+            </article>
+            </label>
+    
+
+   
+          
+         
+        </div>
+        
+
+
+
+      </div>
+
+       <div class="flex flex-wrap -mx-px md:-mx-3  tabcontent"  id="music" style="display: none;"></div>
+        <div class="flex flex-wrap -mx-px md:-mx-3  tabcontent"  id="books" style="display: none;"></div>
+
+
+             <div class="flex flex-wrap -mx-px md:-mx-3  tabcontent"  id="lk" style="display: none;">
+        {% if shop_products %}
+   {% for song in shop_products %}
+
+   
+      <a class="w-1/3 p-px md:px-3 " tabindex="0"  id="{{ song.id }}aw" href="{% url 'accounts:shio_pr' song.id %}">
+    
+
+   
+          
+            <article class="post bg-gray-100 text-white relative pb-full md:mb-6">
+              {% if song.file_type == "mp4" %}
+
+              
+
+              
+              
+              <video width="{{ im.x }}" height ="{{ im.y }}" class="w-full h-full absolute left-0 top-0 object-unset" >
+
+                <source src="{{ song.avatar_p.url }}" type="video/mp4">
+              </video>
+              
+
+
+
+              {% else %}
+               {% thumbnail song.logo_pr "200x200" crop="center" as im %}
+              <img class="w-full h-full absolute left-0 top-0 object-unset" src="{{ im.url }}" alt="image" width="{{ im.x }}" height ="{{ im.y }}"> {% endthumbnail %}
+              {% endif %}
+               {% if song.arts_po.all  %}
+             <span style="" id="multyphoto"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"  width="50" height="50" style="enable-background:new 0 0 100 100;fill: white;" xml:space="preserve"><g><path d="M67.6,59.6V28c0-4.4-3.6-8-8-8H28c-4.4,0-8,3.6-8,8v31.6c0,4.4,3.6,8,8,8h31.6C64,67.6,67.6,64,67.6,59.6z"/><path d="M75.1,34.1c-0.3-0.2-0.7-0.2-1,0c-0.3,0.2-0.5,0.5-0.5,0.9v30.3c0,4.3-3.5,7.7-7.7,7.7H34.6c-0.4,0-0.7,0.2-0.9,0.5   c-0.2,0.3-0.2,0.7,0,1c1.9,3.4,5.4,5.5,9.3,5.5h26.3C75.2,80,80,75.2,80,69.4V43.1C80,39.4,78.2,36.1,75.1,34.1z"/></g></svg></span>
+             {% else %}
+             {% endif %}
+             
+              <!-- overlay-->
+              <div class="overlay bg-gray-800 bg-opacity-25 w-full h-full absolute 
+                                left-0 top-0 hidden">
+                <div class="flex justify-center items-center 
+                                    space-x-4 h-full">
+                  <span class="p-2">
+                    <i class="fas fa-heart"></i>
+                    12
+                  </span>
+
+                  <span class="p-2">
+                    <i class="fas fa-comment"></i>
+                    3,909
+                  </span>
+                </div>
+              </div>
+
+            </article>
+         
+        </a>
+
+
+  {% endfor %}
+  {% endif %}
+
+        <!-- column -->
+        
+      
+
+      </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+ 
+      <!-- /GRID COLUMN -->
+
+     
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
+
+   
+
+
+
+
+
+
+
+
+</body>
+
+</html>

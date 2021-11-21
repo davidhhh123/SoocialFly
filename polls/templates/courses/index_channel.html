@@ -1,0 +1,323 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Skateboard Video Platform</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://vjs.zencdn.net/5-unsafe/video-js.css'><link rel="stylesheet" href="{% static 'css/style_courses.css' %}">
+
+</head>
+<body>
+  {% if data_req == "data_req" %}
+  <div class="id_ppp_channel">
+    <div class="req_data">
+      <div class="but_pii">Create Channel</div>
+      
+
+
+
+    </div>
+     <div class="req_data1" >
+      <div class="add_ppoo"><svg version="1.1" id="Capa_1" class="Capa_1_paaa" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+      v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"></path>
+  </g>
+</g>
+
+</svg></div>
+      <div class="profile_name_ppa">
+        <p>Name</p>
+        <input type="text" name="text" class="profile_name_ppa_input" placeholder="Name" value="{{ profile.first_name }}">
+
+        
+
+
+      </div>
+      <div class="profile_des_ppa">
+        <p>Description</p>
+        
+        <textarea cols="20" rows="20" class="profile_des_ppa_input" placeholder="Description"></textarea>
+
+        
+
+
+      </div>
+
+
+
+    </div>
+    
+
+
+  </div>
+
+  {% else %}
+  {% endif %}
+    
+<!-- partial:index.partial.html -->
+<div class="container">
+{% include 'intex.html' %}
+{% include 'courses/intex_main.html' %}
+
+ 
+  <div class="main-container">
+  
+   <div class="main-blogs">
+    <div class="main-blog anim bl_anim" style="--delay: .1s;background-image:url({{ profile_ch.0.poster.url  }});background-color: transparent;background-position-x: 0;">
+    
+     <div class="main-blog__author">
+      <div class="author-img__wrapper">
+       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+        <path d="M20 6L9 17l-5-5" />
+       </svg>
+        {% if profile_ch.0.main_poster.url != None  %}
+        <label for="file_poo">
+          <input type="file" id="file_poo" style="display: none;">
+          <img class="author-img" src="{{ profile.main_poster.url }}" alt="">
+          
+        </label>
+     
+
+    {% else %}
+    <label for="file_poo">
+          <input type="file" id="file_poo" style="display: none;">
+         <img class="author-img" src="https://images.unsplash.com/photo-1587918842454-870dbd18261a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=943&q=80" alt="">
+          
+        </label>
+     
+    {% endif %}
+       
+      </div>
+      <div class="author-detail">
+       <div class="author-name">{{ profile_ch.0.name }}</div>
+       <div class="author-info">53K views <span class="seperate"></span></div>
+       <div class="about_text">about</div>
+      </div>
+     </div>
+     {% if ch_other %}{% else %}<div class="main-blog__time">
+      <label for="file_poster">
+      <input type="file" name="file_p" id="file_poster" style="display: none;">
+
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 512 512" style="width: 30px;height: 30px;fill: white;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.853,256-256S397.167,0,256,0z M256,472.341
+      c-119.275,0-216.341-97.046-216.341-216.341S136.725,39.659,256,39.659S472.341,136.705,472.341,256S375.295,472.341,256,472.341z
+      "/>
+  </g>
+</g>
+<g>
+  <g>
+    <path d="M355.148,234.386H275.83v-79.318c0-10.946-8.864-19.83-19.83-19.83s-19.83,8.884-19.83,19.83v79.318h-79.318
+      c-10.966,0-19.83,8.884-19.83,19.83s8.864,19.83,19.83,19.83h79.318v79.318c0,10.946,8.864,19.83,19.83,19.83
+      s19.83-8.884,19.83-19.83v-79.318h79.318c10.966,0,19.83-8.884,19.83-19.83S366.114,234.386,355.148,234.386z"/>
+  </g>
+</g>
+
+</svg>
+</label>
+</div>{% endif %}
+
+    </div>
+    
+   </div>
+   <div class="small-header anim" style="--delay: .3s">Most Watched</div>
+   <div class="small-header anim ny2kk" style="position: relative;
+    float: left;
+    --delay: .3s;
+    margin-top: -50px;
+    margin-left: calc(100% - 100px);
+    font-size: 15px;
+    
+">
+
+<div style="border: 1px solid #399cab;
+    border-radius: 10px;
+    padding: 12px;cursor:pointer;background-color: #5199FF;text-align: center;" class="sub_byt" name = "{{ profile_ch.0.pk }}">{% if profile in  profile_ch.0.subscribe.all %}UnFollow{% else %}Follow{% endif %}</div>
+
+    <div style="text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+" class="hy8">{{ profile_ch.0.subscribe.count }}</div>
+
+
+
+</div>
+
+   <div class="videos">
+    {% for i in my_videos %}
+   
+   <div class="video anim" style="--delay: .6s">
+     <div class="video-time">7 min</div>
+      <a href="{% url 'accounts:channel_video' my_channel.0.pk i.pk %}" style="background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    /* color: transparent; */
+    text-decoration-color: transparent;
+    color: white;"><div class="video-wrapper">
+      <video muted="">
+       <source src="{{ i.video.url }}" type="video/mp4">
+      </video>
+      <div class="author-img__wrapper video-author">
+       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+        <path d="M20 6L9 17l-5-5" />
+       </svg>
+       {% if i.profile_ch.0.main_poster.url != None %}
+       <img class="author-img" src="{{ iprofile_ch.0.main_poster.url }}" />
+       {% else %}
+       <img class="author-img" src="https://images.pexels.com/photos/1870163/pexels-photo-1870163.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+       {% endif %}
+       
+      </div>
+     </div></a>
+     <div class="video-by offline">{{ i.profile.first_name }}</div>
+     <div class="video-name">{{ i.name }}</div>
+     <div class="video-view">64K views<span class="seperate video-seperate"></span>2 week ago</div>
+    </div>
+   {% endfor %}
+   </div>
+  
+</div>
+</div>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://vjs.zencdn.net/5-unsafe/video.js'></script><script  src="{% static 'css/script_courses.js' %}"></script>
+<script type="text/javascript">
+  $(".but_pii").on("click", function(){
+    $(".req_data").css("visibility", "hidden")
+     $(".req_data1").css({"visibility":"visible", "opacity":1})
+
+  })
+  $(".add_ppoo").on("click", function(){
+
+    var name = $(".profile_name_ppa_input").val()
+    var description = $(".profile_des_ppa_input").val()
+    if (name.length>0 && description.length>0){
+       $(".profile_name_ppa_input").css("background-color", "#1b1a1a")
+        $(".profile_des_ppa_input").css("background-color", "#1b1a1a")
+      console.log(name, description)
+      $.ajax({
+           
+           url: "{% url 'accounts:create_mychannel' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'name': name,'description':description, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+            if (data=="success"){
+              location.replace("/mychannel/")
+            }
+               
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+    }
+    else if (name.length==0 ||  description.length==0){
+      if (name.length==0 && description.length!=0){
+        $(".profile_name_ppa_input").css("background-color", "red")
+      
+         $(".profile_des_ppa_input").css("background-color", "#1b1a1a")
+
+
+
+      }
+      else if(description.length==0 && name.length!=0){
+        $(".profile_des_ppa_input").css("background-color", "red")
+          $(".profile_name_ppa_input").css("background-color", "#1b1a1a")
+
+      }
+      else{
+        $(".profile_des_ppa_input").css("background-color", "red")
+        $(".profile_name_ppa_input").css("background-color", "red")
+
+
+      }
+
+
+
+    }
+    
+  })
+  $("")
+    $(".sub_byt").on("click", function(){
+    var pk = $(this).attr("name")
+    $.ajax({
+           
+           url: "{% url 'accounts:subscribe_channel_v' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+          
+            $(".hy8").html(data.count)
+            if (data.status=="remove"){
+              $(".sub_byt").html("Follow")
+
+            }
+            else{
+               $(".sub_byt").html("UnFollow")
+
+
+            }
+
+            
+               
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+
+    
+
+
+  })
+
+    $("#file_poster").on("change", function(){
+      var this_file = $(this)[0].files
+      console.log(this_file)
+      
+      var data = new FormData();
+      
+      data.append("images" + 0, this_file[0])
+
+      $.ajax({
+         
+           
+           url: "{% url 'accounts:change_poster_in_channel' %}",
+           method: 'POST',
+           
+           data: data,
+           
+           success: function(data) {
+            if (data==1){
+              location.replace("/mychannel/")
+            }
+               
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }, 
+           processData: false,
+          contentType: false,
+      });
+      
+
+
+    })
+</script>
+
+</body>
+</html>

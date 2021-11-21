@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% load  static %}
+
+{% block title %}Edit Profile | {{ user }} {{ super }}{% endblock %}
+
+{% block body %}
+    <div class="grid-100">
+        <h1 id="test">Profile</h1>
+        
+            
+           <!-- <input type="text" name="song_title" required="" id="id_song_title" maxlength="250">
+
+            <input type="file" name="avatar" id="id_avatar">
+            <input type="submit" class="button" value="save" id="s20" />
+        
+    </div>-->
+
+
+    <form method="POST" name="form" id="form" enctype="multipart/form-data">
+     {% csrf_token %}
+     <p></p><h3 style="color: white;font-size: 2rem;">Brand</h3><p></p>
+        
+        <input type="text" name="brand" id="brand" maxlength="15" required="">
+         <p></p><h3 style="color: white;font-size: 2rem;">Product_Name</h3><p></p>
+        <input type="text" name="name_pr" id="name_pr" maxlength="30" required="">
+        <p></p><h3 style="color: white;font-size: 2rem;">descruption</h3><p></p>
+        <textarea name="descruption" cols="20" rows="10" id="descruption" maxlength="255" required=""></textarea>
+        <p></p><h3 style="color: white;font-size: 2rem;">Category</h3><p></p>
+
+        {{ form.Category1d }}
+        <p></p><h3 style="color: white;font-size: 2rem;">Product_Images</h3><p></p>
+        
+
+        <input type="file" name="logo_pr" id="multi_product" multiple="" accept="image/*" required="">
+        <div class="priview_images" id="priview_images">
+            
+
+            
+
+
+        </div>
+
+
+
+
+        <p></p><h3 style="color: white;font-size: 2rem;">Product_prise</h3><p></p>
+
+        <input type="number" name="prise" value="0" id="prise" step="any" required="">
+
+        
+
+
+       
+
+  <p id="demo"></p>
+  <div id="dddd"></div>
+  <input type="button" class="adff" value="save" id="s20000000" name="{{ al_id }}">
+
+
+
+</form>
+
+   
+
+<div class="progress">
+  <div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+    0%
+  </div>
+</div>
+<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+
+<!--    <script type="text/javascript">
+		$('#s20').click(function(event) {
+
+
+		var name = $("#id_song_title").val()
+		var name1 = $("#id_avatar").val()
+		$.ajax({
+    url: '{% url "accounts:hello" %}',
+    type: 'POST',
+    dataType: 'json',
+    enctype: 'multipart/form-data',
+    data: { 
+                'name': name,
+                'name1': name1, 
+                'csrfmiddlewaretoken': '{{csrf_token}}'
+            },  // This is the default though, you don't actually need to always mention it
+    success: function(data) {
+        document.getElementById('test').innerHTML = data;
+        alert(name1);
+    },
+    failure: function() { 
+        alert('Got an error dude');
+    }
+}); 
+		}); 
+
+
+
+
+$(document).ready(function(){
+    $('form').on('submit', function(e){
+        e.preventDefault();
+        var data = new FormData($('form').get(0));
+        $.ajax({
+            url: '{% url "accounts:saveprof" %}',
+            method: "POST",
+            data: data,
+            success: function(data){},
+            error: function(data){},
+            processData: false,
+            contentType: false,
+        });
+    });
+});
+	</script>-->
+{% endblock %}

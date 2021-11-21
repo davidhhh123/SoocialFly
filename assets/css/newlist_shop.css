@@ -1,0 +1,843 @@
+body{
+          
+         
+        }
+        .container1{
+          position: absolute;
+          
+        }
+        .container3{
+          z-index: 1;
+          position: absolute;
+          
+          left: 125px;
+          width: 800px;
+          top: 10px;
+          
+        }
+        
+        
+        .form-control {
+    display: block;
+    width: 100%;
+    
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    
+    
+    background-clip: padding-box;
+    
+    border-radius: 20px;
+    border-width: 1px; 
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+.btn{
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    z-index: 10002;
+    }
+#ds{
+  
+  
+  
+  
+  
+  
+  
+  
+  top: 102px;
+  background: #242625; 
+  
+  
+
+}
+#c1{
+
+  position: absolute;
+  left: 70%;
+    top: 28%;
+    transform: translate(0%,180%);
+    color: black;
+    
+   
+    left:40%;
+
+    
+
+}
+#c{
+
+  position: absolute;
+  left: 70%;
+    top: 28%;
+    transform: translate(0%,180%);
+    color: black;
+    
+   
+    left:20%;
+
+    
+
+}
+
+#c2{
+  position: absolute;
+  left: 70%;
+    top: 28%;
+    transform: translate(0%,180%);
+    
+    
+    left:40%;
+    
+
+}
+
+    .swiper-container {
+        width: 20%;
+        height: auto;
+  }
+  .swiper-container4 {
+        width: 20%;
+        height: auto;
+  }
+  
+
+    .swiper-slide {
+      font-style: 18px;
+      background:transparent;
+      border: 1px solid transparent;
+      border-radius: 19px;
+
+      
+    }
+    .swiper-container2 {
+      left: 30px;
+      
+        }
+    
+
+
+
+    .swiper-container{
+      position: absolute;
+      
+      height: 140px;
+      top: 270px;
+      left: 30px;
+      width: 95%;
+      transition: all 500ms;
+     } 
+     .swiper-container4{
+      margin: 0 auto;
+        position: absolute;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 4;
+
+      
+      height: 140px;
+      top: 500px;
+      left: 30px;
+      width: 95%;
+      transition: all 500ms;
+     } 
+     
+     .swiper-container1{
+      position: absolute;
+      
+      height: 30px;
+      top: 70px;
+      left: 160px;
+      width: 840px;
+      background: white;
+     } 
+     .swipers{
+      position: fixed;
+      width: 100%;
+      height: 1.5px;
+      background: #eee;
+      top: 46px;
+      z-index: 10205;
+      transition: all 500ms; 
+      
+
+     }
+     .dv{
+      position: fixed;
+      width: 1024px;
+      height: 70px;
+      background: white;
+      top: 0px;
+      z-index: 10205;
+
+     }
+  .cfl{
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  background-color: #319635;
+  top: 120px;
+  left: 910px;
+  
+
+}
+     .cfl .cflh4{
+  
+  
+  
+  top: 0px;
+  left: 11px;
+  font-size: 15px;
+  color: white;
+
+}
+.dd{
+  color: black;
+  position: relative;
+
+  
+  left: 50px;
+  width: 165px;
+  top: -25px;
+  word-break: all;
+
+}
+.ico1{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 500px;
+  top: 50px;
+  background: none;
+    color: #757575;
+    
+    margin: auto;
+    transition: all 500ms;
+
+
+}
+
+
+
+.dfg{
+  position: absolute;
+  width: 268px;
+  height: 25px;
+  border: 1px solid #757575;
+  left: 400px;
+  top: 99px;
+  border-radius: 20px; 
+  z-index: 999;
+   
+}
+
+
+.blockpanel{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 162px);
+  height: 200px;
+  left: 160px;
+  top: 162px;
+  transition: all 500ms;
+}
+.blockpanel1{
+  position: absolute;
+  width: 200px;
+  left: 180px;
+  top: 170px;
+}
+.sp{
+  
+  position: absolute;
+  
+  
+
+}
+.sp1{
+  position: absolute;
+  
+  left: 290px;
+   
+}
+.sp{
+  
+  position: absolute;
+  
+  left: 600px;
+   
+}
+#psp{
+  color: #817F7F;
+}
+
+.dfg{
+  left: 360px;
+  top: 99px;
+  transition: all 500ms;
+}
+
+
+.image{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  
+  
+  
+
+  left: 0px;
+  top: 260px;
+  
+  min-width: 665px;
+  
+  
+
+  
+  
+  
+
+
+  
+  border: 1px solid transparent;
+  border-radius: 20px; 
+
+  transition: all 575ms;
+
+}
+
+  @media (max-width: 950px){
+
+  .blockpanel{
+    left: 100px;
+
+  }
+  .dfg{
+    left: 300px;
+  }
+
+
+  
+}
+  @media (max-width: 880px){
+
+  .blockpanel{
+    left: 60px;
+
+  }
+  .dfg{
+    left: 260px;
+  }
+  
+}
+
+
+@media (max-width: 300px){
+  .image{
+    justify-content: center;
+  }
+}
+
+.jpg{
+  position: absolute;
+  width: 130px;
+    left: -1px;
+    top: -1px;
+    height: 130px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  
+}
+.jpg1{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  border: 1px solid transparent;
+  
+}
+.spp{
+  position: absolute;
+  background: transparent;
+  width: 90px;
+  height: 30px;
+  left: 45px;
+}
+.spp1{
+  position: absolute;
+  background: transparent;
+  width: 90px;
+  height: 30px;
+  left: 345px;
+}
+.spp2{
+  position: absolute;
+  background: transparent;
+  width: 90px;
+  height: 30px;
+  left: 660px;
+}
+.andrimg{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0px;
+
+}
+.iosimg{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0px;
+  left: 30px;
+
+}
+.winimg{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0px;
+  left: 60px;
+
+}
+.sp2{
+  position: absolute;
+  left: 0px;
+}
+@media (max-width: 850px){
+
+  .sp1{
+    left: 270px;
+
+  }
+  .sp{
+    left: 580px;
+
+  }
+  .spp1{
+    left: 325px;
+  }
+  .spp2{
+    left: 640px;
+  }
+  .dfg{
+    left: 240px;
+  }
+  
+}
+@media (max-width: 810px){
+
+  .sp1{
+    left: 250px;
+
+  }
+  .sp{
+    left: 520px;
+
+  }
+  .spp1{
+    left: 305px;
+  }
+  .spp2{
+    left: 580px;
+  }
+ 
+
+}
+@media (max-width: 763px){
+
+  .sp1{
+    left: 230px;
+
+  }
+  .sp{
+    left: 480px;
+
+  }
+  .spp1{
+    left: 285px;
+  }
+  .spp2{
+    left: 540px;
+  }
+  .dfg{
+    left: 210px;
+  }
+  
+}
+@media (max-width: 718px){
+
+  .sp1{
+    left: 200px;
+
+  }
+  .sp{
+    left: 430px;
+
+  }
+  .spp1{
+    left: 255px;
+  }
+  .spp2{
+    left: 490px;
+  }
+  .dfg{
+    left: 200px;
+  }
+  
+}
+@media (max-width: 650px){
+
+  .sp1{
+    left: 170px;
+
+  }
+  .sp{
+    left: 380px;
+
+  }
+  .spp1{
+    left: 225px;
+  }
+  .spp2{
+    left: 440px;
+  }
+  .dfg{
+    left: 190px;
+  }
+  
+}
+@media (max-width: 595px){
+
+  .sp1{
+    left: 160px;
+
+  }
+  .sp{
+    left: 320px;
+
+  }
+  .spp1{
+    left: 215px;
+  }
+  .spp2{
+    left: 380px;
+  }
+  .dfg{
+    left: 180px;
+  }
+  
+}
+@media (max-width: 562px){
+
+  .sp1{
+    left: 200px;
+
+  }
+  .sp{
+    left: 365px;
+
+  }
+  .sp2{
+    left: 40px;
+
+  }
+  .spp1{
+    left: 185px;
+    top: 35px;
+  }
+  .spp2{
+    left: 350px;
+    top: 35px;
+  }
+  .spp{
+    left: 10px;
+    
+    top: 35px;
+  }
+  .dfg{
+    left: 150px;
+  }
+  
+}
+
+@media (max-width: 518px){
+
+  .sp1{
+    left: 170px;
+
+  }
+  .sp{
+    left: 335px;
+
+  }
+  .sp2{
+    left: 10px;
+
+  }
+  .spp1{
+    left: 155px;
+    top: 35px;
+  }
+  .spp2{
+    left: 320px;
+    top: 35px;
+  }
+  .spp{
+    left: -20px;
+    
+    top: 35px;
+  }
+  .dfg{
+    left: 130px;
+  }
+  
+}
+  
+@media (max-width: 475px){
+
+  .sp1{
+    left: 145px;
+
+  }
+  .sp{
+    left: 310px;
+
+  }
+  .sp2{
+    left: -15px;
+
+  }
+  .spp1{
+    left: 130px;
+    top: 35px;
+  }
+  .spp2{
+    left: 295px;
+    top: 35px;
+  }
+  .spp{
+    left: -45px;
+    
+    top: 35px;
+  }
+  .dfg{
+    left: 110px;
+  }
+  
+}
+
+@media (max-width: 447px){
+
+  .sp1{
+    left: 150px;
+
+  }
+  .sp{
+    left: 285px;
+
+  }
+  .sp2{
+    left: -15px;
+
+  }
+  .spp1{
+    left: 130px;
+    top: 35px;
+  }
+  .spp2{
+    left: 275px;
+    top: 35px;
+  }
+  .spp{
+    left: -45px;
+    
+    top: 35px;
+  }
+  .dfg{
+    left: 100px;
+  }
+  @media (max-width: 425px){
+
+  .sp1{
+    left: 125px;
+
+  }
+  .sp{
+    left: 260px;
+
+  }
+  .sp2{
+    left: -15px;
+
+  }
+  .spp1{
+    left: 105px;
+    top: 35px;
+  }
+  .spp2{
+    left: 250px;
+    top: 35px;
+  }
+  .spp{
+    left: -45px;
+    
+    top: 35px;
+  }
+  .dfg{
+    left: 80px;
+  }
+}
+
+@media (max-width: 402px){
+
+  .sp1{
+    left: 105px;
+
+  }
+  .sp{
+    left: 240px;
+
+  }
+  .sp2{
+    left: -15px;
+
+  }
+  .spp1{
+    left: 85px;
+    top: 35px;
+  }
+  .spp2{
+    left: 230px;
+    top: 35px;
+  }
+  .spp{
+    left: -45px;
+    
+    top: 35px;
+  }
+  .dfg{
+    left: 60px;
+  }
+}
+}
+
+@media (max-width: 380px){
+
+  .sp1{
+    left: 105px;
+
+  }
+  .sp{
+    left: 230px;
+
+  }
+  .sp2{
+    left: -15px;
+
+  }
+  .spp1{
+    left: 85px;
+    top: 35px;
+  }
+  .spp2{
+    left: 215px;
+    top: 35px;
+  }
+  .spp{
+    left: -45px;
+    
+    top: 35px;
+  }
+  .dfg{
+    left: 60px;
+  }
+}
+}
+@media (max-width: 373px){
+
+  .sp1{
+    left: 95px;
+
+  }
+  .sp{
+    left: 220px;
+
+  }
+  .sp2{
+    left: -15px;
+
+  }
+  .spp1{
+    left: 75px;
+    top: 35px;
+  }
+  .spp2{
+    left: 205px;
+    top: 35px;
+  }
+  .spp{
+    left: -45px;
+    
+    top: 35px;
+  }
+}
+@media (max-width: 356px){
+
+  .sp1{
+    left: 85px;
+
+  }
+  .sp{
+    left: 195px;
+
+  }
+  .sp2{
+    left: -15px;
+
+  }
+  .spp1{
+    left: 65px;
+    top: 35px;
+  }
+  .spp2{
+    left: 180px;
+    top: 35px;
+  }
+  .spp{
+    left: -45px;
+    
+    top: 35px;
+  }
+  .dfg{
+    left: 40px;
+  }
+}
+
+
+
+    
+    
+
+
+
+
+
+

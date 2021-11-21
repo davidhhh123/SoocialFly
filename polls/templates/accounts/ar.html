@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Camera is a Pixedelic free jQuery slideshow | Manuel Masia (designer and developer) --> 
+<html> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
+    <title>Camera | a free jQuery slideshow by Pixedelic</title> 
+    <meta name="description" content="Camera a free jQuery slideshow with many effects, transitions, adaptive layout, easy to customize, using canvas and mobile ready"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //		Styles
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////////////--> 
+    
+    <style>
+	*{
+  margin:0;
+}
+video {
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+  z-index:-1;
+  position:absolute;
+}
+h1{
+  color:#fff;
+  text-align:center;
+}
+	</style>
+
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //		Scripts
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////////////--> 
+    
+   
+ 
+</head>
+<video></video>
+<h1>Hello</h1><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script type="text/javascript">
+
+	$(function()
+{
+  var video = $('body > video')[0],
+	  cvs = document.createElement('canvas'),
+	  ctx = cvs.getContext('2d');
+  
+  navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+  
+  navigator.getMedia({ video: !0, audio: !1 }, function(stream)
+  {
+    if(navigator.mozGetUserMedia)
+      video.mozSrcObject = stream;
+    else
+    {
+      var vu = window.URL || window.webkitURL;
+      video.srcObject = stream;
+     
+    }
+    video.play();
+  }, function(error)
+  {
+    if(window.console)
+      console.error(error);
+  });
+  
+  video.addEventListener('canplay', function(ev)
+  {
+  
+      height = video.videoHeight / (video.videoWidth / width);
+      video.setAttribute('width', width);
+      video.setAttribute('height', height);
+      
+   
+  }, !1);
+
+
+});
+</script>
+    
+</body> 
+</html>

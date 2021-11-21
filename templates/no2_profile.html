@@ -1,0 +1,967 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - HTML5 Video Player</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+
+  
+<link rel="stylesheet" type="text/css" href="{% static 'css/style166.css' %}">
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap1-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plyr.css' %}">
+  <link rel="stylesheet" href="{% static 'css/photoswipe.css' %}">
+  <link rel="stylesheet" href="{% static 'css/default-skin.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main8.css' %}">
+  <link rel="stylesheet" href="{% static 'css/flickity.css' %}">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/flickity1.css' %}">
+
+  <!-- Favicons -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="Dmitry Volkov">
+  <title>HotFlix – Online Movies, TV Shows & Cinema HTML Template</title>
+  <style type="text/css">
+    
+  :root {
+  --custom-width: {{ profile.lavel_dr_s  }}%;
+}
+.nav_p{
+  display: none;
+}
+
+
+
+  .lavel{
+  width: calc(var(--custom-width) / {{ profile.total_lavel_b  }}); 
+}
+
+@media(max-width: 1199px){
+  .nav_p{
+  display: block;
+}
+.nav_o{
+  display: none;
+}
+.lavel{
+  margin-top: 15px;
+}
+  
+}
+
+.md\:py-8{
+  padding-bottom: 100px;
+}
+.text-3xl{
+  font-size: 2.8rem;
+  color: white;
+}
+.hidden{
+  font-size: 1.6rem;
+  margin-top: 5px;
+  color: white;
+  line-height:25px;
+}
+.md\:text-xs{
+  font-size: 2rem;
+}
+.text-sm{
+  font-size: 2rem;
+}
+.lg\:w-8\/12{
+  width: 95%;
+}
+.w-1\/3{
+  width: 25%;
+}
+@media(max-width: 1199px){
+  .w-1\/3{
+  width: 33.333333%;
+}
+.lg\:w-8\/12{
+  width: 85%;
+}
+
+
+}
+@media(max-width: 1023px){
+  
+.lg\:w-8\/12{
+  width: 100%;
+}}
+@media(max-width: 767px){
+  .my-2 {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    margin-top: 3rem;
+}
+.md\:py-8{
+  padding-bottom: 25px;
+}
+.text-gray-800{
+  font-size: 1.8rem;
+  color: white;
+}
+
+}
+@media(max-width: 499px){
+  
+  .ml-4{
+    text-align: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 17%;
+  }
+  .image_tm{
+    margin-left: calc(50% - 7.5rem);
+  }
+  
+  .text-gray-800{
+    font-size: 1.6rem;
+  }
+  .text-sm{
+    font-size: 1.8rem;
+  }
+
+}
+@media(max-width: 300px){
+  
+  .ml-4{
+    text-align: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 17%;
+  }
+  .image_tm{
+    margin-left: calc(50% - 6rem);
+  }
+  
+  .text-gray-800{
+    font-size: 1.6rem;
+  }
+  .text-sm{
+    font-size: 1.6rem;
+  }
+   .my-2{
+    font-size: 1.5rem;
+   }
+   .gl_o{
+    font-size: 1.5rem;
+
+   }
+   #imgh_i{
+  height: 12rem;
+  width: 12rem;
+}
+.text-3xl{
+  font-size: 2.1rem;
+}
+.font-semibold{
+  font-weight: 300;
+}
+
+
+}
+  </style>
+
+  {% block style %}
+  {% endblock %}
+</head>
+<body>
+
+	 <div class="loader-wrapper" id="llo">
+    <span class="loader22"><span class="loader-inner"></span></span>
+</div>
+
+
+
+
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__content">
+            <!-- header logo -->
+            <a href="" class="header__logo">
+              <img src="logo.svg" alt="">
+            </a>
+            <!-- end header logo -->
+
+            <!-- header nav -->
+            <ul class="header__nav">
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+                  <li><a href="index.html">Home slideshow bg</a></li>
+                  <li><a href="index2.html">Home static bg</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <!-- dropdown -->
+              <li class="header__nav-item">
+                 <a class="dropdown-toggle header__nav-link nav_o" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+                <a class=" header__nav-link nav_p" href="#" id="" ><i class="fa fa-star" aria-hidden="true"></i><span style="margin-left: 10px;">{{ profile.lavel }}</span>
+                  <div class="lavel"></div>
+
+
+                </a>
+
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                  <li><a href="catalog.html">Catalog</a></li>
+                  <li><a href="details.html">Movie Detail</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+
+              <li class="header__nav-item">
+                <a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="faq.html" class="header__nav-link">Help</a>
+              </li>
+
+              <!-- dropdown -->
+              <li class="dropdown header__nav-item">
+                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                  <li><a href="about.html" id="money_appp">{{ profile.mymoney }} $</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                   <li><a href="signin.html"><i class="fa fa-star" aria-hidden="true"></i><span style="margin-left: 10px;">{{ profile.lavel }}</span></a></li>
+                <li><a href="signup.html"><div class="lavel"></div></a></li>
+                  <li><a href="signup.html">Sign Up</a></li>
+                  <li><a href="forgot.html">Forgot password</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                  <li><a href="404.html">404 Page</a></li>
+                </ul>
+              </li>
+              <!-- end dropdown -->
+            </ul>
+            <!-- end header nav -->
+
+            <!-- header auth -->
+            <div class="header__auth">
+               <div action="#" class="header__search">
+
+                <input class="header__search-input" type="text" placeholder="Search..."    id="search">
+
+                
+
+
+
+                <button class="header__search-button" type="button">
+                  <i class="icon ion-ios-search"></i>
+                </button>
+                <button class="header__search-close" type="button">
+                  <i class="icon ion-md-close"></i>
+                </button>
+                 <ul id="myUL">
+  <li><a href="#"><div class="pr_info"><div class="imge25"><img src="/media/4k.jpg" class="e25"></div><div class="title_pr"><p>David Hovhannisyan</p></div></div></a></li>
+  <li><a href="#"><div class="pr_info"><div class="imge25"><img src="/media/4k.jpg" class="e25"></div><div class="title_pr"><p>David Hovhannisyan</p></div></div></a></li>
+  
+</ul>
+ </div>
+
+              <button class="header__search-btn" type="button">
+                <i class="icon ion-ios-search"></i>
+              </button>
+
+              <!-- dropdown -->
+              <div class="dropdown header__lang">
+                <a class="dropdown-toggle header__nav-link" href="/messager/" role="button" id="dropdownMenuLang" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512"><title>ionicons-v5-n</title><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:#32b0ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:#32b0ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></a>
+
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
+                </ul>
+              </div>
+              <!-- end dropdown -->
+
+              {% if profile.user.is_authenticated %}
+              <div class="header__sign-in" style="height: 40px;width: 40px;">
+                {% if  profile.avatar.url %}
+                <img src="{{ profile.avatar.url }}" style="width: 100%;height: 100%;border-radius: 180px;">
+                {% else %}
+                <img src="{% static 'images/no-img.jpg' %}' %}" style="width: 100%;height: 100%;border-radius: 180px;">
+
+                {% endif %}
+
+
+
+
+
+                
+              </div>
+
+               <div class="haraai93">
+                <a href="about.html" id="money_app0">
+
+
+                {{ profile.mymoney }} $</a>
+                 <a href="{% url 'accounts:edit_profile' %}"><div class="iconnn1">
+                  <span>Settings<span>
+                  <i class="fa fa-cog fly1" aria-hidden="true"></i>
+                  
+                </div></a>
+                <a href="{% url 'accounts:sign_out' %}"><div class="iconnn">
+                  <span>Sign_out<span>
+                  <i class="fa fa-sign-out fty" aria-hidden="true"></i>
+                  
+                </div></a>
+
+                
+                
+              </div>
+              {% else %}
+
+
+              <a href="signin.html" class="header__sign-in">
+                <i class="icon ion-ios-log-in"></i>
+                <span>sign in</span>
+              </a>
+              {% endif %}
+            </div>
+            <!-- end header auth -->
+
+            <!-- header menu btn -->
+            <button class="header__btn" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- end header menu btn -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+
+  {% block body %}
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+ <script src="{% static 'js/KrYJow.js' %}"></script>
+ 
+  <script src="{% static 'js/flickity1.pkgd.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.mCustomScrollbar.min.js' %}"></script>
+  <script src="{% static 'js/wNumb.js' %}"></script>
+  <script src="{% static 'js/nouislider.min.js' %}"></script>
+  <script src="{% static 'js/jquery.morelines.min.js' %}"></script>
+  <script src="{% static 'js/plyr.min.js' %}"></script>
+  <script src="{% static 'js/photoswipe.min.js' %}"></script>
+  <script src="{% static 'js/photoswipe-ui-default.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+<script>
+
+
+   $(window).on("load",function(){
+    document.getElementById("llo").style.display="none";
+     
+});
+
+
+  
+
+
+   $('.spo').click(function () {
+    console.log("sadf")
+
+
+   })
+
+//setInterval(function(){
+/*  console.log("a")
+  
+   $.ajax({
+                type: "Post",
+                url: "{% url 'accounts:new_message' %}",
+                dataType: 'json',
+                data: {
+
+                   
+                },
+               success: function(data) {
+                console.log(data.count)
+
+
+               }
+                
+            });
+
+
+
+
+
+
+
+ }, 3000);*/
+
+$(function() {
+
+    $('#search').keyup(function() {
+        document.getElementById("myUL").innerHTML = "";
+        document.getElementById("myUL").style.display = "block";
+
+
+
+        if ($('#search').val().length !=0){
+
+            $.ajax({
+                type: "Post",
+                url: "{% url 'accounts:search_status' %}",
+                dataType: 'json',
+                data: {
+                    'search_text' : $('#search').val(),
+                    'csrfmiddlewaretoken': '{{csrf_token}}'
+                },
+                success: searchSuccess,
+                
+            });
+        }
+        else{
+          document.getElementById("myUL").style.display = "none";
+
+
+        }
+
+        });
+
+});
+
+function searchSuccess(statuss, textStatus, jqXHR)
+
+{
+    const text_box = '<li><a href="#"><div class="pr_info"><div class="imge25"><img src="/media/4k" class="e25"></div><div class="title_pr"><p>Adele</p></div></div></a></li>'
+    const text_box1 = '<li сlass = "li_no_res" style = "font-size: 35px;margin-top: 50%;margin-left:30%;color:#C3C3C3;">No Resoult</li>'
+        
+
+
+
+      
+
+
+
+    l = JSON.parse(statuss)
+    console.log(l)
+
+if(l != ''){
+  for (var i = 0, len = l.length; i < len; ++i) {
+
+        var result = l[i];
+        console.log(result['fields']['first_name'])
+        var box = text_box.replace('Adele', result['fields']['first_name']);
+        e = result['pk']
+        box = box.replace('#', "/profile/" + e + "/");
+        if (result['fields']['avatar'] == ''){
+          box = box.replace('/media/4k', '/assets/images/no-img.jpg');
+          
+
+        }
+        else{
+          box = box.replace('4k', result['fields']['avatar']);
+
+
+
+        }
+
+
+       
+        
+        $('#myUL').append(box);
+        //$('#search-results').append(result['fields']['first_name']);
+        
+        
+    }
+   
+
+
+
+}
+else{
+
+  $('#myUL').append(text_box1);
+
+
+
+}
+
+
+
+    
+    
+}
+
+
+
+
+function searchResult(data) {
+    $( "#txtSearch" ).autocomplete ({
+        source: data
+    });
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<!--<div class="article">
+<div>
+ Спойлер №1 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+
+ <div class="spoiler_body">
+  Текст в первом спойлере
+  Текст в первом спойлере
+ </div>
+</div>
+</div>
+
+<div>
+ Спойлер №2 <a href="" class="spoiler_links">показать / скрыть</a>
+  <div class="f4h5aa">
+ <div class="spoiler_body">
+  Текст во втором спойлере
+  Текст во втором спойлере
+ </div>
+</div>
+
+</div>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<!--<script id="rendered-js">
+ 
+
+  function s20(){
+     var v = document.getElementById("da5").offsetHeight;
+     var s = document.getElementById("ffff44").offsetHeight;
+     console.log(s,v)
+   
+    document.getElementById("ffff44").style.height = s + (v-50) + "px";
+    document.getElementById("dd").style.opacity = "0";
+    
+    
+
+
+
+
+  }
+  $( "#dd" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
+
+</script>-->
+<!--<script type="text/javascript">
+  
+  $( ".f22" ).click(function(event) {
+
+        $('.f4h5aa .da4').css({
+  'height': 'auto',
+  
+});
+  var p=$("#da5");
+  var k=$("#ffff44");
+
+
+  var s=p.outerHeight();
+  var e=k.outerHeight();
+
+  $('#ffff44').css({
+  'height': e+s-50,
+  
+});
+  $('#dd').css({
+  
+  
+});
+  
+
+  console.log(s);
+});
+  
+</script>-->
+
+  
+
+  <script>
+
+
+
+$(".header__sign-in").click(function(){
+  $(".haraai93").toggle(400);
+});    
+$('.gallery-item').on('click', function() {
+  const text_box = '<div class="sdfgj4" id="gg11">'+
+        '<span  class="spo" id="dd">ещё</span>'+
+        
+        '<div class="jghyfg">'+
+        '<div class="imagefgh"><img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" class="img144dfs"></div>' + 
+        '<div class="wrap">' + 
+        '<div class="cont" tabindex="0">ffff</div></div><span class="likes"><i class="fa fa-heart-o" aria-hidden="true"></i></span></div>'
+        + 
+        '</div>'+
+        
+
+
+
+      '</div>'
+      
+
+    var name = $(this).attr('data_id');
+    var id = $(this).attr('data_post_id');
+    var heart_id = $(this).attr('heart_c');
+    var s29 = document.getElementById("heart_box")
+    var s30 = document.getElementById("s20a20")
+    var s31 = document.getElementsByClassName("gg")[0]
+    var s32 = document.getElementById("com_tt")
+    var s33 = document.getElementById("com_tt0")
+    var s34 = document.getElementById("com_tt1")
+
+   
+
+    s29.setAttribute("name", id);
+    s30.setAttribute("name", id);
+    s31.setAttribute("name", id);
+    s32.setAttribute("href", "/comments/" + String(name))
+    s33.setAttribute("href", "/comments/" + String(name))
+    s34.setAttribute("href", "/comments/" + String(name))
+    if (heart_id == 0){
+    s29.innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+     s30.innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+      s31.innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+    console.log(heart_id)
+
+  }
+    else{
+      s29.innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+      s30.innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+      s31.innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+      console.log(heart_id)
+    }
+    alert(id);
+      $.ajax({
+          url: '{% url "accounts:comments_url" %}',
+          type: 'POST',
+          dataType: 'json',
+          data: { 
+                      'name': name,
+                      'id': id,  
+                      'csrfmiddlewaretoken': '{{csrf_token}}'
+                  },  // This is the default though, you don't actually need to always mention it
+          success: function(data, fields) {
+            l = JSON.parse(data)
+            console.log(data)
+            console.log(l)
+
+            for (var i = 0, len = l.length; i < len; ++i) {
+            // Setup the result...
+                        
+            var result = l[i];
+            var box = text_box.replace('ffff', result['fields']['comment_title']);
+
+            $('.hpljfjs').append(box);
+
+            // Name
+            
+            console.log(result['fields']['comment_title'])
+
+
+            
+        }
+        let arr = [];
+
+    $(document).ready(function(){
+
+        if($('.cont').height() > 75){
+        $('.cont').height(75);
+        $('.open').addClass('visible');
+    }
+  
+    $('.spo').click(function () {
+        console.log("asasdsfg")
+       
+        $(this).parent().find('.cont').addClass('full');
+        var p=$(this).parent().find('.cont');
+         var s=p.outerHeight();
+         var k=$(this).parent().find('.spo');
+         
+         arr.splice(1, 0, s);
+          $(this).parent().find('.jghyfg').css({
+  'height': s+5,
+  
+  
+});
+          $(this).parent().find('.spo').css({
+  'display': 'none',
+
+  
+  
+});
+$(this).parent().find('.likes').css({
+  
+  
+
+
+  
+  
+});
+
+        $('.open').removeClass('visible');
+        $('.close').removeClass('hide');
+       
+        
+        
+        console.log(arr);
+
+    });
+  $('.close').click(function () {
+        $('.cont').removeClass('full');
+        $('.open').addClass('visible');
+        $('.close').addClass('hide');
+    });
+
+  
+
+
+
+});
+              
+
+              
+              
+
+             
+
+              
+
+
+          },
+          failure: function() { 
+              alert('Got an error dude');
+          }
+      }); 
+
+
+
+
+
+     var src = $(this).attr('data-full');
+      
+        // Change src attribute of image
+        $("#imghhh").attr("src", src);
+        $(".s258").css("display", "block");
+        $(".spo").css({
+  'position': 'relative',
+   'top': '100px',
+   'left': '85%',
+   'display': 'block'
+
+  
+  
+});
+  });
+
+
+
+$('.s55hf').on('click', function() {
+      
+          $('.cont').removeClass('full');
+          $(this).parent().find('.jghyfg').css({
+              'height': 50,
+  
+  
+          });
+          var parent = document.getElementById("das");
+          //document.getElementById("gg11").outerHTML='';
+      //var child = document.getElementById("gg11");
+      //parent.removeChild(child);
+      var myNode = document.getElementById("das");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+    }
+          
+  });
+
+
+
+
+
+
+$('.btn').click(function(event){
+  var pk = $(this).attr('name');
+  $.ajax({
+           
+           url: "{% url 'accounts:subscribe' %}",
+           type: 'POST',
+           dataType: 'json',
+           enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+                {% if my_profile %}
+                  
+                  document.getElementById('test').innerHTML = data.f;
+                  {% if album.sponsor %}
+                  document.getElementById('subscribe').innerHTML = data.j;
+                  {% else %}
+                   document.getElementById('sub').innerHTML = data.j;
+                  {% endif %}
+                 
+                  
+                {% else %}
+                  document.getElementById('test').innerHTML = data.f;
+                   {% if album.sponsor %}
+                  document.getElementById('subscribe').innerHTML = data.j;
+                  {% else %}
+                   document.getElementById('sub').innerHTML = data.j;
+                  {% endif %}
+                  
+
+                {% endif %}
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+
+
+$(document).on("click", ".box12", function(event){
+  var pk = $(this).attr('name');
+
+  
+  
+  e =  String(pk + 123)
+  status_name = String(pk) + 'aw'
+  console.log(e)
+
+    
+  $.ajax({
+           
+           url: "{% url 'accounts:post_like' %}",
+           type: 'POST',
+         dataType: 'json',
+         enctype: 'multipart/form-data',
+           data: {'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+           
+           success: function(data) {
+                //alert(data.a);
+                //alert($("#" + data.a).val());
+                
+                
+                if (data.status=='False'){
+                  document.getElementById("heart_box").innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+                  document.getElementById("s20a20").innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+                   document.getElementsByClassName("gg")[0].innerHTML = '<i class="fa fa-heart-o" aria-hidden="true" ></i>'
+                  
+                  document.getElementsByName(status_name)[0].setAttribute("heart_c", 0)
+                  
+                  console.log(document.getElementsByName(status_name))
+                  
+                }
+                else{
+                  document.getElementsByName(status_name)[0].setAttribute("heart_c", 1)
+                  console.log(document.getElementsByName(status_name))
+                  document.getElementById("heart_box").innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+                   document.getElementById("s20a20").innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+                    document.getElementsByClassName("gg")[0].innerHTML = '<i class="fa fa-heart" aria-hidden="true" style="color: #F44336;"></i>'
+                   
+                }
+                
+
+
+                
+                 //find('#test').innerHTML = data.f;
+
+                  
+                  
+            },
+           error: function(data) {
+                  alert('Something went wrong.');
+           }
+      });
+    })
+
+
+</script> 
+
+
+
+
+
+
+
+
+</body>
+</html>
